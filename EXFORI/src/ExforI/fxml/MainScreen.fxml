@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.input.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="500" minWidth="1000" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ExforI.MainScreenController">
+    <top>
+        <VBox alignment="TOP_CENTER" prefHeight="57.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <MenuBar maxHeight="-Infinity" minHeight="-Infinity" prefHeight="27.0" prefWidth="600.0" style="-fx-background-color: #3c7fb1, linear-gradient(#fafdfe, #e8f5fc),   linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #a7d9f5 100%);">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem fx:id="doOpenExf" mnemonicParsing="false" onAction="#doOpenExf" text="Open">
+                                    <accelerator>
+                                        <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator>
+                                </MenuItem>
+                                <MenuItem fx:id="doSaveExf" mnemonicParsing="false" onAction="#doSaveExf" text="Save">        
+                                    <accelerator>
+                                        <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator>
+                                </MenuItem>
+                                <MenuItem fx:id="doSaveAsExf" mnemonicParsing="false" onAction="#doSaveAsExf" text="SaveAs">
+                                    <accelerator>
+                                        <KeyCodeCombination alt="UP" code="A" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator>
+                                </MenuItem>
+                                <MenuItem onAction="#goQuit" text="Quit">
+                                    <accelerator>
+                                        <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator>
+                                </MenuItem>                              
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Tools">
+                            <items>
+                                <MenuItem fx:id="doOrdering" mnemonicParsing="false" onAction="#doProcOrder" text="Process Ordering">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="P" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <MenuItem fx:id="CheXing" mnemonicParsing="false" onAction="#doRunChex" text="ZCHEX">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="Z" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="Janising" mnemonicParsing="false" onAction="#doRunJanis" text="JANIS">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="J" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="selfCheck" mnemonicParsing="false" onAction="#doSelfCheck" text="Builtin CHECKER">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="C" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                            </items>
+                        </Menu>                                      
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="About" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-padding: 0 1 0 1; -fx-border-insets: 0, 1, 2; -fx-background-color: #306eff,   linear-gradient(#5a61af, #e8f5fc),    linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #a7d9f5 100%);">
+                    <children>
+                        <Button fx:id="doCheck" mnemonicParsing="false" text="Check">
+                            <font>
+                                <Font size="10.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="doOrder" mnemonicParsing="false" onAction="#doProcOrder" text="Order" textAlignment="CENTER">
+                            <font>
+                                <Font size="10.0" />
+                            </font>
+                        </Button>
+                        <TextField fx:id="entNumT" promptText="Entry Number" style="-fx-max-width: 64; -fx-min-width: 64;">
+                            <font>
+                                <Font size="10.0" />
+                            </font>
+                        </TextField>
+                        <Button fx:id="setB1" mnemonicParsing="false" onMouseClicked="#doSetEntry" text="Set">
+                            <font>
+                                <Font size="10.0" />
+                            </font>
+                        </Button>
+                        <TextField fx:id="entDateT" promptText="Entry Date" style="-fx-max-width: 64; -fx-min-width: 64;">
+                            <font>
+                                <Font size="10.0" />
+                            </font>
+                        </TextField>
+                        <Button fx:id="setB2" mnemonicParsing="false" onMouseClicked="#doSetDate" text="Set">
+                            <font>
+                                <Font size="10.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </top>
+    <left>
+        <TreeView id="EntryTree" fx:id="subEntTree" editable="true" onMouseClicked="#doMakeTree" prefHeight="321.0" prefWidth="171.0" style="-fx-background-color: #eaf6fd;" BorderPane.alignment="CENTER" />
+    </left>
+    <center>
+        <TableView fx:id="editTable" editable="true" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #3c7fb1;" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="bibHead" maxWidth="80.0" minWidth="80.0" prefWidth="-1.0" sortable="false" />
+                <TableColumn fx:id="bibPtr" maxWidth="18.0" minWidth="18.0" prefWidth="18.0" sortable="false" />
+                <TableColumn fx:id="bibText" maxWidth="442.0" minWidth="440.0" prefWidth="-1.0" sortable="false" />
+                <TableColumn fx:id="bibLines" maxWidth="110.0" minWidth="110.0" prefWidth="110.0" sortable="false" />
+            </columns>
+         <opaqueInsets>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </opaqueInsets>
+        </TableView>
+    </center>
+</BorderPane>

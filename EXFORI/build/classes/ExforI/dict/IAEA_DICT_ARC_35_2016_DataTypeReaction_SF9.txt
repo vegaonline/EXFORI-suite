@@ -1,0 +1,13 @@
+ TRA 198202 CALC                                    7Calculated data                                                       
+ TRA 198202 DERIV                                   3Derived data                                                          
+ TRA                                       Data not derived from the experimental data by the most                         
+ TRA                                       direct method, but are calculated from other data                               
+ TRA                                       obtained in the analysis of the experimental data.                              
+ TRA                                       Only values derived by the experimentalist from their                           
+ TRA                                       own data should be entered in this way.                                         
+ TRA 198202 EVAL                                    9Evaluated data                                                        
+ TRA                                        Using best available experimental and theoretical                              
+ TRA                                        information                                                                    
+ OBS 200908 EXP                                     1Experimental data                                                     
+ TRA 198202 RECOM                                   5Recommended data                                                      
+ TRA                                        Recommended at the time the entry was prepared                                 

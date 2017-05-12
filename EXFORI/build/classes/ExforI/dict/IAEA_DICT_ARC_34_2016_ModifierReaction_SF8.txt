@@ -1,0 +1,155 @@
+ TRA 198507 (A)                                    62GENQ Uncertain if corrected for natural isotopic abund.               
+ TRA                                        Unclear whether corrected for natural isotopic                                 
+ TRA                                        abundance of target. To be used only when data are                             
+ TRA                                        given for an isotope, but were measured on a target                            
+ TRA                                        with natural isotopic composition.                                             
+ TRA                                        For enriched targets use modifier 'FCT' instead.                               
+ TRA 201112 (PHY)                                  27     Uncertain if corrected for decay during irradiation              
+ TRA 201311 1K2                                    41     form: k**2 dsig/dOmega = Sum (a(L)*p(L))                         
+ TRA                                       *Modifier for Legendre or cosine coefficients of the                            
+ TRA                                        form k**2 d-sig/d-Omega = Sum(a(L)*p(L)), where                                
+ TRA                                        k = wave vector                                                                
+ TRA 198307 2AG                                    69     times 2 * isotopic abund. and stat. weight factor                
+ TRA 200902 2G                                     65     times 2 * statistical weight factor                              
+ TRA 201311 2L2                                    42     form: dsig/dOmega = 1/2 Sum ((2L+1)*a(L)*p(L))                   
+ TRA                                       *Modifier for Legendre or cosine coefficients of the                            
+ TRA                                        form d-sig/d-Omega = (1/2)Sum((2L+1)*a(L)*p(L))                                
+ INT 199402 2MT                                    92     times 2pi * trans. sec. mass                           RHID      
+ INT 199402 2PT                                    93     times 2pi * trans. sec. momentum                       RHID      
+ TRA 198202 4AG                                    70     times 4 * isotopic abund. and stat. weight factor                
+ TRA 198202 4PI                                    30     times 4 pi                                                       
+ TRA 198503 A                                      60GENQ Data times natural isotopic abundance                            
+ TRA                                        To be used only when data are given for an isotope,                            
+ TRA                                        but were measured on a target with natural isotopic                            
+ TRA                                        composition. For enriched targets use modifier                                 
+ TRA                                        'FCT' instead.                                                                 
+ TRA 198202 AA                                     80     Adler-Adler formalism                                            
+ TRA                                        for resonance parameters                                                       
+ TRA 198307 AG                                     68     times isotopic abund. and stat. weight factor                    
+ TRA 198307 AL1                                    34     Associated Legendre Polynomials of the first kind                
+ TRA                                       *Coefficients for first-order associated Legendre                               
+ TRA                                        functions of the first kind                                                    
+ TRA 199911 AMP                                    88     Amplitude (for resonance parameters)                             
+ TRA 199801 ANA                                    31     Vector analyzing power, A(y), for incident beam                  
+ TRA 199108 ASY                                    32     Asymmetry of polarization of outgoing particles                  
+ TRA 198511 AV                                      1GENQAAverage                                                          
+ OBS 200809 AXX                                    31     Tensor analyzing power, Cartesian coord.                         
+ OBS 200809 AYY                                    31     Tensor analyz.power,inc.proj.spin normal to scatt.plane          
+ OBS                                        Tensor analyzing power, incident projectile spin                               
+ OBS                                        normal to scattering plane                                                     
+ OBS 200809 AZZ                                    31     Tensor analyz.power,inc.proj.spin parall.to scatt.plane          
+ OBS                                        Tensor analyzing power, incident projectile spin                               
+ OBS                                        parallel to beam direction in scattering plane                                 
+ TRA 199412 BRA                                    18GENQPBremsstrahlung spectrum average                                  
+ TRA 199412 BRS                                    17GENQPAverage over part of bremsstrahlung spectrum                     
+ TRA 199801 C                                      33     Spin correlation parameter                                       
+ TRA 201307 CH                                     60     per electric charge                                              
+ TRA 198202 COS                                    35     Cosine coefficients                                              
+ TRA 201311 CS2                                    35     form: a0+a1*sin**2+a2*sin**2*cos+a3*sin**2*cos**2                
+ TRA                                       *Coefficients of the form d-sig/d-Omega = a(0) +                                
+ TRA                                        a(1)*sin**2(theta) + a(2)*sin**2(theta)*cos(theta) +                           
+ TRA                                        a(3)*sin**2(theta)*cos**2(theta)                                               
+ TRA 199903 D                                      33     Spin rotation parameter                                          
+ TRA 201612 DAM                                    60GENQ Divided by atomic mass of the target nucleus                     
+ TRA 199801 DSP                                    36     Difference for spins parallel - antiparallel                     
+ OBS 201412 DT                                     50     production thick/thin target yield                               
+ TRA 201612 EOB                                    50     End-of-bombardment thick/thin target yield                       
+ TRA 199003 EPI                                    13GENQPEpithermal neutron spectrum average                              
+ TRA 198610 FCT                                     6GENQMtimes a factor (see text)                                        
+ TRA 198503 FIS                                    14GENQPFission spectrum average                                         
+ TRA 199003 FST                                    15GENQPFast reactor neutron spectrum average                            
+ TRA 198307 G                                      64     times statistical weight factor                                  
+ OBS 200503 IPA                                    47     integrated over partial angular range                            
+ TRA 199710 K                                      35     Spin transfer parameter                                          
+ TRA 201311 L4P                                    43     form: 4pi * dsig/dOmega = Sum((2L+1)*a(L)*p(L))                  
+ TRA                                       *Modifier for Legendre or cos coefficients of the form                          
+ TRA                                        4pi*d-sig/d-Omega =Sum((2L+1)*a(L)*p(L))                                       
+ TRA 198202 LEG                                    34     Legendre coefficients                                            
+ TRA 198307 LIM                                    24     Modifier for a resonance integral given for a                    
+ TRA                                                      limited EN-range only                                            
+ TRA 200402 MOT                                    49     relative to Mott scattering                                      
+ TRA 198606 MSC                                     2GENQMApproximate definition only, see REACTION text                   
+ TRA                                        ==Note==This is approximate definition only, see text                          
+ TRA                                        General purpose modifier for unusual data types. Exact                         
+ TRA                                        definition is given in free text following the                                 
+ TRA                                        reaction code. Use with code from dict.36 which is                             
+ TRA                                        closest to data given.                                                         
+ TRA 200305 MXD                                    26     Spectrum rel.to Maxw.distr.of given temperature                  
+ TRA 198411 MXW                                    12GENQPMaxwellian average                                               
+ TRA                                        The appropriate spectrum temperature is to be given                            
+ TRA                                        under data heading 'KT', or the mean energy under                              
+ TRA                                        'EN-MEAN' (if given by author) or 'EN-DUMMY' (if                               
+ TRA                                        assumed by compiler).                                                          
+ TRA                                        ==Note== 'MXW' previously meant 'thermal Maxwellian                            
+ TRA                                        average'.                                                                      
+ TRA 200503 NCP                                    55     Non-coplanar                                                     
+ TRA 201105 NPD                                    26     Normalized to probability distribution                           
+ TRA 200204 NSF                                    33     Non-spin-flip                                                    
+ INT 200001 PER                                    93     Peripheral                                             RHID      
+ TRA 200401 PHY                                    29     Physical yield                                                   
+ TRA 200204 PP                                     32     Inc.proj.parallel/perpendicular to reac.plane                    
+ TRA 200908 RAB                                    60     times nat.abund.div.by abund.of targ.of 1st term                 
+ TRA                                       *times natural isotopic abundance, divided by isotopic                          
+ TRA                                        abundance of target of first term of REACTION sum                              
+ INT 198411 RAT                                     5GENQNRatio                                                            
+ INT                                        (used by NNDC for ratios of quantities)                                        
+ TRA 198511 RAW                                     3GENQNRaw data (see REACTION text)                                     
+ TRA 198411 REL                                     4GENQNRelative data                                                    
+ TRA                                        To be combined with arbitrary units.                                           
+ TRA                                        Otherwise use 'FCT'.                                                           
+ TRA 198307 RES                                    76     at peak of resonance                                             
+ TRA 200705 RG                                     64     times (2J(i)+1) * (2J(j)+1)                                      
+ TRA 198202 RM                                     83     Reich-Moore formalism                                            
+ TRA                                        for resonance parameters                                                       
+ TRA 198202 RMT                                    86     R-matrix formalism                                               
+ TRA                                        for resonance parameters                                                       
+ TRA 198307 RNV                                    22     Non-1/v part                                                     
+ TRA                                        of cross-section or resonance-integral                                         
+ TRA 201112 RRE                                    19     relative to square-root(E)                                       
+ TRA 201311 RS                                     37     Times 4pi/sigma                                                  
+ TRA                                        Modifier for diff.cross-sections 4pi/sig d-sig/d-Omega                         
+ TRA                                        and for Legendre or cosine coefficients of the form:                           
+ TRA                                        (4pi/sig)*(d-sig/d-Omega) = Sum(a(L)*p(L))                                     
+ TRA 201311 RS0                                    40     (dsig/dOmega)/(dsig/dOmega at 0 deg) = Sum(a(L)*p(L))            
+ TRA                                       *Modifier for Legendre or cosine coefficients of the                            
+ TRA                                        form:                                                                          
+ TRA                                        (d-sig/d-Omega)/(d-sig/d-Omega at 0 deg)=Sum(a(L)*p(L))                        
+ TRA 201311 RSD                                    39     Relative to 90 degree data                                       
+ TRA                                       *Modifier for Legendre or cosine coefficients of the                            
+ TRA                                        form:                                                                          
+ TRA                                        (d-sig/d-Omega)/(d-sig/d-Omega at 90 deg) =                                    
+ TRA                                        = 1 +Sum(a(L)*p(L))                                                            
+ TRA                                        Also modifier for angular distributions of the form:                           
+ TRA                                        sig(theta)/sig(90deg) and for the anisotropy-coeff                             
+ TRA                                        sig(0)/sig(90deg)                                                              
+ TRA 201311 RSL                                    38     form: (4pi/sig)*(dsig/dOmega)=Sum((2L+1)*a(L)*p(L))              
+ TRA                                       *Modifier for Legendre or cosine coefficients of the                            
+ TRA                                        form:                                                                          
+ TRA                                        (4pi/sig)*(d-sig/d-Omega)=Sum((2L+1)*a(L)*p(L))                                
+ TRA 198202 RTE                                    16     times square-root(E)                                             
+ TRA 199412 RTH                                    46     relative to Rutherford scattering                                
+ TRA 198307 RV                                     20     1/v part only                                                    
+ OBS 201304 RYL                                    23     Reaction yield                                                   
+ TRA 198202 S0                                     72     times total peak cross section                                   
+ TRA 201311 S2T                                    45     form: dsig/dOmega = a0 + a1*sin**2(T) + a2*sin**2(2*T)           
+ TRA                                       *Coefficients of the form: d-sig/d-Omega =                                      
+ TRA                                        a(0) + a(1)*sin**2(theta) + a(2)*sin**2(2*theta)                               
+ TRA 201605 SAT                                    25     Saturation yield                                                 
+ TRA 201301 SDT                                    21GENQPSlowing-down time average                                        
+ TRA 200111 SF                                     33     Spin flip                                                        
+ TRA 199610 SFC                                    48     S-factor                                                         
+ TRA                                       *Coefficients for a sum in power of sin**2                                      
+ TRA 198411 SPA                                    10GENQPSpectrum average                                                 
+ TRA 198202 SQ                                     74     Quantity squared                                                 
+ TRA 199801 SRF                                    33     Spin rotation function                                           
+ TRA 199003 SS                                     36     Spin-spin cross section                                          
+ INT 198411 SUM                                     7GENQ Sum                                                              
+ INT                                        (used by NNDC for sums of quantities)                                          
+ TRA 199801 TAP                                    31     Tensor analyzing power, spherical coordinates                    
+ OBS 201612 TM                                     51     per 1 MeV target thickness (for thick target yields)             
+ OBS 200809 TRN                                    23     Transmission                                                     
+ TRA 200309 TST                                    33     Total spin transfer                                              
+ TRA 200805 TT                                     28     Measured for thick target                                        
+ TRA 199801 VAP                                    31     Vector analyzing power, spherical coordinates                    
+ TRA 198202 VGT                                    84     Vogt formalism                                                   
+ TRA                                        for resonance parameters                                                       

@@ -1,0 +1,16 @@
+ TRA                                        The following codes are to be used for the keyword                             
+ TRA                                        'RESULT' only. Codes for the keyword 'ADD-RES' are                             
+ TRA                                        given in dictionary 20.                                                        
+ TRA                                        'ADD-RES' is used to refer to additional results not                           
+ TRA                                        compiled in the Exfor entry, whereas 'RESULT' gives                            
+ TRA                                        additional explanations about the data given under                             
+ TRA                                        'REACTION'.                                                                    
+ OBS 200705 CAPTA                          G*Gamma(N) * Gamma(Gamma) / Gamma                                               
+ OBS                                        Capture area/2*pi**2 * Lambda(0)**2                                            
+ TRA 200204 DFRCT                          Delayed neutron fraction                                                        
+ TRA 199007 FRCUM                          Fractional cumulative yield                                                     
+ TRA                                        Ratio of cumulative yield to chain yield                                       
+ TRA 199007 FRIND                          Fractional independent yield                                                    
+ TRA                                        Ratio of independent yield to chain yield                                      
+ TRA 199007 RVAL                           R-value                                                                         
+ TRA                                        Ratio of yields at 2 different incid.energies                                  

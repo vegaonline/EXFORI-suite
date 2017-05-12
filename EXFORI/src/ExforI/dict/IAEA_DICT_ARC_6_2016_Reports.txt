@@ -1,0 +1,910 @@
+ TRA                                        ===Note= The following series which usually contain                            
+ TRA                                        conference proceedings, are generally not considered                           
+ TRA                                        as reports. Therefore, such publications are usually                           
+ TRA                                        entered with a conference code (see dict. 7).                                  
+ TRA                                             CEA-CONF                                                                  
+ TRA                                             CONF-    (AEC, ERDA)                                                      
+ TRA                                             NBS-SPEC-PUB                                                              
+ TRA                                             STI/PUB  (IAEA)                                                           
+ TRA 199406 A-AEP-                         3CPRAEPInst. of Atomic Energy, Beijing, Annual Report                           
+ TRA 198202 A-ALB-                         1USAALBState Univ. of New York at Albany Reports                                
+ TRA 198202 A-ARK-                         1USAARKUniv. of Arkansas Reports                                                
+ TRA 201407 A-BNT-                         3CPRAEPBeijing Nat. Tandem Accel. Lab., Prog. Report                            
+ TRA                                        (one report every 2 years)                                                     
+ TRA 198202 A-CSN-                         2FR CSNC.S.N.S.M., Orsay  Reports                                               
+ TRA                                        Centre de Spectrometrie Nucleaire et de Spectrometrie                          
+ TRA                                         de Masse                                                                      
+ EXT 200506 A-INS-                         2JPNTOKUniv.Tokyo,Inst.f.Nucl.Study, Annual Report                              
+ TRA 201307 A-IPNO-                        2FR PARInst. de Phys. Nucleaire Orsay Activity Report                           
+ TRA 198202 A-IPS-                         2SWDIPSRes. Inst. of Phys., Stockholm Annual Rept.                              
+ TRA 200908 A-JCL-                         2JPNIPCRIKEN Accelerator Progress Report                                        
+ TRA                                        Inst.of Phys.and Chem.Res., Wako-shi,Saitama                                   
+ TRA                                       =vol.1 (1967) -                                                                 
+ TRA 198610 A-KTY-                         1USAKTYUniv.of Kentucky annual report                                           
+ TRA 201304 A-LNS-                         2ITYLNSINFN Southern National Lab.(LNS), activity rept.                         
+ TRA 198404 A-MSU-                         1USAMSUMichigan State Univ.Cyclotron Lab., annual rept.                         
+ TRA 198307 A-PAD-                         2ITYPADPadua Univ. and Lab. Naz. Legnaro annual report                          
+ TRA 198404 A-RCNP-                        2JPNOSARes. Centre for Nucl. Phys., Osaka, annual rept.                         
+ TRA 198202 A-RPI-                         1USARPIR.P.I. annual progress report                                            
+ EXT 198903 A-TNL-                         1USATNLTriangle Univ. Nuclear Lab. annual report                                
+ TRA 198202 A-WAU-                         1USAWAUUniv.of Washington, Seattle, annual report                               
+ CIN 199411 AAEC/                          3AULAUAAustralian AEC reports                                                   
+ TRA 198404 AAEC/AP/PR-                    3AULAUAAustralian AEC Applied Phys.Div. Prog. Report   *                        
+ TRA 198202 AAEC/E-                        3AULAUAAustralian AEC Reports                          *                        
+ TRA 198404 AAEC/PD/PR-                    3AULAUAAustralian AEC Physics Div. Progress Report     *                        
+ TRA 198202 AAEC/PR-                       3AULAUAAustralian AEC Progress report                  *                        
+ TRA 198202 AAEC/TM-                       3AULAUAAustralian AEC Technical Memo                   *                        
+ TRA 199601 ABO-ANN-                       2SF ABAAbo Akademi Annual Reports                                               
+ TRA 198202 ACO/UK-                        2UK ALDAldermaston Reports                                                      
+ TRA 198202 ACRH-                          1USAUSAArgonne Cancer Res. Hospital Reports                                     
+ TRA 198202 AD-                            1USADODDept. of Defence Reports                                                 
+ TRA 198202 AE-                            2SWDAE Aktiebolaget Atomenergi,Stockholm/Studsvik Repts                         
+ TRA                                        Series discontinued. Last report = AE-517.                                     
+ TRA 198202 AE-FFN-                        2SWDAE Aktiebolaget Atomenergi, Stockholm Reports      *                        
+ TRA 198202 AE-FN-                         2SWDAE Aktiebolaget Atomenergi, Stockholm,internal rpt.*                        
+ TRA 200611 AE-RFT-                        2SWDAE Aktiebolaget Atomenergi, Stockholm/Studsvik rpt.                         
+ TRA 199508 AEA-TRS-                       2UK WINAEA Technol.Winfrith, Thermal Reactor Serv.,rpt.                         
+ TRA 198202 AEC(NZ)-                       3NZLNZLNew Zealand A.E.C. Reports                                               
+ TRA                                        The original code is 'AEC-' and (NZ) is added for                              
+ TRA                                         clarification                                                                 
+ TRA 198202 AEC-TR-                        1USATIDDiv. of Tech. Info. U.S. AEC translation                                 
+ EXT 198202 AECD-                          1USATIDDiv. of Tech. Info. U.S. AEC                                             
+ EXT                                        Succeeded MDDC-, extinct 1960                                                  
+ CIN 199411 AECD/                          3BANRAMAtomic Energy Centre, Dhaka Reports                                      
+ TRA 198911 AECD/EP-                       3BANRAMAtomic Energy Centre, Dhaka Reports             *                        
+ TRA 198911 AECD/MISC-                     3BANRAMAtomic Energy Centre, Dhaka Progress Report     *                        
+ TRA 198911 AECD/TP-                       3BANRAMAtomic Energy Centre, Dhaka Reports             *                        
+ TRA 198202 AECL-                          1CANCRCAtomic Energy of Canada Ltd. Reports                                     
+ EXT 198202 AECU-                          1USATIDDiv. of Tech. Info. U.S. AEC Reports                                     
+ EXT 199507 AEET-                          3INDTRMAtomic Energy Est. Trombay Reports                                       
+ EXT                                        Last issue is AEET-275 (1967).                                                 
+ EXT                                        Continued as BARC-                                                             
+ EXT 199412 AEET-ANAL-                     3INDTRMTrombay Reports                                 *                        
+ EXT 198202 AEET-NP-                       3INDTRMTrombay Reports                                 *                        
+ CIN 199411 AEEW-                          2UK WINA.E.E.W. Winfrith report series                                          
+ TRA 198202 AEEW-M-                        2UK WINA.E.E.W. Winfrith Reports                       *                        
+ TRA 198202 AEEW-R-                        2UK WINA.E.E.W. Winfrith Reports                       *                        
+ CIN 199411 AERE-                          2UK HARA.E.R.E. Harwell report series                                           
+ TRA 198202 AERE-C/R-                      2UK HARA.E.R.E. Harwell Reports                        *                        
+ TRA 198202 AERE-I/R-                      2UK HARA.E.R.E. Harwell Reports                        *                        
+ TRA 198202 AERE-M-                        2UK HARA.E.R.E. Harwell Reports                        *                        
+ TRA 198202 AERE-N/M-                      2UK HARA.E.R.E. Harwell Reports                        *                        
+ TRA 198202 AERE-N/R-                      2UK HARA.E.R.E. Harwell Reports                        *                        
+ TRA 198202 AERE-NP/GEN                    2UK HARA.E.R.E. Harwell Reports                        *                        
+ TRA 198202 AERE-NP/M-                     2UK HARA.E.R.E. Harwell Reports                        *                        
+ TRA 198202 AERE-NP/R-                     2UK HARA.E.R.E. Harwell Reports                        *                        
+ TRA 198202 AERE-PR/NP-                    2UK HARA.E.R.E. Harwell Reports                        *                        
+ TRA 198202 AERE-R-                        2UK HARA.E.R.E. Harwell Reports                        *                        
+ TRA 198202 AERE-R/M-                      2UK HARA.E.R.E. Harwell Reports                        *                        
+ TRA 198202 AERE-R/R-                      2UK HARA.E.R.E. Harwell Reports                        *                        
+ TRA 198202 AERE-RP/R-                     2UK HARA.E.R.E. Harwell Reports                        *                        
+ TRA 198202 AERE-TRANS-                    2UK HARA.E.R.E. Harwell translations                   *                        
+ TRA 198202 AERE-X/PR-                     2UK HARA.E.R.E. Harwell Reports                        *                        
+ TRA 200302 AES-                           2SWDAE Aktiebolaget Atomenergi, Studsvik, Reports                               
+ TRA 198202 AFOSR-                         1USADODDept. of Defense Reports                                                 
+ CIN 199411 AFSWC-                         1USAUSAAir Force Spec.Weap.Center Kirtland A.F.B.Repts.                         
+ TRA 198202 AFSWC-TDR-                     1USAUSAAir Force Spec.Weap.Center Kirtland A.F.B.Repts.*                        
+ TRA 198202 AFSWC-TR-                      1USAUSAAir Force Spec.Weap.Center Kirtland A.F.B.Repts.*                        
+ TRA 198202 AFSWP-                         1USADODArmed Forces Special Weapons Project Reports                             
+ CIN 199411 AFWL-                          1USAUSAAir Force Spec.Weap.Center Kirtland A.F.B.Repts.                         
+ OBS 200607 AFWL-TDR-                      1USAUSAAir Force Spec.Weap.Center Kirtland A.F.B.Repts.*                        
+ TRA 200607 AFWL-TR-                       1USAUSAAir Force Spec.Weap.Center Kirtland A.F.B.Repts.*                        
+ TRA 198202 AHSB(S)R-                      2UK RIYU.K. AEA Health and Safety Branch Risley Reports                         
+ TRA 198202 AI-                            1USAAI Atomics International Reports                                            
+ TRA 198202 AI-AEC-                        1USAAI Atomics International Reports                   *                        
+ OBS 198202 AIF-                           3MEXIFM                                                *                        
+ OBS                                        See journal-code AIF                                                           
+ TRA 200611 AIP-                           1USAAIPConf.proceedings by Am.Inst.of Phys.            *                        
+ TRA                                        Published electronically in                                                    
+ TRA                                        http://proceedings.aip.org                                                     
+ TRA 198202 AKO-UK-                        2UK ALDAldermaston Internal Report                                              
+ TRA 198202 ALBERTA-                       1CANALANucl.Res.Centre, U.of Alberta, Edmonton Reports                          
+ TRA                                       =(reports carry a number but no report code;                                    
+ TRA                                       =code 'ALBERTA-' was invented)                                                  
+ TRA 198202 AN-                            1USAAGNAerojet General Nucleonics Reports                                       
+ TRA 198202 ANCR-                          1USAANCAerojet Nuclear Corp. Reports                                            
+ TRA 198202 ANL-                           1USAANLArgonne National Laboratory report series                                
+ TRA 198202 ANL-NDM-                       1USAANLArgonne National Laboratory Reports             *                        
+ TRA 198202 ANL-TRANS-                     1USAANLArgonne National Laboratory, translations       *                        
+ CIN 199411 ANU-                           3AULCBRAustralian National Univ., Canberra Reports                              
+ TRA 198202 ANU-P-                         3AULCBRAustralian National Univ., Canberra Reports     *                        
+ TRA 198202 AP/CTR/TM-                     1USAANLArgonne Nat. Lab., Appl.Phys.Div., Techn. Memo                           
+ TRA 198202 APDA-                          1USAAPDAtomic Power Devel. Assoc., Detroit Reports                              
+ TRA 198202 APED-                          1USAGECGeneral Electric, Atomic Power Equipm.Dept.Repts                         
+ EXT 198202 APEX-                          1USAGEAGeneral Electric, Aircraft Nucl.Prop.Dept.Repts.                         
+ TRA 198202 ARB.BER-                       2GERKFKKernforschungszentrum Karlsruhe Reports                                  
+ TRA 198705 AREAEE-                        3EGYCAIAtomic Energy Establishment Reports                                      
+ TRA                                        Series started with nr.117 in 1971                                             
+ TRA 198202 ARF-                           1USAARFArmour Research Foundation Reports                                       
+ TRA 198507 ARL-                           1USAARLAerospace Res.Labs,Wright-Patterson A.F.B.Repts.                         
+ CIN 199411 ASTM-                          1USAUSAAmerican Soc. of Testing and Materials, reports                          
+ TRA 199106 ASTM-STP-                      1USAUSAAmerican Soc. of Testing and Materials Reports  *                        
+ TRA 199007 ATOMKI-AR-                     3HUNDEBAtomki Annual Reports                                                    
+ TRA                                       =(Code is invented for reference, report appears as                             
+ TRA                                       ='Atomki Annual report 1989')                                                   
+ CIN 199411 AWRE-                          2UK ALDA.W.R.E. Aldermaston report series                                       
+ TRA 201301 AWRE-CNR/PR                    2UK ALDA.W.R.E. Aldermaston Reports                    *                        
+ TRA 198202 AWRE-NR/C-                     2UK ALDA.W.R.E. Aldermaston Reports                    *                        
+ TRA 198202 AWRE-NR/P-                     2UK ALDA.W.R.E. Aldermaston Reports                    *                        
+ TRA 198202 AWRE-O-                        2UK ALDA.W.R.E. Aldermaston Reports                    *                        
+ TRA 198202 BARC-                          3INDTRMB.A.R.C., Trombay report series                                          
+ TRA                                        Starts with BARC-276 (1967)                                                    
+ TRA                                       =(formerly AEET- series)                                                        
+ TRA 198202 BARC/I-                        3INDTRMB.A.R.C., Trombay Reports                       *                        
+ TRA 198202 BAW-                           1USAB+WBabcock and Wilcox Co. Reports                                           
+ TRA 201412 BCDL-                          4RUSLINBull. Centro Dannykh LIJAF, Leningrad-Gatchina                           
+ TRA                                        (Bulletin of the Data Centre of LIJAF)                                         
+ TRA 198206 BIPM-                          2FR BIPBureau Int. des Poids et Mesures Reports                                 
+ TRA 198202 BLG-                           2BLGMOLCentre d'Etude de l'Energie Nucl.,Bruxelles,Rept                         
+ TRA 198202 BLM-JB-                        2GERMUUBeschleunigerlab. Univ. Muenchen annual report                           
+ TRA                                        und der Techn. Univ. Muenchen                                                  
+ TRA 198202 BMI-                           1USABATBattelle Memorial Inst. Reports                                          
+ TRA 198202 BMWF-FBK-                      2GERGERBundesmin.f.Wiss.Forschg. Reports                                        
+ TRA 198202 BNL-                           1USABNLBrookhaven National Laboratory report series                             
+ TRA 198202 BNL-C-                         1USABNLBrookhaven National Laboratory Reports          *                        
+ TRA 198202 BNL-NCS-                       1USABNLBrookhaven National Laboratory Reports          *                        
+ TRA 198202 BNL-TR-                        1USABNLBrookhaven National Laboratory translations     *                        
+ TRA 198610 BNWL-                          1USABNWBattelle-Northwest report series                                         
+ TRA 199106 BNWL-B-                        1USABNWBattelle-Northwest Reports                      *                        
+ TRA 198202 BNWL-SA-                       1USABNWBattelle-Northwest Reports                      *                        
+ TRA 200302 BNWL-TR-                       1USABNWBattelle-Northwest Reports                      *                        
+ EXT 198202 BR-                            2UK CAVCavendish Lab. Reports                                                   
+ EXT                                        Early reports                                                                  
+ TRA 198202 BRL-                           1USABRLBallistic Research Labs report series                                    
+ TRA 198202 BRL-MR-                        1USABRLBallistic Research Labs Reports                 *                        
+ TRA 198202 BRL-R-                         1USABRLBallistic Research Labs Reports                 *                        
+ TRA 198202 BUP-                           2NORBGNBergen Univ. Dept. of Physics Reports                                    
+ TRA 198202 CC-                            1USACHIChicago University Metallurgical Labs Reports                            
+ CIN 199411 CCDN-                          2ZZZNDCC.C.D.N. Saclay report series                                            
+ TRA 198202 CCDN-CI-                       2ZZZNDCC.C.D.N. Saclay Reports                         *                        
+ TRA 198202 CCDN-NW-                       2ZZZNDCC.C.D.N. Saclay Newsletters                     *                        
+ TRA 198202 CCEN-                          3BZLUFPComun.do Centro de Energia Nuclear,Recife,Repts.                         
+ TRA                                        Univ. Federal de Pernambuco                                                    
+ TRA 199303 CDFE-                          4RUSMOSFotoyadernye Dannye (Photonuclear Data)                                  
+ TRA                                        To be used for annual series starting with no.1,1977                           
+ TRA                                        (Compare CDFE-IND- and book codes CDFE/..)                                     
+ TRA 199303 CDFE-IND-                      4RUSMOSFotoyadernye Dannye (Photonuclear Data) Index   *                        
+ TRA                                        Compare CDFE- and book codes                                                   
+ TRA 199303 CDFE-IND2-                     4RUSMOSPhotonuclear Data Index (Photofission)          *                        
+ TRA                                        Fotojadernye Dannye. Compare CDFE-and book codes                               
+ TRA 200607 CEA-                           2FR FR Centre d'Etudes Nucleaires report series                                 
+ TRA 200302 CEA-CONF-                      2FR FR Commissariat a l'Energie Atomique, Conf.reports                          
+ TRA 200607 CEA-N-                         2FR FR Centre d'Etudes Nucleaires, note                *                        
+ TRA                                        Internal report with limited distribution                                      
+ TRA 200607 CEA-R-                         2FR FR Centre d'Etudes Nucleaires, Saclay Reports      *                        
+ TRA 198202 CEA-SMNF-                      2FR SACCentre d'Etudes Nucleaires, Saclay Reports      *                        
+ EXT 199108 CEC-                           2ITYBOLCentro di Calcolo, CNEN, Bologna Reports                                 
+ EXT                                        ===Note: report number includes the year in the form                           
+ EXT                                           CEC-(71)9                                                                   
+ EXT                                       =(now: CEC(year)-)                                                              
+ TRA 198202 CEN(BG)-                       2FR BORC.E.N. Bordeaux-Gradignan Reports                                        
+ TRA                                        Centre d'Etudes Nucleaires Bordeaux-Gradignan                                  
+ TRA 198202 CERN-                          2ZZZCERCERN Europ. Org. for Nuclear Res. Reports                                
+ TRA 198202 CF-                            1USACHIChicago University Metallurgical Labs Reports                            
+ TRA 198202 CISE-                          2ITYCISCentre Inform. Studi Esp. Reports                                        
+ TRA 198202 CLOR-                          3POLPOLBiuro Pelnom. Rzadu do Spraw Wykorzyst. En. Jad.                         
+ TRA 199007 CN-                            1USACHIChicago University Metallurgical Labs Reports                            
+ TRA 198202 CNAEM-                         2TUKCNACekmece Nuclear Res. and Training Centre Reports                         
+ TRA 198202 CNEA-                          3ARGCNEComision Nacional de Energia Atomica report ser.                         
+ CIN 199406 CNEA-CAB-                      3ARGCNECentro Atomico Bariloche, internal report       *                        
+ TRA 199406 CNEA-CAB-IT                    3ARGCNECentro Atomico Bariloche, internal report       *                        
+ EXT 199108 CNEN-RT/FI-                    2ITYITYCom.Naz. per l'Energia Nucleare Reports                                  
+ TRA 198911 CNIC-                          3CPRCNIChina Nucl. Information Center Reports                                   
+ TRA 198202 CONF-                          1USAUSAConference proceedings report series                                     
+ TRA                                        ===Note: Instead of the CONF- code usually a                                   
+ TRA                                           conference code is introduced (see dictionary 7                             
+ TRA                                           for conference codes)                                                       
+ TRA 198202 COO-                           1USAUSAChicago Operations Office,A.E.C.,Contract rept.                          
+ TRA 198202 CP-                            1USACHIChicago University Metallurgical Labs Reports                            
+ TRA                                        Some reports issued from Argonne National Lab.                                 
+ OBS 198202 CR-                            1CANCRC*** Code obsolete *** Use AECL-number           *                        
+ EXT 198202 CRC-                           1CANCRCNational Research Council Reports                                        
+ EXT 198202 CRGP-                          1CANCRCAECL  .                                                                  
+ EXT                                        Use AECL- numbers                                                              
+ TRA 198202 CRNL-                          1CANCRCAECL Chalk River Reports                                                 
+ TRA 198202 CRP-                           1CANCRCAECL Chalk River Reports                                                 
+ TRA 198202 CRRP-                          1CANCRCAECL Chalk River Reports                                                 
+ TRA 198202 CRT-                           1CANCRCNatn'l Res.Council of Canada, Chalk River Repts                          
+ TRA 198202 CS-                            1USACHIChicago University Metallurgical Labs Reports                            
+ TRA 198202 CSIR-FIS-                      3SAFSIRCouncil f.Scient.and Indust.Res.,Pretoria,Repts.                         
+ TRA 199106 CTH-RF-                        2SWDCTHChalmers Univ. of Technol., Gothenburg Reports                           
+ TRA 198202 CU(PNPL)-                      1USACOLColumbia Univ. progress report                  *                        
+ TRA 198202 CU-                            1USACOLColumbia Univ. report series                                             
+ TRA 198202 CUD-                           1USACOLColumbia Univ. report series                                             
+ EXT 198202 CVAC-                          1USAUSAVultee Aircraft Corp. Reports                                            
+ EXT 198202 CWR-                           1USACUWCurtiss-Wright Corp. Reports                                             
+ EXT 198202 D2-                            1USAUSABoeing Aircraft Reports                                                  
+ TRA 198202 DASA-                          1USADODDefense Atomic Support Agency Reports                                    
+ TRA                                        ===Note: In 1972/73 replaced by DNA                                            
+ TRA 198307 DAV-                           1USADAVCrocker Nucl. Lab., U.C. at Davis Reports                                
+ EXT 198202 DC-                            1USAGEAGeneral Electric, Aircraft Nucl. Prop. Proj.                             
+ TRA 198202 DNA-                           1USAUSADefense Nuclear Agency Reports                                           
+ TRA                                        ===Note: DNA is a contracting agency, and many labs                            
+ TRA                                           publish in DNA- .                                                           
+ TRA                                        DNA- replaced DASA- in 1972/73                                                 
+ TRA 198202 DOE-                           1USAUSAU.S. Dept.of Energy Reports                                              
+ TRA 198202 DOE-ER-                        1USAUSAU.S. Dept.of Energy, Fusion Energy Series                                
+ TRA 198202 DOE-NDC-                       1USAUSAU.S. D.O.E. Nuclear Data Committee Reports                               
+ TRA 198202 DP-                            1USASRLDu Pont, Savannah River Reports                                          
+ TRA 198202 DP-MS-                         1USASRLDu Pont, Savannah River Reports                 *                        
+ OBS 198202 DUB-                           4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports                                
+ OBS                                        Use JINR-                                                                      
+ OBS 198202 DUB-E-                         4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ OBS                                        Use JINR-E-                                                                    
+ OBS 198202 DUB-P-                         4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ OBS                                        Use JINR-P-                                                                    
+ EXT 198202 EANDC(CAN)-                    2ZZZNEACanadian report to EANDC                        *                        
+ EXT 198202 EANDC(E)-                      2ZZZNEAReport from Euratom-countries + Euratom to EANDC*                        
+ EXT 198202 EANDC(J)-                      2ZZZNEAJapanese report to EANDC                        *                        
+ EXT 198202 EANDC(OR)-                     2ZZZNEAReport from misc. OECD Countries to EANDC       *                        
+ EXT 198202 EANDC(UK)-                     2ZZZNEAU.K. report to EANDC                            *                        
+ EXT 198202 EANDC(US)-                     2ZZZNEAU.S. report to EANDC                            *                        
+ EXT 198202 EANDC-                         2ZZZNEAEuropean-American Nucl. Data Committee Documents                         
+ EXT                                       =(usually accompanied by an additional code,                                    
+ EXT                                       =e.g. EANDC(CAN); continued 1974 as NEANDC-)                                    
+ TRA 198202 ECN-                           2NEDRCNEnergy Research Foundation,Petten Reports                                
+ TRA 199610 ECN-C-                         2NEDRCNEnergy Research Foundation,Petten Reports       *                        
+ TRA 199610 ECN-R-                         2NEDRCNEnergy Research Foundation,Petten Reports       *                        
+ TRA 199108 ECN-RX-                        2NEDRCNEnergy Research Foundation,Petten Reports       *                        
+ TRA 198202 EDF-                           2FR EDFElectricite de France Reports                                            
+ TRA 198202 EDF-HX-                        2FR EDFElectricite de France Reports                   *                        
+ TRA 199303 EFI-                           4ARMARMErevanskij Fisicheskij Institut Reports                                  
+ TRA 198202 EIR-                           2SWTWUREidg.Inst.Reaktorforsch.Wuerenlingen Reports                             
+ TRA 199406 ENDF-                          1USAUSAEvaluated Nuclear Data File (ENDF) Reports                               
+ TRA 199108 ENEA/RT/IN-                    2ITYITYE.N.E.A., Area Innovazione Reports                                       
+ TRA                                        ===Note: complete code is ENEA/RT/INN-                                         
+ TRA 199108 ENEA/RT/NU-                    2ITYITYE.N.E.A., Area Nucleare Reports                                          
+ TRA                                        ==Note: complete code is ENEA/RT/NUCL-                                         
+ TRA 198202 ENICO-                         1USAACCExxon Nuclear Idaho Company Reports                                      
+ TRA 199505 EPA-                           4RUSEPAExp.Physics Inst. Arzamas Reports                                        
+ TRA 198202 EPRI-                          1USAUSAElectric Power Res. Inst., Palo Alto reports                             
+ TRA                                        ===Note: the report numbers are project numbers, so                            
+ TRA                                           different reports may appear under the same report                          
+ TRA                                           number.                                                                     
+ TRA 198202 EPRI-NP-                       1USAUSAElectric Power Res. Inst., Nuclear Phys. Series *                        
+ TRA 198202 ERDA-                          1USAUSAU.S. Energy Res. and Development Admin. Reports                          
+ TRA 198202 ERDA-NDC-                      1USAUSAU.S. E.R.D.A. Nuclear Data Committee Reports                             
+ TRA 198202 ESL-                           1USATEXUniv. of Texas technical report                                          
+ TRA 198202 EUR-                           2ZZZISPEuratom Reports                                                          
+ TRA 199303 FEI-                           4RUSFEIFiz.-Energ Institut, Obninsk Reports                                     
+ TRA 199303 FIAN-                          4RUSLEBFiz. Inst. Akad. Nauk Lebedev, Moscow Reports                            
+ TRA 198404 FIZ-KA-                        2GERIKAFachinformationszentrum Karlsruhe Reports                                
+ TRA 198202 FOA4-                          2SWDFOARes. Inst. National Defence Dept. 4 reports                              
+ TRA 198202 FOA4-A-                        2SWDFOARes. Inst. National Defence Dept. 4A Reports    *                        
+ TRA 198202 FOA4-C-                        2SWDFOARes. Inst. National Defence Dept. 4C Reports    *                        
+ TRA 200607 FOA4-D-                        2SWDFOARes. Inst. National Defence Dept. 4D Reports    *                        
+ TRA 198202 FRA-TM-                        1USAANLFRA Technical Memorandum, Argonne Nat. Lab.                              
+ TRA 198202 FRM-                           2GERMUNForschungs Reactor Muenchen Reports                                      
+ TRA 199507 FRNC-TH-                       2FR FR French non CEA Reports                                                   
+ TRA 199303 FTI-                           4RUSFTIFiz-Tech. Inst. Ioffe, Leningrad Reports                                 
+ TRA 198202 FZK-                           1USAGDTGeneral Dynamics Reports                                                 
+ TRA 200002 FZKA-                          2GERKFKForschungszentrum Karlsruhe Reports                                      
+ TRA 198202 GA-                            1USAGA General Atomic Div. Reports                                              
+ TRA 198202 GACD-                          1USAGA General Atomic Div. Reports                                              
+ TRA 198202 GAMD-                          1USAGA General Atomic Div. Reports                                              
+ TRA 198202 GEAP-                          1USAGECGeneral Electric, California Reports                                     
+ TRA 198202 GEMP-                          1USAGEAGeneral Electric, Flight Prop. Lab. Reports                              
+ TRA 199003 GKSS-                          2GERKIGGes.Kernen.-Verwertung, Schiffbau and Schiffahrt                         
+ TRA                                        Ges. fuer Kernenergie-Verwertung in Schiffbau und                              
+ TRA                                         Schiffahrt Reports                                                            
+ TRA 199003 GSI-                           2GERGSIGesellschaft fuer Schwerionenforschung Reports                           
+ TRA 200302 GSI-J-                         2GERGSIGesellschaft fuer Schwerionenforschung Reports  *                        
+ TRA 198202 GULF-                          1USAGA Gulf Radiation Technology report series                                  
+ TRA 198202 GULF-RT-                       1USAGA Gulf Radiation Technology Reports               *                        
+ TRA 198202 GULF-RT-A-                     1USAGA Gulf Radiation Technology Reports               *                        
+ TRA 198202 HASL-                          1USAHSLUSAEC Health and Safety Lab, New York Reports                            
+ TRA 198202 HEDL-TME-                      1USAHEDHanford Engineering Development Lab. Reports                             
+ TRA                                        ===Note: Series started 1971.   number includes                                
+ TRA                                           the year (HEDL-TME-71-...)                                                  
+ TRA 198307 HEW(FDA)-                      1USAUSAPublic Health Service, F.D.A. Reports                                    
+ TRA 199106 HH-                            2GERHAMHamburg Univ.,Inst.f.Experimentalphysik Reports                          
+ TRA 200805 HIMAC-                         2JPNIRSNat.Inst.of Radiological Sciences, HIMAC Reports                         
+ TRA 198202 HMI-                           2GERBERHahn-Meitner Inst., Berlin report series                                 
+ TRA 198202 HMI-B-                         2GERBERHahn-Meitner Inst., Berlin Reports              *                        
+ TRA 198202 HNS-                           1USAHNSHazleton-Nuclear Science Co. Reports                                     
+ TRA 198404 HSJ-                           3CPRAEPInst. of Atomic Energy, Beijing Reports                                  
+ EXT 198202 HW-                            1USAHANHanford Reports                                                          
+ EXT                                        now BNWL- , extinct 1965                                                       
+ EXT 198202 HW-SA-                         1USAHANHanford Reports                                 *                        
+ EXT                                        now BNWL- , extinct 1965                                                       
+ TRA 199003 IA-                            3ISLISLIsrael AEC Reports                                                       
+ TRA 199303 IAE-                           4RUSKURInst. Atomnoy Energii, Kurchatov Reports                                 
+ TRA 198202 IAEA-                          3ZZZIAEI.A.E.A. technical report, Vienna                                        
+ TRA                                       =(starting with report no. 219, the full title                                  
+ TRA                                       =of this series is now IAEA-TECDOC-)                                            
+ TRA 198202 IAEA-NDS-                      3ZZZIAENuclear Data Services (Doc. series of NDS)                               
+ TRA 198202 IAEA-R-                        3ZZZIAEI.A.E.A. Research Contract Report                                        
+ TRA 198202 IAEA-SM-                       3ZZZIAEI.A.E.A. Symposium Collection -extended synopses                         
+ TRA 200409 IAEA-TECDOC                    3ZZZIAEI.A.E.A. Technical Documents                                             
+ TRA                                        previously coded as IAEA-                                                      
+ CIN 199411 IAEA/                          3ZZZIAEI.A.E.A., Vienna, report series                                          
+ TRA 198202 IAEA/RL-                       3ZZZIAEI.A.E.A. Div. of Res. + Labs Reports            *                        
+ TRA 198202 IAEA/TA-                       3ZZZIAEI.A.E.A. Technical Assistance Reports           *                        
+ CIN 199411 IAN-                           3CLMIANInst. de Asuntos Nucleares, Bogota, reports                              
+ TRA 198202 IAN-E-                         3CLMIANInst. de Asuntos Nucleares, Bogota Reports      *                        
+ TRA 199412 IAN/E-                         4ESTESTIzvestia Estonian Akad.Nauk, Reports                                     
+ OBS 198202 IBJ-                           3POLIBJ                                                                         
+ OBS                                        Had sometimes been used for INR-                                               
+ TRA 198202 IBK-                           3YUGBKBInst. Boris Kidrich Reports                                              
+ TRA 201307 IC-                            2ZZZTPTInternat.Centre for Theoretical Physics, reports                         
+ EXT 201301 ICD-                           4RUSCJDBull. Centr po Jadernym Dannym, Obninsk                                  
+ EXT                                       =no.1 (1964) - no.6 (1969)                                                      
+ EXT                                       =continued as YK-7                                                              
+ TRA 198202 ICP-                           1USAACCAllied Chem. Corp., Idaho Chem. Programs                                 
+ TRA 200401 ICRU-                          1USAUSAInt.Comm.on Radiation Units and Meas. Reports                            
+ EXT 201003 IDO-                           1USAMTRPhilips Petroleum Co., Idaho Falls Reports                               
+ TRA 198202 IEA-                           3BZLIEAInst. de Energia Atomica, Sao Paulo, Reports                             
+ TRA 198202 IEA-INF-                       3BZLIEAInst. de Energia Atomica, Sao Paulo, prog. rept.*                        
+ TRA 198903 IEAV/NT-                       3BZLCTAInst. de Estudos Avancados, Technical Note                               
+ TRA 199303 IF-                            4UKRIFUAkad. Nauk Ukrainskaja, Kiev                                             
+ CIN 199411 IFA-                           3RUMBUCInst. Fis. Atomica, Romanian Acad. Sci. reports                          
+ TRA 198202 IFA-CRD-                       3RUMBUCInst. Fis. Atomica, Romanian Acad. Sci. Reports *                        
+ TRA 198202 IFA-DNBR-                      3RUMBUCInst. Fis. Atomica, Romanian Acad. Sci. Reports *                        
+ TRA 198202 IFA-DNR-                       3RUMBUCInst. Fis. Atomica, Romanian Acad. Sci. Reports *                        
+ TRA                                        Note: Sometimes the code IFA is not shown on the cover                         
+ TRA 198202 IFA-EP-                        3RUMBUCInst. Fis. Atomica, Romanian Acad. Sci. Reports *                        
+ TRA                                        Note: Sometimes the code IFA is not shown on the cover                         
+ TRA 198202 IFA-FN-                        3RUMBUCInst. Fis. Atomica, Romanian Acad. Sci. Reports *                        
+ TRA 198202 IFA-FR-                        3RUMBUCInst. Fis. Atomica, Romanian Acad. Sci. Reports *                        
+ TRA 198202 IFA-NF-                        3RUMBUCInst. Fis. Atomica, Romanian Acad. Sci. Reports *                        
+ TRA 198202 IFA-NR-                        3RUMBUCInst. Fis. Atomica, Romanian Acad. Sci. Reports *                        
+ TRA                                        Note: Codes of the form IFA-NR-33-1970 must be given                           
+ TRA                                           in Exfor as IFA-NR-33,(1970),...                                            
+ TRA 198202 IFA-R-                         3RUMBUCInst. Fis. Atomica, Romanian Acad. Sci. Reports *                        
+ TRA 198202 IFA-RN-                        3RUMBUCInst. Fis. Atomica, Romanian Acad. Sci. Reports *                        
+ TRA 198202 IFIN-NR-                       3RUMBUCInst. de Fiz. si Ing.Nucleara,Bucharest Reports                          
+ OBS 198202 IFJ-                           3POLIFJ                                                                         
+ OBS                                        Use INP-                                                                       
+ TRA 198903 IFUSP/P-                       3BZLUSPUniv. of Sao Paulo, Inst.of Phys. Reports                                
+ TRA 199303 IFVE-                          4RUSRUSInst. Fiz. Vysokikh Energij, Serpukhov Reports                           
+ TRA 198202 IIT-                           1USAIITIllinois Inst.of Technology Reports                                      
+ TRA 198202 IITRI-                         1USAIITIllinois Inst.of Technology Reports                                      
+ TRA 199303 IJAI-                          4UKRIJIInst. Yad. Issledovanii Communications,Kiev                              
+ TRA 199303 IJAI-P-                        4UKRIJIInst. Yad. Issledovanii, Kiev Reports                                    
+ TRA 199303 IJE-                           4BLRIJEInst. of Nucl. Energetics, Bjelorus. Acad. Sci.                          
+ TRA                                         report and preprints                                                          
+ TRA                                         IJE-nnn-yy  (nnn=serial no., yy=year)                                         
+ CIN 199411 IJS-                           3SLNIJSInst. Jozef Stefan, Ljubljana, reports                                   
+ TRA 199303 IJS-P-                         3SLNIJSInst. Jozef Stefan, Ljubljana Reports           *                        
+ TRA                                        Starting with IJS-P-245 6/69                                                   
+ TRA 199303 IJS-R-                         3SLNIJSInst. Jozef Stefan, Ljubljana Reports           *                        
+ TRA                                        Starting with IJS-R-560 6/69                                                   
+ TRA 198202 IKDA-                          2GERTHDInst. f. Kernphysik,Darmstadt Reports                                    
+ TRA 198202 IKE-                           2GERTHSStuttgart u. Inst. f. Kernenergetik Reports                              
+ TRA 198202 IKF-                           2GERFRKInst.fuer Kernphysik, Frankfurt Reports                                  
+ TRA 198202 IN-                            1USAMTRIdaho Nuclear Corp. Reports                                              
+ TRA 198202 INDC(ARG)-                     3ZZZIAEArgentine report to the I.N.D.C.                *                        
+ TRA 198202 INDC(AUL)-                     3ZZZIAEAustralian report to the I.N.D.C.               *                        
+ TRA 198202 INDC(AUS)-                     3ZZZIAEAustrian report to the I.N.D.C.                 *                        
+ TRA 198312 INDC(BAN)-                     3ZZZIAEBangladesh report to the I.N.D.C.               *                        
+ TRA 198202 INDC(BLG)-                     3ZZZIAEBelgian report to the I.N.D.C.                  *                        
+ TRA 199712 INDC(BLR)-                     3ZZZIAEBelorus report to the I.N.D.C.                  *                        
+ TRA 198507 INDC(BOL)-                     3ZZZIAEBolivian report to the I.N.D.C.                 *                        
+ TRA 198202 INDC(BUL)-                     3ZZZIAEBulgarian report to the I.N.D.C.                *                        
+ TRA 198202 INDC(BZL)-                     3ZZZIAEBrazilian report to the I.N.D.C.                *                        
+ TRA 198202 INDC(CAN)-                     3ZZZIAECanadian report to the I.N.D.C.                 *                        
+ TRA 198202 INDC(CCP)-                     3ZZZIAEUSSR report to the I.N.D.C.                     *                        
+ TRA 198903 INDC(CHL)-                     3ZZZIAEChile report to the I.N.D.C.                    *                        
+ TRA 198705 INDC(CPR)-                     3ZZZIAEChinese report to the I.N.D.C.                  *                        
+ EXT 199412 INDC(CSR)-                     3ZZZIAECSSR report to the I.N.D.C.                     *                        
+ TRA 200104 INDC(CUB)-                     3ZZZIAECuban report to the I.N.D.C.                    *                        
+ TRA 201612 INDC(CZR)-                     3ZZZIAECzech report to the I.N.D.C.                    *                        
+ TRA 198202 INDC(EGY)-                     3ZZZIAEEgyptian report to the I.N.D.C.                 *                        
+ TRA 198202 INDC(EUR)-                     3ZZZIAEComm. of the European Commun. report to I.N.D.C.*                        
+ TRA                                        (Formerly Euratom)                                                             
+ TRA 198202 INDC(FIN)-                     3ZZZIAEFinnish report to the I.N.D.C.                  *                        
+ TRA 198202 INDC(FR)-                      3ZZZIAEFrench report to the I.N.D.C.                   *                        
+ EXT 199412 INDC(GDR)-                     3ZZZIAEGerm.Dem.Rep.report to the I.N.D.C.             *                        
+ TRA 198307 INDC(GER)-                     3ZZZIAEFed.Rep.Germ.report to the I.N.D.C.             *                        
+ TRA 198202 INDC(HUN)-                     3ZZZIAEHungarian report to the I.N.D.C.                *                        
+ TRA 198202 INDC(IND)-                     3ZZZIAEIndian report to the I.N.D.C.                   *                        
+ TRA 198202 INDC(IRN)-                     3ZZZIAEIran report to the I.N.D.C.                     *                        
+ TRA 198202 INDC(IRQ)-                     3ZZZIAEIraq report to the I.N.D.C.                     *                        
+ TRA 198202 INDC(ISL)-                     3ZZZIAEIsrael report to the I.N.D.C.                   *                        
+ TRA 200104 INDC(ITY)-                     3ZZZIAEItalian report to the I.N.D.C.                  *                        
+ EXT 199106 INDC(JAP)-                     3ZZZIAEJapanese report to the I.N.D.C.                 *                        
+ TRA 199106 INDC(JPN)-                     3ZZZIAEJapanese report to the I.N.D.C.                 *                        
+ TRA 198202 INDC(KOR)-                     3ZZZIAEKorean report to the I.N.D.C.                   *                        
+ TRA 198705 INDC(MOR)-                     3ZZZIAEMorocco report to the I.N.D.C.                  *                        
+ TRA 198202 INDC(NDS)-                     3ZZZIAEIAEA Nucl.Data Section report to the I.N.D.C.   *                        
+ EXT 199412 INDC(NDU)-                     3ZZZIAEIAEA Nucl.Data Section report to the I.N.D.C.   *                        
+ TRA 198202 INDC(NED)-                     3ZZZIAENetherlands report to the I.N.D.C.              *                        
+ TRA 198202 INDC(NOR)-                     3ZZZIAENorwegian report to the I.N.D.C.                *                        
+ TRA 198202 INDC(PAK)-                     3ZZZIAEPakistan report to the I.N.D.C.                 *                        
+ TRA 198202 INDC(POL)-                     3ZZZIAEPolish report to the I.N.D.C.                   *                        
+ TRA 198202 INDC(ROM)-                     3ZZZIAERomanian report to the I.N.D.C.                 *                        
+ TRA                                        Before 1981, the code INDC(RUM) was used.                                      
+ EXT 199412 INDC(RUM)-                     3ZZZIAERomanian report to the I.N.D.C.                 *                        
+ TRA 198202 INDC(SAF)-                     3ZZZIAESouth-African report to the I.N.D.C.            *                        
+ TRA 200603 INDC(SEC)-                     3ZZZIAEI.N.D.C. Secretariat Report Series              *                        
+ TRA 199412 INDC(SLK)-                     3ZZZIAESlovakian report to the I.N.D.C.                *                        
+ TRA 199412 INDC(SLN)-                     3ZZZIAESlovenian report to the I.N.D.C.                *                        
+ TRA 199610 INDC(SUD)-                     3ZZZIAESudanese report to the I.N.D.C.                 *                        
+ TRA 198202 INDC(SWD)-                     3ZZZIAESwedish report to the I.N.D.C.                  *                        
+ TRA 201412 INDC(SWT)-                     3ZZZIAESwiss report to the I.N.D.C.                    *                        
+ TRA 200104 INDC(TAI)-                     3ZZZIAEThailand report to the I.N.D.C.                 *                        
+ TRA 198202 INDC(TUR)-                     3ZZZIAETurkish report to the I.N.D.C.                  *                        
+ TRA                                        Note: Some copies of INDC(TUR)-3 are erroneously                               
+ TRA                                         labelled as INDC(TUK)-3                                                       
+ TRA 198202 INDC(UK)-                      3ZZZIAEU.K. report to the I.N.D.C.                     *                        
+ TRA 199712 INDC(UKR)-                     3ZZZIAEUkrainian report to the I.N.D.C.                *                        
+ OBS 198202 INDC(US)-                      3ZZZIAE                                                *                        
+ OBS                                        Use INDC(USA) although some issues have INDC(US)- on                           
+ OBS                                         their covers                                                                  
+ TRA 198202 INDC(USA)-                     3ZZZIAEU.S. report to the I.N.D.C.                     *                        
+ TRA 198408 INDC(VN)-                      3ZZZIAEVietnam report to the I.N.D.C.                  *                        
+ TRA 198202 INDC(YUG)-                     3ZZZIAEYugoslavian report to the I.N.D.C.              *                        
+ TRA 198202 INDC-                          3ZZZIAEInternational Nucl. Data Committee report series                         
+ TRA                                       =(usually accompanied by an additional code,                                    
+ TRA                                       =e.g.,INDC(NDS))                                                                
+ TRA                                        Nr.1(1971)-15(1973) and Nr.156(1967)-274(1969)                                 
+ TRA                                        Then continued in a number of subseries                                        
+ TRA                                        Note: /G /L /U etc. are distribution-codes which                               
+ TRA                                         should be ignored.                                                            
+ TRA                                        'E' following the report number distinguishes an                               
+ TRA                                         English translation from its original.                                        
+ EXT 199412 INDSWG-                        3ZZZIAEInt. Nuclear Data Sci. Working Group Reports                             
+ EXT                                        Nr.1(1962)-155(1967),continued as INDC-.                                       
+ EXT                                        'E' following the report no. distinguishes an                                  
+ EXT                                        English translation from its original.                                         
+ TRA 198202 INER-                          3CHFSHIInst. of Nucl.Energy Research Reports                                    
+ TRA 201301 INFN/BE-                       2ITYGVAINFN Reports / Low Energy Physics Series                                 
+ TRA                                        (Fisica di Bassa Energia)                                                      
+ TRA 201304 INFN/TC-                       2ITYITYINFN Reports / Various Techniques Series                                 
+ TRA                                        (Tecniche varie)                                                               
+ TRA 199303 INIS-MF-                       3ZZZIAEINIS microfiche                                                          
+ TRA                                        Identification assigned by IAEA to documents received                          
+ TRA                                         without report code.                                                          
+ TRA 199303 INIS-SU-                       3ZZZIAEINIS Reports                                                             
+ TRA                                        Identification assigned by Atom-Inform to documents                            
+ TRA                                         received without report code.                                                 
+ TRA 198202 INP-                           3POLIFJInst. Fiz. Jadr. (Nucl.Phys.), Krakow Reports                            
+ TRA                                        Note: On the covers of this series one finds                                   
+ TRA                                         sometimes INP-..., sometimes IFJ-..., but                                     
+ TRA                                         often a report number without a report code.                                  
+ TRA                                         Some were indexed in NSA as PAN-(Pol.Ak.Nauk).                                
+ TRA                                         Omit characters behind report number                                          
+ TRA                                         Example: INP-543 instead of INP-543/PL                                        
+ TRA 198202 INR-                           3POLIBJInst.Badan Jadr.(Nucl.Res.),Swierk+Warsaw,Repts                          
+ TRA                                        Note: On the covers of this series one sometimes                               
+ TRA                                         finds INR-..., sometimes IBJ-..., but often a                                 
+ TRA                                         report number without a report code.                                          
+ TRA                                        Some were indexed in NSA as PAN-(Pol.Ak.Nauk).                                 
+ TRA                                        Characters behind report number should not be omitted.                         
+ TRA                                         Example: INR-1461/I/PL/A  and  INR-1461/I/PL/B are two                        
+ TRA                                         different documents with no relation to each other.                           
+ TRA 198202 INR-FIA-                       3POLIBJInst. Badan Jadr., Swierk+Warsaw Reports        *                        
+ TRA 198202 INS-                           3NZLNZHInst.of Nuclear Sciences, Progress Reports                               
+ EXT 200603 INS-J-                         2JPNTOKUniv.Tokyo, Inst.for Nucl.Study, Reports                                 
+ EXT                                        Extinct March 1997 due to close of inst.                                       
+ EXT                                        Last issue: INS-J-186                                                          
+ TRA 198202 INTEL-RT-                      1USAIRTIntelcom Radiation Technology Reports           *                        
+ CIN 199411 INTELRT-                       1USAIRTIntelcom Radiation Technology reports                                    
+ TRA 198202 IPEN-                          3BZLIPEInst.de Pesquisas Energ.e Nucl.,Sao Paulo,Repts                          
+ TRA 198202 IPF-SP-                        2SWTFRSInst.de Phys., U. de Fribourg, Physics Series                            
+ TRA 201307 IPNO-PHN-                      2FR PARInst. de Phys. Nucl. Orsay Reports (Nucl.Phys.)                          
+ TRA 201307 IPNO-RC-                       2FR PARInst. de Phys. Nucl. Orsay Reports (Radiochem.)                          
+ TRA 201307 IPNO-TH-                       2FR PARInst. de Physique Nucleaire Orsay thesis                                 
+ TRA 199412 IPPCZ-                         3CZRCZACzechoslovak A.S. Plasma Physics Reports, Prague                         
+ TRA 198610 IRK-PR-                        2AUSIRKInst. f. Radiumforschung Progress Report                                 
+ TRA                                        No report code shown on document                                               
+ TRA 200002 IRMM-                          2ZZZGELInst. of Ref.Materials and Meas. Repts., Geel                            
+ TRA 200209 IRMM-R-                        2ZZZGELInst. of Ref.Materials and Meas. Repts., Geel                            
+ TRA 198312 IRNE-                          3RUMPITInst. Nuclear Power Reactors Reports                                     
+ TRA 198202 IRT-                           1USAIRTIntelcom Radiation Technology Reports                                    
+ TRA 198202 IS-                            1USAIOWIowa State Univ. Reports                                                 
+ TRA 198202 IS-T-                          1USAIOWIowa State Univ., thesis                                                 
+ TRA 198202 IS/P-                          1USABNLBrookhaven National Laboratory Reports                                   
+ TRA 200611 ISINN-                         4ZZZDUBInt.Sem.on Interactions of Neutrons with Nuclei                          
+ TRA                                        Proceedings of annual meeting held in Dubna                                    
+ TRA 198202 ISN-                           2FR GREU. de Grenoble, Inst. des Sciences Nucl. reports                         
+ TRA 198202 ISN-TS-                        2FR GREU. de Grenoble, Inst. des Sciences Nucl. reports*                        
+ TRA 200302 ISTC-                          4RUSRUSInternat.Science and Technology Center, Reports                          
+ OBS 199303 ITE-                           4RUSITEInst. Teoret. i Experiment. Fiziki, Moscow Repts                         
+ OBS                                        Use ITEF-                                                                      
+ TRA 199303 ITEF-                          4RUSITEInst. Teoret. i Experiment. Fiziki, Moscow Repts                         
+ TRA 199805 IYFK-P-                        4KASKAZInst. Nucl.Phys., Alma-Ata, preprints                                    
+ TRA 201311 JAEA-C-                        2JPNJAEJAEA Conference proceedings                     *                        
+ TRA                                        Complete code is JAEA-Conf-                                                    
+ TRA 201311 JAEA-R-                        2JPNJAEJAEA Research Reports                           *                        
+ TRA                                        Complete code is JAEA-Research-                                                
+ EXT 200603 JAERI-                         2JPNJAEJAERI Reports                                                            
+ EXT                                        Extinct. Last issue: JAERI-1348                                                
+ EXT 201311 JAERI-C-                       2JPNJAEJAERI Conference proceedings                    *                        
+ EXT                                        Complete code is JAERI-Conf-                                                   
+ EXT                                        Extinct. Last issue: JAERI-Conf-2005-12                                        
+ EXT 200603 JAERI-D-                       2JPNJAEJAERI Data collection / Computer code reports   *                        
+ EXT                                        Complete code is JAERI-Data/Code                                               
+ EXT                                        Extinct. Last issue: JAERI-Data/Code-2005-10                                   
+ EXT 200603 JAERI-M-                       2JPNJAEJAERI-M Reports                                 *                        
+ EXT                                        Extinct in 1994, continued as -C, -D, -R                                       
+ EXT                                        Last issue: JAERI-M-94-082                                                     
+ EXT 200603 JAERI-MEMO-                    2JPNJAEJAERI-Memo Reports                              *                        
+ EXT                                        In 1972 split into JAERI memo (unpublished) and                                
+ EXT                                        JAERI-M (published)                                                            
+ EXT                                        Extinct. Last issue: JAERI-MEMO-14-006                                         
+ EXT 200603 JAERI-R-                       2JPNJAEJAERI Research Reports                          *                        
+ EXT                                        Complete code is JAERI-Research                                                
+ EXT                                        Extinct. Last issue: JAERI-Research-2005-30                                    
+ TRA 198202 JEN-                           2SPNJNEJunta de Energia Nuclear Reports                                         
+ EXT 198202 JENER-                         2NORKJLJoint Establ. Nucl. Res., Kjeller Reports                                
+ TRA 201007 JIA-                           4RUSJIAInst. Nucl. Res., Russian Acad. Sci. Preprint   *                        
+ TRA 198202 JINR-                          4ZZZDUBJoint Inst. for Nucl. Res., Dubna, reports                               
+ TRA                                        Note: the 4-digits report number is unique, the                                
+ TRA                                         symbols between JINR and number can be omitted.                               
+ TRA                                         They mean P=Russian, E=English, D=Engl+Russian.                               
+ TRA                                         The digit following this character denotes the                                
+ TRA                                         subject category, e.g.                                                        
+ TRA                                           3 = low-energy experimental physics                                         
+ TRA                                           4 = low-energy theoretical physics                                          
+ TRA                                          15 = exp'tl phys.of nucl.reactions at low en.                                
+ TRA 198202 JINR-D-                        4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ TRA 200002 JINR-D15-                      4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ TRA 198202 JINR-D3-                       4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ TRA 200302 JINR-D6-                       4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ TRA 198202 JINR-D7-                       4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ TRA 198202 JINR-E-                        4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ TRA 200204 JINR-E1-                       4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ TRA 198202 JINR-E15-                      4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ TRA 199807 JINR-E3-                       4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ TRA 200302 JINR-E4-                       4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ TRA 198202 JINR-E7-                       4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ TRA 198202 JINR-P-                        4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ TRA 198312 JINR-P1-                       4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ TRA 200209 JINR-P10-                      4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ TRA 199807 JINR-P11-                      4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ TRA 200302 JINR-P12-                      4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ TRA 199807 JINR-P13-                      4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ TRA 200305 JINR-P14-                      4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ TRA 198202 JINR-P15-                      4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ TRA 198202 JINR-P2-                       4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ TRA 198202 JINR-P3-                       4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ TRA 198202 JINR-P4-                       4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ TRA 198202 JINR-P6-                       4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ TRA 198202 JINR-P7-                       4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports       *                        
+ TRA 198202 JU-RR-                         2SF JYVUniv. of Jyvaeskylae, Dept.of Physics Reports                            
+ TRA 198202 JUEL-                          2GERJULKernforschungsanlage, Juelich, report series                             
+ TRA 198202 JUEL-SPEZ-                     2GERJULKernforschungsanlage Juelich, Progress Report   *                        
+ TRA 200302 KAERI/GP-                      3KORKAEKorean Atomic Energy Research Inst. Reports                              
+ TRA 198202 KAPL-                          1USAKAPKnolls Atomic Power Lab. report series                                   
+ TRA 198202 KAPL-M-                        1USAKAPKnolls Atomic Power Lab. Reports                *                        
+ TRA 198202 KAPL-M-ECH-                    1USAKAPKnolls Atomic Power Lab. Reports                *                        
+ TRA 198202 KAPL-M-EFC-                    1USAKAPKnolls Atomic Power Lab. Reports                *                        
+ TRA 198202 KAPL-M-JBN-                    1USAKAPKnolls Atomic Power Lab. Reports                *                        
+ TRA 198202 KAPL-P-                        1USAKAPKnolls Atomic Power Lab. Reports                *                        
+ TRA 198202 KAPL/CSNL-                     1USAKAPKnolls At. Power Lab. Cross-Section Newsletter                           
+ TRA 198202 KDK-                           2SWDSWDSwedish Nuclear Data Committee Reports                                   
+ TRA 198202 KFK-                           2GERKFKKernforschungszentrum Karlsruhe Reports                                  
+ TRA 198202 KFK-EXT-                       2GERKFKKernforschungszentrum Karlsruhe Reports         *                        
+ TRA 198202 KFK-TR-                        2GERKFKKernforschungszentrum Karlsruhe translation ser.                         
+ TRA 198202 KFKI-                          3HUNKFICentral Research Inst. of Physics Reports                                
+ TRA                                        Hungarian Academy of Sciences                                                  
+ TRA                                        ===Note: Subject codes appended to the report number                           
+ TRA                                           (e.g., KFKI-1989-02/G) may be omitted.                                      
+ TRA                                           (KFKI-1989-02 is sufficient for unique reference).                          
+ TRA 198202 KFKI-YB-                       3HUNKFIKFKI Yearbook (progress-report)                                          
+ TRA 199303 KHFTI-                         4UKRUFTUkrainsk. Fiz. Tekhn. Inst. Reports                                      
+ TRA                                        Until 1968 no report code was printed on the cover                             
+ TRA                                         but only a number.                                                            
+ TRA                                        Starting 1969 the report codes have the form                                   
+ TRA                                         KHFTI-69-1 which is coded KHFTI-69/1                                          
+ TRA 199303 KIYAI-                         4UKRIJIInst. Yad. Issledovanii, Kiev Reports                                    
+ TRA 198202 KR-                            2NORKJLInst. for Atomenergi, Kjeller Reports                                    
+ TRA 199303 KUR-                           4RUSKUR                                                                         
+ TRA                                        Had been used for  IAE-                                                        
+ CIN 200809 KURRI-                         2JPNKTOKyoto Univ.,Res.Reactor Inst., Reports          *                        
+ TRA 198404 KURRI-AR-                      2JPNKTOKyoto Univ.,Res.Reactor Inst., Annual Report                             
+ TRA 198404 KURRI-TR-                      2JPNKTOKyoto-Univ.,Res.Reactor Inst., Tech. Report                              
+ TRA                                        In Japanese with English abstracts                                             
+ TRA 198202 LA-                            1USALASLos Alamos Scientific Lab. Reports                                       
+ TRA 198202 LA-DC-                         1USALASLos Alamos Scientific Lab. Reports              *                        
+ TRA 198202 LA-TR-                         1USALASLos Alamos Scientific Lab. translations                                  
+ TRA 198202 LA-UR-                         1USALASLos Alamos Scientific Lab. Reports              *                        
+ TRA 198202 LADC-                          1USALASLos Alamos Scientific lab. Reports                                       
+ TRA 199303 LAFI-                          4LATIFLInst. Fiziki Latvijskoi Akad. Sci., Riga Reports                         
+ EXT 198202 LAMS-                          1USALASLos Alamos Scientific Lab. Reports                                       
+ EXT                                        extinct Sept. 1964                                                             
+ TRA 198202 LAP-                           1USACALCalif. Inst. of Technology Lemon Aid Preprints                           
+ TRA 198202 LBL-                           1USALBLLawrence Berkeley Lab. Reports                                           
+ TRA 198202 LFF-                           2SWDSWDSwedish Reports                                                          
+ CIN 199411 LIB/TRAN-                      3AULAULAustralia Translation                           *                        
+ TRA 199003 LIB/TRANS-                     3AULAULAustralia Translation                                                    
+ TRA 199303 LIJAF-                         4RUSLINLeningrad Inst. Nucl. Phys. Reports                                      
+ TRA 198202 LMSC-                          1USALOKLockheed Aircraft Co. Reports                                            
+ TRA 198202 LMSD-                          1USALOKLockheed Aircraft Co. Reports                                            
+ TRA 199208 LNS-                           3CRORBZInst. Rudjer Boskovic Reports                                            
+ TRA 198202 LPC-                           2FR PCFLab. de Physique Corpusculaire Reports                                   
+ TRA 198202 LPC-T-                         2FR PCFLab. de Physique Corpusculaire thesis                                    
+ TRA 198202 LPN-UM-                        1CANMONUniv. of Montreal Reports                                                
+ TRA 198202 LR-                            3ARGIIAInst. Investigacion Aeronautica y Esp, Reports                           
+ EXT 198202 LRL-                           1USAUSACalif. Research and Development Co. Reports                              
+ TRA 198202 LS-                            3ISLSORSoreq Nuclear Research Center Reports                                    
+ TRA 198202 LU-NP-                         2SWDLNDLund Univ. Reports                                                       
+ TRA 198202 LUNF-D6-                       2SWDLNDLund Univ., Nuclear Physics Series                                       
+ TRA 198202 LYCEN-                         2FR LYOUniv. of Lyon Reports                                                    
+ TRA 198202 MAINZ-                         2GERMNZMainz Univ. Reports                                                      
+ TRA 198202 MC-                            1CANCANNat'l Res.Council of Canada, Montreal Labs Repts                         
+ EXT 198202 MDDC-                          1USATIDManhatten District Reports                                               
+ EXT                                        Continued as AECD-                                                             
+ TRA 198202 MF-                            2SPNJNEJunta Energia Nuclear, Madrid Reports                                    
+ TRA 199303 MIF-                           4RUSMIFMoscow Inst. of Engineering Physics Reports                              
+ TRA                                        MIF-nnn-yy (nnn=serial no.,yy=year)                                            
+ TRA 198202 MIT-                           1USAMITMassachusetts Inst. of Technology Reports                                
+ TRA 199106 MIT-LNS-PR-                    1USAMITM.I.T. Lab. of Nucl.Science progress report     *                        
+ TRA 198202 MIT-REP-                       1USAMITMassachusetts Inst. of Technology Reports       *                        
+ TRA 199007 MIT-TR-                        1USAMITMassachusetts Inst. of Technology Reports       *                        
+ TRA 198202 MITNE-                         1USAMITM.I.T. Dept.of Nuclear Engineering Reports                               
+ TRA 198202 MLM-                           1USAMNDMound Lab., Miamisburg Reports                                           
+ TRA 198202 MNC-                           1USAMRYMaryland Univ., Dept. of Nuclear Chem. Reports                           
+ TRA 198211 MOH-                           3MORMOHUniv. Mohammed V, Rabat, Annual Report                                   
+ TRA                                       =(the code MOH- was created for input and does                                  
+ TRA                                       =not show up on the cover)                                                      
+ TRA 199007 MON-N-                         1USAUSAChemistry Division Reports                                               
+ TRA 198202 MR-A-                          1USAUSAVultee Aircraft Corp., Ft.Worth Reports                                  
+ TRA 199412 MSU-INP-                       4RUSMOSMoscow State Univ.Inst.of Nucl.Phys.Reports                              
+ TRA 198202 MTR-L-                         1USAMTRIdaho Nuclear Corp. Reports                                              
+ TRA 198202 N-                             1USANASN.A.S.A. Reports                                                         
+ TRA                                        Code includes the year.  (Write N-70-..., not N70-...)                         
+ OBS 198202 N70-                           1USANAS*** Code obsolete ***  Write N-70-                                       
+ CIN 199411 NAA-                           1USAAI North American Aviation report series                                    
+ TRA 198503 NAA-SR-                        1USAAI North American Aviation Reports                 *                        
+ CIN 198902 NAA-SR-M-                      1USAAI North American Aviation Reports                 *                        
+ TRA 198503 NAA-SR-MEMO                    1USAAI North American Aviation Reports                 *                        
+ TRA                                        Note: Coded in CINDA as NAA-SR-M-                                              
+ TRA 198503 NAA-SR-TDR-                    1USAAI North American Aviation Reports                 *                        
+ TRA 198202 NARF-                          1USAGDTNuclear Aerospace Research Facility Reports                              
+ TRA 198307 NAS-NRC-                       1USAUSANat. Acad. of Sci., Nat. Res. Council Reports                            
+ CIN 199411 NASA-                          1USANASN.A.S.A. Reports, TM = Technical Memo,                                   
+ CIN                                       =TN = Technical Note, TP = Technical Paper                                      
+ TRA 201612 NASA-SP-                       1USANASN.A.S.A. Special Publication                    *                        
+ TRA 198911 NASA-TM-                       1USANASN.A.S.A. Technical Memo                         *                        
+ TRA 198202 NASA-TN-                       1USANASN.A.S.A. Technical Note                         *                        
+ TRA 198202 NASA-TN-D-                     1USANASN.A.S.A. Technical Note                         *                        
+ TRA 198911 NASA-TP-                       1USANASN.A.S.A. Technical Paper                        *                        
+ TRA 198202 NBS-MONO-                      1USANBSNational Bureau of Standards Monograph                                   
+ TRA 198202 NCSAC-                         1USAUSAU.S.AEC Nucl.Cross Sections Advisory Comm. Repts                         
+ EXT 198202 NDA-                           1USAUNCUnited Nuclear Corp. Reports                                             
+ TRA 198202 NDA-MEMO-                      1USAUNCUnited Nuclear Corp. Reports                    *                        
+ EXT 198202 NDA-PHYS-                      1USAUNCUnited Nuclear Corp. Reports                    *                        
+ TRA 198202 NDL-TR-                        1USANDLU.S. Army Chem.Corps. Nuclear Def. Lab. Reports                          
+ TRA 199809 NEA-NSC-                       2ZZZNEANEA Nuclear Science Committee Reports                                    
+ TRA 200110 NEACRP-L-                      2ZZZNEANEA internal report NEANDC(E)-NEACRP-L                                   
+ TRA 198202 NEANDC(CAN)                    2ZZZNEACanadian report to NEANDC                       *                        
+ TRA 198202 NEANDC(E)-                     2ZZZNEAReport from CEC-Countries and CEC to NEANDC     *                        
+ TRA 198202 NEANDC(J)-                     2ZZZNEAJapanese report to NEANDC                       *                        
+ TRA 198202 NEANDC(OR)-                    2ZZZNEAReport from misc. OECD countries to NEANDC      *                        
+ TRA 198202 NEANDC(UK)-                    2ZZZNEAU.K. report to NEANDC                           *                        
+ TRA 198202 NEANDC(US)-                    2ZZZNEAU.S. report to NEANDC                           *                        
+ TRA 198202 NEANDC-                        2ZZZNEANucl. En. Agency Nucl. Data Committee reports                            
+ TRA                                       =(started 1974 as continuation of EANDC-)                                       
+ TRA 198202 NEDO-                          1USAGECGeneral Electric, At.Power Equipm. Dept.                                 
+ EXT 200603 NETU-                          2JPNTOHTohoku Univ., Dept.of Nucl.Engineering Reports                           
+ TRA 198202 NFL-                           2SWDSWRStudsvik Science Res. Lab. Reports                                       
+ TRA 199303 NIIAR-                         4RUSNIRInst. Atomnykh Reaktorov, Melekess Reports                               
+ TRA 199303 NIIAR-P1-                      4RUSNIRInst. Atomnykh Reaktorov, Melekess Reports      *                        
+ CIN 199411 NIJS-                          3SLNIJSInst. Josef Stefan, Ljubljana, report series                             
+ TRA 199303 NIJS-P-                        3SLNIJSInst. Josef Stefan, Ljubljana Reports           *                        
+ TRA                                        Continued June 1969 as IJS-P-                                                  
+ TRA 199303 NIJS-R-                        3SLNIJSInst. Josef Stefan, Ljubljana Reports           *                        
+ TRA                                        Continued June 1969 as IJS-R-                                                  
+ TRA 200409 NISTIR-                        1USANISN.I.S.T. Report Series                                                   
+ TRA 198202 NP-                            1USATIDDiv. of Tech. Info. U.S. AEC Reports                                     
+ TRA                                        numbering of non project                                                       
+ TRA 198202 NP-TR-                         1USATIDDiv. of Tech. Info. U.S. AEC translations                                
+ OBS 198202 NPD-                           3PAKNIL                                                                         
+ OBS                                        === see  PINST-NPD-                                                            
+ TRA 198312 NPL-                           1USACLUU. Colorado, Nucl.Phys.Lab., Techn. Prog. Rept.                          
+ TRA 198202 NR/P-                          2UK ALDU.K.AEA Weapons Group,A.W.R.E. Aldermaston Rept.                         
+ TRA 198202 NRCC-                          1CANOTCNat'l Res.Council of Canada, Ottawa Reports                              
+ TRA 198202 NRCN-                          3ISLNEGBeersheva Nuclear Res. Center Negev Reports                              
+ TRA 198202 NRDC-                          2UK HARA.E.R.E. Harwell Reports                                                 
+ CIN 199411 NRITB-                         3IRQNRINuclear Res. Inst., Tuwaitha, Baghdad, reports                           
+ TRA 198202 NRITB-PH-                      3IRQNRINuclear Res. Inst., Tuwaitha, Baghdad, Reports  *                        
+ TRA 198202 NRL-                           1USANRLNaval Research Lab. Reports                                              
+ CIN 199411 NRPB-                          2UK NRPNational Radiol. Prot. Board Reports                                     
+ TRA 198206 NRPB-M-                        2UK NRPNational Radiol. Prot. Board Reports            *                        
+ TRA 198206 NRPB-R-                        2UK NRPNational Radiol. Prot. Board Reports            *                        
+ TRA 198603 NST-                           3CPRSIUInst.of Nucl.Sci.and Technol.,Sichuan U. Reports                         
+ TRA 200611 NUCL-EX-                       1USACORCornell University Web Reports                                           
+ TRA                                        Numbers on website are given as "nucl-ex/..."                                  
+ TRA 198705 NUREG/CP-                      1USAUSANuclear Regulatory Commission Reports                                    
+ TRA 198202 NYO-                           1USAUSANew York Operations Office Reports                                       
+ TRA 198202 NYO-GEN-                       1USACOLColumbia Univ. Reports                                                   
+ TRA 198202 NYO-GEN72-                     1USAUSANew York Operations Office Reports              *                        
+ TRA 198202 OAP-                           1USACALCalif. Inst. of Technology Orange Aid Preprints                          
+ OBS 198303 OAWS-                          2AUSAUS                                                                         
+ OBS                                        See journal OAW.                                                               
+ TRA 200603 OKTAV-A-                       2JPNOSAOsaka Univ., OKTAVIAN Reports                                            
+ TRA                                        Original papers and data tables                                                
+ TRA 200603 OKTAV-C-                       2JPNOSAOsaka Univ., OKTAVIAN Reports                                            
+ TRA                                        Files of publications by other organizations                                   
+ TRA 198202 ORNL-                          1USAORLOak Ridge National Lab. Reports                                          
+ EXT 198312 ORNL-CF-                       1USAORLOak Ridge National Lab. Central File Memo                                
+ EXT 201512 ORNL-CPX-                      1USAORLORNL Charged-Part.Cross-Sect.Data Center Reports                         
+ TRA 198202 ORNL-P-                        1USAORLOak Ridge National Lab. preprint                                         
+ TRA 198202 ORNL-TM-                       1USAORLOak Ridge National Lab. technical memo                                   
+ TRA 198202 ORNL-TR-                       1USAORLOak Ridge National Lab. translation                                      
+ TRA 198202 ORO-                           1USAUSAOak Ridge Operations Office, contract report                             
+ OBS 198303 P3-                            4ZZZDUBJoint Inst. for Nucl. Res., Dubna Reports                                
+ OBS                                        *** Use JINR-P3- or JINR-.                                                     
+ OBS                                        Similarly, use JINR-Codes for P15-, E3-,  etc.                                 
+ OBS 198202 PAN-                           3POLPOLPolish Academy of Sciences Reports                                       
+ OBS                                        Was used by NSA for INR- and INP-                                              
+ TRA 198202 PEL-                           3SAFPELAtomic Energy Board, Pelindaba Reports                                   
+ TRA 198202 PINST-                         3PAKNILPakistan Inst. Nucl. Sci. Tech. Reports                                  
+ TRA                                       = -  Note: original code is 'PINSTECH-'.                                        
+ TRA 198202 PINST-NPD-                     3PAKNILPakistan Inst.Nuc.Sci.Tech.,Nucl.Phys.Div.Repts                          
+ TRA                                       = -  Note: original code is 'NPD-' only.                                        
+ TRA 198202 PINST-RT-                      3PAKNILPakistan Inst. Nucl. Sci. Tech. Reports                                  
+ TRA                                       = -  Note: original Code is 'PINSTECH-RT-'.                                     
+ TRA 198202 PNE-                           1USAUSAU.S. AEC, Peaceful Nuclear Explosions series                             
+ TRA 198202 PNR-                           2FR CADCadarache Reports                                                        
+ TRA 200302 PNR/SETR-                      2FR CADCadarache Reports                                                        
+ TRA                                        Code on cover e.g. PNR/SETR 65.010                                             
+ TRA                                        to be coded as PNR/SETR-65-1OPRD/B                                             
+ TRA                                                                                                                       
+ TRA 198202 PNR/SETR-R-                    2FR CADCadarache Reports                                                        
+ TRA                                        E.g.: PNR/SETR-R-25                                                            
+ TRA                                        Code on cover (on 2 lines): PNR/SETR                                           
+ TRA                                                                    R.025                                              
+ EXT 198202 PPAR-                          1USAPTNPrinceton Pennsylvania Accelerator Reports                               
+ TRA 198202 PR-CM-                         1CANCRCAECL Chalk River Reports                                                 
+ TRA 198202 PR-CMA-                        1CANCRCAECL Chalk River Reports                                                 
+ EXT 198202 PR-P-                          1CANCRCAECL Reports                                                             
+ EXT                                        Use AECL- numbers                                                              
+ TRA 198202 PSB-BER-                       2GERKFKKernforschungszentrum Karlsruhe preprint                                 
+ CIN 199411 PTB-                           2GERPTBP.T.B., Braunschweig, reports                                            
+ TRA 198202 PTB-FMRB-                      2GERPTBP.T.B., Braunschweig Reports                    *                        
+ TRA                                        Phys.Techn.Bundesanst.,Forschungs- u.Messreaktor                               
+ TRA 199003 PTB-N-                         2GERPTBPhys.Techn.Bundesanst., Neutronenphysik Reports *                        
+ TRA 201003 PTR-                           1USAMTRPhillips Petroleum Co., Idaho Falls Reports                              
+ TRA 198202 PTUM-E-                        2GERMUNTechn. Univ. Muenchen Reports                                            
+ TRA 198202 PUC-                           1USAPTNPrinceton, Palmer Physics Lab. Reports                                   
+ TRA 198202 PWAC-                          1USAPRWPratt and Whitney Aircraft Div. Reports                                  
+ TRA 198202 RCN-                           2NEDRCNReactor Cent. Nederland, Petten Reports                                  
+ TRA 198202 RD/B/M-                        2UK CEGCentral Electricity Generating Board Reports                             
+ TRA                                        ===Note: Complete code is CEGB-RD/B/M-                                         
+ TRA 200302 RD/B/N-                        2UK CEGCentral Electricity Generating Board Reports                             
+ TRA                                        ===Note: Complete code is CEGB-RD/B/M-                                         
+ TRA 198202 RFA-                           2SWDAE Aktiebolaget Atomenergi, Stockholm Reports                               
+ TRA 198202 RFP-                           1USAUSADow Chemical Company, Rocky Flats Div. Reports                           
+ TRA 198202 RFP-TRANS-                     1USADRFDow Chemical Comp., Rocky Flats, translations                            
+ TRA 198202 RFR-                           2SWDAE Aktiebolaget Atomenergi, Stockholm Reports                               
+ TRA 199303 RI-                            4RUSRI Khlopin Radiev. Inst., Leningrad Reports                                 
+ TRA 201003 RIKEN-NC-NP                    2JPNIPCRIKEN Nishina Center: Nuclear Physics preprint                           
+ TRA 198202 RISO-                          2DENRISRISO Research Institute report series                                    
+ TRA 198202 RISO-M-                        2DENRISRISO Research Institute Reports                 *                        
+ TRA 198202 RL-                            1USALRLLawrence Radiation Lab., Berkeley Reports                                
+ TRA 198202 RLO-                           1USAUSAU.S. AEC Reports                                                         
+ TRA 198202 RPC-                           1USAUSARadioplane Co., Van Nuys, California Reports                             
+ TRA 198202 RPCC-                          1USAANLReactor Physics Constants Center Newsletter                              
+ TRA 198202 RPI-                           1USARPIRensselaer Polytechnic Inst. Reports                                     
+ TRA 198503 RPI-PR-                        1USARPIR.P.I. progress report                          *                        
+ TRA 198202 RRC-                           3INDKALReactor Research Center Kalpakkam Reports                                
+ EXT 199108 RT/FI-                         2ITYITYComitate Nazionale per l'En. Nuc. Fiz. Reports                           
+ EXT 199108 RT/FIMA-                       2ITYITYComitate Nazionale per l'En.Nuc.Fiz.Mat.Repts.                           
+ EXT 199108 RT/TIB-                        2ITYBOLENEA Dipart.Technol.Interessettor.di Base Repts                          
+ TRA 198202 S-                             2SWDAE Aktiebolaget Atomenergi, Stockholm, prog. rept.                          
+ TRA 198202 SAR-G-                         2FR GREC.E.A. Grenoble Reports                                                  
+ TRA 198202 SC-                            1USASC Sandia Corp., Albuquerque, report series                                 
+ TRA 198202 SC-R-                          1USASC Sandia Corp., Albuquerque Reports               *                        
+ TRA 198202 SC-RR-                         1USASC Sandia Corp., Albuquerque Reports               *                        
+ EXT 198202 SCR-                           1USASC Sandia Corp. Reports                                                     
+ EXT                                        Continued as SC-R-.                                                            
+ TRA 198202 SFL-A-                         2SF SF Sateilyfysiikan Laitos-Radiofys. Inst. Reports  *                        
+ TRA                                        (Inst. of Radiation Physics), Helsinki                                         
+ TRA 198202 SGAE-                          2AUSSGAOesterr. Studienges. f. Atomenergie reports                              
+ TRA 198202 SGAE-PH-                       2AUSSGAOesterr.Studienges.f.Atomen.,Physikinst., Repts                          
+ TRA 199303 SIB-                           4RUSSIBInst. Jad. Fiz., Novosibirsk Reports                                     
+ TRA                                       =(This is an invented code. The reports                                         
+ TRA                                       =have only a 'preprint'-number without a code)                                  
+ TRA 198202 STI/DOC/10-                    3ZZZIAEI.A.E.A. Technical Document Series                                       
+ TRA                                        ===Note: See also  IAEA-                                                       
+ TRA 198202 STI/PUB-                       3ZZZIAEI.A.E.A. Publications                                                    
+ TRA 198202 STI/PUB/15-                    3ZZZIAEI.A.E.A. Review Series (1959-1962)              *                        
+ TRA 198202 STI/PUB/21-                    3ZZZIAEI.A.E.A. Bibliographical Series                 *                        
+ TRA 198202 STUDSVIK-                      2SWDSWRStudsvik Science Res. Lab. Reports                                       
+ TRA 198202 SUI-                           1USAIOWIowa State Univ. Reports                                                 
+ TRA 198202 SUNI-                          3SAFSUNSouthern Universities Nuclear Inst. Reports                              
+ TRA 198202 TC-                            1USAHEDHanford Engineering Development Lab. Reports                             
+ TRA 198202 TDS-                           1CANCRCAECL Nucl.Power Plant Div. Reports                                       
+ TRA 198202 THAI-AEC-                      3TAIBANAtomic Energy for Peace, Bangkok Reports                                 
+ TRA 198202 TI-                            1USAAI Atomics Int., N. American Rockwell, Tech. Inf.                           
+ TRA 200503 TIB/FICS-                      2ITYITYENEA Dpmt. TIB / FICS Reports                                            
+ TRA                                        ENEA Dipmt. Tecnologie Intersettorali di Base /                                
+ TRA                                        Div. Fisica e Calcolo Scientifico Reports                                      
+ TRA                                        Code on cover: e.g. TIB/FICS (83) 4                                            
+ TRA 198202 TID-                           1USATIDDiv. of Tech. Info. U.S. AEC Reports                                     
+ TRA 198202 TLU-                           2SWDTLUUppsala Univ. Tandem Lab. Reports                                        
+ TRA 199303 TMO-                           4BLRTMOInst.Teplo-Massoobmena Bjeloruss.Acad.Sci.Repts                          
+ TRA                                         ===Note: This is an invented code. The reports have                           
+ TRA                                            only a 'preprint'-number without a code.                                   
+ TRA                                         English translation of TMO-2 through TMO-7 is                                 
+ TRA                                            available as report INDC(CCP)-142.                                         
+ TRA 198202 TNC-                           1USATNCTexas Nuclear Corp. Reports                                              
+ EXT 198303 TNCC(CAN)-                     1ZZZ   Tripartite Nucl. Cross Sections Comm. Reports   *                        
+ EXT 198303 TNCC(UK)-                      1ZZZ   Tripartite Nucl. Cross Sections Comm. Reports   *                        
+ EXT 198303 TNCC(US)-                      1ZZZ   Tripartite Nucl  Cross Sections Comm. Reports   *                        
+ EXT 198202 TNCC-                          1ZZZ   Tripartite Nucl. Cross Sections Comm. Reports                            
+ TRA 198202 TNSD-P-                        3ISLHFATechnion Nuclear Science Dept. Reports                                   
+ TRA 198202 TNSD-R-                        3ISLHFATechnion Nuclear Science Dept. Reports                                   
+ EXT 198202 TU-                            3DDRTUDTechnische Univ. Dresden, Reports                                        
+ TRA 198606 TUNL-                          1USATNLTriangle Univ. Nuclear Lab. annual report                                
+ TRA 198202 U/KTY-                         1USAKTYUniversity of Kentucky Reports                                           
+ EXT 198705 UARAEE-                        3EGYCAIAtomic Energy Establishment Reports                                      
+ EXT                                        Last issue nr.116 (1971). Continued as AREAEE-                                 
+ TRA 198312 UCAR-                          1USALRLU.C., Lawrence Livermore Lab., Reports                                   
+ TRA 198507 UCD-CNL-                       1USADAVCrocker Nucl. Lab., U.C. at Davis, prog.rep.                             
+ TRA 198202 UCID-                          1USALRLU.C., Lawrence Rad.Lab., Reports                                         
+ TRA 198202 UCOL-P-                        1USACLUColorado Univ. Reports                                                   
+ TRA 198202 UCRL-                          1USALRLU.C., Lawrence Rad.Lab. (Berkeley and Livermore)                         
+ TRA 200002 UCRL-ID-                       1USALRLU.C., Lawrence Rad.Lab. (Berkeley and Livermore)*                        
+ CIN 198202 UCRL-TR-                       1USALRLU.C., Lawrence Radiation Lab. translation series                         
+ TRA 198202 UCRL-TRANS-                    1USALRLU.C., Lawrence Radiation Lab. translation       *                        
+ TRA                                        ===Note: the CINDA code is UCRL-TR-                                            
+ OBS 199303 UFT-                           4UKRUFTUkrainskij Fiz. Tech. Inst. Reports                                      
+ OBS                                        Had been used for old KHFTI- report which had no                               
+ OBS                                         report code on the cover                                                      
+ TRA 198503 UILU-ENG-                      1USAUI Univ.of Illinois, Dept. of Engin. progress rept.                         
+ TRA 198202 UJF-                           3CZRUJFUstav Jad. Fyziky (Inst.Nucl.Phys.) Reports                              
+ TRA                                        Note: The series UJV- and UJF- share the same                                  
+ TRA                                         consecutive numbering such that the existence of                              
+ TRA                                         UJF-2899 excludes the existence of UJV-2899                                   
+ TRA 199412 UJV-                           3CZRUJVUstav Jad. Vyzkumu (Inst Nucl res), Reports                              
+ EXT 198202 UK/C-                          1CANCRCAECL Reports                                                             
+ EXT                                        Use AECL- numbers                                                              
+ CIN 199411 UKNDC-                         2UK UK Progress report from U.K. Nuclear Data Comm.                             
+ TRA 198202 UKNDC-P-                       2UK UK Progress report from U.K.N.D.C.                 *                        
+ TRA                                        Note: report appears as UKNDC(75)- .                                           
+ TRA 198202 UMO-                           1USAUSAUniversity Microfilms Order Number                                       
+ TRA                                       =(Theses can be ordered using this number from                                  
+ TRA                                       =University Microfilms Ltd.)                                                    
+ TRA 198202 UNC-                           1USAUNCUnited Nuclear Corp. Reports                                             
+ TRA 198202 UNIV-MI-                       1USAMHGUniversity of Michigan Reports                                           
+ TRA 198202 UPP-                           2SWDUPPUppsala Univ. Annual Report                                              
+ TRA 198202 UR-                            1USAROCUniv. of Rochester Reports                                               
+ TRA 198202 USNDC-                         1USAUSAReport to the U.S. Nuclear Data Comm.                                    
+ TRA 198202 USNRDL-                        1USANRDNaval Radiological Def. Lab. Reports                                     
+ TRA 198202 USNRDL-TR-                     1USANRDNaval Radiological Def. Lab. Reports            *                        
+ TRA 201307 UU-NF-                         2SWDUPPUppsala Univ., Neutron Physics Lab. Reports                              
+ TRA 198202 UWFDM-                         1USAWISUniv.Wisconsin Fusion Engineering Program Repts                          
+ TRA 200104 UZB-P-                         4UZ UZBInst.of Nucl.Phys., Tashkent, Uzbekistan, Repts                          
+ CIN 199411 WADC-                          1USAWADWright Air Devel. Centre report series                                   
+ TRA 198202 WADC-TN-                       1USAWADWright Air Devel. Centre Reports                *                        
+ TRA 198202 WADC-TR-                       1USAWADWright Air Devel. Centre Reports                *                        
+ TRA 198202 WADD-TR-                       1USAWADWright Air Devel. Centre Reports                *                        
+ TRA 198202 WANL-                          1USAWALWestinghouse Astro-Nuclear Lab. reports                                  
+ TRA 198202 WANL-TME-                      1USAWALWestinghouse Astro-Nuclear Lab. Reports         *                        
+ TRA 198202 WAPD-                          1USAWAPWestinghouse Atomic Power Div.(Bettis) reports                           
+ TRA 198202 WAPD-BT-                       1USAWAPWestinghouse Atomic Power Div.(Bettis) Reports  *                        
+ TRA 198202 WAPD-T-                        1USAWAPWestinghouse Atomic Power Div.(Bettis) Reports  *                        
+ TRA 198202 WAPD-TM-                       1USAWAPWestinghouse Atomic Power Div.(Bettis) Reports  *                        
+ TRA 198202 WAPD-TRANS-                    1USAWAPWestinghouse Atomic Power Div.(Bettis) Reports  *                        
+ TRA 198202 WARD-                          1USAWEWWestinghouse Advanced Reactors Division Reports                          
+ TRA 198202 WASH-                          1USAUSAWashington AEC Office Reports                                            
+ TRA                                        Often reports to NCSAG.                                                        
+ TRA 198202 WCAP-                          1USAWESWestinghouse Atomic Power Div.(Pittsburgh) Repts                         
+ TRA 198503 WL-TR-                         1USAGDTGeneral Dynamics, Fort Worth, Techn. Reports                             
+ EXT 198202 XDC-                           1USAUSAGeneral Electric Corp., Cincinnati Reports                               
+ TRA 199303 YFI-                           4RUSFEIYaderno-Fizicheskie Issledovaniya Reports                                
+ EXT 201301 YK-                            4RUSCJDYadernye Konstanty                                                       
+ EXT                                        Full title = Vopr.At.Nauki i Tekhn.,Ser.Jad.Kon                                
+ EXT                                       =no.7 (1971) - no.27 (1977)                                                     
+ EXT                                       =continues ICD-6                                                                
+ EXT                                       =continued as journal YK                                                        
+ TRA 198202 ZAED-M-                        2GERGERZentralstelle fuer Atomkernenergie-Dokum.                                
+ TRA 199412 ZFK-                           2GERZFKZentralinst. f. Kernforschung Rossendorf Reports                         
+ TRA                                        Starting with number ZFK-121 7/66 as continuation                              
+ TRA                                         of 6 ZFK- subseries as follows.                                               
+ EXT 199412 ZFK-DOS-                       3DDRROSZentralinst. f. Kernforschung Rossendorf Reports*                        
+ EXT                                        Last issue ZFK-DOS-5 7/66                                                      
+ EXT 199412 ZFK-PHA-                       3DDRROSZentralinst. f. Kernforschung Rossendorf Reports*                        
+ EXT                                        Last issue ZFK-PHA-26 1/67                                                     
+ EXT 199412 ZFK-RCH-                       3DDRROSZentralinst. f. Kernforschung Rossendorf Reports*                        
+ EXT                                        Last issue ZFK-RCH-3 D/65                                                      
+ EXT 199412 ZFK-RN-                        3DDRROSZentralinst. f. Kernforschung Rossendorf Reports*                        
+ EXT                                        Last issue ZFK-RN-33 2/66                                                      
+ EXT 199412 ZFK-TPH-                       3DDRROSZentralinst. f. Kernforschung Rossendorf Reports*                        
+ EXT                                        Last issue ZFK-TPH-23 3/66                                                     
+ EXT 199412 ZFK-WF-                        3DDRROSZentralinst. f. Kernforschung Rossendorf Reports*                        
+ EXT                                        Last issue ZFK-WF-29 5/66                                                      

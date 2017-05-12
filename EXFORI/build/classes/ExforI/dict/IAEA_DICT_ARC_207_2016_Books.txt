@@ -1,0 +1,259 @@
+ TRA 198307 ABAGJAN                        Abagjan Group Constants                              4CCPTUSAABAGJAN            
+ TRA                                       (Gruppovye Konstanty dlja Rascheta Jadernykh Reaktorov,                         
+ TRA                                       Atomizdat, Moskva, 1964. English translation:                                   
+ TRA                                       Group Constants for Nuclear Reactor Calculations,                               
+ TRA                                       Consultants Bureau, New York, 1964)                                             
+ TRA                                       Note= The English version contains some revised data.                           
+ TRA 198307 ACT.EL                         Actinide Elements                                    1USA    ACT.EL             
+ TRA                                       (The Actinide Elements, National Nuclear Energy Series,                         
+ TRA                                       Div IV, Vol 14a 1954, McGraw Hill 1954)                                         
+ TRA                                       =Editors G.T. Seaborg and J.J. Katz.                                            
+ TRA 198610 ANCIPOV                        Ancipov et al,Nucl.Data for Pu Isotopes,Minsk 1982   4CCP    ANCIPOV            
+ TRA                                       (G.V.Ancipov,V.A.Konshin,E.Sh.Sukhovickij, Yadernye                             
+ TRA                                       Konstanty dlja Isotopov Plutoniya (Nuclear Data for                             
+ TRA                                       Plutonium Isotopes), Minsk 1982, in Russian)                                    
+ TRA 198312 ANDERSEN                       H.H.Andersen,H Stopping Powers and Ranges,Pergamon 771USA    ANDERSEN           
+ TRA                                       (H.H.Andersen,J.F.Ziegler, Hydrogen Stopping Powers and                         
+ TRA                                       Ranges in All Elements, Pergamon Press, 1977.                                   
+ TRA                                       Vol.3 of Stopping Powers and Ranges of Ions in Matter)                          
+ TRA 199007 BAARD                          Baard et al.,Nuclear Data Guide,Kluwer Acad.Publ.19891USA    BAARD              
+ TRA                                       (J.H. Baard, W.L. Zijp, H.J. Nolthenius, Nuclear Data                           
+ TRA                                       Guide for Reactor Neutron Metrology, Kluwer Academic                            
+ TRA                                       Publishers for the CEC, 1989)                                                   
+ TRA                                       =(see also 'Handbooks', page I.18 ff)                                           
+ TRA 199007 BELANOVA                       Belanova et al.,Neutron Capt.Cross Sect.,Moscow 1986 4CCP    BELANOVA           
+ TRA                                       (T.S.Belanova,A.V.Ignatjuk,A.B.Pashchenko,V.I.Pljaskin,                         
+ TRA                                       Radiacionnyi Zakhvat Neitronov (Neutron Capture Cross                           
+ TRA                                       Sections), A Handbook published by Energoatomizdat,                             
+ TRA                                       Moskva, 1986, in Russian)                                                       
+ TRA 198903 BROND                          V.N.Manokhin: BROND Documentation, Obninsk 1986      4CCP    BROND              
+ TRA                                       (V.N. Manokhin, Biblioteka Rekomendovannykh Ocenennykh                          
+ TRA                                       Nejtronnykh Dannykh - Brond (USSR Evaluated Neutron                             
+ TRA                                       Data Library), Obninsk 1986, in Russian)                                        
+ TRA                                       =English translation see report INDC(CCP)-283                                   
+ TRA 201105 BROWNE                         Browne et al., Table of Radioactive Isotopes, NY 19861USA    BROWNE             
+ TRA                                       (E.Browne et al., Table of Radioactive Isotopes, 1986,                          
+ TRA                                       John Wiley & Sons, NY, USA, 1986)                                               
+ TRA 198307 BRUNE                          Activation Analysis Handbook, D.Brune                3ZZZ IAEBRUNE              
+ TRA                                       (Activation Analysis Handbook, D.Brune, IAEA Technical                          
+ TRA                                       Report 156, Vienna 1974, STI/DOC/10/156)                                        
+ TRA 201003 BYCHKOV                        Bychkov et al,Cross Sect.f.Thresh.React.,Moscow 1982 4CCP    BYCHKOV            
+ TRA                                       (V.M.Bychkov, V.N.Manokhin, A.B.Pashchenko, V.I.Pljaskin,                       
+ TRA                                       Cross-Sections for Neutron-Induced Threshold Reactions,                         
+ TRA                                       Moscow, Energoizdat 1982, in Russian)                                           
+ TRA 198903 CDFE/FIS                       Fotojad.Dannye - Fission of Heavy Nuclei,Moscow 1983 4CCP    CDFE/FIS           
+ TRA                                       (Fotojadernye Dannye (Photonuclear Data) - Fission of                           
+ TRA                                       Heavy Nuclei, Moscow State Univ., 1983)                                         
+ TRA 198911 CDFE/FIS2                      Fotojad.Dannye-Photofission of U-235,238, Moscow 19874CCP    CDFE/FIS2          
+ TRA                                       (Fotojadernye Dannye (Photonuclear Data), Photofission                          
+ TRA                                       of Uranium 235,238, Moscow State Univ. 1987)                                    
+ TRA 198903 CDFE/LI                        Fotojad.Dannye - Photodisintegr.of Li, Moscow 1984   4CCP    CDFE/LI            
+ TRA                                       (Fotojadernye Dannye (Photonuclear Data) -                                      
+ TRA                                       Photodisintegration of Lithium, Moscow State Univ.,                             
+ TRA                                       1984)                                                                           
+ TRA 198903 CDFE/LI2                       Fotojad.Dannye - Photodisint.of Li,Suppl.,Moscow 19864CCP    CDFE/LI2           
+ TRA                                       (Fotojadernye Dannye (Photonuclear Data) -                                      
+ TRA                                       Photodisintegration of Lithium, Supplement, Moscow                              
+ TRA                                       State Univ.,1986)                                                               
+ TRA 198903 CDFE/XG                        Fotojad.Dannye - Gamma,X Gamma'Reactions, Moscow 19854CCP    CDFE/XG            
+ TRA                                       (Fotojadernye Dannye (Photonuclear Data) -                                      
+ TRA                                       Gamma,X Gamma' Reactions, Moscow State Univ., 1985)                             
+ TRA 200002 DEMIDOV                        Demidov, Excited States of Nuclei, Alma Ata 1986     4CCP    DEMIDOV            
+ TRA                                       (A.M.Demidov et al., Issledovaniya Vozbuzhdennykh                               
+ TRA                                       Sostoyaniy Yader - Investigation of the Excited States                          
+ TRA                                       of Nuclei. Alma Ata, "Nauka" edition, 1986, in                                  
+ TRA                                       Russian)                                                                        
+ TRA 201003 DMITRIEV                       Dmitriev, Yields of Radionuclides, Moscow 1986       4CCP    DMITRIEV           
+ TRA                                       (P.P.Dmitriev, Vykhod Radionuklidov V Reakcijakh S                              
+ TRA                                       Protonami,Dejtronami, Al'Fa-Chasticami I Geliem-3                               
+ TRA                                        (Yields of Radionuclides from Reactions with Protons,                          
+ TRA                                       Deuterons,Alphas and He-3), Energoatomizdat,                                    
+ TRA                                       Moscow 1986, in Russian).                                                       
+ TRA                                       =English translation see INDC(CCP)-263                                          
+ TRA 198307 EXP.NUC.P.                     Experimental Nuclear Physics                         1USA    EXP.NUC.P.         
+ TRA                                       (Experimental Nuclear Physics, Edited by E.Segre,                               
+ TRA                                       Wiley, N.Y., 1959)                                                              
+ TRA 198307 FAST N.PH.                     Fast Neutron Physics                                 1USA    FAST N.PH.         
+ TRA                                       (Fast Neutron Physics, Marion and Fowler, Interscience,                         
+ TRA                                       N.Y., 1960)                                                                     
+ TRA                                       =Russian translation Fizika Bystryh Neitronov Moskva                            
+ TRA                                       =Cosatomizdat, 1963.                                                            
+ TRA 200310 FIRESTONE                      Table of Isotopes, 8th edition 1996                  1USA    FIRESTONE          
+ TRA                                       (R.B. Firestone et al., Table of Isotopes,                                      
+ TRA                                       8th edition, John Wiley and Sons, NY, USA, 1996)                                
+ TRA 198307 FRC                            Fast Reactor Cross-Sections, Pergamon 1960           1USA    FRC                
+ TRA                                       (S.Yiftah et al, Fast Reactor Cross-Sections, Int'l.                            
+ TRA                                       Series of Monographs on Nuclear Energy, Pergamon Press                          
+ TRA                                       1960)                                                                           
+ TRA 201003 GAMMAATLAS                     Atlas of Gamma-Ray Spectra, Moscow 1978              4CCP    GAMMAATLAS         
+ TRA                                       (Atlas of Gamma-Ray Spectra from the Inelastic                                  
+ TRA                                       Scattering of Reactor Fast Neutrons, Moscow, Atomizdat                          
+ TRA                                       1978)                                                                           
+ TRA                                        = INDC(CCP)-120                                                                
+ TRA 199106 GRUEBLER                       Gruebler,Reactions Induced by Deuterons, Zurich 1973 2SWT    GRUEBLER           
+ TRA                                       (Results of Measurements and Analyses of Nuclear                                
+ TRA                                       Reactions Induced by Polarized and Unpolarized                                  
+ TRA                                       Deuterons, W.Gruebler,V.Koenig,P.A.Schmelzbach,                                 
+ TRA                                       Lab.F.Kernphysik, ETH Zurich, May 1973)                                         
+ TRA 198610 GUSEV                          Gusev,Quant.Emiss.of Radionuclides,Moscow 1977       4CCP    GUSEV              
+ TRA                                       (N.G.Gusev,N.P.Dimitriev, Kvantovoe Izluchenie                                  
+ TRA                                       Radioaktivnykh Nuklidov. Moscow, Atomizdat, 1977)                               
+ TRA                                       =In Russian                                                                     
+ TRA 198610 HB.SPEC                        Handbook of Spectroscopy, Crc Press, Florida, 1981   1USA    HB.SPEC            
+ TRA                                       (Handbook of Spectroscopy, CRC Press, Florida, 1981,                            
+ TRA                                       3 vols.)                                                                        
+ TRA 198610 KONSHIN                        Konshin,Eval.of Nucl.Data for Pu-242,Minsk 1979      4CCP    KONSHIN            
+ TRA                                       (Otsenka Yadernych Dannych dlja Pu-242 v Oblasti                                
+ TRA                                       Energii Neitronov 10**E-5 eV - 15 MeV (Evaluation of                            
+ TRA                                       nuclear data for Pu-242 in the 10**E-5 eV - 15 MeV                              
+ TRA                                       neutron energy region), V. Konshin, et al., editor:                             
+ TRA                                       A.K. Krasin, Minsk 1979)                                                        
+ TRA                                       =English translation see INDC(CCP)-150(1980).                                   
+ TRA 200512 KOSYAK                         Kosyak, Study of Nucl. Excited States, Alma Ata, 19864CCP    KOSYAK             
+ TRA                                       (Yu.G.Kosyak, Izuchenie vozbuzshdennykh sostoyaniy                              
+ TRA                                       yader, ed. Dzhelepov B.S., Alma Ata, Nauka, 1986)                               
+ TRA 201003 LANDOLT                        Landolt-Boernstein, New Series, Springer             2GER    LANDOLT            
+ TRA                                       (Landolt-Boernstein, Numerical Data and Functional                              
+ TRA                                       Relationships in Science and Technology, New Series,                            
+ TRA                                       Springer Verlag)                                                                
+ TRA                                       Group I, Vol.5, part B, page 7 is coded                                         
+ TRA                                        (B,LANDOLT,I/5B,7,1973)                                                        
+ TRA 198610 LAPENAS                        Lapenas,Neutron Spect.Meas.by Activ.,Riga 1975       4CCP    LAPENAS            
+ TRA                                       (Izmerenie Spektrov Nejtronov Aktivacionnym Metodom,                            
+ TRA                                       Zinatne (Neutron Spectra Measurements by Activation                             
+ TRA                                       Techniques), Riga, USSR, 1975, in Russian)                                      
+ TRA 200908 LEDERER-6                      C.M.Lederer,Table of Isotopes, 6th Ed., 1967         1USA    LEDERER-6          
+ TRA                                       (C.M.Lederer, J.M.Hollander, I.Perlman, ed.,                                    
+ TRA                                        Table of Isotopes, 6th Ed., Wiley and Sons,                                    
+ TRA                                        1967)                                                                          
+ TRA 198312 LEDERER-7                      C.M.Lederer,Table of Isotopes,7th Ed.,1978           1USA    LEDERER-7          
+ TRA                                       (C.M.Lederer,V.S.Shirley, ed., Table of Isotopes, 7th                           
+ TRA                                       Ed., Wiley and Sons, 1978)                                                      
+ TRA 201003 LEVKOVSKIJ                     Levkovskij,Act.Cs.By Protons and Alphas,Moscow 1991  4CCP    LEVKOVSKIJ         
+ TRA                                       (V.N.Levkovskij, Sechenija Aktivacii Nuklidov Srednej                           
+ TRA                                       Massi(A=40-100) Protonami I Alfa Chasticami Srednikh                            
+ TRA                                       Energij (E=10-50 MeV) (Activation Cross Sections for                            
+ TRA                                        Medium Mass Nuclei (A=40-100) by Medium Energy Protons                         
+ TRA                                        and Alpha Particles (E=10-50 MeV)), Moscow 1991)                               
+ TRA 201307 MOLNAR                         Molnar, Handbook of Prompt Gamma Activation Analysis 2NED    MOLNAR             
+ TRA                                       (G.L.Molnar (ed.), Handbook of Prompt Gamma Activation,                         
+ TRA                                        Kluwer Academic Publishers, Dordrecht, 2004)                                   
+ TRA 201003 NEUT.RES                       Atlas of Neutron Resonances, S.F.Mughabghab, 2006    2NED    NEUT.RES           
+ TRA                                       (Atlas of Neutron Resonances - Resonance                                        
+ TRA                                        Parameters and Thermal Cross Sections -                                        
+ TRA                                        Z=1-100, S.F.Mughabghab, Elsevier, 2006)                                       
+ TRA 198312 N.REAC.DES                     Theory and Method of Nucl.Reactor Design,Moscow 1962 4CCP    N.REAC.DES         
+ TRA                                       (Theory and Method of Nucl.Reactor Design,Moscow 1962)                          
+ TRA                                       =English: see REAC.CALC                                                         
+ TRA 198312 NB.GS.COMP                     Noble Gas Compounds, Chicago Press 1963              1USA    NB.GS.COMP         
+ TRA                                       (Noble Gas Compounds, H.H.Hyman, Ed., Chicago Press                             
+ TRA                                       1963)                                                                           
+ TRA 199506 NEA-DISCR                      NEA Discrepancy File 1983                            2ZZZ NEANEA-DISCR          
+ TRA                                       (Nuclear Discrepancies 1983, the NEANDC-INDC Joint                              
+ TRA                                       Discrepancy File, OECD-NEA, 1984)                                               
+ TRA 198307 NEJTRONFIZ                     Neitronnaya Fizika, Moskva 1961                      4CCP    NEJTRONFIZ         
+ TRA                                       (Neitronnaya Fizika, P.Krupcickiy, Moscow Gosatomizdat                          
+ TRA                                       1961)                                                                           
+ TRA                                       =English translation as 'Soviet Progress in Neutron                             
+ TRA                                       =Physics' by Consultants Bureau, New York, USA                                  
+ TRA                                       =see: SPN                                                                       
+ TRA 199306 NEUT.CS 1A                     Neutron Cross Sections,Vol.1,Part A, Res.Par., 1981  1USA    NEUT.CS 1A         
+ TRA                                       (Mughabghab, et al., Neutron Cross Sections, Vol.1,                             
+ TRA                                       Res.Par. + Thermal Cross Sections, Part A, Academic                             
+ TRA                                       Press, 1981)                                                                    
+ TRA 201105 NEUT.CS 1B                     Neutron Cross Sections,Vol.1,Part B, Res.Par., 1984  1USA    NEUT.CS 1B         
+ TRA                                       (Mughabghab, Neutron Cross Sections, Vol.1,                                     
+ TRA                                       Res.Par. + Thermal Cross Sections, Part B, Academic                             
+ TRA                                       Press, 1984)                                                                    
+ TRA 199306 NEUT.CS 2                      Neutron Cross Sections,Vol.2, Curves, 1984           1USA    NEUT.CS 2          
+ TRA                                       (McLane, et al., Neutron Cross Sections, Vol.2,                                 
+ TRA                                       Curves, Academic Press, 1984)                                                   
+ OBS 198307 NEUTRDIFFR                     G.E.Bacon= Neutron Diffraction. 2nd ed, Oxford 1962  2UK     NEUTRDIFFR         
+ OBS                                       *** Schoolbook with no original work.                                           
+ TRA 199007 NIKOL84                        Nikolaev,Multigr.Approx.in Neutr.Transp.,Moskva 1984 4CCP    NIKOL84            
+ TRA                                       (M.N.Nikolaev,B.G.Rjazanov,M.M.Savoskin,A.M.Cibulja,                            
+ TRA                                       Mnogo-Gruppovoje Priblizhenije V Teorii Perenosa                                
+ TRA                                       Nejtronov (Multigroup Approximation in Neutron                                  
+ TRA                                       Transport Theory), Energoatomizdat, Moskva, 1984,                               
+ TRA                                       in Russian)                                                                     
+ TRA 201003 NIKOLAEV                       Nikolaev,Anisotr.of Elast.Scatt.Neutr.,Moscow 1972   4CCP    NIKOLAEV           
+ TRA                                       (M.N.Nikolaev,N.O.Bazazjanc, Anizotropija Uprugogo                              
+ TRA                                       Rassejanija Nejtronov (Anisotropy of Elastically                                
+ TRA                                       Scattered Neutrons), Moskva, Atomizdat 1972)                                    
+ TRA                                       =In Russian. English transl. as 'Anisotropy of Elastic                          
+ TRA                                       =Scattering of Neutrons' by A.Schett, INDC(CCP)-71 Jan                          
+ TRA                                       =1976.                                                                          
+ TRA 198903 NRLME                          Nucl.Reactions at Low and Middle Energies,Moscow 19624CCP    NRLME              
+ TRA                                       (Jadernye Reakcii Pri Nizkikh I Srednikh Energijakh                             
+ TRA                                        (Nucl.Reactions at Low and Middle Energies), Moscow                            
+ TRA                                       1962, in Russian)                                                               
+ OBS 201301 NRLMEN                         Nucl.Reactions at Low and Middle Energies,Moscow 19584CCP    NRLMEN             
+ OBS                                        Obsolete. Use J,AE/S,1957,(5) and J,SJA,1957,(5).                              
+ OBS                                       (Yadernye Reakcii Pri Nizkikh I Srednikh Energijakh                             
+ OBS                                        (Nucl.Reactions at Low and Middle Energies), Moscow                            
+ OBS                                       1958, in Russian)                                                               
+ TRA 198903 OKAMOTO                        Handbook on Nucl.Activation Data, IAEA 1987          3ZZZ IAEOKAMOTO            
+ TRA                                       (Handbook on Nuclear Activation Data, IAEA Technical                            
+ TRA                                       Report Series No.273, editor K.Okamoto, IAEA 1987)                              
+ TRA 198610 PERFILOV                       Perfilov,Nucl.React.Ind.by High En.Part.,USSR 1962   4CCP    PERFILOV           
+ TRA                                       (N.A.Perfilov, et al., Yadernye Reakcii Pod Dejstviem                           
+ TRA                                       Chastic Vysokikh Energii (Nuclear Reactions Induced by                          
+ TRA                                       High Energy Particles), Publ.by Acad.Sci.USSR,                                  
+ TRA                                       Izdatel'Stvo AN SSSR, Moskva/Leningrad 1962,                                    
+ TRA                                       in Russian)                                                                     
+ OBS 198307 PFN                            Fast Neutron Physics Conf., Houston 1963             1USA    PFN                
+ OBS                                       *** Use 63HOUSTON ***                                                           
+ TRA 198610 PH-DAT                         Physik Daten/Physics Data,Series,Karlsruhe           2GER    PHYS.DAT.          
+ TRA                                       (Physik Daten (Physics Data). Compilation Series                                
+ TRA                                       Published by Fachinformationszentrum Energie, Physik,                           
+ TRA                                       Mathematik, Karlsruhe)                                                          
+ OBS 198307 PNS                            Proc. Nucl.and Solid State Phys. Symp., India        3IND    PNS                
+ OBS                                        *** previously used for the annual Indian symposia,                            
+ OBS                                            has been replaced by the usual Conf.                                       
+ OBS                                            codes 63BOMBAY, 64CHANDGRH, etc.                                           
+ TRA 201112 PR.NUC.EN.                     Progress in Nuclear Energy Ser.1 Phys. & Mathematics 2UK     PR.NUC.EN          
+ TRA                                        Pergamon Press, 1956-1959                                                      
+ TRA                                        Vol.1 (1956): R.A.Charpie et al. (ed.)                                         
+ TRA                                        Vol.2 (1958): D.J.Hughes et al. (ed.)                                          
+ TRA                                        Vol.3 (1959): D.J.Hughes et al. (ed.)                                          
+ TRA                                         Selected articles from Conf.Proc. of 58GENEVA.                                
+ TRA                                        Started as a Journal (PNE) in 1977 with vol.1.                                 
+ TRA 198610 PROKOFJEV                      Prokofjev,Therm.Neutr.Capt.for A=143-193,Riga 1973   4CCP    PROKOFJEV          
+ TRA                                       (P.Prokofjev, et al., Spectra of Electromagnetic                                
+ TRA                                       Transitions and Level Schemes Following Thermal Neutron                         
+ TRA                                       Capture by Nuclides with A=143-193.  Riga, Publ.House                           
+ TRA                                       Zinatne, 1973, Latvija, USSR. In Russian and English.)                          
+ TRA 198903 RCS                            Radiochemical Studies, Fission Products, USA, 1951   1USA    RCS                
+ TRA                                       (Radiochemical Studies: The Fission Products, App.B,                            
+ TRA                                       National Nuclear Energy Series, Division IV  -                                  
+ TRA                                       Plutonium Record Project, Vol. 9, Books 1,2,3,                                  
+ TRA                                       McGraw-Hill, N.Y., 1951.)                                                       
+ TRA 198903 REAC.CALC.                     Maruk,Theory and Meth.of Nucl.Reactor Calc.,1964     1USATCCPREAC.CALC.         
+ TRA                                       (Theory and Methods of Nucl.Reactor Calculations,                               
+ TRA                                       Consultants Bureau, New York 1964) Translated from                              
+ TRA                                       Russian from collection of articles ed.by G.I.Marchuk,                          
+ TRA                                       Moscow 1962.  Orig.=Teoriya I Metody Rascheta Yadernyuh                         
+ TRA                                       Reaktorov                                                                       
+ TRA                                       =English of book N.REAC.DES                                                     
+ OBS 198307 RISR                           Radioisotopes in Scient.Res., UNESCO, Paris 1957     2FR     RISR               
+ OBS                                        *** use 57PARIS                                                                
+ TRA 198610 SEGRAVE                        Segrave,The Three-Body Problem,Amsterdam 1970        2NED    SEGRAVE            
+ TRA                                       (John D.Segrave, The Three-Body Problem, North-Holland,                         
+ TRA                                       Amsterdam, 1970)                                                                
+ TRA 199108 SIEGBAHN                       Siegbahn, Beta and Gamma-Ray Spectroscopy, 1955      1USA    SIEGBAHN           
+ TRA                                       (K.Siegbahn, Beta and Gamma-Ray Spectroscopy,                                   
+ TRA                                       Interscience Publ., N.Y., 1955)                                                 
+ TRA 201505 SINGH2011                      Radioisotopes-Applications in Bio-Medical Sci. 2011  3CRO    SINGH2011          
+ TRA                                       (Radioisotopes-Applications in Bio-Medical Science,                             
+ TRA                                       Nirmal Singh (ed.), InTech, Rijeka, Croatia)                                    
+ TRA                                       =ISBN:978-953-307-748-2                                                         
+ TRA 198307 SPN                            Sov.Progr.in Neutr.Phys.,New York 1961               1USATCCPSPN                
+ TRA                                       (Soviet Progress in Neutron Phys., Consultants Bureau,                          
+ TRA                                       New York 1961, Engl transl. of Nejtronnaja Fizika)                              
+ TRA                                       =(English translation: see NEJTRONFIZ)                                          
+ TRA 198307 TRANSU.EL.                     Transuranium Elements                                1USA    TRANSU.EL.         
+ TRA                                       (The Transuranium Elements, National Nuclear Energy                             
+ TRA                                       Series, Div.IV, Vol.14b, 1949)                                                  
+ TRA 199306 WAGEMANS                       Wagemans, The Nuclear Fission Process, CRC Press 19911USA    WAGEMANS           
+ TRA                                       (The Nuclear Fission Process, C.Wagemans, editor,                               
+ TRA                                       CRC Press, Boca Raton, Florida, USA, 1991)                                      

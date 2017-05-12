@@ -1,0 +1,90 @@
+ TRA 198903 ABSFY                          Absolute fission yield measurement                   FY                         
+ TRA                                        i.e., not relative to another fission yield, though                            
+ TRA                                        may be relative to a monitor cross section                                     
+ TRA 198202 ACTIV                          Activation                                                                      
+ TRA 199604 AMS                            Accelerator mass spectrometry                                                   
+ TRA 198202 ASEP                           Separation by mass-separator                                                    
+ TRA 200708 ASPEC                          Alpha spectrometry                                                              
+ TRA 201105 ASSOP                          Associated particle                                                             
+ TRA                                        for neutron flux determination                                                 
+ TRA 198202 BCINT                          Beam current integrated                                                         
+ TRA                                        Code used only if values given in the data section are                         
+ TRA                                        based on this measurement                                                      
+ TRA 198911 BGCT                           Beta-gamma coincidence technique                                                
+ TRA 199003 BSPEC                          Beta ray spectrometry                                                           
+ TRA 198202 BURN                           Burn-up                                              NEUT                       
+ TRA 198202 CADMB                          Cadmium bath                                         NEUT                       
+ TRA 200506 CHARG                          Measurements in gas discharge                                                   
+ TRA 198202 CHRFL                          Christiansen filter                                  NEUT                       
+ TRA 201412 CHSEP                          Chemical separation of products                                                 
+ TRA                                        including radiochemical separation                                             
+ TRA 198202 COINC                          Coincidence                                                                     
+ TRA 198202 DIFFR                          Diffraction                                          NEUT                       
+ TRA 201105 DSCAT                          Double scattering                                                               
+ TRA                                        for polarization determination                                                 
+ TRA 198307 EDE                            Particle identification by 'E/Delta E' measurement                              
+ TRA 198202 EDEG                           Energy degradation by foils                                                     
+ TRA                                        The projectile energy was considerably degraded before                         
+ TRA                                        hitting the target. The initial projectile energy and                          
+ TRA                                        the reference of the energy loss relation used should                          
+ TRA                                        be stated.                                                                     
+ TRA 198202 EXTB                           Irradiation with external beam                                                  
+ TRA 198903 FISCT                          Absolute fission counting                            FY                         
+ TRA                                        of the total number of fissions with a detector to                             
+ TRA                                        be specified                                                                   
+ TRA 198903 FLUX                           Neutron flux monitoring                              FY                         
+ TRA                                        by a reaction to be coded under MONITOR                                        
+ TRA 200401 FNB                            Filtered neutron beam                                                           
+ TRA 198903 FPGAM                          Direct gamma-ray spectrometry                        FY                         
+ TRA                                        of unseparated fission products                                                
+ TRA 199003 GSPEC                          Gamma ray spectrometry                                                          
+ TRA 198903 HADT                           Heavy atom difference technique                      FY                         
+ TRA                                        by mass spectrometry                                                           
+ TRA 199003 HATOM                          Hot atom method                                      FY                         
+ TRA 201105 HE-AC                          Helium accumulation method                                                      
+ TRA                                        for helium determination by vaporization and                                   
+ TRA                                        mass spectrometry                                                              
+ TRA 201105 HEJET                          Collection by He jet                                                            
+ TRA                                        for reaction product transportation                                            
+ TRA 198202 INTB                           Irradiation with internal beam                                                  
+ TRA 199809 JET                            Collection by gas jet                                                           
+ TRA 201105 LRASY                          Left-right asymmetry                                                            
+ TRA                                        for polarization determination                                                 
+ TRA 201105 MAGFR                          Magnetic field rotation                                                         
+ TRA                                        for polarized beam production                                                  
+ TRA 198202 MANGB                          Manganese bath                                       NEUT                       
+ TRA 199809 MASSP                          Mass spectrometry of a product                                                  
+ TRA 198202 MOMIX                          Mixed monitor                                                                   
+ TRA                                        Monitor and target combined as chemical compound or                            
+ TRA                                        mixture, or monitor reaction has the same target                               
+ TRA                                        nuclide as the reaction given under 'REACTION'                                 
+ TRA 198202 MOSEP                          Separate monitor foil                                                           
+ TRA 198903 OLMS                           On-line mass separation                                                         
+ TRA 198202 PHD                            Pulse-height discrimination                                                     
+ TRA 201612 PHWT                           Pulse-height weighting technique                                                
+ TRA 198202 PLSED                          Pulse die-away                                                                  
+ TRA 198202 PSD                            Pulse-shape discrimination                                                      
+ OBS 201412 RCHEM                          Radiochemical separation                             FY                         
+ OBS                                        Obsolete. Use CHSEP.                                                           
+ TRA 198202 REAC                           Reactivity measurement                               NEUT                       
+ TRA 198202 REC                            Collection of recoils                                                           
+ TRA 198202 REFL                           Total reflection from mirrors                        NEUT                       
+ TRA 198903 RELFY                          Relative fission yield measurement                   FY                         
+ TRA                                        i.e., relative to another fission yield value                                  
+ TRA 201105 RINGR                          Ring ratio method                                                               
+ TRA                                        for neutron energy determination                                               
+ TRA 198903 RVAL                           R-value measurement                                  FY                         
+ TRA                                        see LEXFOR under Fission Yields                                                
+ TRA 200002 SFLIP                          Spin flip                                                                       
+ TRA 198307 SHELT                          Shell transmission                                   NEUT                       
+ TRA 198202 SITA                           Single target irradiation                                                       
+ TRA 201105 SLODT                          Slowing-down time                                    NEUT                       
+ TRA                                        for neutron energy determination                                               
+ TRA 199610 STATD                          Statistically determined                                                        
+ TRA 198202 STTA                           Stacked target irradiation                                                      
+ TRA 200503 THERM                          Gas thermochromatographic separation                                            
+ TRA 198202 TOF                            Time-of-flight                                                                  
+ TRA 200512 TRN                            Transmission method                                                             
+ TRA 200210 TTM                            Thick-target method                                                             
+ TRA                                        for excitation function determination                                          
+ TRA 200401 XSPEC                          X-ray spectrometry                                                              

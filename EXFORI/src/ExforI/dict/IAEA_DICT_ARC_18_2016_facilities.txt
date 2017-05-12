@@ -1,0 +1,37 @@
+ TRA 200002 ACCEL                          Accelerator                                                                     
+ TRA 198202 BETAT                          Betatron                                                                        
+ TRA 198202 CCW                            Cockcroft-Walton accelerator                                                    
+ TRA 198202 CHOPF                          Fast chopper                                         NEUT                       
+ TRA 198202 CHOPS                          Slow chopper                                         NEUT                       
+ TRA 201412 CRASS                          Critical assembly                                    NEUT                       
+ TRA 198202 CYCLO                          Cyclotron                                                                       
+ TRA 198202 CYCTM                          Tandem cyclotrons                                                               
+ TRA 198202 CYGFF                          Cyclograaff                                                                     
+ TRA 198202 DYNAM                          Dynamitron                                                                      
+ TRA 199610 ESTRG                          Electron storage ring                                                           
+ TRA 200104 FNS                            Fusion neutron source                                                           
+ TRA 200209 FRS                            Fragment separator                                                              
+ TRA 198202 ICTR                           Insulated core transformer accelerator                                          
+ TRA 200409 INTFM                          Interferometer                                                                  
+ TRA 198202 ISOCY                          Isochronous cyclotron                                                           
+ TRA                                        incl. AVF-cyclotron                                                            
+ TRA 200503 LASER                          Laser system                                                                    
+ TRA 198202 LINAC                          Linear accelerator                                                              
+ TRA 198307 MESON                          Meson facility                                                                  
+ TRA 198202 MICRT                          Microtron                                                                       
+ TRA 200908 NGEN                           Neutron generator                                    NEUT                       
+ TRA                                        To be used when specific type is unknown                                       
+ TRA 199204 OLMS                           On-line mass separator                                                          
+ TRA 198202 OSCIP                          Pile oscillator                                      NEUT                       
+ TRA 200603 PRJFS                          Secondary beam from projectile fragment separator                               
+ TRA 198202 REAC                           Reactor                                              NEUT                       
+ TRA 198202 SELVE                          Velocity selector                                    NEUT                       
+ TRA 198202 SPECC                          Crystal spectrometer                                                            
+ TRA 198202 SPECD                          Double mass spectrometer                                                        
+ TRA 198202 SPECM                          Mass spectrometer                                                               
+ TRA 200405 SRING                          Storage ring                                                                    
+ TRA                                        except Electron storage ring (use ESTRG)                                       
+ TRA 198202 SYNCH                          Synchrotron                                                                     
+ TRA 198202 SYNCY                          Synchro cyclotron                                                               
+ TRA 198202 VDG                            Van de Graaff                                                                   
+ TRA 198202 VDGT                           Tandem van de Graaff                                                            
