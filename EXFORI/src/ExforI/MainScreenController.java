@@ -4889,7 +4889,7 @@ public class MainScreenController { //implements Initializable {
         //setDefaultDirExt (DICTPathDir);   // Setting the directory and extension by default
         // editor part is actually TableView and should not 
         // have sorting property        
-        lList.loadAllDict (brW);
+        // lList.loadAllDict (brW);   // testing with progressbar
 
         // loadAllDict ();  // Load all List for ComboBoxes
         manageTables ();   // Add properties to Tables
