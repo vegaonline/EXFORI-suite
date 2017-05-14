@@ -9,6 +9,7 @@ import java.io.File;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javax.swing.JFileChooser;
@@ -20,6 +21,10 @@ import javax.swing.JFileChooser;
  *         EMAIL : abhihere@protonmail.com
  */
 public class EXFORI extends Application {
+    
+    private ProgressBar bar;
+    private Stage stage1;
+    
     private Stage primStage;
     private BorderPane mainLayout;
     public Scene mainScene;
