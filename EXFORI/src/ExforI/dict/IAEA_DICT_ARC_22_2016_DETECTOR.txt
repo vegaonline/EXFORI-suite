@@ -1,0 +1,71 @@
+ TRA 200607 BAF2                           Scintillator BaF2                                                               
+ TRA 198202 BF3                            Boron Trifluoride neutron detector                   NEU                        
+ TRA 200002 BGO                            Bismuth-Germanate crystal detector                                              
+ TRA 198202 BPAIR                          Electron-pair spectrometer                           GAM                        
+ TRA 200402 BUBLC                          Bubble chamber                                                                  
+ TRA 199108 CEREN                          Cerenkov detector                                                               
+ TRA 198202 COIN                           Coincidence counter arrangement                                                 
+ TRA                                        Detectors used in coincidence follow in the form                               
+ TRA                                        (COIN,DET1,DET2). Other detectors must not be coded                            
+ TRA                                        within the same parentheses but must be coded in a                             
+ TRA                                        separate line.                                                                 
+ TRA 200204 COMPL                          Compton Polarimeter                                                             
+ TRA 198202 CSICR                          Cesium-Iodide crystal                                                           
+ TRA 198202 D4PI                           4pi detector                                                                    
+ TRA 200705 DRFTC                          Drift chamber                                                                   
+ TRA 198202 FISCH                          Fission chamber                                                                 
+ TRA 200503 GE                             Germanium detector                                   GAM                        
+ TRA                                        to be used when specific type is not known                                     
+ TRA 200111 GE-IN                          Germanium intrinsic detector                         GAM                        
+ TRA 198202 GELI                           Germanium-Lithium detector                           GAM                        
+ TRA 201505 GEMUC                          Geiger-Mueller counter                                                          
+ TRA 198202 GLASD                          Glass detector                                                                  
+ TRA 199108 HE3SP                          He-3 spectrometer                                    NEU                        
+ TRA 198202 HORBU                          Hornyak button detector                              NEU                        
+ TRA 198603 HPGE                           Hyperpure Germanium detector                         GAM                        
+ TRA 200607 IMPSI                          Passivated implanted planar Si detector                                         
+ TRA 198202 IOCH                           Ionization chamber                                                              
+ TRA 200310 LEGE                           Low energy Germanium Detector                        GAM                        
+ TRA 198202 LONGC                          Long counter                                         NEU                        
+ TRA 200902 MAGSP                          Magnetic spectrometer                                                           
+ TRA                                        or spectrograph                                                                
+ TRA 200302 MCPLT                          Microchannel plate                                                              
+ TRA 198202 MOXR                           Moxon-Rae detector                                   GAM                        
+ TRA 198202 MTANK                          Moderating tank detector                                                        
+ TRA 200002 MWDC                           Multi-wire drift chamber                                                        
+ TRA 200503 MWPC                           Multi-wire proportional counter                                                 
+ TRA 200509 MWSC                           Multi-wire spark counter                                                        
+ TRA 198202 NAICR                          Sodium-Iodide crystal                                                           
+ TRA 200002 PGAC                           Parallel-grid avalanche detector                                                
+ TRA 200209 PHVC                           Photovoltaic Cell                                                               
+ TRA 198202 PLATE                          Nuclear plates                                                                  
+ TRA 200402 PPAC                           Parallel plate avalanche counter                                                
+ TRA 198202 PROPC                          Proportional counter                                                            
+ TRA 200503 PS                             Position sensitive detector                                                     
+ TRA                                        Specific detector type follows in the form                                     
+ TRA                                        (PS,DET), e.g. (PS,MWPC). Other detectors must not                             
+ TRA                                        be coded within the same parentheses but must be                               
+ TRA                                        coded in a separate line.                                                      
+ OBS 200503 PSSCN                          Position sensitive scintillator                                                 
+ OBS 200503 PSSSD                          Position sensitive solid state detector                                         
+ TRA 198202 SCIN                           Scintillation detector                                                          
+ TRA 199809 SIBAR                          Silicon surface barrier detector                                                
+ TRA 201505 SILI                           Silicon-Lithium detector                                                        
+ TRA 201505 SI                             Silicon detector                                                                
+ TRA                                        to be used when specific type is not known                                     
+ TRA 200503 SISD                           Silicon strip detector                                                          
+ TRA 198202 SOLST                          Solid-state detector                                                            
+ TRA 201301 SPEC                           Large spectrometer system                                                       
+ TRA                                        for spectrometer which cannot be expressed by a set of                         
+ TRA                                        detector codes clearly                                                         
+ TRA 198202 STANK                          Scintillator tank                                                               
+ TRA 200503 SWPC                           Single-wire proportional counter                                                
+ TRA 198202 TELES                          Counter telescope                                                               
+ TRA                                        Detectors used may follow in the form                                          
+ TRA                                        (TELES,DET1,DET2). Other detectors used must not be                            
+ TRA                                        coded within the same parenthesis but must be coded                            
+ TRA                                        in a separate line                                                             
+ TRA 200209 TFBC                           Thin-film Breakdown Counter                                                     
+ TRA 198202 THRES                          Threshold detector                                                              
+ TRA 198202 TRD                            Track detector                                                                  
+ TRA 200310 XHPGE                          Extended range Germanium gamma detector              GAM                        

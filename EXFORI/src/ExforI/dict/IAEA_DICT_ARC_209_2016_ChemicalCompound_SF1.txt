@@ -1,0 +1,147 @@
+ OBS 198903   1-D-D2O                      D D2O  13501        C                   Heavy water                   *         
+ OBS                                        9===Obsolete, use 1-H-D2O                                                      
+ OBS 198903   1-D-DXX                      D DXX  13601        C                   Deuterium compound            *         
+ OBS                                        9===Obsolete, use 1-H-DXX                                                      
+ TRA 200908   1-H-ARM                      H ARM  13701                            Aromatic compounds            *         
+ TRA                                        9 except benzene, benzyl compounds, phenol and phenyl                          
+ TRA                                        9 compounds                                                                    
+ TRA 200305   1-H-BNZ                      H BNZ  13201        C                   Benzene, benzyl compounds     *         
+ TRA                                        9 C6-H6                                                                        
+ TRA 200305   1-H-BUT                      H BUT  14501        C                   Butane, butyl compounds       *         
+ TRA                                        9 C4-H10                                                                       
+ TRA 198307   1-H-CMP                      H CMP  13301        C                   Hydrogen compound             *         
+ TRA                                        9 except water, metal-hydrides, organic or ammonium                            
+ TRA                                        9 compound                                                                     
+ TRA 198307   1-H-CXX                      H CXX  13401        C                   Organic compound              *         
+ TRA                                        9 except BNZ, MTH, PFN, PHL, PLE                                               
+ TRA 198407   1-H-D2O                      D D2O  13501        C                   Heavy water                   *         
+ TRA 200902   1-H-DXX                      D DXX  13601        C                   Deuterium compound            *         
+ TRA                                        9 including mixed H-D compounds and excluding heavy                            
+ TRA                                        9 water and Zr-deuteride                                                       
+ TRA 200305   1-H-ETH                      H ETH  14601        C                   Ethane, ethyl compounds       *         
+ TRA                                        9 C2-H6                                                                        
+ TRA 200305   1-H-MTH                      H MTH  13801        C                   Methane, methyl compounds     *         
+ TRA                                        9 C-H4                                                                         
+ TRA 198307   1-H-PFN                      H PFN  14001        C                   Paraffin                      *         
+ TRA 200305   1-H-PHL                      H PHL  14101        C                   Phenol, phenyl compounds      *         
+ TRA                                        9 C6-H5-OH. Di-, Ter-, Poly-                                                   
+ TRA 198307   1-H-PLE                      H PLE  14201        C                   Polyethylene                  *         
+ TRA 200305   1-H-PRO                      H PRO  14701        C                   Propane, propyl compounds     *         
+ TRA                                        9 C3-H8                                                                        
+ TRA 198407   1-H-TXX                      T TXX  14301        C                   Tritium compound              *         
+ TRA                                        9 including mixed H-T or D-T compounds and excluding                           
+ TRA                                        9 Zr-tritide                                                                   
+ TRA 198307   1-H-WTR                      H WTR  14401        C                   Water, Ice, Steam             *         
+ OBS 198903   1-T-TXX                      T TXX  14301        C                   Tritium compound              *         
+ OBS                                        9===Obsolete, use 1-H-TXX                                                      
+ INT 198211   2-HE-CMP                     HECMP  23301        C                   Helium compound               *         
+ TRA 200110   3-LI-CMP                     LICMP  33301        C                   Lithium compound              *         
+ TRA 200204   4-BE-CMP                     BECMP  43301        C                   Beryllium compound            *         
+ TRA 199003   4-BE-OXI                     BEOXI  43901        C                   Beryllium oxide               *         
+ TRA 200110   5-B-CMP                      B CMP  53301        C                   Boron compound                *         
+ TRA 200110   5-B-OXI                      B OXI  53901                            Boron oxide                   *         
+ TRA 198307   6-C-CMP                      C CMP  63301        C                   Carbon compound               *         
+ TRA                                        9 except carbonates and hydro-carbons                                          
+ TRA 198307   7-N-AIR                      N AIR  73001        C                   Air                           *         
+ TRA 198307   7-N-AMM                      N AMM  73101        C                   Ammonium compound             *         
+ TRA 200603   7-N-CMP                      N CMP  73301        C                   Nitrogen compound             *         
+ TRA 200603   8-O-CMP                      O CMP  83301        C                   Oxygen compound               *         
+ TRA 200603   9-F-CMP                      F CMP  93301        C                   Fluorine compound             *         
+ TRA 200603  11-NA-CMP                     NACMP 113301        C                   Sodium compound               *         
+ TRA 200111  12-MG-CMP                     MGCMP 123301        C                   Magnesium compound            *         
+ TRA 200111  12-MG-OXI                     MGOXI 123901        C                   Magnesium compound            *         
+ TRA 200603  13-AL-CMP                     ALCMP 133301        C                   Aluminium compound            *         
+ TRA 200204  13-AL-OXI                     ALOXI 133901        C                   Aluminium Oxide               *         
+ TRA 200603  14-SI-CMP                     SICMP 143301        C                   Silicon compound              *         
+ TRA 198307  14-SI-OXI                     SIOXI 143901        C                   Silicon oxide                 *         
+ TRA                                        9 Si-O2, glass, quartz                                                         
+ TRA 200603  15-P-CMP                      P CMP 153301        C                   Phosphorus compound           *         
+ TRA 200603  16-S-CMP                      S CMP 163301        C                   Sulphur compound              *         
+ TRA 200603  17-CL-CMP                     CLCMP 173301        C                   Chlorine compound             *         
+ TRA 200603  19-K-CMP                      K CMP 193301        C                   Potassium compound            *         
+ TRA 200603  20-CA-CMP                     CACMP 203301        C                   Calcium compound              *         
+ TRA 200204  20-CA-OXI                     CAOXI 203901        C                   Calcium oxide                 *         
+ TRA 200110  22-TI-CMP                     TICMP 223301        C                   Titanium compound             *         
+ TRA 200110  22-TI-OXI                     TIOXI 223901                            Titanium oxide                *         
+ TRA 200603  23-V-CMP                      V CMP 233301        C                   Vanadium compound             *         
+ TRA 200603  24-CR-CMP                     CRCMP 243301        C                   Chromium compound             *         
+ TRA 200603  25-MN-CMP                     MNCMP 253301        C                   Manganese compound            *         
+ TRA 201605  26-FE-CMP                     FECMP 263301        C                   Iron compound                 *         
+ TRA 200110  26-FE-OXI                     FEOXI 263901                            Iron oxide                    *         
+ TRA 200110  27-CO-CMP                     COCMP 273301        C                   Cobalt compound               *         
+ TRA 200110  27-CO-OXI                     COOXI 273901                            Cobalt oxide                  *         
+ TRA 200603  28-NI-CMP                     NICMP 283301        C                   Nickel compound               *         
+ TRA 200603  29-CU-CMP                     CUCMP 293301        C                   Copper compound               *         
+ TRA 200603  30-ZN-CMP                     ZNCMP 303301        C                   Zinc compound                 *         
+ TRA 200302  32-GE-CMP                     GECMP 323301        C                   Germanium compound            *         
+ TRA 200110  32-GE-OXI                     GEOXI 323901                            Germanium oxide               *         
+ TRA 200603  33-AS-CMP                     ASCMP 333301        C                   Arsenic compound              *         
+ TRA 200611  33-AS-OXI                     ASOXI 333901        C                   Arsenic oxide                 *         
+ TRA 200603  34-SE-CMP                     SECMP 343301        C                   Selenium compound             *         
+ TRA 200603  35-BR-CMP                     BRCMP 353301        C                   Bromine compound              *         
+ TRA 200603  37-RB-CMP                     RBCMP 373301        C                   Rubidium compound             *         
+ TRA 200603  38-SR-CMP                     SRCMP 383301        C                   Strontium compound            *         
+ TRA 200603  39-Y-CMP                      Y CMP 393301        C                   Yttrium compound              *         
+ TRA 198307  40-ZR-ALY                     ZRCMP 401301        T                   Zircalloy                     *         
+ TRA 200603  40-ZR-CMP                     ZRCMP 403301        C                   Zirconium compound            *         
+ TRA 198307  40-ZR-HYD                     ZRHYD 401371        C                   Zirconium Hydride             *         
+ TRA                                        9 including deuteride and tritide                                              
+ TRA 200204  40-ZR-OXI                     ZROXI 403901        C                   Zirconium Oxide               *         
+ TRA 200603  41-NB-CMP                     NBCMP 413301        C                   Niobium compound              *         
+ TRA 200611  44-RU-CMP                     RUCMP 443301        C                   Ruthenium compound            *         
+ TRA 200611  44-RU-OXI                     RUOXI 443901        C                   Ruthenium oxide               *         
+ TRA 200611  45-RH-CMP                     RHCMP 453301        C                   Rhodium compound              *         
+ TRA 200603  46-PD-CMP                     PDCMP 463301        C                   Palladium compound            *         
+ TRA 200603  47-AG-CMP                     AGCMP 473301        C                   Silver compound               *         
+ TRA 200110  48-CD-CMP                     CDCMP 483301        C                   Cadmium compound              *         
+ TRA 198211  48-CD-OXI                     CDOXI 483901                            Cadmium oxide                 *         
+ TRA 200603  49-IN-CMP                     INCMP 493301        C                   Indium compound               *         
+ TRA 200110  50-SN-CMP                     SNCMP 503301        C                   Tin compound                  *         
+ TRA 200110  50-SN-OXI                     SNOXI 503901                            Tin oxide                     *         
+ TRA 200603  51-SB-CMP                     SBCMP 513301        C                   Antimony compound             *         
+ TRA 200110  52-TE-CMP                     TECMP 523301        C                   Tellurium compound            *         
+ TRA 200110  52-TE-OXI                     TEOXI 523901                            Tellurium oxide               *         
+ TRA 200603  53-I-CMP                      I CMP 533301        C                   Iodine compound               *         
+ TRA 200603  55-CS-CMP                     CSCMP 553301        C                   Cesium compound               *         
+ TRA 200603  56-BA-CMP                     BACMP 563301        C                   Barium compound               *         
+ TRA 200110  57-LA-CMP                     LACMP 573301        C                   Lanthanum compound            *         
+ TRA 200110  57-LA-OXI                     LAOXI 573901                            Lanthanum oxide               *         
+ TRA 200110  58-CE-CMP                     CECMP 583301        C                   Cerium compound               *         
+ TRA 200110  58-CE-OXI                     CEOXI 583901                            Cerium oxide                  *         
+ TRA 200110  59-PR-CMP                     PRCMP 593301        C                   Praseodymium compound         *         
+ TRA 200110  59-PR-OXI                     PROXI 593901                            Praseodymium oxide            *         
+ TRA 200603  60-ND-CMP                     NDCMP 593301        C                   Neodymium compound            *         
+ TRA 200603  62-SM-CMP                     SMCMP 623301        C                   Samarium compound             *         
+ TRA 200110  63-EU-CMP                     EUCMP 633301        C                   Europium compound             *         
+ TRA 200110  63-EU-OXI                     EUOXI 633901                            Europium oxide                *         
+ TRA 200110  65-TB-CMP                     TBCMP 653301        C                   Terbium compound              *         
+ TRA 200110  65-TB-OXI                     TBOXI 653901                            Terbium oxide                 *         
+ TRA 200110  66-DY-CMP                     DYCMP 663301        C                   Dysprosium compound           *         
+ TRA 200110  66-DY-OXI                     DYOXI 663901                            Dysprosium oxide              *         
+ TRA 200110  67-HO-CMP                     HOCMP 673301        C                   Holmium  compound             *         
+ TRA 200110  67-HO-OXI                     HOCMP 673901                            Holmium  oxide                *         
+ TRA 200110  68-ER-CMP                     ERCMP 683301        C                   Erbium compound               *         
+ TRA 200110  68-ER-OXI                     ERCMP 683901                            Erbium oxide                  *         
+ TRA 200603  69-TM-OXI                     TMCMP 693901                            Thulium oxide                 *         
+ TRA 200603  70-YB-CMP                     YBCMP 703301        C                   Ytterbium compound            *         
+ TRA 200603  71-LU-OXI                     LUCMP 713901                            Lutetium oxide                *         
+ TRA 200603  72-HF-CMP                     HFCMP 723301        C                   Hafnium compound              *         
+ TRA 200603  73-TA-CMP                     TACMP 733301        C                   Tantalum compound             *         
+ TRA 200603  73-TA-OXI                     TACMP 733901                            Tantalum oxide                *         
+ TRA 200603  74-W-CMP                      W CMP 743301        C                   Tungsten compound             *         
+ TRA 200603  74-W-OXI                      W CMP 743901                            Tungsten oxide                *         
+ TRA 200603  75-RE-CMP                     RECMP 753301        C                   Rhenium compound              *         
+ TRA 200603  78-PT-CMP                     PTCMP 783301        C                   Platinum compound             *         
+ TRA 200603  79-AU-CMP                     AUCMP 793301        C                   Gold compound                 *         
+ TRA 200603  80-HG-CMP                     HGCMP 803301        C                   Mercury compound              *         
+ TRA 201612  80-HG-OXI                     HGOXI 803901                            Mercury oxide                 *         
+ TRA 200603  81-TL-CMP                     TLCMP 813301        C                   Thallium compound             *         
+ TRA 200603  81-TL-OXI                     TLCMP 813901                            Thallium oxide                *         
+ TRA 200603  82-PB-CMP                     PBCMP 823301        C                   Lead compound                 *         
+ TRA 200603  83-BI-CMP                     BICMP 833301        C                   Bismuth compound              *         
+ TRA 200603  83-BI-OXI                     BICMP 833901                            Bismuth oxide                 *         
+ TRA 200603  90-TH-CMP                     THCMP 903301        C                   Thorium compound              *         
+ TRA 200603  90-TH-OXI                     THCMP 903901                            Thorium oxide                 *         
+ TRA 200603  92-U-CMP                      U CMP 923301        C                   Uranium compound              *         
+ TRA 198307  92-U-OXI                      U OXI 923901        C                   Uranium Oxide                 *         
+ TRA 200603  94-PU-CMP                     PUCMP 943301        C                   Plutonium compound            *         

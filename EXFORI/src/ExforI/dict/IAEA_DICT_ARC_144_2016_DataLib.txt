@@ -1,0 +1,114 @@
+ TRA 200902 AUSTR-DFN                      3AUL    Australian Library of Evaluated Neutron Cross                           
+ TRA                                          Sections for Fission-Product Nuclei                                          
+ TRA 200902 BENZI-DFN                      2ITY    Bologna Library of Evaluated Neutron Cross Sections                     
+ TRA                                          for Fission-Product Nuclei                                                   
+ TRA 201003 BROND-                         4RUS    Russian Recommended Evaluated Neutron Data Library                      
+ TRA                                          (BROND)                                                                      
+ TRA                                           1993 BROND-2.2                                                              
+ TRA                                           1992 BROND-2                                                                
+ TRA 201612 CENDL-                         3CPR    Chinese Evaluated Nuclear Data Library (CENDL)                          
+ TRA                                           2009 CENDL-3.1                                                              
+ TRA                                           1995 CENDL-2.1                                                              
+ TRA                                           1991 CENDL-2.0                                                              
+ TRA 200902 CNEN-CEA                       2FR 2ITYEvaluated Data Library from CNEN (Italy) - CEA                          
+ TRA                                          (France) Collaboration                                                       
+ TRA 201003 EFF-                           2ZZZ NEAEuropean Fusion File                                                    
+ TRA                                          Last version: EFF-2.4 (1994)                                                 
+ TRA                                           1994 EFF-2.4                                                                
+ TRA                                           1986 EFF-1                                                                  
+ TRA 201301 ENDF/B-                        1USA    US Evaluated Nuclear Data File (ENDF) B Library                         
+ TRA                                           2011 ENDF/B-VII.1                                                           
+ TRA                                           2006 ENDF/B-VII.0                                                           
+ TRA                                           2001 ENDF/B-VI.8                                                            
+ TRA                                           2000 ENDF/B-VI.7                                                            
+ TRA                                           1999 ENDF/B-VI.6                                                            
+ TRA                                           1998 ENDF/B-VI.5                                                            
+ TRA                                           1996 ENDF/B-VI.4                                                            
+ TRA                                           1995 ENDF/B-VI.3                                                            
+ TRA                                           1993 ENDF/B-VI.2                                                            
+ TRA                                           1990 ENDF/B-VI                                                              
+ TRA                                           1978 ENDF/B-V                                                               
+ TRA                                           1974 ENDF/B-IV                                                              
+ TRA                                           1972 ENDF/B-III                                                             
+ TRA                                           1970 ENDF/B-II                                                              
+ TRA                                           1968 ENDF/B-I                                                               
+ TRA 201003 ENDL-                          1USA    Livermore Evaluated Nuclear Data Library (ENDL)                         
+ TRA                                           1986 ENDL-86                                                                
+ TRA                                           1978 ENDL-78                                                                
+ TRA 200902 EXFOR                           ZZZ 4C EXFOR Experimental Nuclear Reaction Data Library                        
+ TRA 201003 FENDL                          3ZZZ IAEFusion Evaluated Nuclear Data Library (FENDL)                           
+ TRA                                           2004 FENDL/E-2.1  (Evaluated data for n/g transport)                        
+ TRA                                           1998 FENDL/E-2.0  (Evaluated data for n/g transport)                        
+ TRA                                           1997 FENDL/A-2.0  (Activation)                                              
+ TRA                                           1997 FENDL/D-2.0  (Decay)                                                   
+ TRA                                           1997 FENDL/DS-2.0 (Dosimetry)                                               
+ TRA                                           1997 FENDL/C-2.0  (Charged-particle fusion xs)                              
+ TRA 200902 INDL-                          3ZZZ IAEIAEA Nulear Data Library (INDL)                                         
+ TRA                                          Files included in both INDL/A and INDL/V under the same                      
+ TRA                                          accession number                                                             
+ TRA 200902 INDL/A-                        3ZZZ IAEIAEA Nuclear Data Library for evaluated neutron                         
+ TRA                                          reaction data of Actinides (INDL/A)                                          
+ TRA 200902 INDL/V-                        3ZZZ IAEIAEA Nuclear Data Library for Various neutron data                      
+ TRA                                          evaluations in ENDF/B-5 format (INDL/V)                                      
+ TRA 201003 IRDF-                          3ZZZ IAEInternational Reactor Dosimetry File (IRDF) in                          
+ TRA                                          ENDF/B-5 format                                                              
+ TRA                                           2005 IRDF-2002                                                              
+ TRA                                           1993 IRDF-90.2                                                              
+ TRA                                           1990 IRDF-90.1                                                              
+ TRA 201505 IRDFF-                         3ZZZ IAEInternational Reactor Dosimetry and Fusion File                         
+ TRA 201003 JEF-                           2ZZZ NEAJoint Evaluated File (JEF)                                              
+ TRA                                          compiled at the OECD Nuclear Energy Agency Data Bank                         
+ TRA                                          Last version: JEF-2.2 (1992)                                                 
+ TRA                                           1993 JEF-2.2                                                                
+ TRA                                           1991 JEF-2.1                                                                
+ TRA                                           1990 JEF-2.0                                                                
+ TRA                                           1985 JEF-1                                                                  
+ TRA 201301 JEFF-                          2ZZZ NEAJoint Evaluated Fission and Fusion (JEFF) Library                       
+ TRA                                          compiled at the OECD Nuclear Energy Agency Data Bank                         
+ TRA                                           2012 JEFF-3.1.2/GP (update of neutron data)                                 
+ TRA                                           2009 JEFF-3.1.1/GP (update of neutron data)                                 
+ TRA                                           2009 JEFF-3.1.1/FY (update of fission yields)                               
+ TRA                                           2007 JEFF-3.1.1/DD (update of decay data)                                   
+ TRA                                           2005 JEFF-3.1 (general and special purpose files)                           
+ TRA                                           2002 JEFF-3.0/GP (general purpose file)                                     
+ TRA 201304 JENDL-                         2JPN    Japanese Evaluated Nuclear Data Library (JENDL)                         
+ TRA                                           2010 JENDL-4.0, General Purpose File                                        
+ TRA                                           2002 JENDL-3.3, General Purpose File                                        
+ TRA                                           1994 JENDL-3.2, General Purpose File                                        
+ TRA                                           1990 JENDL-3.1, General Purpose File                                        
+ TRA                                           1985 JENDL-2 (Addition of Fission Products)                                 
+ TRA                                           1984 JENDL-2 (Revised)                                                      
+ TRA                                           1982 JENDL-2                                                                
+ TRA                                           1977 JENDL-1                                                                
+ TRA 201003 JENDL-A-                       2JPN    JENDL Activation File (JENDL/A)                                         
+ TRA                                           1996 JENDL/A-96                                                             
+ TRA 201003 JENDL-AC-                      2JPN    JENDL Actinoid File  (JENDL/AC)                                         
+ TRA                                           2008 JENDL/AC-2008                                                          
+ TRA 201003 JENDL-AN-                      2JPN    JENDL (alpha,n) Reaction Data File (JENDL/AN)                           
+ TRA                                           2005 JENDL/AN-2005                                                          
+ TRA                                           2003 JENDL/AN-2003                                                          
+ TRA 201003 JENDL-D-                       2JPN    JENDL Dosimetry File (JENDL/D)                                          
+ TRA                                           1999 JENDL/D-99                                                             
+ TRA                                           1991 JENDL/D-91                                                             
+ TRA 201301 JENDL-FP-                      2JPN    JENDL Fission Product Decay Data (JENDL/FPD)                            
+ TRA                                           2000 JENDL/FPD-2000                                                         
+ TRA 201003 JENDL-F-                       2JPN    JENDL Fusion File (JENDL/F)                                             
+ TRA                                           1999 JENDL/F-99                                                             
+ TRA 201003 JENDL-HE-                      2JPN    JENDL High Energy File (JENDL/HE)                                       
+ TRA                                           2007 JENDL/HE-2007                                                          
+ TRA                                           2004 JENDL/HE-2004                                                          
+ TRA 201003 JENDL-PD-                      2JPN    JENDL Photonuclear Data File (JENDL/PD)                                 
+ TRA                                           2004 JENDL/PD-2004                                                          
+ EXT 200902 JNDC-FFP-WG                    2JPN    Nuclear data evaluated by JNDC Fast FP WG                               
+ EXT 200902 JNDC-FP                        2JPN    JNDC nuclear data library of Fission Products                           
+ EXT                                          Decay data, fission yields and one group cross sections                      
+ EXT 200902 KEDAK-                         2GER    Karlsruhe Evaluated Nuclear Data Library (KEDAK)                        
+ TRA 200902 RCN-                           2NED    ECN, Petten, Evaluated Fission Product Cross                            
+ TRA                                          Section Library                                                              
+ EXT 200902 SOKRATOR-                      4CCP    USSR Evaluated Nuclear Data Library                                     
+ EXT                                          Superseded by BROND-2                                                        
+ TRA 201512 TENDL-                         2NED    TALYS-based Evaluated Nuclear Data Library                              
+ TRA 200902 UKFY2                          2UK     UK Fission Yield library (UKFY) version 2                               
+ TRA                                          in ENDF-6 format                                                             
+ TRA 200902 UKNDL-DFN                      2UK     United Kingdom Nuclear Data Library (UKNDL)                             
+ TRA 200902 VIEN-V                         3ZZZ IAEVarious International Evaluated Neutron data (VIEN)                     

@@ -1,0 +1,23 @@
+ TRA 198202 ABS                                    20Absorption                                                            
+ TRA 198202 EL                                     50Elastic scattering                                                    
+ TRA 198202 F                                      80Fission                                                               
+ TRA 200202 FUS                                    85Total fusion                                                          
+ TRA 198202 INL                                    60Inelastic scattering                                                  
+ TRA 198202 NON                                    30Nonelastic (= total minus elastic)                                    
+ TRA 198503 PAI                                   110Pair production                                        PHOT           
+ TRA 198202 SCT                                    40Total scattering (elastic + inelastic)                                
+ TRA 200310 TCC                                    87Total charge changing                                                 
+ TRA 198202 THS                                    70Thermal neutron scattering                                            
+ TRA                                        involving molecular and crystalline binding vibrations                         
+ TRA 198202 TOT                                    10Total                                                                 
+ TRA 198202 X                                      90Process unspecified                                                   
+ TRA                                       Examples                                                                        
+ TRA                                       - (...,X)Z-S-A = production of the product specified in                         
+ TRA                                         SF4                                                                           
+ TRA                                       - (..,P+X)Z-S-A = emission of a proton plus the product                         
+ TRA                                         specified in SF4, and of other unspecified particles                          
+ TRA                                       - (..,P+X),SEQ,... = emission of a proton followed by                           
+ TRA                                         the emission of other unspecified particles or other                          
+ TRA                                         processes.                                                                    
+ OBS 200601 XN                                    200Variable number of emitted neutrons                                   
+ OBS 200601 YP                                    210Variable number of emitted protons                                    

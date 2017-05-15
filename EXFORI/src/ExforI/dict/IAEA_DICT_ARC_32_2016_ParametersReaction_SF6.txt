@@ -1,0 +1,102 @@
+ TRA 198202 AG                                     76Symmetry coefficient                                                  
+ TRA 198202 AH                                     78Asymmetry coefficient                                                 
+ TRA 198202 AKE                                    26Average kinetic energy                                                
+ TRA 198307 ALF                                     3Alpha = capture/fission cross-section ratio                           
+ TRA 198202 AMP                                    36Scattering amplitude                                                  
+ TRA 198202 AP                                     23Most probable mass of fission-fragments                               
+ TRA 198307 ARE                                    72Resonance-area                                                        
+ OBS 200603 COR                                    32Angular correlation                                                   
+ OBS 201307 CRL                                    32Correlation                                                           
+ OBS                                       use CRN when more than two fragments are specified                              
+ TRA 198307 D                                      82Average level-spacing                                                 
+ TRA 198202 DA                                     30Differential with angle of outgoing particle                          
+ TRA 200002 DA2                                    30Double-diff. by angle (for quadruple-diff cs only)                    
+ TRA 198202 DE                                     40Differential with energy of outgoing particle                         
+ TRA 200002 DE2                                    40Double-diff. by energy (for quadruple-diff.cs only)                   
+ INT 200002 DEK                                    98Differential with kinetic energy                       RHID           
+ TRA 201612 DEN                                    33Differential with incident energy                                     
+ INT 200002 DET                                    95Differential with transverse energy                    RHID           
+ INT 200002 DMT                                    98Differential with transverse mass                      RHID           
+ OBS 200509 DN                                     46Diff.with no.of outgoing particles (comb.with SIG)                    
+ TRA 200110 DP                                     47Differential with lin.momentum of outgoing particles                  
+ INT 200002 DPR                                    99Differential with pseudo-rapidity                      RHID           
+ INT 200002 DPT                                    97Differential with transverse momentum                  RHID           
+ INT 200002 DR                                     99Differential with rapidity                             RHID           
+ TRA 200110 DT                                     48Diff.with 4-momentum transfer squared of outg.particles               
+ OBS 200607 ECO                                    44Energy correlation                                                    
+ OBS 200503 EMC                                    54Effective mass correlation                                            
+ TRA 198307 EN                                     60Resonance-energy                                                      
+ TRA 198307 ETA                                     7Average neutron yield per nonelastic event                            
+ TRA                                       for fissile isotopes                                                            
+ INT 200002 ETR                                    95Transverse energy                                      RHID           
+ TRA 198408 FM                                     35Product of polarization and cross section                             
+ TRA 198202 FY                                     20Fission-product yield                                                 
+ TRA 198202 INT                                    13Cross-section integral over incident energy                           
+ TRA                                       (from EN-MIN to EN-MAX)                                                         
+ TRA 200503 IPA                                      Cs integrated over partial angular range                              
+ TRA 200805 IPP                                      Cs integrated over partial momentum range                             
+ INT 200002 ISP                                    93Inverse slope parameter                                RHID           
+ TRA 198202 J                                      64Spin J                                                                
+ TRA                                       (resonances, strength-functions)                                                
+ TRA 198202 KE                                     24Kinetic energy                                                        
+ TRA 200305 KEM                                    27Temperature of Maxwellian distr.of outgoing particles                 
+ TRA 200305 KEP                                    25Most probable kinetic energy of outgoing particle                     
+ TRA 199007 KER                                    96Kerma factor                                                          
+ TRA 198307 L                                      62Angular momentum L                                                    
+ TRA                                       (resonances, strength-functions)                                                
+ TRA 200902 LD                                     90Level-density                                                         
+ TRA 198202 LDP                                    90Level-density parameter                                               
+ OBS 200607 MCO                                    52Linear momentum correlation                                           
+ TRA 198202 MLT                                     6Multiplicity (particle yield per event)                               
+ TRA                                       ===Note=== the special codes 'NU','ETA' for fission                             
+ TRA 198202 NU                                      5Fission-neutron yield, nu-bar                                         
+ INT 200002 PB                                     93in lead glass detector                                 RHID           
+ TRA 198202 PHS                                    80Reich-Moore phase                                                     
+ TRA 198503 PN                                     28Pn-value or delayed neutron emission probability                      
+ TRA 198202 POL                                    34Polarization                                                          
+ TRA 198202 PTY                                    66Parity                                                                
+ TRA 198307 PY                                     18Product yield                                                         
+ TRA                                       To be used in cases where neither SIG nor TTY applies.                          
+ TRA                                       Degradation of primary projectile energy within target                          
+ TRA                                       does not extend below reaction threshold. Data are thus                         
+ TRA                                       sensitive to target thickness and beam profile and are                          
+ TRA                                       not always reproducible.                                                        
+ TRA 198202 RAD                                    38Scattering radius                                                     
+ TRA 198503 RAT                                      Ratio                                                                 
+ TRA                                       (in case of isomeric ratios, TER/BIN ratios)                                    
+ TRA 198307 RED                                    70Reduced                                                               
+ TRA                                       (resonance-width)                                                               
+ TRA 198202 RI                                     14Resonance integral                                                    
+ TRA 201304 RYL                                     2Reaction yield                                                        
+ TRA 198202 SCO                                    94Spin cut-off factor                                                   
+ TRA 198202 SGV                                    15Reaction rate (sigma * velocity)                                      
+ TRA 199909 SIF                                     2Self-indication function                                              
+ TRA 198307 SIG                                     1Cross section                                                         
+ TRA                                       (Integral) cross-section for the formation of the                               
+ TRA                                       specified product nucleus or the specified reaction-                            
+ TRA                                       type (x,y)                                                                      
+ TRA 201301 SPC                                    42Intensity of discrete gamma-lines                                     
+ TRA                                       (not to be used for continuous gamma spectra)                                   
+ TRA 198307 STF                                    84Strength function                                                     
+ TRA 200001 STR                                    69Strength                                                              
+ OBS 198903 SUM                                      Sum                                                                   
+ OBS                                       (in case of isomeric sums)                                                      
+ TRA 198503 SWG                                    65Statistical weight g                                                  
+ TRA                                       (to be coded with reaction (N,0))                                               
+ TRA 198903 TEM                                    92Nuclear temperature                                                   
+ TRA 201112 TKE                                    29Total kinetic energy                                                  
+ TRA 198903 TMP                                    50Temperature-dependent quantity                                        
+ TRA                                       (not to be used with SF3 = THS)                                                 
+ TRA 201003 TRN                                     2Transmission                                                          
+ TRA 199003 TTT                                    17Thick-target yield per unit time                                      
+ TRA 198307 TTY                                    16Thick-target yield of the specified reaction product.                 
+ TRA                                       Cross-section measurement with a target thick enough to                         
+ TRA                                       degrade the primary projectile energy well below the                            
+ TRA                                       threshold of the reaction under consideration. Data are                         
+ TRA                                       not very sensitive to slight changes in target thick-                           
+ TRA                                       ness or beam properties.                                                        
+ TRA 199108 TYA                                    31Differential with respect to Treiman-Yang angle                       
+ TRA                                       (to be coded DA/TYA)                                                            
+ TRA 198307 WID                                    68Resonance width                                                       
+ INT 200902 ZCL                                    93in zero-degree calorimeter                             RHID           
+ TRA 198307 ZP                                     22Most probable charge of fission fragments                             

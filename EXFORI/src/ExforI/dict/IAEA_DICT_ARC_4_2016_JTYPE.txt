@@ -1,0 +1,15 @@
+ TRA 200902 0                              DATA   Experimental data library                                                
+ TRA                                       Preliminary or not yet compiled data                                            
+ TRA 200902 3                              DATA   Evaluated data library                                                   
+ TRA 200902 4                              DATA   Experimental data library                                                
+ TRA 200310 A                              CONF  7Abstract of conference                                                   
+ TRA 200705 B                              BOOK207Book                                                                     
+ TRA 198307 C                              CONF  7Conference                                                               
+ TRA 198307 J                              JOUR  5Journal                                                                  
+ TRA 200310 K                              JOUR  5Abstract of journal                                                      
+ TRA 198307 P                              PROG  6Progress report                                                          
+ TRA 198307 R                              REPT  6Report other than progress report                                        
+ TRA 198307 S                              REPT  6Report containing conference proc.                                       
+ TRA 198307 T                              THES   Thesis or dissertation                                                   
+ TRA 198307 W                              PRIV   Private communication                                                    
+ TRA 200310 X                              PREP   Preprint                                                                 

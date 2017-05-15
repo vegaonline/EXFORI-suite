@@ -1,0 +1,91 @@
+ TRA                                       ------------------------------------------------------      R                   
+ TRA                                       The following codes must be followed by an accession        R                   
+ TRA                                        number indicating a cross-reference, e.g.,                 R                   
+ TRA                                       (COREL,B0123004)= Data correlated with subentry             R                   
+ TRA                                                         B0123004                                  R                   
+ TRA                                       (DEP,10048007)= Data deduced from subentry 10048007         R                   
+ TRA                                       ------------------------------------------------------      R                   
+ TRA                                       ------------------------------------------------------      S                   
+ TRA                                       The following codes may be followed by an accession         S                   
+ TRA                                        number indicating a cross-reference, e.g.,                 S                   
+ TRA                                       (SPSDD,10048009)= Superseded by subentry 10048009           S                   
+ TRA                                       ------------------------------------------------------      S                   
+ TRA 198202 APRVD                              1Approved by author                                                         
+ TRA                                        Proof copy approved by author and author's corrections                         
+ TRA                                         entered.                                                                      
+ TRA                                        Free text = name and date of approval                                          
+ TRA 201007 BERMN                             29Data converted from file of B.Berman                                       
+ TRA 198202 COREL                             50Data correlated with another data set                  R                   
+ TRA                                        Example: different results obtained by different                               
+ TRA                                          analyses of the same experimental data.                                      
+ TRA 198202 CPX                               24Data taken from data file of McGowan, et al.                               
+ TRA                                        The data are partly published in:                                              
+ TRA                                         ORNL-CPX-1 (1964) for reactions with Mn, Fe, Co                               
+ TRA                                         ORNL-CPX-2 (1964) for reactions with Ni, Cu                                   
+ TRA                                         Nucl.Data/A,1,203 (1966) for reactions with Li, Be, B                         
+ TRA                                         Nucl.Data/A,2,1 (1966) for reactions with C                                   
+ TRA                                         Nucl.Data/A,3,123 (1967) for reactions with N, O                              
+ TRA                                        Some of the data in this file were obtained from                               
+ TRA                                         curves with a data point reader.                                              
+ TRA 201612 CRCTD                             53Data corrected by other than author                    R                   
+ TRA                                        Accession number follows: original data coded under                            
+ TRA                                         that accession number.                                                        
+ TRA 198202 CURVE                             10Data read from a curve                                                     
+ TRA 201003 DASTR                             28Data converted from DASTAR file                                            
+ TRA 198202 DEP                               70Dependent data                                         R                   
+ TRA                                        Example: Gamma width obtained by subtraction of                                
+ TRA                                          independently measured total width and neutron                               
+ TRA                                          width.                                                                       
+ TRA                                        Free text = cross-reference to the data from which                             
+ TRA                                                    the dependent data were derived.                                   
+ TRA 199801 NACRE                             27Converted from NACRE files                                                 
+ TRA                                        Nuclear Astrophysics Compilation of Reaction Rates                             
+ TRA 199204 NCHKD                             12Original reference not checked                                             
+ TRA 198202 NDD                               22Data converted from NEUDADA file                                           
+ TRA 198202 OUTDT                             92Normalization out-of-date                              S                   
+ TRA                                        Reason or cross-reference to renormalized data                                 
+ TRA 201112 PENTZ                             30Data converted from GMA input file of W.P.Poenitz                          
+ TRA                                        Data compiled by W.P.Poenitz for the least-squares                             
+ TRA                                         analysis of the neutron standard cross sections with                          
+ TRA                                         the GMA code (Report ANL/NDM-139). Data obtained from                         
+ TRA                                         the authors and converted into the form of the                                
+ TRA                                         'primary' measured quantities where it was needed for                         
+ TRA                                         the combined standards fit. Some partial components                           
+ TRA                                         of the uncertainties may be assigned by Poenitz at                            
+ TRA                                         the base of expert estimation.                                                
+ TRA 198202 PRELM                             40Preliminary data                                                           
+ TRA                                        Data labelled by author as preliminary                                         
+ TRA                                        Free text = author's information about finalizing the                          
+ TRA                                         data.                                                                         
+ TRA                                        Also to be used for data not to be quoted prior to                             
+ TRA                                         publication.                                                                  
+ TRA 201007 RIDER                             26Data converted from file of B.F.Rider                                      
+ TRA 201612 RCALC                             51Ratio to standard calculated by other than author                          
+ TRA 201612 RNORM                             52Data renormalized by other than author                 R                   
+ TRA                                        Free text = explanation of renormalization and                                 
+ TRA                                          cross-reference to author's original data                                    
+ TRA                                        =NOTE= To be used only for non-trivial renormalization                         
+ TRA                                               by an evaluator.  Compilation centers should                            
+ TRA                                               generally store the author's normalization.                             
+ TRA 198202 SCSRS                             20Data converted from SCISRS file                                            
+ TRA                                        Information is incomplete due to automatic                                     
+ TRA                                         conversion from SCISRS.                                                       
+ TRA 201301 SGMBS                             31Data converted from Sigmabase                                              
+ TRA                                        Cross section compilation for ion beam analysis                                
+ TRA 198202 SPSDD                             90Data superseded                                        S                   
+ TRA                                        Superseded by author's decision.                                               
+ TRA                                        Accession number follows: revised data coded under                             
+ TRA                                         that accession number.                                                        
+ TRA                                        No subaccession number follows for:                                            
+ TRA                                         - data withdrawn by author with no replacement                                
+ TRA                                         - replacing data not yet entered at time of                                   
+ TRA                                           compilation                                                                 
+ TRA                                         - old entries before 1977 when accession number field                         
+ TRA                                           was not used.                                                               
+ TRA                                         Free text explanation required.                                               
+ TRA 201105 TABLE                             10Data presented by authors                                                  
+ TRA                                        Data shown in text or table in articles, or data                               
+ TRA                                         received from authors. Previously used for data                               
+ TRA                                         received by centre in tabular form.                                           
+ TRA 198202 UNOBT                             80Data unobtainable from author                                              
+ TRA                                        Free text = explanation of why unobtainable                                    

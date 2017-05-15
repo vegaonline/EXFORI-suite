@@ -1,0 +1,115 @@
+ TRA 198610 (CUM)                                  72Compiler uncertain if cumulative                                      
+ TRA                                       Application of the code 'CUM' uncertain. Explanation is                         
+ TRA                                       obligatory.                                                                     
+ TRA                                       To be used only with process codes 'F' or 'X'                                   
+ OBS 201007 (DEF)                                  82Uncertain if reaction channel defined                                 
+ OBS                                       Uncertain from reference whether reaction channel is                            
+ OBS                                       defined or whether outgoing particles represent only                            
+ OBS                                       sum of emitted nucleons.                                                        
+ OBS                                       === Not to be used with process codes 'X' or 'F'.                               
+ OBS                                           So far used only for charged particle data                                  
+ TRA 198307 (M)                                    34Uncertain if formation via isomeric trans. included                   
+ TRA                                       Whether formation via isomeric transition is included                           
+ TRA                                       is regarded by the compiler as uncertain. Explanation                           
+ TRA                                       is obligatory.                                                                  
+ TRA 198307 1                                      50Channel 1, e.g., in Reich-Moore res.pars.                             
+ TRA 198307 2                                      51Channel 2, e.g., in Reich-Moore res.pars.                             
+ TRA 201105 20                                      40th component of the 2nd rank spherical tensor                        
+ TRA 201105 21                                      41st component of the 2nd rank spherical tensor                        
+ TRA 201105 22                                      42nd component of the 2nd rank spherical tensor                        
+ TRA 201105 31                                      41st component of the 3rd rank spherical tensor                        
+ TRA 201105 32                                      42nd component of the 3rd rank spherical tensor                        
+ TRA 201105 33                                      43rd component of the 3rd rank spherical tensor                        
+ TRA 201105 40                                      40th component of the 4th rank spherical tensor                        
+ TRA 198307 3                                      52Channel 3, e.g., in Reich-Moore res.pars.                             
+ TRA 198307 4                                      53Channel 4, e.g., in Reich-Moore res.pars.                             
+ TRA 198202 BA                                     12Bound atom                                                            
+ TRA 198202 BIN                                    64Binary fission                                                        
+ INT 200001 CEN                                    92Central                                                               
+ TRA 198307 CHG                                    76Total element yield (of fission products)                             
+ TRA 198202 CHN                                    75Total chain                                                           
+ TRA 198307 CN                                     40Compound-nucleus part                                                 
+ TRA 198202 COH                                    16Coherent                                                              
+ TRA 200310 CON                                    27For a range of continuum gammas, discrete gammas excluded             
+ TRA 201307 CRN                                    63More than two fragments are specified                                 
+ TRA                                       To be used when more than two atomic and/or mass                                
+ TRA                                       numbers are specified under headings ELEM1, MASS1 etc.                          
+ TRA 198307 CUM                                    72Cumulative production of product nucleus                              
+ TRA                                       (Cumulative) Production of the product nucleus via                              
+ TRA                                       direct formation and radioactive decay.                                         
+ TRA                                       To be used only with process codes 'F' or 'X'.                                  
+ TRA 198307 DI                                     42Direct-interaction part                                               
+ TRA 200310 DIS                                    28For a range of discrete gammas, continuum gammas excluded             
+ TRA 198307 DL                                     62Delayed                                                               
+ TRA                                       For use in fission.                                                             
+ TRA 198307 EM                                     90Emission cross section (excluding elastic scattering)                 
+ TRA                                       ===Use only when outgoing particle considered equals                            
+ TRA                                       the incident particle                                                           
+ TRA 199108 EP                                     36For a given electric polarity component                               
+ TRA 198202 FA                                     14Free atom                                                             
+ TRA 201311 FRG                                    61Referring to fragment specified                                       
+ TRA 200007 FIS                                    66High-energy fission cross section                                     
+ TRA 200002 GRP                                    22For a given half-life group                                           
+ TRA 199108 HEN                                    44High-energy component                                  PHOT           
+ TRA 201407 ICL                                    91Uncorrected for other channels emitting same particle                 
+ TRA 201301 IM                                     15Imaginary part                                                        
+ TRA 198202 INC                                    18Incoherent                                                            
+ TRA 198307 IND                                    70Independent production of product nucleus                             
+ TRA                                       (Independent) Production of the product nucleus via                             
+ TRA                                       direct formation only. To be used only with process                             
+ TRA                                       codes 'F' or 'X' and only in cases where cumulative                             
+ TRA                                       production (SF5 = CUM) can occur also.                                          
+ TRA 199108 LEN                                    45Low-energy component                                   PHOT           
+ TRA 200503 LL                                      5Longitudinal-longitudinal (zz) component                              
+ TRA                                       Beam and target spins parallel to beam direction in                             
+ TRA                                       scattering plane (=zz)                                                          
+ TRA 199710 LON                                     1Longitudinally polarized                                              
+ TRA 200302 LP                                     25For longitudinal component of linear momentum                         
+ TRA 200503 LS                                      6Longitudinal-sideward (zx) component                                  
+ TRA 198307 M+                                     30Including formation via isomeric transition                           
+ TRA 198307 M-                                     32Excluding formation via isomeric transition                           
+ TRA 200002 MAS                                    74Total mass (for yields of fission fragments)                          
+ INT 199604 MNB                                    94Minimum bias                                           RHID           
+ TRA 199108 MP                                     46For a given magnetic polarity component                               
+ TRA 200503 NL                                      7Normal-longitudinal (yz) component                                    
+ TRA 200503 NN                                      7Normal-normal (yy) component                                          
+ TRA                                       Beam and target spins normal to scattering plane                                
+ TRA                                       (=yy)                                                                           
+ TRA 200405 NUM                                    24For number of outgoing particles                                      
+ TRA 198307 PAR                                    21Partial                                                               
+ TRA                                       leaving the residual nucleus in a specific level or                             
+ TRA                                       emitting a specific gamma or particle group.                                    
+ INT 199604 PER                                    93Peripheral                                             RHID           
+ TRA 198705 PM+                                    19Paramagnetic effects included                                         
+ TRA                                       (for thermal scattering)                                                        
+ TRA 198307 POT                                    10Potential                                                             
+ TRA                                       (for scattering)                                                                
+ TRA 198307 PR                                     60Prompt                                                                
+ TRA                                       (for use in fission)                                                            
+ TRA 198307 PRE                                    68Primary                                                               
+ TRA                                       (for fission product yields)                                                    
+ TRA 200908 PRV                                    68Provisional                                                           
+ TRA                                       (for fission product yields)                                                    
+ TRA 200705 QTR                                    65Quaternary fission                                                    
+ TRA 198202 SEC                                    69Secondary                                                             
+ TRA                                       (for fission product yields)                                                    
+ TRA 198307 SEQ                                    77Particle sequence as specified in SF3                                 
+ TRA                                       Indicates that the sequence of outgoing particles is                            
+ TRA                                       as specified in subfield 3.                                                     
+ TRA 200503 SL                                      8Sideward-longitudinal (xz) component                                  
+ TRA                                       Beam spin perpendicular, target spin parallel to                                
+ TRA                                       beam direction in scattering plane                                              
+ TRA 200007 SPL                                    67Spallation cross section                                              
+ TRA 200503 SS                                      9Sideward-sideward (xx) component                                      
+ TRA                                       Target and beam spins perpendicular to beam                                     
+ TRA                                       direction in scattering plane                                                   
+ TRA 198307 TER                                    65Ternary fission                                                       
+ TRA 200705 TP                                     25For transverse component of linear momentum                           
+ TRA 199710 TRS                                     2Transversely polarized                                                
+ OBS 200209 UND                                    80Reaction channel undefined                                            
+ OBS                                       outgoing particles represent only sum of emitted                                
+ OBS                                       nucleons.                                                                       
+ OBS                                       ===Not to be used with process codes 'X' or 'F'.                                
+ OBS                                       So far used only for charged particle data.                                     
+ TRA 199804 UNW                                    84Unweighted production cross section                                   
+ TRA                                       not weighted by multiplicity of outgoing particle                               
