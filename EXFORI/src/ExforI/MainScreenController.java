@@ -37,10 +37,10 @@ import javax.swing.filechooser.FileFilter;
 public class MainScreenController { //implements Initializable {
 
     // from other class
-    libList lList = new libList ();
+    libList lList = new libList();
 
     //  file 
-    JFileChooser fileChooser = new JFileChooser ();
+    JFileChooser fileChooser = new JFileChooser();
     private File exfFileWrite;
     private File exfFileRead;
     private File recordsDir;
@@ -67,20 +67,20 @@ public class MainScreenController { //implements Initializable {
     private String zchexName = "";
 
     //stage etc.
-    private Group rootGr = new Group ();
-    private TabPane myTabPane = new TabPane ();
-    private Tab tab1 = new Tab ();
-    private Tab tab2 = new Tab ();
+    private Group rootGr = new Group();
+    private TabPane myTabPane = new TabPane();
+    private Tab tab1 = new Tab();
+    private Tab tab2 = new Tab();
     private boolean tab1B = false;
     private boolean tab2B = false;
     private boolean tabSelected = false;
-    private BorderPane winPane = new BorderPane ();
-    private BorderPane winPane1 = new BorderPane ();
-    private BorderPane winPane2 = new BorderPane ();
+    private BorderPane winPane = new BorderPane();
+    private BorderPane winPane1 = new BorderPane();
+    private BorderPane winPane2 = new BorderPane();
     private Stage myStage;
     private Scene myRootScene;
-    final Stage myDialog1 = new Stage ();
-    final Stage myDialog = new Stage ();
+    final Stage myDialog1 = new Stage();
+    final Stage myDialog = new Stage();
     private Scene myDialogScene;
     Process p;
     boolean txtEntered;
@@ -113,7 +113,7 @@ public class MainScreenController { //implements Initializable {
     private boolean addLReac = false;
     private String[] sComp;
     private int addLReacCnt = 0;
-    private ArrayList<String> sub4Common = new ArrayList<String> ();
+    private ArrayList<String> sub4Common = new ArrayList<String>();
     private int numR = 1;
     private int numC = 1;
     private int maxW = 130;
@@ -147,29 +147,29 @@ public class MainScreenController { //implements Initializable {
     private int theNDX = 0;
     private boolean isSelect = false;
 
-    private ScrollPane sp1 = new ScrollPane ();
-    private HBox masterHB = new HBox ();
-    private VBox masterVB1 = new VBox ();
-    private VBox masterVB2 = new VBox ();
+    private ScrollPane sp1 = new ScrollPane();
+    private HBox masterHB = new HBox();
+    private VBox masterVB1 = new VBox();
+    private VBox masterVB2 = new VBox();
 
-    private VBox vbContMenu = new VBox (10);
-    private VBox VBsub01 = new VBox ();
-    private VBox VBsub02 = new VBox ();
+    private VBox vbContMenu = new VBox(10);
+    private VBox VBsub01 = new VBox();
+    private VBox VBsub02 = new VBox();
 
-    Tooltip t1 = new Tooltip ("Enter ENTRY number in box and press SET");
-    Tooltip t2 = new Tooltip ("Entering ENTRYNUM will automatically set date");
-    Tooltip t3 = new Tooltip ("Click RightButton to see menu.");
+    Tooltip t1 = new Tooltip("Enter ENTRY number in box and press SET");
+    Tooltip t2 = new Tooltip("Entering ENTRYNUM will automatically set date");
+    Tooltip t3 = new Tooltip("Click RightButton to see menu.");
 
-    private Tooltip tp1 = new Tooltip ();
-    private Tooltip tp2 = new Tooltip ();
-    private Tooltip tp3 = new Tooltip ();
-    private Tooltip tp4 = new Tooltip ();
-    private Tooltip tp5 = new Tooltip ();
-    private Tooltip tp6 = new Tooltip ();
-    private Tooltip tp7 = new Tooltip ();
-    private Tooltip tp8 = new Tooltip ();
-    private Tooltip tp9 = new Tooltip ();
-    private Tooltip tp10 = new Tooltip ();
+    private Tooltip tp1 = new Tooltip();
+    private Tooltip tp2 = new Tooltip();
+    private Tooltip tp3 = new Tooltip();
+    private Tooltip tp4 = new Tooltip();
+    private Tooltip tp5 = new Tooltip();
+    private Tooltip tp6 = new Tooltip();
+    private Tooltip tp7 = new Tooltip();
+    private Tooltip tp8 = new Tooltip();
+    private Tooltip tp9 = new Tooltip();
+    private Tooltip tp10 = new Tooltip();
 
     private String titleTip
             = "Here you may add Title of the Article as free text.  \n Please press accept to enter data \n else press Cancel to reject entry. ";
@@ -209,248 +209,248 @@ public class MainScreenController { //implements Initializable {
 
     //final ContextMenu cMenu = new ContextMenu();
     // final ContextMenu addNew = new ContextMenu();
-    final ContextMenu chkMenuEdit = new ContextMenu ();
-    final MenuItem cEdit = new MenuItem ("Edit");
-    final MenuItem cDelete = new MenuItem ("Delete");
-    final MenuItem titleM = new MenuItem ("Title");
+    final ContextMenu chkMenuEdit = new ContextMenu();
+    final MenuItem cEdit = new MenuItem("Edit");
+    final MenuItem cDelete = new MenuItem("Delete");
+    final MenuItem titleM = new MenuItem("Title");
     boolean bTitle = false;
-    final MenuItem authM = new MenuItem ("Author");
+    final MenuItem authM = new MenuItem("Author");
     boolean bAuth = false;
-    final MenuItem instM = new MenuItem ("Institute");
+    final MenuItem instM = new MenuItem("Institute");
     boolean bInst = false;
-    final MenuItem refM = new MenuItem ("Reference");
+    final MenuItem refM = new MenuItem("Reference");
     boolean bRef = false;
-    final MenuItem facM = new MenuItem ("Facility");
+    final MenuItem facM = new MenuItem("Facility");
     boolean bFac = false;
-    final MenuItem sampM = new MenuItem ("Sample");
+    final MenuItem sampM = new MenuItem("Sample");
     boolean bSamp = false;
-    final MenuItem incSM = new MenuItem ("Inc-Source");
+    final MenuItem incSM = new MenuItem("Inc-Source");
     boolean bIncs = false;
-    final MenuItem detM = new MenuItem ("Detector");
+    final MenuItem detM = new MenuItem("Detector");
     boolean bDet = false;
-    final MenuItem monitM = new MenuItem ("Monitor");
+    final MenuItem monitM = new MenuItem("Monitor");
     boolean bMonit = false;
-    final MenuItem monitRefM = new MenuItem ("Monit-Ref");
+    final MenuItem monitRefM = new MenuItem("Monit-Ref");
     boolean bMonitRef = false;
-    final MenuItem reacM = new MenuItem ("Reaction");
+    final MenuItem reacM = new MenuItem("Reaction");
     boolean bReac = false;
-    final MenuItem methodM = new MenuItem ("Method");
+    final MenuItem methodM = new MenuItem("Method");
     boolean bMethod = false;
-    final MenuItem analysM = new MenuItem ("Analysis");
+    final MenuItem analysM = new MenuItem("Analysis");
     boolean bAnalys = false;
-    final MenuItem histM = new MenuItem ("History");
+    final MenuItem histM = new MenuItem("History");
     boolean bHist = false;
-    final MenuItem commentM = new MenuItem ("Comment");
+    final MenuItem commentM = new MenuItem("Comment");
     boolean bComm = false;
-    final MenuItem statusM = new MenuItem ("Status");
+    final MenuItem statusM = new MenuItem("Status");
     boolean bStatus = false;
-    final MenuItem errAnalysM = new MenuItem ("Err-Analys");
+    final MenuItem errAnalysM = new MenuItem("Err-Analys");
     boolean bErrAnalys = false;
-    final MenuItem addlResultM = new MenuItem ("Addl-Result");
+    final MenuItem addlResultM = new MenuItem("Addl-Result");
     boolean bAddResult = false;
-    final MenuItem commActiveM = new MenuItem ("Common Activate");
+    final MenuItem commActiveM = new MenuItem("Common Activate");
     boolean bComActive = false;
-    final MenuItem commEditM = new MenuItem ("Common Edit");
+    final MenuItem commEditM = new MenuItem("Common Edit");
     boolean bComEdit = false;
-    final MenuItem decayDataM = new MenuItem ("Decay Data");
+    final MenuItem decayDataM = new MenuItem("Decay Data");
     boolean bdData = false;
-    final MenuItem decayMonM = new MenuItem ("Decay-Mon");
+    final MenuItem decayMonM = new MenuItem("Decay-Mon");
     boolean bdMon = false;
-    final MenuItem correctM = new MenuItem ("Correction");
+    final MenuItem correctM = new MenuItem("Correction");
     boolean bCorrect = false;
-    final MenuItem dataM = new MenuItem ("Data");
+    final MenuItem dataM = new MenuItem("Data");
     boolean bData = false;
-    final MenuItem flagM = new MenuItem ("Flag");
+    final MenuItem flagM = new MenuItem("Flag");
     boolean bFlag = false;
 
-    final MenuItem newSUBM = new MenuItem ("New SUBENTRY");
-    final Menu addM = new Menu ("Add Items");
-    final Menu editM = new Menu ("Edit Contents");
+    final MenuItem newSUBM = new MenuItem("New SUBENTRY");
+    final Menu addM = new Menu("Add Items");
+    final Menu editM = new Menu("Edit Contents");
 
-    private Label entryL = new Label ("ENTRY: ");
-    private TextField entryT = new TextField ();
-    private Label numSUBENT = new Label ("Number of SUBENTRIES: ");
-    private TextField numSub = new TextField ();
+    private Label entryL = new Label("ENTRY: ");
+    private TextField entryT = new TextField();
+    private Label numSUBENT = new Label("Number of SUBENTRIES: ");
+    private TextField numSub = new TextField();
 
-    private Label subENT1T = new Label ("SUBENTRY 1");
-    private Label bibSecT = new Label ("BIB Section");
-    private Label titleL = new Label ("Title");
-    private CheckBox titleC = new CheckBox ();
+    private Label subENT1T = new Label("SUBENTRY 1");
+    private Label bibSecT = new Label("BIB Section");
+    private Label titleL = new Label("Title");
+    private CheckBox titleC = new CheckBox();
     int titleCI = 0;
-    private Label authL = new Label ("Author");
-    private CheckBox authC = new CheckBox ();
+    private Label authL = new Label("Author");
+    private CheckBox authC = new CheckBox();
     int authCI = 0;
-    private Label instL = new Label ("Institute");
-    private CheckBox instC = new CheckBox ();
+    private Label instL = new Label("Institute");
+    private CheckBox instC = new CheckBox();
     int instCI = 0;
-    private Label refL = new Label ("Reference");
-    private CheckBox refC = new CheckBox ();
+    private Label refL = new Label("Reference");
+    private CheckBox refC = new CheckBox();
     int refCI = 0;
-    private Label faciL = new Label ("Facility");
-    private CheckBox faciC = new CheckBox ();
+    private Label faciL = new Label("Facility");
+    private CheckBox faciC = new CheckBox();
     int faciCI = 0;
-    private Label sampL = new Label ("Sample");
-    private CheckBox sampC = new CheckBox ();
+    private Label sampL = new Label("Sample");
+    private CheckBox sampC = new CheckBox();
     int sampCI = 0;
-    private Label detL = new Label ("Detector");
-    private CheckBox detC = new CheckBox ();
+    private Label detL = new Label("Detector");
+    private CheckBox detC = new CheckBox();
     int detCI = 0;
-    private Label methL = new Label ("Method");
-    private CheckBox methC = new CheckBox ();
+    private Label methL = new Label("Method");
+    private CheckBox methC = new CheckBox();
     int methCI = 0;
-    private Label monitL = new Label ("Monitor");
-    private CheckBox monitC = new CheckBox ();
+    private Label monitL = new Label("Monitor");
+    private CheckBox monitC = new CheckBox();
     int monitCI = 0;
-    private Label incSrcL = new Label ("INC-SOURCE");
-    private CheckBox incSrcC = new CheckBox ();
+    private Label incSrcL = new Label("INC-SOURCE");
+    private CheckBox incSrcC = new CheckBox();
     int incSrcCI = 0;
-    private Label analL = new Label ("Analysis");
-    private CheckBox analC = new CheckBox ();
+    private Label analL = new Label("Analysis");
+    private CheckBox analC = new CheckBox();
     int analCI = 0;
-    private Label errAnalL = new Label ("ERR-ANALYSIS");
-    private CheckBox errAnalC = new CheckBox ();
+    private Label errAnalL = new Label("ERR-ANALYSIS");
+    private CheckBox errAnalC = new CheckBox();
     int errAnalCI = 0;
-    private Label partDetL = new Label ("PART-DET");
-    private CheckBox partDetC = new CheckBox ();
+    private Label partDetL = new Label("PART-DET");
+    private CheckBox partDetC = new CheckBox();
     int partDetCI = 0;
-    private Label halfLL = new Label ("Half-Life");
-    private CheckBox halfLC = new CheckBox ();
+    private Label halfLL = new Label("Half-Life");
+    private CheckBox halfLC = new CheckBox();
     int halfLCI = 0;
-    private Label commentL = new Label ("Comment");
-    private CheckBox commentC = new CheckBox ();
+    private Label commentL = new Label("Comment");
+    private CheckBox commentC = new CheckBox();
     int commentCI = 0;
-    private Label commActivL = new Label ("Common Active: ");
-    private CheckBox commActC = new CheckBox ();
+    private Label commActivL = new Label("Common Active: ");
+    private CheckBox commActC = new CheckBox();
     int commActCI = 0;
-    private Label dataL = new Label ("DATA Active: ");
-    private CheckBox dataC = new CheckBox ();
+    private Label dataL = new Label("DATA Active: ");
+    private CheckBox dataC = new CheckBox();
     int dataCI = 0;
-    private Label reacL = new Label ("Reaction");
-    private CheckBox reacC = new CheckBox ();
+    private Label reacL = new Label("Reaction");
+    private CheckBox reacC = new CheckBox();
     int reacCI = 0;
-    private Label flagL = new Label ("Flag");
-    private CheckBox flagC = new CheckBox ();
+    private Label flagL = new Label("Flag");
+    private CheckBox flagC = new CheckBox();
     int flagCI = 0;
-    private Label statusL = new Label ();
-    private CheckBox statusC = new CheckBox ();
+    private Label statusL = new Label();
+    private CheckBox statusC = new CheckBox();
     int statusCI = 0;
-    private Label addresL = new Label ("Add-Residue");
-    private CheckBox addresC = new CheckBox ();
+    private Label addresL = new Label("Add-Residue");
+    private CheckBox addresC = new CheckBox();
     int addresCI = 0;
-    private Label corrL = new Label ("Correction");
-    private CheckBox corrC = new CheckBox ();
+    private Label corrL = new Label("Correction");
+    private CheckBox corrC = new CheckBox();
     int corrCI = 0;
-    private Label subENT2T = new Label ("SUBENTRY 2");
-    private Label monitRefL = new Label ("MONIT-REF");
-    private Label headingL = new Label ("Heading");
-    private Label subAccL = new Label ("SubAccn:");
+    private Label subENT2T = new Label("SUBENTRY 2");
+    private Label monitRefL = new Label("MONIT-REF");
+    private Label headingL = new Label("Heading");
+    private Label subAccL = new Label("SubAccn:");
 
-    private CheckBox headingC = new CheckBox ();
+    private CheckBox headingC = new CheckBox();
     private boolean headingCB = false;
     int headingNum = 0;
 
-    private CheckBox DDFlagC = new CheckBox ();
+    private CheckBox DDFlagC = new CheckBox();
     private boolean DDFlagB = false;
     private int DDFlagNum = 0;
 
-    private Button createB = new Button ("Create");
-    private Button cancelB = new Button ("Cancel");
-    private Button acceptEdit = new Button ("Accept");
-    private Button cancelEdit = new Button ("Cancel");
-    private Button selectIt = new Button ("Select");
-    private Button selectRow = new Button ("Select");
-    private Button addL = new Button ("Add record");
-    private Button addRow = new Button ("Add Row");
-    private Button addCol = new Button ("Add Column");
-    private Button DelRow = new Button ("Delete Row");
-    private Button DelCol = new Button ("Delete Column");
-    private Button addRCB = new Button ("Add");
-    private Button chngRCB = new Button ("Change");
-    private Button chngCol = new Button ("Change");
-    private Button okButton = new Button ("OK");
+    private Button createB = new Button("Create");
+    private Button cancelB = new Button("Cancel");
+    private Button acceptEdit = new Button("Accept");
+    private Button cancelEdit = new Button("Cancel");
+    private Button selectIt = new Button("Select");
+    private Button selectRow = new Button("Select");
+    private Button addL = new Button("Add record");
+    private Button addRow = new Button("Add Row");
+    private Button addCol = new Button("Add Column");
+    private Button DelRow = new Button("Delete Row");
+    private Button DelCol = new Button("Delete Column");
+    private Button addRCB = new Button("Add");
+    private Button chngRCB = new Button("Change");
+    private Button chngCol = new Button("Change");
+    private Button okButton = new Button("OK");
 
-    private TextField volTxt = new TextField ();
-    private TextField volMTxt = new TextField ();
-    private TextField pgTxt = new TextField ();
-    private TextField pgMTxt = new TextField ();
-    private TextField yrTxt = new TextField ();
-    private TextField yrMTxt = new TextField ();
-    private TextField MMTxt = new TextField ();
-    private TextField reptNumTxt = new TextField ();
-    private TextField numRow = new TextField ();
-    private TextField numRow1 = new TextField ();
-    private TextField numRow2 = new TextField ();
-    private TextField numCol = new TextField ();
-    private TextField numCol1 = new TextField ();
-    private TextField numCol2 = new TextField ();
-    private TextField TC1 = new TextField ();
-    private TextField TC2 = new TextField ();
-    private TextField TC3 = new TextField ();
-    private TextField TC4 = new TextField ();
-    private TextField TC5 = new TextField ();
-    private TextField TC6 = new TextField ();
-    private TextField subAcc = new TextField ();
-    private TextField authT = new TextField ();
-    private TextField THalfDDT = new TextField ();
-    private TextField SF2EnergyDDT = new TextField ();
-    private TextField SF3abandDDT = new TextField ();
+    private TextField volTxt = new TextField();
+    private TextField volMTxt = new TextField();
+    private TextField pgTxt = new TextField();
+    private TextField pgMTxt = new TextField();
+    private TextField yrTxt = new TextField();
+    private TextField yrMTxt = new TextField();
+    private TextField MMTxt = new TextField();
+    private TextField reptNumTxt = new TextField();
+    private TextField numRow = new TextField();
+    private TextField numRow1 = new TextField();
+    private TextField numRow2 = new TextField();
+    private TextField numCol = new TextField();
+    private TextField numCol1 = new TextField();
+    private TextField numCol2 = new TextField();
+    private TextField TC1 = new TextField();
+    private TextField TC2 = new TextField();
+    private TextField TC3 = new TextField();
+    private TextField TC4 = new TextField();
+    private TextField TC5 = new TextField();
+    private TextField TC6 = new TextField();
+    private TextField subAcc = new TextField();
+    private TextField authT = new TextField();
+    private TextField THalfDDT = new TextField();
+    private TextField SF2EnergyDDT = new TextField();
+    private TextField SF3abandDDT = new TextField();
 
-    private Label sf1L = new Label ("Target (SF1)");
-    private Label sf2L = new Label ("Inc. Particle (SF2)");
-    private Label sf3L = new Label ("Process (SF3)");
-    private Label sf4L = new Label ("Product (SF4)");
-    private Label sf5L = new Label ("Branch (SF5)");
-    private Label sf6L = new Label ("Parameter (SF6)");
-    private Label sf7L = new Label ("Particle (SF7)");
-    private Label sf8L = new Label ("Modifier (SF8)");
-    private Label sf9L = new Label ("Data Type (SF9)");
-    private Label jtypeL = new Label ("Type of reference:");
-    private Label refSrcL = new Label (
+    private Label sf1L = new Label("Target (SF1)");
+    private Label sf2L = new Label("Inc. Particle (SF2)");
+    private Label sf3L = new Label("Process (SF3)");
+    private Label sf4L = new Label("Product (SF4)");
+    private Label sf5L = new Label("Branch (SF5)");
+    private Label sf6L = new Label("Parameter (SF6)");
+    private Label sf7L = new Label("Particle (SF7)");
+    private Label sf8L = new Label("Modifier (SF8)");
+    private Label sf9L = new Label("Data Type (SF9)");
+    private Label jtypeL = new Label("Type of reference:");
+    private Label refSrcL = new Label(
             "Journals / Books / Conferences / Reports");
-    private Label volL = new Label ("Volume");
-    private Label volML = new Label ("Version");
-    private Label pgL = new Label ("Page");
-    private Label matML = new Label ("Material");
-    private Label yrL = new Label ("Year (yyyy)");
-    private Label yrML = new Label ("Date");
-    private Label reptL = new Label ("Report \nNumber");
-    private Label reptMML = new Label ("Month");
-    private Label incsrcL = new Label ("Incident sources");
-    private Label detectorL = new Label ("Detectors");
-    private Label compNucL = new Label ("Nuclide / Compound");
-    private Label targetL = new Label ("Target nucleus (SF1)");
-    private Label incidentL = new Label ("Incident particle (SF2)");
-    private Label procL = new Label ("Process (SF3)");
-    private Label productL = new Label ("Reaction product (SF4)");
-    private Label qtyBranchL = new Label ("Quantity : Branch (SF5)");
-    private Label qtyParamL = new Label ("Quantity : Parameter (SF6)");
-    private Label qtyParticleL = new Label ("Quantity : Particle (SF7)");
-    private Label qtyModifierL = new Label ("Quantity : Modifier (SF8)");
-    private Label qtyDTypeL = new Label ("Quantity : Data Types (SF9)");
-    private Label addRCL = new Label ("Add ");
-    private Label delRCL = new Label ("Delete ");
-    private Label numRowL = new Label (" Rows ");
-    private Label numColL = new Label (" Columns ");
-    private Label numNumL = new Label ("Number of ");
-    private Label nuclL = new Label ("Nuclide");
-    private Label HalfL = new Label ("Half Life");
-    private Label SF1DDL = new Label ("SF1");
-    private Label SF2DDL = new Label ("SF2");
-    private Label SF3DDL = new Label ("SF3");
-    private Label dataUnitL = new Label ("Units");
+    private Label volL = new Label("Volume");
+    private Label volML = new Label("Version");
+    private Label pgL = new Label("Page");
+    private Label matML = new Label("Material");
+    private Label yrL = new Label("Year (yyyy)");
+    private Label yrML = new Label("Date");
+    private Label reptL = new Label("Report \nNumber");
+    private Label reptMML = new Label("Month");
+    private Label incsrcL = new Label("Incident sources");
+    private Label detectorL = new Label("Detectors");
+    private Label compNucL = new Label("Nuclide / Compound");
+    private Label targetL = new Label("Target nucleus (SF1)");
+    private Label incidentL = new Label("Incident particle (SF2)");
+    private Label procL = new Label("Process (SF3)");
+    private Label productL = new Label("Reaction product (SF4)");
+    private Label qtyBranchL = new Label("Quantity : Branch (SF5)");
+    private Label qtyParamL = new Label("Quantity : Parameter (SF6)");
+    private Label qtyParticleL = new Label("Quantity : Particle (SF7)");
+    private Label qtyModifierL = new Label("Quantity : Modifier (SF8)");
+    private Label qtyDTypeL = new Label("Quantity : Data Types (SF9)");
+    private Label addRCL = new Label("Add ");
+    private Label delRCL = new Label("Delete ");
+    private Label numRowL = new Label(" Rows ");
+    private Label numColL = new Label(" Columns ");
+    private Label numNumL = new Label("Number of ");
+    private Label nuclL = new Label("Nuclide");
+    private Label HalfL = new Label("Half Life");
+    private Label SF1DDL = new Label("SF1");
+    private Label SF2DDL = new Label("SF2");
+    private Label SF3DDL = new Label("SF3");
+    private Label dataUnitL = new Label("Units");
 
-    private final Popup popup = new Popup ();
+    private final Popup popup = new Popup();
 
-    private TextArea tf = new TextArea ();
+    private TextArea tf = new TextArea();
     private String putTxt;
     private String putTxtType;
 
     private TableView<CommonDataClass> matrixData
-            = new TableView<CommonDataClass> ();
+            = new TableView<CommonDataClass>();
     private TableColumn[] matrixDataColumns = new TableColumn[6];
-    private TableColumn matCol = new TableColumn<> ();
+    private TableColumn matCol = new TableColumn<>();
     private final ObservableList<CommonDataClass> matData = FXCollections.
-            observableArrayList ();
+            observableArrayList();
 
     private int matrixDataMaxColSize = 6;
     private int matrixDataColSize = 0;
@@ -459,53 +459,53 @@ public class MainScreenController { //implements Initializable {
     String selectionStr = "Please select:";
 
     private final ObservableList<BIBClasses> bibList = FXCollections.
-            observableArrayList ();
+            observableArrayList();
     private final ObservableList<BIBClasses> bibSorted = FXCollections.
-            observableArrayList (bibList);
+            observableArrayList(bibList);
     private final ObservableList<lineList> headList = FXCollections.
-            observableArrayList ();
+            observableArrayList();
     private final ObservableList<String> FixedHeadList = FXCollections.
-            observableArrayList ();
+            observableArrayList();
     private ObservableList<editableData> myData = FXCollections.
-            observableArrayList ();
+            observableArrayList();
 
-    private final ComboBox<String> institute = new ComboBox<> ();
-    private final ComboBox<String> journals = new ComboBox<> ();
-    private final ComboBox<String> jType = new ComboBox<> ();
-    private final ComboBox<String> facilCB = new ComboBox<> ();
-    private final ComboBox<String> incSrcCB = new ComboBox<> ();
-    private final ComboBox<String> detectorCB = new ComboBox<> ();
-    private final ComboBox<String> compNucCB = new ComboBox<> ();
-    private final ComboBox<String> targetNCB = new ComboBox<> ();
-    private final ComboBox<String> compoundCB = new ComboBox<> ();
-    private final ComboBox<String> incPCB = new ComboBox<> ();
-    private final ComboBox<String> procCB = new ComboBox<> ();
-    private final ComboBox<String> prodCB = new ComboBox<> ();
-    private final ComboBox<String> branchCB = new ComboBox<> ();
-    private final ComboBox<String> paramSF6CB = new ComboBox<> ();
-    private final ComboBox<String> paramSF7CB = new ComboBox<> ();
-    private final ComboBox<String> modifierCB = new ComboBox<> ();
-    private final ComboBox<String> dataTypeCB = new ComboBox<> ();
-    private final ComboBox<String> methodCB = new ComboBox<> ();
-    private final ComboBox<String> addlResultCB = new ComboBox<> ();
-    private final ComboBox<String> statusCB = new ComboBox<> ();
-    private final ComboBox<String> dataHeadingCB = new ComboBox<> ();
-    private final ComboBox<String> dataUnitsCB = new ComboBox<> ();
-    private final ComboBox<String> monitRefCB = new ComboBox<> ();
-    private final ComboBox<String> nuclideDDCB = new ComboBox<> ();
-    private final ComboBox<String> radSF1DDCB = new ComboBox<> ();
-    private final ComboBox<String> dHCB1 = new ComboBox<> ();
-    private final ComboBox<String> dHCB2 = new ComboBox<> ();
-    private final ComboBox<String> dHCB3 = new ComboBox<> ();
-    private final ComboBox<String> dHCB4 = new ComboBox<> ();
-    private final ComboBox<String> dHCB5 = new ComboBox<> ();
-    private final ComboBox<String> dHCB6 = new ComboBox<> ();
-    private final ComboBox<String> dUCB1 = new ComboBox<> ();
-    private final ComboBox<String> dUCB2 = new ComboBox<> ();
-    private final ComboBox<String> dUCB3 = new ComboBox<> ();
-    private final ComboBox<String> dUCB4 = new ComboBox<> ();
-    private final ComboBox<String> dUCB5 = new ComboBox<> ();
-    private final ComboBox<String> dUCB6 = new ComboBox<> ();
+    private final ComboBox<String> institute = new ComboBox<>();
+    private final ComboBox<String> journals = new ComboBox<>();
+    private final ComboBox<String> jType = new ComboBox<>();
+    private final ComboBox<String> facilCB = new ComboBox<>();
+    private final ComboBox<String> incSrcCB = new ComboBox<>();
+    private final ComboBox<String> detectorCB = new ComboBox<>();
+    private final ComboBox<String> compNucCB = new ComboBox<>();
+    private final ComboBox<String> targetNCB = new ComboBox<>();
+    private final ComboBox<String> compoundCB = new ComboBox<>();
+    private final ComboBox<String> incPCB = new ComboBox<>();
+    private final ComboBox<String> procCB = new ComboBox<>();
+    private final ComboBox<String> prodCB = new ComboBox<>();
+    private final ComboBox<String> branchCB = new ComboBox<>();
+    private final ComboBox<String> paramSF6CB = new ComboBox<>();
+    private final ComboBox<String> paramSF7CB = new ComboBox<>();
+    private final ComboBox<String> modifierCB = new ComboBox<>();
+    private final ComboBox<String> dataTypeCB = new ComboBox<>();
+    private final ComboBox<String> methodCB = new ComboBox<>();
+    private final ComboBox<String> addlResultCB = new ComboBox<>();
+    private final ComboBox<String> statusCB = new ComboBox<>();
+    private final ComboBox<String> dataHeadingCB = new ComboBox<>();
+    private final ComboBox<String> dataUnitsCB = new ComboBox<>();
+    private final ComboBox<String> monitRefCB = new ComboBox<>();
+    private final ComboBox<String> nuclideDDCB = new ComboBox<>();
+    private final ComboBox<String> radSF1DDCB = new ComboBox<>();
+    private final ComboBox<String> dHCB1 = new ComboBox<>();
+    private final ComboBox<String> dHCB2 = new ComboBox<>();
+    private final ComboBox<String> dHCB3 = new ComboBox<>();
+    private final ComboBox<String> dHCB4 = new ComboBox<>();
+    private final ComboBox<String> dHCB5 = new ComboBox<>();
+    private final ComboBox<String> dHCB6 = new ComboBox<>();
+    private final ComboBox<String> dUCB1 = new ComboBox<>();
+    private final ComboBox<String> dUCB2 = new ComboBox<>();
+    private final ComboBox<String> dUCB3 = new ComboBox<>();
+    private final ComboBox<String> dUCB4 = new ComboBox<>();
+    private final ComboBox<String> dUCB5 = new ComboBox<>();
+    private final ComboBox<String> dUCB6 = new ComboBox<>();
 
     // Tree view related
     private TreeItem<String> rootNode;
@@ -516,14 +516,14 @@ public class MainScreenController { //implements Initializable {
     private TreeItem<String> endSUBTag;
 
     private final Node rootIcon
-            = new ImageView (new Image (getClass ().getResourceAsStream (
+            = new ImageView(new Image(getClass().getResourceAsStream(
                     "root.png")));
 
     // Other widgets from Java
-    public String myDate0 = new SimpleDateFormat ("yyyyMMdd").format (Calendar.
-            getInstance ().getTime ());
+    public String myDate0 = new SimpleDateFormat("yyyyMMdd").format(Calendar.
+            getInstance().getTime());
     public String myDateOldFile = "";
-    public DropShadow shadow = new DropShadow ();
+    public DropShadow shadow = new DropShadow();
 
     private AnchorPane myPane;
 
@@ -531,9 +531,9 @@ public class MainScreenController { //implements Initializable {
     @FXML
     private BorderPane mainPane;
     @FXML
-    private final Button setB1 = new Button ("SET");
+    private final Button setB1 = new Button("SET");
     @FXML
-    private final Button setB2 = new Button ("SET");
+    private final Button setB2 = new Button("SET");
     @FXML
     private Button doCheck;
     @FXML
@@ -554,7 +554,7 @@ public class MainScreenController { //implements Initializable {
     private MenuItem doOrdering;
 
     @FXML
-    private TableView<editableData> editTable = new TableView ();
+    private TableView<editableData> editTable = new TableView();
     @FXML
     private TableColumn<editableData, String> bibHead;
     @FXML
@@ -578,11 +578,7 @@ public class MainScreenController { //implements Initializable {
         this.myRootScene = myscene;
     }
 
-    public void setCSS(String cssname) {
-        this.cssName = cssname;
-    }
-    
-    public void setbrW(BufferedWriter brWIN){
+    public void setbrW(BufferedWriter brWIN) {
         this.brW = brWIN;
     }
 
@@ -593,7 +589,7 @@ public class MainScreenController { //implements Initializable {
      */
     @FXML
     private void doProcOrder(ActionEvent event) {
-        doProcSE (0);
+        doProcSE(0);
         bOrdered = true;
     }
 
@@ -613,142 +609,142 @@ public class MainScreenController { //implements Initializable {
         int tmpI = 0;
         int line = 0;
 
-        if ( entryNum.isEmpty () ) {
-            popupMsg.warnBox ("EntryNum has not been set. Exiting.....",
+        if (entryNum.isEmpty()) {
+            popupMsg.warnBox("EntryNum has not been set. Exiting.....",
                     "Entry number ?");
             return -9;  //  System.exit (1);
         } else {
             String temp = "";
             str1 = entryNum;
 
-            headStyle ();
-            if ( !isOrdered ) {
+            headStyle();
+            if (!isOrdered) {
                 lastEntVal = myDataN + 1;
             } else {
                 lastEntVal = myDataN;
             }
 
-            for ( int ii = 0; ii < lastEntVal; ii++ ) {
-                String s1 = myData.get (ii).getBibItemName ().toString ();
-                String s2 = myData.get (ii).getPointerID ().toString ();
-                String s3 = myData.get (ii).getContentTxt ().toString ();
+            for (int ii = 0; ii < lastEntVal; ii++) {
+                String s1 = myData.get(ii).getBibItemName().toString();
+                String s2 = myData.get(ii).getPointerID().toString();
+                String s3 = myData.get(ii).getContentTxt().toString();
 
                 temp = s1;
-                if ( temp.contains ("ENTRY") && !temp.contains ("END") ) {
-                    str2 = exforUtil.fixStr0s ("0", 3);
-                    str3 = exforUtil.fixStr0s ("1", 5);
-                } else if ( temp.contains ("ENDSUBENT") ) {
-                    str3 = procOutput ("99999", 5);
+                if (temp.contains("ENTRY") && !temp.contains("END")) {
+                    str2 = exforUtil.fixStr0s("0", 3);
+                    str3 = exforUtil.fixStr0s("1", 5);
+                } else if (temp.contains("ENDSUBENT")) {
+                    str3 = procOutput("99999", 5);
                     ++subC;
                     lineC = 1;
-                } else if ( temp.contains ("ENDENTRY") ) {
+                } else if (temp.contains("ENDENTRY")) {
                     subC = 999;
                     lineC = 99999;
                     //str2 = fixString11(String.valueOf(subC), 3); 
-                    str2 = procOutput (Integer.toString (subC), 3);  // fixStr0s(String.valueOf(subC), 3);
-                    str3 = procOutput (Integer.toString (lineC), 5); // fixStr0s(String.valueOf(lineC), 5);
+                    str2 = procOutput(Integer.toString(subC), 3);  // fixStr0s(String.valueOf(subC), 3);
+                    str3 = procOutput(Integer.toString(lineC), 5); // fixStr0s(String.valueOf(lineC), 5);
                 } else {
-                    str2 = exforUtil.fixStr0s (Integer.toString (subC), 3); //procOutput(Integer.toString(subC), 3);
+                    str2 = exforUtil.fixStr0s(Integer.toString(subC), 3); //procOutput(Integer.toString(subC), 3);
                     tmpI = lineC++;
-                    str3 = exforUtil.fixStr0s (Integer.toString (tmpI), 5); // procOutput(Integer.toString(tmpI), 5);
+                    str3 = exforUtil.fixStr0s(Integer.toString(tmpI), 5); // procOutput(Integer.toString(tmpI), 5);
                 }
 
-                if ( s1.contains ("BIB") && (linia == 0) && !isBIB ) {
-                    setBIBRecNum (ii);
-                    if ( isBIB ) {
+                if (s1.contains("BIB") && (linia == 0) && !isBIB) {
+                    setBIBRecNum(ii);
+                    if (isBIB) {
                         BIBN1S = exforUtil.
-                                fixString11 (Integer.toString (BIBN1));
+                                fixString11(Integer.toString(BIBN1));
                         BIBN2S = exforUtil.
-                                fixString11 (Integer.toString (BIBN2));
+                                fixString11(Integer.toString(BIBN2));
                         s3 = BIBN1S + BIBN2S;
                     }
                 }
 
-                if ( s1.contains ("ENDBIB") ) {
-                    s3 = BIBN2S + exforUtil.fixString11 ("0");
+                if (s1.contains("ENDBIB")) {
+                    s3 = BIBN2S + exforUtil.fixString11("0");
                     BIBN1 = 0;
                     BIBN2 = 0;
                     isBIB = false;
                 }
 
-                if ( s1.contains ("COMMON") && (linia == 0) && !isCOM ) {
-                    setCommonRecNum (ii);
-                    if ( isCOM ) {
+                if (s1.contains("COMMON") && (linia == 0) && !isCOM) {
+                    setCommonRecNum(ii);
+                    if (isCOM) {
                         COMN1S = exforUtil.
-                                fixString11 (Integer.toString (COMN1));
+                                fixString11(Integer.toString(COMN1));
                         COMN2S = exforUtil.
-                                fixString11 (Integer.toString (COMN2));
+                                fixString11(Integer.toString(COMN2));
                         s3 = COMN1S + COMN2S;
                     }
                 }
 
-                if ( s1.contains ("DATA") && (linia == 0) && !isData &&
-                        !s1.contains ("DECAY") ) {
-                    setDataRecNum (ii);
-                    if ( isData ) {
+                if (s1.contains("DATA") && (linia == 0) && !isData
+                        && !s1.contains("DECAY")) {
+                    setDataRecNum(ii);
+                    if (isData) {
                         DATN1S = exforUtil.
-                                fixString11 (Integer.toString (DATN1));
+                                fixString11(Integer.toString(DATN1));
                         DATN2S = exforUtil.
-                                fixString11 (Integer.toString (DATN2));
+                                fixString11(Integer.toString(DATN2));
                         s3 = DATN1S + DATN2S;
                     }
                 }
 
-                if ( s1.contains ("ENDCOMMON") && (linia == 0) ) {
-                    s3 = COMN2S + exforUtil.fixString11 ("0");
+                if (s1.contains("ENDCOMMON") && (linia == 0)) {
+                    s3 = COMN2S + exforUtil.fixString11("0");
                     COMN1 = 0;
                     COMN2 = 0;
                     isCOM = false;
                 }
 
-                if ( s1.contains ("ENDDATA") && (linia == 0) ) {
-                    s3 = DATN2S + exforUtil.fixString11 ("0");
+                if (s1.contains("ENDDATA") && (linia == 0)) {
+                    s3 = DATN2S + exforUtil.fixString11("0");
                     isData = false;
                 }
 
-                if ( s1.contains ("NOCOMMON") && (linia == 0) ) {
-                    s3 = exforUtil.fixString11 ("0") + exforUtil.fixString11 (
+                if (s1.contains("NOCOMMON") && (linia == 0)) {
+                    s3 = exforUtil.fixString11("0") + exforUtil.fixString11(
                             "0");
                 }
 
-                if ( s1.contains ("SUBENT") && !s1.contains ("END") && (linia ==
-                        0) ) {
+                if (s1.contains("SUBENT") && !s1.contains("END") && (linia
+                        == 0)) {
                     // setSubentNum (ii);
-                    String tmp = myData.get (ii - 1).getSubEntNum ().trim ();
-                    tmp = tmp.substring (5, 8).trim ();
-                    int fac = Integer.parseInt (tmp) + 1;
-                    s3 = exforUtil.fixString11 (getSUBENT (fac)) + exforUtil.
-                            fixString11 (myDate0);
+                    String tmp = myData.get(ii - 1).getSubEntNum().trim();
+                    tmp = tmp.substring(5, 8).trim();
+                    int fac = Integer.parseInt(tmp) + 1;
+                    s3 = exforUtil.fixString11(getSUBENT(fac)) + exforUtil.
+                            fixString11(myDate0);
                 }
 
-                if ( s1.contains ("ENDSUBENT") && (linia == 0) ) {
-                    String tmp = myData.get (ii - 1).getSubEntNum ().trim ();
-                    tmp = tmp.substring (8).trim ();
-                    int fac = Integer.parseInt (tmp) - 1;
+                if (s1.contains("ENDSUBENT") && (linia == 0)) {
+                    String tmp = myData.get(ii - 1).getSubEntNum().trim();
+                    tmp = tmp.substring(8).trim();
+                    int fac = Integer.parseInt(tmp) - 1;
                     //int fac = subENTNum;
-                    s3 = exforUtil.fixString11 (Integer.toString (fac)) +
-                            exforUtil.fixString11 ("0");
+                    s3 = exforUtil.fixString11(Integer.toString(fac))
+                            + exforUtil.fixString11("0");
                 }
 
-                if ( s1.matches ("ENDENTRY") && (linia == 0) ) {
-                    String tmp = myData.get (ii - 1).getSubEntNum ().trim ();
-                    tmp = tmp.substring (5, 8).trim ();
-                    tmp = Integer.toString (Integer.parseInt (tmp)).trim ();
-                    s3 = exforUtil.fixString11 (tmp) + exforUtil.fixString11 (
+                if (s1.matches("ENDENTRY") && (linia == 0)) {
+                    String tmp = myData.get(ii - 1).getSubEntNum().trim();
+                    tmp = tmp.substring(5, 8).trim();
+                    tmp = Integer.toString(Integer.parseInt(tmp)).trim();
+                    s3 = exforUtil.fixString11(tmp) + exforUtil.fixString11(
                             "0");
                 }
 
                 String s4 = str1 + str2 + str3 + " ";
-                line = Integer.parseInt (str3.trim ()); // Integer.parseInt(str3.substring(str3.length() - 3));
-                if ( linia == 0 ) {
-                    myData.set (ii, new editableData (s1, s2, s3, s4));
+                line = Integer.parseInt(str3.trim()); // Integer.parseInt(str3.substring(str3.length() - 3));
+                if (linia == 0) {
+                    myData.set(ii, new editableData(s1, s2, s3, s4));
                 } else {
-                    if ( s1.contains ("COMMON") ) {
+                    if (s1.contains("COMMON")) {
                         line = 99999;
                     }
-                    headList.add (new lineList (s1, line));
+                    headList.add(new lineList(s1, line));
                 }
-                if ( s1.contains ("ENDENTRY") ) {
+                if (s1.contains("ENDENTRY")) {
                     isOrdered = true;
                     break;
                 }
@@ -760,30 +756,30 @@ public class MainScreenController { //implements Initializable {
 
     private String getLineNum(String myText, boolean isOld) {
         int lineNum = 0;
-        if ( !isOld ) {
-            String partA = myText.substring (0, 10).trim ();
-            String partB = myText.substring (66).trim ();
-            lineNum = (partA.contains ("COMMON")
+        if (!isOld) {
+            String partA = myText.substring(0, 10).trim();
+            String partB = myText.substring(66).trim();
+            lineNum = (partA.contains("COMMON")
                     ? 99999
-                    : Integer.parseInt (partB.substring (8).trim ()));
-            headList.add (new lineList (partA, lineNum));
+                    : Integer.parseInt(partB.substring(8).trim()));
+            headList.add(new lineList(partA, lineNum));
         } else {
             String Head = myText;
-            for ( lineList item : headList ) {
-                if ( item.getHeading ().contains (Head) ) {
-                    lineNum = item.getLine ();
+            for (lineList item : headList) {
+                if (item.getHeading().contains(Head)) {
+                    lineNum = item.getLine();
                 }
             }
         }
-        return Integer.toString (lineNum);
+        return Integer.toString(lineNum);
     }
 
     private int doGetSELineNum(String Head) {
         int line = 0;
         //doProcSE(1);
-        for ( lineList item : headList ) {
-            if ( item.getHeading ().contains (Head) ) {
-                line = item.getLine ();
+        for (lineList item : headList) {
+            if (item.getHeading().contains(Head)) {
+                line = item.getLine();
             }
         }
         return line - 3; // -3  is used to make Title as 1
@@ -793,11 +789,11 @@ public class MainScreenController { //implements Initializable {
         String temp1;
         BIBN1 = 0;
         BIBN2 = 0;
-        for ( int jj = kk + 1; jj < myDataN; jj++ ) {
-            temp1 = myData.get (jj).getBibItemName ();
-            if ( !temp1.contains ("ENDBIB") && temp1.length () != 0 && !isBIB ) {
+        for (int jj = kk + 1; jj < myDataN; jj++) {
+            temp1 = myData.get(jj).getBibItemName();
+            if (!temp1.contains("ENDBIB") && temp1.length() != 0 && !isBIB) {
                 ++BIBN1;
-            } else if ( temp1.contains ("ENDBIB") ) {
+            } else if (temp1.contains("ENDBIB")) {
                 BIBN2 = jj - kk - 1;
                 isBIB = true;
                 break;
@@ -811,17 +807,17 @@ public class MainScreenController { //implements Initializable {
         int jj = kk + 3;
         DATN1 = 0;
         DATN2 = 0;
-        tmp1 = myData.get (jj).getBibItemName () + " " + myData.get (jj).
-                getContentTxt ();
+        tmp1 = myData.get(jj).getBibItemName() + " " + myData.get(jj).
+                getContentTxt();
 
         ++DATN2;
-        parts = tmp1.split ("\\s+");
+        parts = tmp1.split("\\s+");
         DATN1 = parts.length;
         while (!isData && jj < (myDataN - 1)) {
             ++jj;
-            tmp1 = myData.get (jj).getBibItemName ();
+            tmp1 = myData.get(jj).getBibItemName();
             ++DATN2;
-            if ( tmp1.contains ("ENDDATA") ) {
+            if (tmp1.contains("ENDDATA")) {
                 isData = true;
                 break;
             }
@@ -836,16 +832,16 @@ public class MainScreenController { //implements Initializable {
         COMN1 = 0;
         COMN2 = 0;
         int jj = kk + 1;
-        tmp1 = myData.get (jj).getBibItemName () + " " + myData.get (jj).
-                getContentTxt ();
+        tmp1 = myData.get(jj).getBibItemName() + " " + myData.get(jj).
+                getContentTxt();
         ++COMN2;
-        parts = tmp1.split ("\\s+");
+        parts = tmp1.split("\\s+");
         COMN1 = parts.length;
         while (!isCOM && jj < (myDataN - 1)) {
             ++jj;
-            tmp1 = myData.get (jj).getBibItemName ();
+            tmp1 = myData.get(jj).getBibItemName();
             ++COMN2;
-            if ( tmp1.contains ("ENDCOMMON") ) {
+            if (tmp1.contains("ENDCOMMON")) {
                 isCOM = true;
                 break;
             }
@@ -856,7 +852,7 @@ public class MainScreenController { //implements Initializable {
     private void setSubentNum(int kk) {
         int jj = kk + 1;
         subENTNum = 0;
-        while (!myData.get (kk).getBibItemName ().contains ("ENDSUBENT")) {
+        while (!myData.get(kk).getBibItemName().contains("ENDSUBENT")) {
             ++subENTNum;
             ++kk;
         }
@@ -870,11 +866,11 @@ public class MainScreenController { //implements Initializable {
      */
     @FXML
     private void doSelfCheck(ActionEvent event) throws InterruptedException, InterruptedException, InterruptedException, InterruptedException, InterruptedException, InterruptedException {
-        if ( !entryNum.isEmpty () &&
-                !fName.isEmpty () &&
-                !myData.isEmpty () &&
-                isOrdered ) {
-            selfChecker.selfChecker (entryNum, fName, myData, brW);
+        if (!entryNum.isEmpty()
+                && !fName.isEmpty()
+                && !myData.isEmpty()
+                && isOrdered) {
+            selfChecker.selfChecker(entryNum, fName, myData, brW);
         }
     }
 
@@ -887,17 +883,17 @@ public class MainScreenController { //implements Initializable {
     @FXML
     private void goQuit(ActionEvent event
     ) {
-        lList.doClearArrays ();   //doClearArrays ();
+        lList.doClearArrays();   //doClearArrays ();
         try {
-            brW.close ();
-            System.gc ();
+            brW.close();
+            System.gc();
 
         } catch (IOException ex) {
-            Logger.getLogger (MainScreenController.class
-                    .getName ()).
-                    log (Level.SEVERE, null, ex);
+            Logger.getLogger(MainScreenController.class
+                    .getName()).
+                    log(Level.SEVERE, null, ex);
         }
-        System.exit (0);
+        System.exit(0);
     }
 
     /*
@@ -907,42 +903,42 @@ public class MainScreenController { //implements Initializable {
     @FXML
     private void doSetEntry(MouseEvent event
     ) {
-        String s1 = entNumT.getText ();
-        String s11 = s1.substring (0, 1);
-        String s12 = s1.substring (1, 2);
-        String s13 = s1.substring (2, 3);
+        String s1 = entNumT.getText();
+        String s11 = s1.substring(0, 1);
+        String s12 = s1.substring(1, 2);
+        String s13 = s1.substring(2, 3);
 
         // entTextEntered = true;
-        if ( !s1.isEmpty () && s1.length () <= 5 && !exforUtil.isAlpha (s12) &&
-                setB1Count < 1 ) {
-            if ( s1.length () < 5 || s1.length () > 5 ) {
+        if (!s1.isEmpty() && s1.length() <= 5 && !exforUtil.isAlpha(s12)
+                && setB1Count < 1) {
+            if (s1.length() < 5 || s1.length() > 5) {
                 popupMsg.
-                        warnBox ("ENTRY Number WRONG Format", "Entry Number...");
+                        warnBox("ENTRY Number WRONG Format", "Entry Number...");
                 return;
             }
             entryNum = s1;
 
-            s11 = (!exforUtil.isNumeric (s11)) ? s11.toUpperCase () : s11;
-            entryNum = entryNum.substring (1);
+            s11 = (!exforUtil.isNumeric(s11)) ? s11.toUpperCase() : s11;
+            entryNum = entryNum.substring(1);
             entryNum = s11 + entryNum;
 
-            exforUtil.setDefaultDirExt (EXFPathDir);
-            rootDir = fileChooser.getCurrentDirectory ().toString ();
+            exforUtil.setDefaultDirExt(EXFPathDir);
+            rootDir = fileChooser.getCurrentDirectory().toString();
             fName = rootDir + pathSEP + entryNum + ".exf";
-            exfFileRead = new File (fName);
+            exfFileRead = new File(fName);
 
-            if ( exfFileRead.exists () && !exfFileRead.isDirectory () ) {
-                System.out.println ("Loading....." + fName);
+            if (exfFileRead.exists() && !exfFileRead.isDirectory()) {
+                System.out.println("Loading....." + fName);
                 fNameSet = false;
-                doLoadEXFFile ();
+                doLoadEXFFile();
             } else {
                 fNameSet = true;
-                entDateT.setText (myDate0);
+                entDateT.setText(myDate0);
                 ++setB1Count;
-                doNewFile ();
+                doNewFile();
             }
-        } else if ( !exforUtil.isNumeric (s12) ) {
-            popupMsg.warnBox (
+        } else if (!exforUtil.isNumeric(s12)) {
+            popupMsg.warnBox(
                     "First character may be alphanumeric while second onwards must be numeric",
                     "Check Entry Number");
         } else {
@@ -951,12 +947,12 @@ public class MainScreenController { //implements Initializable {
             fName = null;
             setB1Count = 0;
 
-            if ( s1.length () < 5 || s1.length () > 5 ) {
+            if (s1.length() < 5 || s1.length() > 5) {
                 popupMsg.
-                        warnBox ("ENTRY Number WRONG Format", "Entry Number...");
+                        warnBox("ENTRY Number WRONG Format", "Entry Number...");
                 return;
             } else {
-                popupMsg.warnBox (
+                popupMsg.warnBox(
                         "EXFOR entry Number has not been selected. Please enter...",
                         "EXFOR entry not selected");
             }
@@ -969,7 +965,7 @@ public class MainScreenController { //implements Initializable {
     @FXML
     private void doSetDate(MouseEvent event
     ) {
-        entDateT.setText (myDate0);
+        entDateT.setText(myDate0);
     }
 
     /*
@@ -978,42 +974,42 @@ public class MainScreenController { //implements Initializable {
     private void startNewExf(ActionEvent event
     ) {
         boolean isFileOK = false;
-        exforUtil.setDefaultDirExt (EXFPathDir);
-        rootDir = fileChooser.getCurrentDirectory ().toString ();
-        fileChooser.setDialogTitle ("Load EXFOR compilation file.....");
-        fileChooser.addChoosableFileFilter (filter);
-        int ret = fileChooser.showDialog (null, "Open File");
-        if ( ret == JFileChooser.APPROVE_OPTION ) {
-            exfFileRead = fileChooser.getSelectedFile ();
-            if ( exfFileRead != null ) {
+        exforUtil.setDefaultDirExt(EXFPathDir);
+        rootDir = fileChooser.getCurrentDirectory().toString();
+        fileChooser.setDialogTitle("Load EXFOR compilation file.....");
+        fileChooser.addChoosableFileFilter(filter);
+        int ret = fileChooser.showDialog(null, "Open File");
+        if (ret == JFileChooser.APPROVE_OPTION) {
+            exfFileRead = fileChooser.getSelectedFile();
+            if (exfFileRead != null) {
                 isFileOK = true;
             }
         }
-        if ( ret == JFileChooser.CANCEL_OPTION ) {
+        if (ret == JFileChooser.CANCEL_OPTION) {
             // dummy for do nothin option
         }
 
         //if ( exfFileRead.exists () ) {
-        if ( isFileOK ) {
-            if ( exfFileRead.getName ().toString ().substring (
-                    exfFileRead.getName ().toString ().length () - 4,
-                    exfFileRead.getName ().toString ().length ())
-                    .toLowerCase ().contains (".exf") ) {
-                fName = exfFileRead.getAbsolutePath ().toString ();
+        if (isFileOK) {
+            if (exfFileRead.getName().toString().substring(
+                    exfFileRead.getName().toString().length() - 4,
+                    exfFileRead.getName().toString().length())
+                    .toLowerCase().contains(".exf")) {
+                fName = exfFileRead.getAbsolutePath().toString();
             } else {
-                fName = exfFileRead.getAbsolutePath ().toString () + ".exf";
+                fName = exfFileRead.getAbsolutePath().toString() + ".exf";
             }
         } else {
-            fName = exfFileRead.getAbsolutePath ().toString () + ".exf";
-            entryNum = exfFileRead.getName ().toString ();
+            fName = exfFileRead.getAbsolutePath().toString() + ".exf";
+            entryNum = exfFileRead.getName().toString();
         }
 
-        if ( exfFileRead.exists () && !exfFileRead.isDirectory () ) {
-            doLoadEXFFile ();
+        if (exfFileRead.exists() && !exfFileRead.isDirectory()) {
+            doLoadEXFFile();
         } else {
-            entNumT.setText (entryNum);
-            entDateT.setText (myDate0);
-            doNewFile ();
+            entNumT.setText(entryNum);
+            entDateT.setText(myDate0);
+            doNewFile();
             ++setB1Count;
         }
     }
@@ -1025,30 +1021,30 @@ public class MainScreenController { //implements Initializable {
     private void doOpenExf(ActionEvent event
     ) {
         boolean isFileOK = false;
-        exforUtil.setDefaultDirExt (EXFPathDir);
-        rootDir = fileChooser.getCurrentDirectory ().toString ();
+        exforUtil.setDefaultDirExt(EXFPathDir);
+        rootDir = fileChooser.getCurrentDirectory().toString();
         while (exfFileRead == null) {
-            fileChooser.setDialogTitle ("Load EXFOR compilation file.....");
-            fileChooser.addChoosableFileFilter (filter);
-            int ret = fileChooser.showDialog (null, "Open File");
-            if ( ret == JFileChooser.APPROVE_OPTION ) {
-                exfFileRead = fileChooser.getSelectedFile ();
-                if ( exfFileRead != null ) {
+            fileChooser.setDialogTitle("Load EXFOR compilation file.....");
+            fileChooser.addChoosableFileFilter(filter);
+            int ret = fileChooser.showDialog(null, "Open File");
+            if (ret == JFileChooser.APPROVE_OPTION) {
+                exfFileRead = fileChooser.getSelectedFile();
+                if (exfFileRead != null) {
                     isFileOK = true;
                 }
             }
-            if ( ret == JFileChooser.CANCEL_OPTION ) {
+            if (ret == JFileChooser.CANCEL_OPTION) {
                 break;
             }
         }
-        if ( isFileOK ) {
-            fName = exfFileRead.getAbsolutePath ().toString ();
-            if ( exfFileRead.exists () && !exfFileRead.isDirectory () ) {
-                doLoadEXFFile ();
+        if (isFileOK) {
+            fName = exfFileRead.getAbsolutePath().toString();
+            if (exfFileRead.exists() && !exfFileRead.isDirectory()) {
+                doLoadEXFFile();
             } else {
-                entNumT.setText (entryNum);
-                entDateT.setText (myDate0);
-                doNewFile ();
+                entNumT.setText(entryNum);
+                entDateT.setText(myDate0);
+                doNewFile();
                 ++setB1Count;
             }
         }
@@ -1061,21 +1057,21 @@ public class MainScreenController { //implements Initializable {
     private void doSaveExf(ActionEvent event
     ) {
         //doProcSE(0);
-        exforUtil.setDefaultDirExt (EXFPathDir);
-        trySaving (".exf");
+        exforUtil.setDefaultDirExt(EXFPathDir);
+        trySaving(".exf");
     }
 
     @FXML
     private void doSaveAsExf(ActionEvent event) {
         //doProcSE(0);
-        exforUtil.setDefaultDirExt (EXFPathDir);
-        fileChooser.setDialogTitle ("save the EXFOR entry as:");
-        int ret = fileChooser.showSaveDialog (fileChooser);
-        if ( ret == JFileChooser.CANCEL_OPTION ) {
+        exforUtil.setDefaultDirExt(EXFPathDir);
+        fileChooser.setDialogTitle("save the EXFOR entry as:");
+        int ret = fileChooser.showSaveDialog(fileChooser);
+        if (ret == JFileChooser.CANCEL_OPTION) {
             // do nothing come out
-        } else if ( ret == JFileChooser.APPROVE_OPTION ) {
-            fName = fName.substring (0, fName.length () - 9);
-            fName += fileChooser.getSelectedFile ();
+        } else if (ret == JFileChooser.APPROVE_OPTION) {
+            fName = fName.substring(0, fName.length() - 9);
+            fName += fileChooser.getSelectedFile();
             //trySaving (".exf");
         }
     }
@@ -1086,47 +1082,47 @@ public class MainScreenController { //implements Initializable {
         String cmd2;
 
         //doProcSE(0);
-        trySaving (".x4");
-        myDialog.setTitle ("Compiling  " + fName + " .... ");
-        if ( !myDialog.getModality ().toString ().contains ("MODAL") ) {
-            myDialog.initModality (Modality.WINDOW_MODAL);
-            myDialog.initOwner (myStage);
+        trySaving(".x4");
+        myDialog.setTitle("Compiling  " + fName + " .... ");
+        if (!myDialog.getModality().toString().contains("MODAL")) {
+            myDialog.initModality(Modality.WINDOW_MODAL);
+            myDialog.initOwner(myStage);
         }
 
-        VBox vb1 = new VBox ();
-        tf.setPrefWidth (800);
-        vb1.getChildren ().addAll (tf, okButton);
-        myDialogScene = new Scene (vb1, 900, 250);
-        myDialog.setScene (myDialogScene);
-        myDialog.show ();
+        VBox vb1 = new VBox();
+        tf.setPrefWidth(800);
+        vb1.getChildren().addAll(tf, okButton);
+        myDialogScene = new Scene(vb1, 900, 250);
+        myDialog.setScene(myDialogScene);
+        myDialog.show();
 
-        exforUtil.setDefaultDirExt (zchexPath);
+        exforUtil.setDefaultDirExt(zchexPath);
         cmd1 = zchexCmd;
         cmd2 = fName;
-        String xType = fName.substring (fName.length () - 8, fName.
-                length () - 7);
-        String optTxt = (xType.contains ("D") || xType.contains ("d")) ? "D"
+        String xType = fName.substring(fName.length() - 8, fName.
+                length() - 7);
+        String optTxt = (xType.contains("D") || xType.contains("d")) ? "D"
                 : "T";
         String[] commands = {cmd1, cmd2, optTxt};
         try {
-            ProcessBuilder proBuilder = new ProcessBuilder (commands);
-            proBuilder.directory (new File (zchexPath));
-            Process myProc = proBuilder.start ();  // Runtime.getRuntime().exec(cmd1 + " " + cmd2);
-            InputStream is = myProc.getInputStream ();
-            InputStreamReader isr = new InputStreamReader (is);
-            BufferedReader br = new BufferedReader (isr);
-            while (myProc.isAlive ()) {
+            ProcessBuilder proBuilder = new ProcessBuilder(commands);
+            proBuilder.directory(new File(zchexPath));
+            Process myProc = proBuilder.start();  // Runtime.getRuntime().exec(cmd1 + " " + cmd2);
+            InputStream is = myProc.getInputStream();
+            InputStreamReader isr = new InputStreamReader(is);
+            BufferedReader br = new BufferedReader(isr);
+            while (myProc.isAlive()) {
                 String thisLine;
-                if ( (thisLine = br.readLine ()) != null ) {
-                    Platform.runLater (new Runnable () {
+                if ((thisLine = br.readLine()) != null) {
+                    Platform.runLater(new Runnable() {
                         @Override
                         public void run() {
-                            tf.appendText (thisLine + "\n");
+                            tf.appendText(thisLine + "\n");
                             try {
-                                brW.write (thisLine + "\n");
+                                brW.write(thisLine + "\n");
                             } catch (IOException ex) {
-                                Logger.getLogger (MainScreenController.class.
-                                        getName ()).log (Level.SEVERE, null, ex);
+                                Logger.getLogger(MainScreenController.class.
+                                        getName()).log(Level.SEVERE, null, ex);
                             }
                         }
                     });
@@ -1134,35 +1130,35 @@ public class MainScreenController { //implements Initializable {
             }
         } catch (IOException ex) {
             try {
-                brW.write ("Could not compile using ZCHEX");
+                brW.write("Could not compile using ZCHEX");
                 Logger
-                        .getLogger (MainScreenController.class
-                                .getName ()).
-                        log (Level.SEVERE, null, ex);
+                        .getLogger(MainScreenController.class
+                                .getName()).
+                        log(Level.SEVERE, null, ex);
 
             } catch (IOException ex1) {
-                Logger.getLogger (MainScreenController.class
-                        .getName ()).
-                        log (Level.SEVERE, null, ex1);
+                Logger.getLogger(MainScreenController.class
+                        .getName()).
+                        log(Level.SEVERE, null, ex1);
             }
         }
 
         zchexName = fName + ".err";
-        tf.appendText (" ");
-        tf.appendText ("=========================================");
-        tf.appendText (" ");
-        BufferedReader br1 = new BufferedReader (new FileReader (
+        tf.appendText(" ");
+        tf.appendText("=========================================");
+        tf.appendText(" ");
+        BufferedReader br1 = new BufferedReader(new FileReader(
                 zchexName));
         String line;
-        while ((line = br1.readLine ()) != null) {
-            tf.appendText (line);
+        while ((line = br1.readLine()) != null) {
+            tf.appendText(line);
         }
-        br1.close ();
+        br1.close();
 
-        okButton.setOnAction (
+        okButton.setOnAction(
                 (ActionEvent event1) -> {
-                    tf.clear ();
-                    myDialog.close ();
+                    tf.clear();
+                    myDialog.close();
                 }
         );
     }
@@ -1176,35 +1172,35 @@ public class MainScreenController { //implements Initializable {
     private void trySaving(String newExt) {
         String fName1;
         try {
-            fName1 = fName.substring (0, fName.length () - 4);
+            fName1 = fName.substring(0, fName.length() - 4);
 
-            fName1 = (!newExt.isEmpty ()) ? fName1 + newExt : fName1 + ".x4";
+            fName1 = (!newExt.isEmpty()) ? fName1 + newExt : fName1 + ".x4";
 
             zchexName = fName1;
-            File fileName = new File (fName1);
-            FileWriter fw = new FileWriter (fileName);
-            Writer output = new BufferedWriter (fw);
+            File fileName = new File(fName1);
+            FileWriter fw = new FileWriter(fileName);
+            Writer output = new BufferedWriter(fw);
 
-            for ( int i = 0; i < myDataN; i++ ) {
-                String str1 = myData.get (i).getBibItemName ();
-                String str2 = myData.get (i).getPointerID ();
-                String str3 = myData.get (i).getContentTxt ();
-                String str4 = myData.get (i).getSubEntNum ();
+            for (int i = 0; i < myDataN; i++) {
+                String str1 = myData.get(i).getBibItemName();
+                String str2 = myData.get(i).getPointerID();
+                String str3 = myData.get(i).getContentTxt();
+                String str4 = myData.get(i).getSubEntNum();
 
-                str1 = procOutput (str1, 0);
-                str2 = procOutput (str2, 1);
-                str3 = procOutput (str3, 2);
+                str1 = procOutput(str1, 0);
+                str2 = procOutput(str2, 1);
+                str3 = procOutput(str3, 2);
 
-                fw.write (str1 + str2 + str3 + str4 + "\n");
+                fw.write(str1 + str2 + str3 + str4 + "\n");
             }
-            output.close ();
-            fw.close ();
-            System.gc ();
+            output.close();
+            fw.close();
+            System.gc();
 
         } catch (IOException ex) {
-            Logger.getLogger (MainScreenController.class
-                    .getName ()).
-                    log (Level.SEVERE, null, ex);
+            Logger.getLogger(MainScreenController.class
+                    .getName()).
+                    log(Level.SEVERE, null, ex);
         }
     }
 
@@ -1215,7 +1211,7 @@ public class MainScreenController { //implements Initializable {
      */
     @FXML
     private void doRunJanis(ActionEvent event) {
-        popupMsg.warnBox ("", titleTip);
+        popupMsg.warnBox("", titleTip);
         //
         // myDialog.setTitle ("Compipling " + fName + ".....");
         // if ( !myDialog.getModality ().toString ().contains ("MODAL") ) {
@@ -1236,95 +1232,95 @@ public class MainScreenController { //implements Initializable {
      */
     @FXML
     private void doMakeTree(MouseEvent event) {
-        startTree ();
+        startTree();
     }
 
     private void startTree() {
         String title = "ENTRY " + entryNum;
-        rootNode = new TreeItem<String> (title); //entryNum);
-        rootNode.setExpanded (true);
-        fixTreeList ();
-        subEntTree = new TreeView<String> (rootNode);
-        subEntTree.setEditable (true);
-        subEntTree.getSelectionModel ().setSelectionMode (
+        rootNode = new TreeItem<String>(title); //entryNum);
+        rootNode.setExpanded(true);
+        fixTreeList();
+        subEntTree = new TreeView<String>(rootNode);
+        subEntTree.setEditable(true);
+        subEntTree.getSelectionModel().setSelectionMode(
                 SelectionMode.MULTIPLE);
 
-        mainPane.setLeft (subEntTree);
-        mainPane.getStyleClass ().addAll ("pane");
+        mainPane.setLeft(subEntTree);
+        mainPane.getStyleClass().addAll("pane");
     }
 
     private void fixTreeList() {
-        if ( !rootNode.getChildren ().isEmpty () ) {
-            rootNode.getChildren ().clear ();
+        if (!rootNode.getChildren().isEmpty()) {
+            rootNode.getChildren().clear();
         }
         int count = 0;
 
-        for ( int i = 0; i < subentNum; i++ ) {
-            count = Integer.parseInt (getSUBENT (i + 1).
-                    substring (getSUBENT (i + 1).length () - 3));
-            String subEntData = "SUBENT    " + getSUBENT (i + 1); // i+ 1 to start from 1 and not 0
-            subEntLeaf = new TreeItem<String> (subEntData);
-            subEntLeaf.setExpanded (true);
-            rootNode.getChildren ().add (subEntLeaf);
-            bibTag = new TreeItem<String> ("BIB");
-            bibTag.setExpanded (true);
-            subEntLeaf.getChildren ().add (bibTag);
+        for (int i = 0; i < subentNum; i++) {
+            count = Integer.parseInt(getSUBENT(i + 1).
+                    substring(getSUBENT(i + 1).length() - 3));
+            String subEntData = "SUBENT    " + getSUBENT(i + 1); // i+ 1 to start from 1 and not 0
+            subEntLeaf = new TreeItem<String>(subEntData);
+            subEntLeaf.setExpanded(true);
+            rootNode.getChildren().add(subEntLeaf);
+            bibTag = new TreeItem<String>("BIB");
+            bibTag.setExpanded(true);
+            subEntLeaf.getChildren().add(bibTag);
 
-            for ( int j = 0; j < bibList.size (); j++ ) {
-                String tmpSE = bibList.get (j).getSubEntNum ();
-                tmpSE = (tmpSE.length () > 5) ? tmpSE.substring (5, 8).trim ()
+            for (int j = 0; j < bibList.size(); j++) {
+                String tmpSE = bibList.get(j).getSubEntNum();
+                tmpSE = (tmpSE.length() > 5) ? tmpSE.substring(5, 8).trim()
                         : tmpSE;
-                int c1 = Integer.parseInt (tmpSE);
-                if ( c1 == count ) {
-                    bibItems = new TreeItem<String> (bibList.get (j).
-                            getStrItem ());
-                    bibTag.getChildren ().add (bibItems);
+                int c1 = Integer.parseInt(tmpSE);
+                if (c1 == count) {
+                    bibItems = new TreeItem<String>(bibList.get(j).
+                            getStrItem());
+                    bibTag.getChildren().add(bibItems);
                 }
             }
-            if ( bibTag.getChildren ().isEmpty () ) {
-                subEntLeaf.setExpanded (false);
+            if (bibTag.getChildren().isEmpty()) {
+                subEntLeaf.setExpanded(false);
             }
-            endBibTag = new TreeItem<String> ("ENDBIB");
-            subEntLeaf.getChildren ().add (endBibTag);
-            endSUBTag = new TreeItem<String> ("ENDSUBENT");
-            rootNode.getChildren ().add (endSUBTag);
+            endBibTag = new TreeItem<String>("ENDBIB");
+            subEntLeaf.getChildren().add(endBibTag);
+            endSUBTag = new TreeItem<String>("ENDSUBENT");
+            rootNode.getChildren().add(endSUBTag);
         }
     }
 
     private void fixTreeList(int mySE) {
-        if ( !rootNode.getChildren ().isEmpty () ) {
-            rootNode.getChildren ().clear ();
+        if (!rootNode.getChildren().isEmpty()) {
+            rootNode.getChildren().clear();
         }
         int count = 0;
-        for ( int i = 0; i < mySE; i++ ) {
-            count = Integer.parseInt (getSUBENT (i + 1).
-                    substring (getSUBENT (i + 1).length () - 3));
-            String subEntData = "SUBENT    " + getSUBENT (i + 1); // i+ 1 to start from 1 and not 0
-            subEntLeaf = new TreeItem<String> (subEntData);
-            subEntLeaf.setExpanded (true);
-            rootNode.getChildren ().add (subEntLeaf);
-            bibTag = new TreeItem<String> ("BIB");
-            bibTag.setExpanded (true);
-            subEntLeaf.getChildren ().add (bibTag);
+        for (int i = 0; i < mySE; i++) {
+            count = Integer.parseInt(getSUBENT(i + 1).
+                    substring(getSUBENT(i + 1).length() - 3));
+            String subEntData = "SUBENT    " + getSUBENT(i + 1); // i+ 1 to start from 1 and not 0
+            subEntLeaf = new TreeItem<String>(subEntData);
+            subEntLeaf.setExpanded(true);
+            rootNode.getChildren().add(subEntLeaf);
+            bibTag = new TreeItem<String>("BIB");
+            bibTag.setExpanded(true);
+            subEntLeaf.getChildren().add(bibTag);
 
-            for ( int j = 0; j < bibList.size (); j++ ) {
-                String tmpSE = bibList.get (j).getSubEntNum ().trim ();
+            for (int j = 0; j < bibList.size(); j++) {
+                String tmpSE = bibList.get(j).getSubEntNum().trim();
                 // String tmpSE = bibList.get (j).getSubEntNum ().
                 //        substring (5, 8).trim ();
-                int c1 = Integer.parseInt (tmpSE);
-                if ( c1 == count ) {
-                    bibItems = new TreeItem<String> (bibList.get (j).
-                            getStrItem ());
-                    bibTag.getChildren ().add (bibItems);
+                int c1 = Integer.parseInt(tmpSE);
+                if (c1 == count) {
+                    bibItems = new TreeItem<String>(bibList.get(j).
+                            getStrItem());
+                    bibTag.getChildren().add(bibItems);
                 }
             }
-            if ( bibTag.getChildren ().isEmpty () ) {
-                subEntLeaf.setExpanded (false);
+            if (bibTag.getChildren().isEmpty()) {
+                subEntLeaf.setExpanded(false);
             }
-            endBibTag = new TreeItem<String> ("ENDBIB");
-            subEntLeaf.getChildren ().add (endBibTag);
-            endSUBTag = new TreeItem<String> ("ENDSUBENT");
-            rootNode.getChildren ().add (endSUBTag);
+            endBibTag = new TreeItem<String>("ENDBIB");
+            subEntLeaf.getChildren().add(endBibTag);
+            endSUBTag = new TreeItem<String>("ENDSUBENT");
+            rootNode.getChildren().add(endSUBTag);
         }
     }
 
@@ -1332,14 +1328,14 @@ public class MainScreenController { //implements Initializable {
      * Selection rule for tee @author Abhijit Bhattacharyya
      */
     private void setTreeSelection() {
-        subEntTree.getSelectionModel ().selectedItemProperty ()
-                .addListener (new ChangeListener<TreeItem> () {
+        subEntTree.getSelectionModel().selectedItemProperty()
+                .addListener(new ChangeListener<TreeItem>() {
                     public void changed(ObservableValue ov,
                             TreeItem oldItem,
                             TreeItem newItem) {
-                        if ( newItem != null ) {
-                            fixTreeList ();
-                            subEntTree.refresh ();
+                        if (newItem != null) {
+                            fixTreeList();
+                            subEntTree.refresh();
                         }
                     }
                 });
@@ -1363,32 +1359,32 @@ public class MainScreenController { //implements Initializable {
         int len2 = 55;
         String out1 = "";
         String tmp = "";
-        if ( tabP == 0 ) {
+        if (tabP == 0) {
 
-            if ( in1.isEmpty () ) {
-                out1 = new String (new char[len0]).replace ("\0", " ");
-            } else if ( in1.length () < len0 ) {
-                tmp = new String (new char[len0 - in1.length ()]).replace ("\0",
+            if (in1.isEmpty()) {
+                out1 = new String(new char[len0]).replace("\0", " ");
+            } else if (in1.length() < len0) {
+                tmp = new String(new char[len0 - in1.length()]).replace("\0",
                         " ");
                 out1 = in1 + tmp;
             } else {
                 out1 = in1;
             }
-        } else if ( tabP == 1 ) {
-            if ( in1.isEmpty () ) {
-                out1 = new String (new char[len1]).replace ("\0", " ");
+        } else if (tabP == 1) {
+            if (in1.isEmpty()) {
+                out1 = new String(new char[len1]).replace("\0", " ");
             } else {
                 out1 = in1;
             }
-        } else if ( tabP == 2 ) {
-            if ( in1.isEmpty () ) {
-                out1 = new String (new char[len2]).replace ("\0", " ");
+        } else if (tabP == 2) {
+            if (in1.isEmpty()) {
+                out1 = new String(new char[len2]).replace("\0", " ");
             } else {
-                out1 = String.format ("%1$-" + len2 + "s", in1);
+                out1 = String.format("%1$-" + len2 + "s", in1);
             }
-        } else if ( tabP > 2 ) {
-            int l1 = tabP - in1.length ();
-            out1 = new String (new char[l1]).replace ("\0", "0");
+        } else if (tabP > 2) {
+            int l1 = tabP - in1.length();
+            out1 = new String(new char[l1]).replace("\0", "0");
             out1 += in1;
         }
         return out1;
@@ -1399,14 +1395,14 @@ public class MainScreenController { //implements Initializable {
      * separator etc.
      */
     private void setupOS() {
-        osName = System.getProperty ("os.name").trim ();
-        if ( osName.contains (winStr) ) {
+        osName = System.getProperty("os.name").trim();
+        if (osName.contains(winStr)) {
             pathSEP = "\\";
-            zchexPath = rootDir + pathSEP + checkerDir + pathSEP +
-                    "zchex_windows";
+            zchexPath = rootDir + pathSEP + checkerDir + pathSEP
+                    + "zchex_windows";
             zchexCmd = zchexPath + pathSEP + "zchexw.exe";
         }
-        if ( osName.contains (linStr) ) {
+        if (osName.contains(linStr)) {
             pathSEP = "/";
             zchexPath = rootDir + pathSEP + checkerDir + pathSEP + "zchex_linux";
             zchexCmd = zchexPath + pathSEP + "zchexl.exe";
@@ -1418,27 +1414,27 @@ public class MainScreenController { //implements Initializable {
      */
     //@Override
     public void initialize() {
-        Tooltip.install (setB1, t1);
-        Tooltip.install (entNumT, t1);
-        Tooltip.install (entDateT, t2);
+        Tooltip.install(setB1, t1);
+        Tooltip.install(entNumT, t1);
+        Tooltip.install(entDateT, t2);
         //Tooltip.install(editTable, t3);        
 
         //setDefaultDirExt (DICTPathDir);
         // rootDir = fileChooser.getCurrentDirectory ().toString ();
         //rootDir = rootDir.substring (0, rootDir.length () - 5);
         try {
-            brW = new BufferedWriter (new FileWriter ("logFile.txt"));
+            brW = new BufferedWriter(new FileWriter("logFile.txt"));
 
         } catch (IOException ex) {
-            Logger.getLogger (MainScreenController.class
-                    .getName ()).
-                    log (Level.SEVERE, null, ex);
+            Logger.getLogger(MainScreenController.class
+                    .getName()).
+                    log(Level.SEVERE, null, ex);
         }
-        CreateHeads ();
+        CreateHeads();
 
-        setupOS ();
+        setupOS();
 
-        startProcess ();
+        startProcess();
         // makeTree();
     }
 
@@ -1446,15 +1442,15 @@ public class MainScreenController { //implements Initializable {
      * This creates reference Heads
      */
     private void CreateHeads() {
-        FixedHeadList.addAll ("TITLE", "AUTHOR", "INSTITUTE",
+        FixedHeadList.addAll("TITLE", "AUTHOR", "INSTITUTE",
                 "REFERENCE", "FACILITY");
-        FixedHeadList.addAll ("SAMPLE", "INC-SOURCE", "DETECTOR", "MONITOR",
+        FixedHeadList.addAll("SAMPLE", "INC-SOURCE", "DETECTOR", "MONITOR",
                 "MONIT-REF", "DECAY-MON");
-        FixedHeadList.addAll ("REL-REF", "CORRECTION", "ADD-RES", "STATUS",
+        FixedHeadList.addAll("REL-REF", "CORRECTION", "ADD-RES", "STATUS",
                 "HISTORY", "COMMON", "NOCOMMON");
-        FixedHeadList.addAll ("REACTION", "DECAY-DATA", "METHOD", "ERR-ANALYS",
+        FixedHeadList.addAll("REACTION", "DECAY-DATA", "METHOD", "ERR-ANALYS",
                 "COMMENT", "DATA");
-        FixedHeadList.addAll (
+        FixedHeadList.addAll(
                 "ENTRY", "BIB", "ENDBIB", "SUBENT", "ENDSUBENT", "ENDENTRY",
                 "ENDCOMMON"
         );
@@ -1463,14 +1459,14 @@ public class MainScreenController { //implements Initializable {
     private void setCellValueFactories() {
         // Main Data Table
 
-        bibHead.setCellValueFactory (cellData -> cellData.getValue ().
-                bibItemNameProperty ());
-        bibPtr.setCellValueFactory (cellData -> cellData.getValue ().
-                pointerIDProperty ());
-        bibText.setCellValueFactory (cellData -> cellData.getValue ().
-                contentTxtProperty ());
-        bibLines.setCellValueFactory (cellData -> cellData.getValue ().
-                subEntNumProperty ());
+        bibHead.setCellValueFactory(cellData -> cellData.getValue().
+                bibItemNameProperty());
+        bibPtr.setCellValueFactory(cellData -> cellData.getValue().
+                pointerIDProperty());
+        bibText.setCellValueFactory(cellData -> cellData.getValue().
+                contentTxtProperty());
+        bibLines.setCellValueFactory(cellData -> cellData.getValue().
+                subEntNumProperty());
 
     }
 
@@ -1478,48 +1474,48 @@ public class MainScreenController { //implements Initializable {
      * Set Row Factory for the TableView
      */
     public void setRowFactory() {
-        editTable.setRowFactory ((TableView<editableData> tv) -> {
-            final TableRow<editableData> row = new TableRow<editableData> ();
-            row.setOnMouseClicked ((MouseEvent event) -> {
-                editableData clickedRow = row.getItem ();
+        editTable.setRowFactory((TableView<editableData> tv) -> {
+            final TableRow<editableData> row = new TableRow<editableData>();
+            row.setOnMouseClicked((MouseEvent event) -> {
+                editableData clickedRow = row.getItem();
                 tmp4 = "";
 
-                tmp4 = clickedRow.bibItemNameProperty ().getValue ();
+                tmp4 = clickedRow.bibItemNameProperty().getValue();
 
-                if ( !row.isEmpty () &&
-                        event.getButton () == MouseButton.SECONDARY &&
-                        event.getClickCount () == 1 &&
-                        !(tmp4.contains ("COMMON")) ) {
+                if (!row.isEmpty()
+                        && event.getButton() == MouseButton.SECONDARY
+                        && event.getClickCount() == 1
+                        && !(tmp4.contains("COMMON"))) {
 
-                    row.setContextMenu (chkMenuEdit);
-                    int rowIndex = row.getIndex ();
-                    resetMenuEditAdd (tmp4, false, rowIndex);
-                    cEdit.setOnAction ((ActionEvent event1) -> {
-                        doAddEditDelete (rowIndex, tmp4, "Edit");
+                    row.setContextMenu(chkMenuEdit);
+                    int rowIndex = row.getIndex();
+                    resetMenuEditAdd(tmp4, false, rowIndex);
+                    cEdit.setOnAction((ActionEvent event1) -> {
+                        doAddEditDelete(rowIndex, tmp4, "Edit");
                     });
-                    cDelete.setOnAction ((ActionEvent event1) -> {
-                        doAddEditDelete (rowIndex, tmp4, "Delete");
+                    cDelete.setOnAction((ActionEvent event1) -> {
+                        doAddEditDelete(rowIndex, tmp4, "Delete");
                     });
 
-                    if ( !append ) {
-                        doAddEditDelete (rowIndex, "", "Add");
+                    if (!append) {
+                        doAddEditDelete(rowIndex, "", "Add");
                     } else {
-                        doAddEditDelete (rowIndex, tmp4, "Add");    // tmp4 was "" before
+                        doAddEditDelete(rowIndex, tmp4, "Add");    // tmp4 was "" before
                     }
-                } else if ( !row.isEmpty () &&
-                        event.getButton () == MouseButton.SECONDARY &&
-                        event.getClickCount () == 1 &&
-                        (tmp4.contains ("COM")) ) {
-                    doAddEditDelete (row.getIndex (), tmp4, "");
+                } else if (!row.isEmpty()
+                        && event.getButton() == MouseButton.SECONDARY
+                        && event.getClickCount() == 1
+                        && (tmp4.contains("COM"))) {
+                    doAddEditDelete(row.getIndex(), tmp4, "");
                 }
-                if ( row.isEmpty () && event.getButton () ==
-                        MouseButton.SECONDARY &&
-                        event.getClickCount () == 1 ) {
+                if (row.isEmpty() && event.getButton()
+                        == MouseButton.SECONDARY
+                        && event.getClickCount() == 1) {
                     String s1 = "";
-                    int rowIndex = row.getIndex ();
-                    resetMenuEditAdd (s1, true, rowIndex);
-                    row.setContextMenu (chkMenuEdit);
-                    doAddEditDelete (rowIndex, "", "Add"); // -1
+                    int rowIndex = row.getIndex();
+                    resetMenuEditAdd(s1, true, rowIndex);
+                    row.setContextMenu(chkMenuEdit);
+                    doAddEditDelete(rowIndex, "", "Add"); // -1
                 }
             });
             return row;
@@ -1532,14 +1528,14 @@ public class MainScreenController { //implements Initializable {
      */
     public void setRowSelection() {
         // editTable :: Big Table
-        editTable.getSelectionModel ().clearSelection ();
-        editTable.getSelectionModel ().setCellSelectionEnabled (false);
-        editTable.setRowFactory (param -> {
-            return new TableRow () {
+        editTable.getSelectionModel().clearSelection();
+        editTable.getSelectionModel().setCellSelectionEnabled(false);
+        editTable.setRowFactory(param -> {
+            return new TableRow() {
                 @Override
                 public void updateIndex(int i) {
-                    super.updateIndex (i);
-                    setMinHeight (50 * i);
+                    super.updateIndex(i);
+                    setMinHeight(50 * i);
                 }
             };
         });
@@ -1550,8 +1546,8 @@ public class MainScreenController { //implements Initializable {
      */
     public void setCellSelection() {
         // editTable:: Big Table
-        editTable.getSelectionModel ().clearSelection ();
-        editTable.getSelectionModel ().setCellSelectionEnabled (true);
+        editTable.getSelectionModel().clearSelection();
+        editTable.getSelectionModel().setCellSelectionEnabled(true);
     }
 
     /**
@@ -1561,23 +1557,23 @@ public class MainScreenController { //implements Initializable {
     public void setCellFactory() {
         // editableData
         final TableColumn<editableData, String> col
-                = new TableColumn<editableData, String> ();
-        col.setCellFactory (param -> {
-            return new TableCell<editableData, String> () {
+                = new TableColumn<editableData, String>();
+        col.setCellFactory(param -> {
+            return new TableCell<editableData, String>() {
                 public void updateItem(String myItem, boolean empty) {
 
-                    super.updateItem (myItem, empty);
+                    super.updateItem(myItem, empty);
 
-                    if ( myItem == null || empty ) {
-                        setText (null);
-                        setStyle ("");
+                    if (myItem == null || empty) {
+                        setText(null);
+                        setStyle("");
                     } else {
-                        Text text = new Text (myItem);
-                        text.setWrappingWidth (param.getPrefWidth () - 35);
-                        setText (myItem);
-                        this.setPrefHeight (
-                                text.getLayoutBounds ().getHeight () + 10);
-                        this.setGraphic (text);
+                        Text text = new Text(myItem);
+                        text.setWrappingWidth(param.getPrefWidth() - 35);
+                        setText(myItem);
+                        this.setPrefHeight(
+                                text.getLayoutBounds().getHeight() + 10);
+                        this.setGraphic(text);
 
                     }
                 }
@@ -1588,402 +1584,402 @@ public class MainScreenController { //implements Initializable {
     private void getAddMenus(String s1, int SE) {
         String subEnt;
         append = false;
-        if ( myData.get (SE).getBibItemName ().contains ("ENDENTRY") ) {
+        if (myData.get(SE).getBibItemName().contains("ENDENTRY")) {
             append = true;
         }
 
-        if ( append ) {
-            subEnt = myData.get (SE - 2).getSubEntNum ();
-            SE = (subEnt.length () > 5)
-                    ? Integer.parseInt (subEnt.substring (9).trim ())
-                    : Integer.parseInt (subEnt.trim ());
+        if (append) {
+            subEnt = myData.get(SE - 2).getSubEntNum();
+            SE = (subEnt.length() > 5)
+                    ? Integer.parseInt(subEnt.substring(9).trim())
+                    : Integer.parseInt(subEnt.trim());
 
-            subEnt = (subEnt.length () > 6) ? subEnt.substring (5, 8).trim ()
+            subEnt = (subEnt.length() > 6) ? subEnt.substring(5, 8).trim()
                     : subEnt;
 
         } else {
-            subEnt = findSubEnt (SE);
+            subEnt = findSubEnt(SE);
         }
 
-        if ( (bOrdered || BLoadOldFile) && !append ) {
-            subEnt = subEnt.substring (5, 8).trim ();
+        if ((bOrdered || BLoadOldFile) && !append) {
+            subEnt = subEnt.substring(5, 8).trim();
         }
 
-        if ( !s1.contains ("END") || !s1.contains ("ENTRY") ||
-                !s1.contains ("SUBENT") || !s1.contains ("ENDCOMMON") ||
-                !s1.contains ("ENDSUBENT") ) {
-            if ( subEnt.length () > 3 ) {
-                subEnt = subEnt.substring (5, 8);
+        if (!s1.contains("END") || !s1.contains("ENTRY")
+                || !s1.contains("SUBENT") || !s1.contains("ENDCOMMON")
+                || !s1.contains("ENDSUBENT")) {
+            if (subEnt.length() > 3) {
+                subEnt = subEnt.substring(5, 8);
             }
-            SE = Integer.parseInt (subEnt);  // finds subentry
-        } else if ( s1.contains ("ENDENTRY") ) {
+            SE = Integer.parseInt(subEnt);  // finds subentry
+        } else if (s1.contains("ENDENTRY")) {
             // to be done
         } else {
             return;
         }
 
-        addM.getItems ().clear ();
-        if ( !bTitle && SE == 1 ) {
-            addM.getItems ().add (titleM);
+        addM.getItems().clear();
+        if (!bTitle && SE == 1) {
+            addM.getItems().add(titleM);
         }
-        if ( !bAuth && SE == 1 ) {
-            addM.getItems ().add (authM);
+        if (!bAuth && SE == 1) {
+            addM.getItems().add(authM);
         }
-        if ( !bInst && SE == 1 ) {
-            addM.getItems ().add (instM);
+        if (!bInst && SE == 1) {
+            addM.getItems().add(instM);
         }
-        if ( !bRef && SE == 1 ) {
-            addM.getItems ().add (refM);
+        if (!bRef && SE == 1) {
+            addM.getItems().add(refM);
         }
-        if ( !bFac && SE == 1 ) {
-            addM.getItems ().add (facM);
+        if (!bFac && SE == 1) {
+            addM.getItems().add(facM);
         }
-        if ( !bReac && SE != 1 ) {          // AVAILABLE sub=2,....
-            addM.getItems ().add (reacM);
+        if (!bReac && SE != 1) {          // AVAILABLE sub=2,....
+            addM.getItems().add(reacM);
         }
-        if ( !bSamp ) {
-            addM.getItems ().add (sampM); // available in sub = ANY
+        if (!bSamp) {
+            addM.getItems().add(sampM); // available in sub = ANY
         }
-        if ( !bDet ) {                     // available in sub = ANY
-            addM.getItems ().add (detM);
+        if (!bDet) {                     // available in sub = ANY
+            addM.getItems().add(detM);
         }
-        if ( !bMethod ) {
-            addM.getItems ().add (methodM);
+        if (!bMethod) {
+            addM.getItems().add(methodM);
         }
-        if ( !bMonit && SE == 1 ) {
-            addM.getItems ().add (monitM);
+        if (!bMonit && SE == 1) {
+            addM.getItems().add(monitM);
         }
-        if ( !bMonitRef ) {
-            addM.getItems ().add (monitRefM);
+        if (!bMonitRef) {
+            addM.getItems().add(monitRefM);
         }
-        if ( !bIncs && SE == 1 ) {
-            addM.getItems ().add (incSM);
+        if (!bIncs && SE == 1) {
+            addM.getItems().add(incSM);
         }
-        if ( !bAnalys && SE == 1 ) {
-            addM.getItems ().add (analysM);
+        if (!bAnalys && SE == 1) {
+            addM.getItems().add(analysM);
         }
-        if ( !bStatus ) {
-            addM.getItems ().add (statusM);
+        if (!bStatus) {
+            addM.getItems().add(statusM);
         }
-        if ( !bHist && SE == 1 ) {
-            addM.getItems ().add (histM);
+        if (!bHist && SE == 1) {
+            addM.getItems().add(histM);
         }
-        if ( !bErrAnalys ) {
-            addM.getItems ().add (errAnalysM);
+        if (!bErrAnalys) {
+            addM.getItems().add(errAnalysM);
         }
-        if ( !bAddResult && SE == 1 ) {
-            addM.getItems ().add (addlResultM);
+        if (!bAddResult && SE == 1) {
+            addM.getItems().add(addlResultM);
         }
-        if ( !bdData ) {
-            addM.getItems ().add (decayDataM);
+        if (!bdData) {
+            addM.getItems().add(decayDataM);
         }
-        if ( !bdMon ) {
-            addM.getItems ().add (decayMonM);
+        if (!bdMon) {
+            addM.getItems().add(decayMonM);
         }
-        if ( !bCorrect ) {
-            addM.getItems ().add (correctM);
+        if (!bCorrect) {
+            addM.getItems().add(correctM);
         }
         //if ( !checkStringArray (subEnt, sub4Common) ) {
-        if ( s1.startsWith ("NOC") ) {
-            addM.getItems ().add (commActiveM);
+        if (s1.startsWith("NOC")) {
+            addM.getItems().add(commActiveM);
         }
-        if ( s1.startsWith ("COM") ) {
-            addM.getItems ().add (commEditM);
+        if (s1.startsWith("COM")) {
+            addM.getItems().add(commEditM);
         }
-        if ( !bData ) {
-            addM.getItems ().add (dataM);
+        if (!bData) {
+            addM.getItems().add(dataM);
         }
-        if ( !bFlag ) {
-            addM.getItems ().add (flagM);
+        if (!bFlag) {
+            addM.getItems().add(flagM);
         }
-        addM.getItems ().add (commentM); // may be put in any block
-        addM.getItems ().add (newSUBM);
+        addM.getItems().add(commentM); // may be put in any block
+        addM.getItems().add(newSUBM);
     }
 
     public void resetMenuEditAdd(String s1, boolean ivoid, int SE) {
         boolean bibSUB = false;
-        if ( s1.contains ("BIB") ||
-                s1.contains ("SUBENT") ||
-                s1.contains ("ENDBIB") ||
-                s1.contains ("ENDSUBENT") ) {
+        if (s1.contains("BIB")
+                || s1.contains("SUBENT")
+                || s1.contains("ENDBIB")
+                || s1.contains("ENDSUBENT")) {
             bibSUB = true;
         }
 
-        chkMenuEdit.getItems ().clear ();
-        editM.getItems ().clear ();
-        getAddMenus (s1, SE);
-        editM.getItems ().addAll (cEdit, cDelete);
-        if ( !ivoid && !bibSUB ) {
-            chkMenuEdit.getItems ().addAll (editM, addM);
-        } else if ( !ivoid ) {
-            chkMenuEdit.getItems ().addAll (addM);
+        chkMenuEdit.getItems().clear();
+        editM.getItems().clear();
+        getAddMenus(s1, SE);
+        editM.getItems().addAll(cEdit, cDelete);
+        if (!ivoid && !bibSUB) {
+            chkMenuEdit.getItems().addAll(editM, addM);
+        } else if (!ivoid) {
+            chkMenuEdit.getItems().addAll(addM);
         }
     }
 
     private void doAddEditDelete(int ri, String s1, String act) {
         String subEntS;
 
-        if ( s1.contains ("ENDENTRY") ) {
-            subEntS = Integer.toString (ri - 1);
-            System.out.println (subEntS);
+        if (s1.contains("ENDENTRY")) {
+            subEntS = Integer.toString(ri - 1);
+            System.out.println(subEntS);
         } else {
-            subEntS = findSubEnt (ri);
+            subEntS = findSubEnt(ri);
         }
 
-        if ( !s1.isEmpty () ) {
+        if (!s1.isEmpty()) {
             switch (s1) {
                 case "TITLE":
-                    doEditFreeText (ri, "TITLE", act, subEntS);
+                    doEditFreeText(ri, "TITLE", act, subEntS);
                     break;
                 case "AUTHOR":
                     // doEditAuth (ri, "AUTHOR", act, subEntS);
-                    doEditFreeText (ri, "AUTHOR", act, subEntS);
+                    doEditFreeText(ri, "AUTHOR", act, subEntS);
                     break;
                 case "INSTITUTE":
-                    doSingleCBText (ri, "INSTITUTE", institute,
+                    doSingleCBText(ri, "INSTITUTE", institute,
                             lList.instList, act, subEntS);
                     break;
                 case "REFERENCE":
-                    doEditRef (ri, "REFERENCE", act, subEntS);
+                    doEditRef(ri, "REFERENCE", act, subEntS);
                     break;
                 case "FACILITY":
-                    doEditFacility (ri, "FACILITY", act, subEntS);
+                    doEditFacility(ri, "FACILITY", act, subEntS);
                     break;
                 case "SAMPLE":
-                    doEditFreeText (ri, "SAMPLE", act, subEntS);
+                    doEditFreeText(ri, "SAMPLE", act, subEntS);
                     break;
                 case "INC-SOURCE":
                     // doEditIncSrc (ri, "INC-SOURCE", act, subEntS);
-                    doSingleCBText (ri, "INC-SOURCE", incSrcCB, lList.incSrcList,
+                    doSingleCBText(ri, "INC-SOURCE", incSrcCB, lList.incSrcList,
                             act,
                             subEntS);
                     break;
                 case "DETECTOR":
-                    doSingleCBText (ri, "DETECTOR", detectorCB,
+                    doSingleCBText(ri, "DETECTOR", detectorCB,
                             lList.detectorList, act, subEntS);
                     break;
                 case "METHOD":
                     //doMethod (ri, "MONITOR", methodCB,
-                    doSingleCBText (ri, "METHOD", methodCB,
+                    doSingleCBText(ri, "METHOD", methodCB,
                             lList.methodList, act, subEntS);
                     break;
                 case "MONITOR":
-                    doEditReact (ri, "MONITOR", act, subEntS);
+                    doEditReact(ri, "MONITOR", act, subEntS);
                     break;
                 case "REACTION":
-                    doEditReact (ri, "REACTION", act, subEntS);
+                    doEditReact(ri, "REACTION", act, subEntS);
                     break;
                 case "MONIT-REF":
-                    doMonitRef (ri, "MONIT-REF", act, subEntS);
+                    doMonitRef(ri, "MONIT-REF", act, subEntS);
                     break;
                 case "HISTORY":
-                    doEditFreeText (ri, "HISTORY", act, subEntS);
+                    doEditFreeText(ri, "HISTORY", act, subEntS);
                     break;
                 case "COMMENT":
-                    doEditFreeText (ri, "COMMENT", act, subEntS);
+                    doEditFreeText(ri, "COMMENT", act, subEntS);
                     break;
                 case "CORRECTION":
-                    doEditFreeText (ri, "CORRECTION", act, subEntS);
+                    doEditFreeText(ri, "CORRECTION", act, subEntS);
                     break;
                 case "STATUS":
-                    doSingleCBText (ri, "STATUS", statusCB,
+                    doSingleCBText(ri, "STATUS", statusCB,
                             lList.statusList, act, subEntS);
                     break;
                 case "ERR-ANALYS":
-                    doEditFreeText (ri, "ERR-ANALYS", act, subEntS);
+                    doEditFreeText(ri, "ERR-ANALYS", act, subEntS);
                     break;
                 case "ADD-RES":
-                    doSingleCBText (ri, "ADD-RES", addlResultCB,
+                    doSingleCBText(ri, "ADD-RES", addlResultCB,
                             lList.addlResultList, act, subEntS);
                     break;
                 case "DECAY-DATA":
-                    doDD (ri, "DECAY-DATA", act, subEntS);
+                    doDD(ri, "DECAY-DATA", act, subEntS);
                     break;
                 case "DECAY-MON":
-                    doDD (ri, "DECAY-MON", act, subEntS);
+                    doDD(ri, "DECAY-MON", act, subEntS);
                     break;
                 case "NOCOMMON":
-                    doCommon (ri, "COMMON", "Activate", subEntS);
+                    doCommon(ri, "COMMON", "Activate", subEntS);
                     break;
                 case "COMMON":
-                    doCommon (ri, "COMMON", "Activate", subEntS);
+                    doCommon(ri, "COMMON", "Activate", subEntS);
                     break;
                 case "DATA":
-                    doCommon (ri, "COMMON", "Activate", subEntS);
+                    doCommon(ri, "COMMON", "Activate", subEntS);
                     break;
                 case "FLAG":
-                    doEditFreeText (ri, "FLAG", act, subEntS);
+                    doEditFreeText(ri, "FLAG", act, subEntS);
                     break;
             }
         }
-        titleM.setOnAction ((ActionEvent event1) -> {
-            editTable.refresh ();
-            bTitle = (act.contains ("Add")) ? true : bTitle;
-            bTitle = (act.contains ("Delete")) ? false : bTitle;
-            doEditFreeText (ri, "TITLE", act, subEntS);
+        titleM.setOnAction((ActionEvent event1) -> {
+            editTable.refresh();
+            bTitle = (act.contains("Add")) ? true : bTitle;
+            bTitle = (act.contains("Delete")) ? false : bTitle;
+            doEditFreeText(ri, "TITLE", act, subEntS);
         });
-        authM.setOnAction ((ActionEvent event1) -> {
-            editTable.refresh ();
-            bAuth = (act.contains ("Add")) ? true : bAuth;
-            bAuth = (act.contains ("Delete")) ? false : bAuth;
+        authM.setOnAction((ActionEvent event1) -> {
+            editTable.refresh();
+            bAuth = (act.contains("Add")) ? true : bAuth;
+            bAuth = (act.contains("Delete")) ? false : bAuth;
             // doEditAuth (ri, "AUTHOR", act, subEntS);
-            doEditFreeText (ri, "AUTHOR", act, subEntS);
+            doEditFreeText(ri, "AUTHOR", act, subEntS);
         });
-        instM.setOnAction ((ActionEvent event1) -> {
-            editTable.refresh ();
-            bInst = (act.contains ("Add")) ? true : bInst;
-            bInst = (act.contains ("Delete")) ? false : bInst;
-            doSingleCBText (ri, "INSTITUTE", institute,
+        instM.setOnAction((ActionEvent event1) -> {
+            editTable.refresh();
+            bInst = (act.contains("Add")) ? true : bInst;
+            bInst = (act.contains("Delete")) ? false : bInst;
+            doSingleCBText(ri, "INSTITUTE", institute,
                     lList.instList, act, subEntS);
         });
-        refM.setOnAction ((ActionEvent event1) -> {
-            editTable.refresh ();
-            bRef = (act.contains ("Add")) ? true : bRef;
-            bRef = (act.contains ("Delete")) ? false : bRef;
-            doEditRef (ri, "REFERENCE", act, subEntS);
+        refM.setOnAction((ActionEvent event1) -> {
+            editTable.refresh();
+            bRef = (act.contains("Add")) ? true : bRef;
+            bRef = (act.contains("Delete")) ? false : bRef;
+            doEditRef(ri, "REFERENCE", act, subEntS);
         });
-        facM.setOnAction ((ActionEvent event1) -> {
-            editTable.refresh ();
-            bFac = (act.contains ("Add")) ? true : bFac;
-            bFac = (act.contains ("Delete")) ? false : bFac;
-            doEditFacility (ri, "FACILITY", act, subEntS);
+        facM.setOnAction((ActionEvent event1) -> {
+            editTable.refresh();
+            bFac = (act.contains("Add")) ? true : bFac;
+            bFac = (act.contains("Delete")) ? false : bFac;
+            doEditFacility(ri, "FACILITY", act, subEntS);
         });
-        sampM.setOnAction ((ActionEvent event1) -> {
-            editTable.refresh ();
-            bSamp = (act.contains ("Add")) ? true : bSamp;
-            bSamp = (act.contains ("Delete")) ? false : bSamp;
-            doEditFreeText (ri, "SAMPLE", act, subEntS);
+        sampM.setOnAction((ActionEvent event1) -> {
+            editTable.refresh();
+            bSamp = (act.contains("Add")) ? true : bSamp;
+            bSamp = (act.contains("Delete")) ? false : bSamp;
+            doEditFreeText(ri, "SAMPLE", act, subEntS);
         });
-        incSM.setOnAction ((ActionEvent event1) -> {
-            editTable.refresh ();
-            bIncs = (act.contains ("Add")) ? true : bIncs;
-            bIncs = (act.contains ("Delete")) ? false : bIncs;
+        incSM.setOnAction((ActionEvent event1) -> {
+            editTable.refresh();
+            bIncs = (act.contains("Add")) ? true : bIncs;
+            bIncs = (act.contains("Delete")) ? false : bIncs;
             // doEditIncSrc (ri, "INC-SOURCE", act, subEntS);
-            doSingleCBText (ri, "INC-SOURCE", incSrcCB, lList.incSrcList, act,
+            doSingleCBText(ri, "INC-SOURCE", incSrcCB, lList.incSrcList, act,
                     subEntS);
         });
-        detM.setOnAction ((ActionEvent event1) -> {
-            editTable.refresh ();
-            bDet = (act.contains ("Add")) ? true : bDet;
-            bDet = (act.contains ("Delete")) ? false : bDet;
-            doSingleCBText (ri, "DETECTOR", detectorCB,
+        detM.setOnAction((ActionEvent event1) -> {
+            editTable.refresh();
+            bDet = (act.contains("Add")) ? true : bDet;
+            bDet = (act.contains("Delete")) ? false : bDet;
+            doSingleCBText(ri, "DETECTOR", detectorCB,
                     lList.detectorList, act, subEntS);
         });
-        methodM.setOnAction ((ActionEvent event1) -> {
-            editTable.refresh ();
-            bMethod = (act.contains ("Add")) ? true : bMethod;
-            bMethod = (act.contains ("Delete")) ? false : bMethod;
+        methodM.setOnAction((ActionEvent event1) -> {
+            editTable.refresh();
+            bMethod = (act.contains("Add")) ? true : bMethod;
+            bMethod = (act.contains("Delete")) ? false : bMethod;
             // doMethod (ri, "METHOD", methodCB,
-            doSingleCBText (ri, "METHOD", methodCB,
+            doSingleCBText(ri, "METHOD", methodCB,
                     lList.methodList, act, subEntS);
         });
-        monitM.setOnAction ((ActionEvent event1) -> {
-            editTable.refresh ();
-            bMonit = (act.contains ("Add")) ? true : bMonit;
-            bMonit = (act.contains ("Delete")) ? false : bMonit;
-            doEditReact (ri, "MONITOR", act, subEntS);
+        monitM.setOnAction((ActionEvent event1) -> {
+            editTable.refresh();
+            bMonit = (act.contains("Add")) ? true : bMonit;
+            bMonit = (act.contains("Delete")) ? false : bMonit;
+            doEditReact(ri, "MONITOR", act, subEntS);
         });
-        reacM.setOnAction ((ActionEvent event1) -> {
-            editTable.refresh ();
-            bReac = (act.contains ("Add")) ? true : bReac;
-            bReac = (act.contains ("Delete")) ? false : bReac;
-            doEditReact (ri, "REACTION", act, subEntS);
+        reacM.setOnAction((ActionEvent event1) -> {
+            editTable.refresh();
+            bReac = (act.contains("Add")) ? true : bReac;
+            bReac = (act.contains("Delete")) ? false : bReac;
+            doEditReact(ri, "REACTION", act, subEntS);
         });
-        monitRefM.setOnAction ((ActionEvent event1) -> {
-            editTable.refresh ();
-            bMonitRef = (act.contains ("Add")) ? true : bMonitRef;
-            bMonitRef = (act.contains ("Delete")) ? false : bMonitRef;
-            doMonitRef (ri, "MONIT-REF", act, subEntS);
+        monitRefM.setOnAction((ActionEvent event1) -> {
+            editTable.refresh();
+            bMonitRef = (act.contains("Add")) ? true : bMonitRef;
+            bMonitRef = (act.contains("Delete")) ? false : bMonitRef;
+            doMonitRef(ri, "MONIT-REF", act, subEntS);
         });
-        histM.setOnAction ((ActionEvent event1) -> {
-            editTable.refresh ();
-            bHist = (act.contains ("Add")) ? true : bHist;
-            bHist = (act.contains ("Delete")) ? false : bHist;
-            doEditFreeText (ri, "HISTORY", act, subEntS);
+        histM.setOnAction((ActionEvent event1) -> {
+            editTable.refresh();
+            bHist = (act.contains("Add")) ? true : bHist;
+            bHist = (act.contains("Delete")) ? false : bHist;
+            doEditFreeText(ri, "HISTORY", act, subEntS);
         });
-        newSUBM.setOnAction ((ActionEvent event1) -> {
-            editTable.refresh ();
-            InsSubEnt (true, subEntS);
+        newSUBM.setOnAction((ActionEvent event1) -> {
+            editTable.refresh();
+            InsSubEnt(true, subEntS);
         });
-        commentM.setOnAction ((ActionEvent event1) -> {
-            editTable.refresh ();
-            bComm = (act.contains ("Add")) ? true : bComm;
-            bComm = (act.contains ("Delete")) ? false : bComm;
-            doEditFreeText (ri, "COMMENT", act, subEntS);
+        commentM.setOnAction((ActionEvent event1) -> {
+            editTable.refresh();
+            bComm = (act.contains("Add")) ? true : bComm;
+            bComm = (act.contains("Delete")) ? false : bComm;
+            doEditFreeText(ri, "COMMENT", act, subEntS);
         });
-        correctM.setOnAction ((ActionEvent event1) -> {
-            editTable.refresh ();
-            bCorrect = (act.contains ("Add")) ? true : bCorrect;
-            bCorrect = (act.contains ("Delete")) ? false : bCorrect;
-            doEditFreeText (ri, "CORRECTION", act, subEntS);
+        correctM.setOnAction((ActionEvent event1) -> {
+            editTable.refresh();
+            bCorrect = (act.contains("Add")) ? true : bCorrect;
+            bCorrect = (act.contains("Delete")) ? false : bCorrect;
+            doEditFreeText(ri, "CORRECTION", act, subEntS);
         });
-        statusM.setOnAction ((ActionEvent event1) -> {
-            editTable.refresh ();
-            bStatus = (act.contains ("Add")) ? true : bStatus;
-            bStatus = (act.contains ("Delete")) ? false : bStatus;
-            doSingleCBText (ri, "STATUS", statusCB,
+        statusM.setOnAction((ActionEvent event1) -> {
+            editTable.refresh();
+            bStatus = (act.contains("Add")) ? true : bStatus;
+            bStatus = (act.contains("Delete")) ? false : bStatus;
+            doSingleCBText(ri, "STATUS", statusCB,
                     lList.statusList, act, subEntS);
         });
-        errAnalysM.setOnAction ((ActionEvent event1) -> {
-            editTable.refresh ();
-            bErrAnalys = (act.contains ("Add")) ? true : bErrAnalys;
-            bErrAnalys = (act.contains ("Delete")) ? false : bErrAnalys;
-            doEditFreeText (ri, "ERR-ANALYS", act, subEntS);
+        errAnalysM.setOnAction((ActionEvent event1) -> {
+            editTable.refresh();
+            bErrAnalys = (act.contains("Add")) ? true : bErrAnalys;
+            bErrAnalys = (act.contains("Delete")) ? false : bErrAnalys;
+            doEditFreeText(ri, "ERR-ANALYS", act, subEntS);
         });
-        addlResultM.setOnAction ((ActionEvent event1) -> {
-            editTable.refresh ();
-            bAddResult = (act.contains ("Add")) ? true : bAddResult;
-            bAddResult = (act.contains ("Delete")) ? false : bAddResult;
-            doSingleCBText (ri, "ADD-RES", addlResultCB,
+        addlResultM.setOnAction((ActionEvent event1) -> {
+            editTable.refresh();
+            bAddResult = (act.contains("Add")) ? true : bAddResult;
+            bAddResult = (act.contains("Delete")) ? false : bAddResult;
+            doSingleCBText(ri, "ADD-RES", addlResultCB,
                     lList.addlResultList, act, subEntS);
         });
-        decayDataM.setOnAction ((ActionEvent event1) -> {
-            editTable.refresh ();
-            bdData = (act.contains ("Add")) ? true : bdData;
-            bdData = (act.contains ("Delete")) ? false : bdData;
-            doDD (ri, "DECAY-DATA", act, subEntS);
+        decayDataM.setOnAction((ActionEvent event1) -> {
+            editTable.refresh();
+            bdData = (act.contains("Add")) ? true : bdData;
+            bdData = (act.contains("Delete")) ? false : bdData;
+            doDD(ri, "DECAY-DATA", act, subEntS);
         });
-        decayMonM.setOnAction ((ActionEvent event1) -> {
-            editTable.refresh ();
-            bdMon = (act.contains ("Add")) ? true : bdMon;
-            bdMon = (act.contains ("Delete")) ? false : bdMon;
-            doDD (ri, "DECAY-MON", act, subEntS);
+        decayMonM.setOnAction((ActionEvent event1) -> {
+            editTable.refresh();
+            bdMon = (act.contains("Add")) ? true : bdMon;
+            bdMon = (act.contains("Delete")) ? false : bdMon;
+            doDD(ri, "DECAY-MON", act, subEntS);
         });
-        commActiveM.setOnAction ((ActionEvent event1) -> {
-            editTable.refresh ();
+        commActiveM.setOnAction((ActionEvent event1) -> {
+            editTable.refresh();
             //bCommon = (act.contains ("Add")) ? true : bCommon;
             //bCommon = (act.contains ("Delete")) ? false : bCommon;
-            doCommon (ri, "COMMON", "Activate", subEntS);
+            doCommon(ri, "COMMON", "Activate", subEntS);
         });
-        commEditM.setOnAction ((ActionEvent event1) -> {
-            editTable.refresh ();
-            doCommon (ri, "COMMON", "Activate", subEntS);
+        commEditM.setOnAction((ActionEvent event1) -> {
+            editTable.refresh();
+            doCommon(ri, "COMMON", "Activate", subEntS);
         });
-        dataM.setOnAction ((ActionEvent event1) -> {
-            editTable.refresh ();
-            doCommon (ri, "COMMON", "Activate", subEntS);
+        dataM.setOnAction((ActionEvent event1) -> {
+            editTable.refresh();
+            doCommon(ri, "COMMON", "Activate", subEntS);
         });
-        flagM.setOnAction ((ActionEvent event1) -> {
-            editTable.refresh ();
-            bFlag = (act.contains ("Add")) ? true : bFlag;
-            bFlag = (act.contains ("Delete")) ? false : bFlag;
-            doEditFreeText (ri, "FLAG", act, subEntS);
+        flagM.setOnAction((ActionEvent event1) -> {
+            editTable.refresh();
+            bFlag = (act.contains("Add")) ? true : bFlag;
+            bFlag = (act.contains("Delete")) ? false : bFlag;
+            doEditFreeText(ri, "FLAG", act, subEntS);
         });
-        procTree ();
+        procTree();
     }
 
     //Dynamically Process Tree
     private void procTree() {
         // Update Tree after operation on Heads
-        doSortBIBList ();
-        fixTreeList (); /// <<--------- for testing
+        doSortBIBList();
+        fixTreeList(); /// <<--------- for testing
     }
 
     // Try to Sort BIBList
     private void doSortBIBList() {
-        if ( !bibList.isEmpty () ) {
-            FXCollections.sort (bibList, (BIBClasses b1, BIBClasses b2)
-                    -> b1.getLineNum ().compareTo (b2.getLineNum ())
+        if (!bibList.isEmpty()) {
+            FXCollections.sort(bibList, (BIBClasses b1, BIBClasses b2)
+                    -> b1.getLineNum().compareTo(b2.getLineNum())
             );
         }
     }
@@ -1993,48 +1989,48 @@ public class MainScreenController { //implements Initializable {
      */
     // private void InsSubEnt(String subN) {
     private void InsSubEnt(boolean append, String SE) {
-        String subN = Integer.toString (++subentNum);
-        int line = Integer.parseInt (SE);
+        String subN = Integer.toString(++subentNum);
+        int line = Integer.parseInt(SE);
 
-        if ( append ) {
+        if (append) {
             ++line;
             //System.out.println (subentNum);
-            subN = Integer.toString (subentNum);
+            subN = Integer.toString(subentNum);
             //System.out.println (subN + " " + subentNum);
-            myData.add (line,
-                    new editableData ("SUBENT", "",
-                            exforUtil.fixString11 (getSUBENT (subentNum)) +
-                            exforUtil.fixString11 (myDate0), subN));
+            myData.add(line,
+                    new editableData("SUBENT", "",
+                            exforUtil.fixString11(getSUBENT(subentNum))
+                            + exforUtil.fixString11(myDate0), subN));
             ++myDataN;
-            myData.add (line + 1, new editableData ("BIB", "", "", subN));
+            myData.add(line + 1, new editableData("BIB", "", "", subN));
             ++myDataN;
-            myData.add (line + 2, new editableData ("ENDBIB", "", "", subN));
+            myData.add(line + 2, new editableData("ENDBIB", "", "", subN));
             ++myDataN;
-            myData.add (line + 3, new editableData ("NOCOMMON", "",
-                    exforUtil.fixString11 ("0") + exforUtil.fixString11 ("0"),
+            myData.add(line + 3, new editableData("NOCOMMON", "",
+                    exforUtil.fixString11("0") + exforUtil.fixString11("0"),
                     subN));
             ++myDataN;
-            sub4Common.add (subN);
-            myData.add (line + 4,
-                    new editableData ("ENDSUBENT", "", "", subN));
+            sub4Common.add(subN);
+            myData.add(line + 4,
+                    new editableData("ENDSUBENT", "", "", subN));
             ++myDataN;
             ++lastLine;
         } else {
-            myData.add (++myDataN,
-                    new editableData ("SUBENT", "",
-                            exforUtil.fixString11 (getSUBENT (subentNum)) +
-                            exforUtil.fixString11 (myDate0), subN));
+            myData.add(++myDataN,
+                    new editableData("SUBENT", "",
+                            exforUtil.fixString11(getSUBENT(subentNum))
+                            + exforUtil.fixString11(myDate0), subN));
 
-            myData.add (++myDataN, new editableData ("BIB", "", "", subN));
-            myData.add (++myDataN, new editableData ("ENDBIB", "", "", subN));
-            myData.add (++myDataN, new editableData ("NOCOMMON", "",
-                    exforUtil.fixString11 ("0") + exforUtil.fixString11 ("0"),
+            myData.add(++myDataN, new editableData("BIB", "", "", subN));
+            myData.add(++myDataN, new editableData("ENDBIB", "", "", subN));
+            myData.add(++myDataN, new editableData("NOCOMMON", "",
+                    exforUtil.fixString11("0") + exforUtil.fixString11("0"),
                     subN));
-            sub4Common.add (subN);
-            myData.add (++myDataN,
-                    new editableData ("ENDSUBENT", "", "", subN));
+            sub4Common.add(subN);
+            myData.add(++myDataN,
+                    new editableData("ENDSUBENT", "", "", subN));
             ++lastLine;
-            myData.add (++myDataN, new editableData ("ENDENTRY", "", "", "999"));
+            myData.add(++myDataN, new editableData("ENDENTRY", "", "", "999"));
         }
     }
 
@@ -2042,13 +2038,13 @@ public class MainScreenController { //implements Initializable {
     private String findSubEnt(int rowNow) {
         String s1 = "";
         int brk = 0;
-        for ( int ij = rowNow; ij <= myDataN; ij++ ) {
-            if ( myData.get (ij).getBibItemName ().contains ("SUBENT") ) {
-                s1 = myData.get (ij).getSubEntNum ();
+        for (int ij = rowNow; ij <= myDataN; ij++) {
+            if (myData.get(ij).getBibItemName().contains("SUBENT")) {
+                s1 = myData.get(ij).getSubEntNum();
                 brk = 1;
                 break;
             }
-            if ( brk == 1 ) {
+            if (brk == 1) {
                 break;
             }
         }
@@ -2060,13 +2056,13 @@ public class MainScreenController { //implements Initializable {
      */
     private void zapBIBEntry(String Head) {
         int thisEntry = 0;
-        for ( int ii = 0; ii < bibList.size (); ii++ ) {
-            if ( bibList.get (ii).getStrItem ().compareTo (Head) == 0 ) {
+        for (int ii = 0; ii < bibList.size(); ii++) {
+            if (bibList.get(ii).getStrItem().compareTo(Head) == 0) {
                 thisEntry = ii;
             }
         }
 
-        bibList.remove (thisEntry);
+        bibList.remove(thisEntry);
         --bibEntNum;
     }
 
@@ -2164,39 +2160,39 @@ public class MainScreenController { //implements Initializable {
         String spaceList = "";
         int wordNum = 0; // s3.split("\\s+").length;                
         multiLine = 1;
-        String nComps[] = s1.split ("\\s+");
+        String nComps[] = s1.split("\\s+");
         int wCount = 0;
 
         s2 = nComps[0] + " ";
-        wCount = nComps[0].length () + 1;
-        for ( int ii = 1; ii < nComps.length; ii++ ) {
-            wCount += nComps[ii].length ();
-            if ( wCount <= cutPoint ) {
+        wCount = nComps[0].length() + 1;
+        for (int ii = 1; ii < nComps.length; ii++) {
+            wCount += nComps[ii].length();
+            if (wCount <= cutPoint) {
                 s2 += nComps[ii] + " ";
                 ++wCount;
             } else {
                 ++multiLine;
                 s2 += "@@" + nComps[ii] + " ";
-                wCount = nComps[ii].length () + 1;
+                wCount = nComps[ii].length() + 1;
             }
         }
         return s2;
     }
 
     private void tooltipDelay(Tooltip tpX, Node thisNode) {
-        thisNode.setOnMouseEntered (new EventHandler<MouseEvent> () {
+        thisNode.setOnMouseEntered(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                Node b = (Node) event.getSource ();
-                Point2D p = b.localToScreen (b.getLayoutBounds ().getMaxX (), b.
-                        getLayoutBounds ().getMaxY ()); //I position the tooltip at bottom right of the node (see below for explanation)
-                tpX.show (b, p.getX (), p.getY ());
+                Node b = (Node) event.getSource();
+                Point2D p = b.localToScreen(b.getLayoutBounds().getMaxX(), b.
+                        getLayoutBounds().getMaxY()); //I position the tooltip at bottom right of the node (see below for explanation)
+                tpX.show(b, p.getX(), p.getY());
             }
         });
-        thisNode.setOnMouseExited (new EventHandler<MouseEvent> () {
+        thisNode.setOnMouseExited(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                tpX.hide ();
+                tpX.hide();
             }
         });
     }
@@ -2216,21 +2212,21 @@ public class MainScreenController { //implements Initializable {
         int wordNum = 0; // s3.split("\\s+").length;                
         multiLine = 1;
         int ii = 0;
-        while (ii <= s1.length ()) {
-            String tmp = (s3.contains ("\n")) ? s3.substring (0, s3.indexOf (
+        while (ii <= s1.length()) {
+            String tmp = (s3.contains("\n")) ? s3.substring(0, s3.indexOf(
                     "\n")) : s3;
-            if ( tmp.length () > cutPoint ) {
-                tmp = arrTitle (tmp);
+            if (tmp.length() > cutPoint) {
+                tmp = arrTitle(tmp);
                 s2 += tmp + "@@";
                 ++multiLine;
             } else {
                 s2 += tmp + "@@";
                 ++multiLine;
             }
-            s3 = s3.substring (s3.indexOf ("\n") + 1);
-            ii += tmp.length ();
+            s3 = s3.substring(s3.indexOf("\n") + 1);
+            ii += tmp.length();
         }
-        s2 = s2.substring (0, s2.length () - 2);
+        s2 = s2.substring(0, s2.length() - 2);
         return s2;
     }
 
@@ -2239,175 +2235,175 @@ public class MainScreenController { //implements Initializable {
         int tmpRICnt = 1;
         isSelect = false;
 
-        while (myData.get (ri + tmpRICnt).getBibItemName ().equals ("")) {
+        while (myData.get(ri + tmpRICnt).getBibItemName().equals("")) {
             ++tmpRICnt;
         }
 
-        if ( act.contains ("Add") ) {
+        if (act.contains("Add")) {
             getTxtData = "";
         } else {
-            for ( int ii = 0; ii < tmpRICnt; ii++ ) {
+            for (int ii = 0; ii < tmpRICnt; ii++) {
                 getTxtData
-                        += myData.get (ri + ii).getContentTxt () + " ";
+                        += myData.get(ri + ii).getContentTxt() + " ";
             }
         }
-        if ( Head.contains ("AUTHOR") && getTxtData.length () > 2 ) {
-            getTxtData = getTxtData.substring (1, getTxtData.length () - 3);
+        if (Head.contains("AUTHOR") && getTxtData.length() > 2) {
+            getTxtData = getTxtData.substring(1, getTxtData.length() - 3);
         }
-        if ( getTxtData != null ) {
-            getTxtData = getTxtData.replaceAll ("\n", " ");
+        if (getTxtData != null) {
+            getTxtData = getTxtData.replaceAll("\n", " ");
         }
-        if ( !act.contains ("Add") ) {
+        if (!act.contains("Add")) {
             tmpINT = tmpRICnt;
         }
 
-        myDialog.setTitle ("Enter " + Head);
-        if ( !myDialog.getModality ().toString ().contains ("MODAL") ) {
-            myDialog.initModality (Modality.WINDOW_MODAL);
-            myDialog.initOwner (myStage);
+        myDialog.setTitle("Enter " + Head);
+        if (!myDialog.getModality().toString().contains("MODAL")) {
+            myDialog.initModality(Modality.WINDOW_MODAL);
+            myDialog.initOwner(myStage);
         }
-        VBox vb1 = new VBox (10);
-        HBox hb1 = new HBox ();
-        tf.setPrefWidth (130);
-        tf.setWrapText (true);
-        hb1.getChildren ().addAll (acceptEdit, cancelEdit);
-        vb1.getChildren ().addAll (tf, hb1);
-        if ( !act.contains ("Delete") ) {
-            if ( act.contains ("Edit") ) {
-                tf.setText (getTxtData);
+        VBox vb1 = new VBox(10);
+        HBox hb1 = new HBox();
+        tf.setPrefWidth(130);
+        tf.setWrapText(true);
+        hb1.getChildren().addAll(acceptEdit, cancelEdit);
+        vb1.getChildren().addAll(tf, hb1);
+        if (!act.contains("Delete")) {
+            if (act.contains("Edit")) {
+                tf.setText(getTxtData);
 
             }
 
-            tp1.getStyleClass ().add ("ttip");
-            if ( Head.contains ("TITLE") ) {
-                tp1.setText (titleTip);
-            } else if ( Head.contains ("AUTHOR") ) {
-                tp1.setText (authorTip);
-            } else if ( Head.contains ("SAMPLE") ) {
-                tp1.setText (sampleTip);
-            } else if ( Head.contains ("HISTORY") ) {
-                tp1.setText (historyTip);
-            } else if ( Head.contains ("COMMENT") ) {
-                tp1.setText (commentTip);
-            } else if ( Head.contains ("ERR-ANALYS") ) {
-                tp1.setText (errAnalysTip);
-            } else if ( Head.contains ("CORRECTION") ) {
-                tp1.setText (corrTip);
+            tp1.getStyleClass().add("ttip");
+            if (Head.contains("TITLE")) {
+                tp1.setText(titleTip);
+            } else if (Head.contains("AUTHOR")) {
+                tp1.setText(authorTip);
+            } else if (Head.contains("SAMPLE")) {
+                tp1.setText(sampleTip);
+            } else if (Head.contains("HISTORY")) {
+                tp1.setText(historyTip);
+            } else if (Head.contains("COMMENT")) {
+                tp1.setText(commentTip);
+            } else if (Head.contains("ERR-ANALYS")) {
+                tp1.setText(errAnalysTip);
+            } else if (Head.contains("CORRECTION")) {
+                tp1.setText(corrTip);
             }
-            tf.setTooltip (tp1);
-            tooltipDelay (tp1, tf);
+            tf.setTooltip(tp1);
+            tooltipDelay(tp1, tf);
 
-            myDialogScene = new Scene (vb1, 400, 150);
-            myDialogScene.getStylesheets ().add (getClass ().getResource (
-                    "CSS/mainscreen.css").toExternalForm ());
-            myDialog.setScene (myDialogScene);
-            myDialog.show ();
-            acceptEdit.setOnAction ((ActionEvent event) -> {
+            myDialogScene = new Scene(vb1, 400, 150);
+            myDialogScene.getStylesheets().add(getClass().getResource(
+                    "CSS/mainscreen.css").toExternalForm());
+            myDialog.setScene(myDialogScene);
+            myDialog.show();
+            acceptEdit.setOnAction((ActionEvent event) -> {
                 String parseStr = "";
                 String strEntered = "";
                 String tmpStr1 = Head;
                 String tmpStr2 = "";
                 String tmpHead = "";
 
-                if ( tf.getText ().isEmpty () ) {
-                    popupMsg.warnBox (
+                if (tf.getText().isEmpty()) {
+                    popupMsg.warnBox(
                             " Blank Entry! To Cancel, please press \"CANCEL\"",
                             "ATTENTION: BLANK ENTRY!");
                 } else {
 
-                    if ( Head.contains ("AUTHOR") ) {
-                        parseStr = "(" + tf.getText ().toString () + ")";
+                    if (Head.contains("AUTHOR")) {
+                        parseStr = "(" + tf.getText().toString() + ")";
                     } else {
-                        parseStr = tf.getText ().toString ();
+                        parseStr = tf.getText().toString();
                     }
 
-                    parseStr = (Head.contains ("ERR-ANALYS")) ? arrTitle (
+                    parseStr = (Head.contains("ERR-ANALYS")) ? arrTitle(
                             parseStr,
-                            true) : arrTitle (parseStr);
-                    multiLine = (parseStr.split ("\\@@")).length;
+                            true) : arrTitle(parseStr);
+                    multiLine = (parseStr.split("\\@@")).length;
 
-                    if ( act.contains ("Edit") ) {
-                        for ( int ii = 0; ii < multiLine; ii++ ) {
+                    if (act.contains("Edit")) {
+                        for (int ii = 0; ii < multiLine; ii++) {
                             tmpHead = (ii == 0) ? tmpStr1 : tmpStr2;
-                            if ( ii <= multiLine - 2 ) {
-                                strEntered = parseStr.substring (
-                                        0, parseStr.indexOf ("@@"));
+                            if (ii <= multiLine - 2) {
+                                strEntered = parseStr.substring(
+                                        0, parseStr.indexOf("@@"));
                             } else {
                                 strEntered = parseStr;
                             }
 
-                            if ( tmpINT == multiLine ) {
-                                myData.set (ri + ii,
-                                        new editableData (tmpHead, "",
+                            if (tmpINT == multiLine) {
+                                myData.set(ri + ii,
+                                        new editableData(tmpHead, "",
                                                 strEntered,
                                                 SE));
                             } else {
-                                myData.add (ri + ii,
-                                        new editableData (tmpHead, "",
+                                myData.add(ri + ii,
+                                        new editableData(tmpHead, "",
                                                 strEntered,
                                                 SE));
                                 ++myDataN;
 
                             }
-                            if ( ii <= multiLine - 2 ) {
-                                parseStr = parseStr.substring (2 + parseStr.
-                                        indexOf ("@@"));
+                            if (ii <= multiLine - 2) {
+                                parseStr = parseStr.substring(2 + parseStr.
+                                        indexOf("@@"));
                             }
                         }
                     } else {
-                        for ( int ii = 0; ii < multiLine; ii++ ) {
+                        for (int ii = 0; ii < multiLine; ii++) {
                             tmpHead = (ii == 0) ? tmpStr1 : tmpStr2;
-                            if ( ii <= multiLine - 2 ) {
-                                strEntered = parseStr.substring (
-                                        0, parseStr.indexOf ("@@"));
+                            if (ii <= multiLine - 2) {
+                                strEntered = parseStr.substring(
+                                        0, parseStr.indexOf("@@"));
                             } else {
                                 strEntered = parseStr;
                             }
-                            myData.add (ri + ii,
-                                    new editableData (tmpHead, "", strEntered,
+                            myData.add(ri + ii,
+                                    new editableData(tmpHead, "", strEntered,
                                             SE));
                             ++myDataN;
-                            if ( ii <= multiLine - 2 ) {
-                                parseStr = parseStr.substring (2 + parseStr.
-                                        indexOf ("@@"));
+                            if (ii <= multiLine - 2) {
+                                parseStr = parseStr.substring(2 + parseStr.
+                                        indexOf("@@"));
                             }
                         }
 
-                        thisEntryLine = Integer.toString (doGetSELineNum (Head));
-                        bibList.add (
+                        thisEntryLine = Integer.toString(doGetSELineNum(Head));
+                        bibList.add(
                                 bibEntNum,
-                                new BIBClasses (thisEntryLine,
-                                        Integer.toString (bibEntNum),
+                                new BIBClasses(thisEntryLine,
+                                        Integer.toString(bibEntNum),
                                         SE, Head));
                         ++bibEntNum;
                     }
-                    editTable.refresh ();
-                    subEntTree.refresh ();
-                    tf.clear ();
-                    tp1.setText ("");
-                    myDialog.close ();
+                    editTable.refresh();
+                    subEntTree.refresh();
+                    tf.clear();
+                    tp1.setText("");
+                    myDialog.close();
                 }
-                System.gc ();
+                System.gc();
             });
-            cancelEdit.setOnAction ((ActionEvent event) -> {
-                tf.clear ();
-                if ( act.contains ("Add") ) {
-                    changeBoolStatus (Head, false);
+            cancelEdit.setOnAction((ActionEvent event) -> {
+                tf.clear();
+                if (act.contains("Add")) {
+                    changeBoolStatus(Head, false);
                 }
-                myDialog.close ();
+                myDialog.close();
             });
         }
-        if ( act.contains ("Delete") ) {
-            for ( int ii = 0; ii < tmpRICnt; ii++ ) {
-                myData.remove (ri);
+        if (act.contains("Delete")) {
+            for (int ii = 0; ii < tmpRICnt; ii++) {
+                myData.remove(ri);
                 --myDataN;
             }
-            editTable.refresh ();
-            zapBIBEntry (Head);
-            changeBoolStatus (Head, false);
+            editTable.refresh();
+            zapBIBEntry(Head);
+            changeBoolStatus(Head, false);
         }
-        procTree ();
-        System.gc ();
+        procTree();
+        System.gc();
     }
 
     private void doSingleCBText(
@@ -2420,13 +2416,13 @@ public class MainScreenController { //implements Initializable {
         int tmpRICnt = 1;
         isSelect = false;
 
-        while (myData.get (ri + tmpRICnt).getBibItemName () == "") {
+        while (myData.get(ri + tmpRICnt).getBibItemName() == "") {
             ++tmpRICnt;
         }
-        if ( !act.contains ("Add") ) {
-            for ( int ii = 0; ii < tmpRICnt; ii++ ) {
-                temp1 = myData.get (ri + ii).getContentTxt () + " ";
-                if ( !temp1.isEmpty () ) {
+        if (!act.contains("Add")) {
+            for (int ii = 0; ii < tmpRICnt; ii++) {
+                temp1 = myData.get(ri + ii).getContentTxt() + " ";
+                if (!temp1.isEmpty()) {
                     getTxtData += temp1;// + "\n";
                 } else {
                     getTxtData = "";
@@ -2437,144 +2433,144 @@ public class MainScreenController { //implements Initializable {
             getTxtData = "";
         }
 
-        if ( getTxtData.length () == 1 && getTxtData.contains ("\n") ) {
+        if (getTxtData.length() == 1 && getTxtData.contains("\n")) {
             getTxtData = "";
         }
-        if ( !getTxtData.isEmpty () ) {
-            demoStr0 = getTxtData.substring (1, getTxtData.indexOf (")"));
+        if (!getTxtData.isEmpty()) {
+            demoStr0 = getTxtData.substring(1, getTxtData.indexOf(")"));
         }
 
-        if ( act.contains ("Add") ) {
+        if (act.contains("Add")) {
             getTxtData = null;
             putTxt = "";
-            if ( !Head.contains ("METHOD") || !Head.contains ("INC-SOURCE") ) {
+            if (!Head.contains("METHOD") || !Head.contains("INC-SOURCE")) {
                 addLReacCnt = 0;
             } else {
                 lineCount = 1;
             }
-        } else if ( act.contains ("Edit") ) {
-            putTxt = getTxtData.substring (getTxtData.indexOf (")") + 1);
-            if ( !Head.contains ("METHOD") || !Head.contains ("INC-SOURCE") ) {
+        } else if (act.contains("Edit")) {
+            putTxt = getTxtData.substring(getTxtData.indexOf(")") + 1);
+            if (!Head.contains("METHOD") || !Head.contains("INC-SOURCE")) {
                 addLReacCnt = 1;
             } else {
                 lineCount = 1;
             }
         }
-        myDialog.setTitle ("Enter " + Head);
-        if ( !myDialog.getModality ().toString ().contains ("MODAL") ) {
-            myDialog.initModality (Modality.WINDOW_MODAL);
-            myDialog.initOwner (myStage);
+        myDialog.setTitle("Enter " + Head);
+        if (!myDialog.getModality().toString().contains("MODAL")) {
+            myDialog.initModality(Modality.WINDOW_MODAL);
+            myDialog.initOwner(myStage);
         }
-        VBox vb1 = new VBox (10);
-        HBox hb1 = new HBox ();
-        HBox hb2 = new HBox ();
-        tf.setPrefWidth (130);
-        tf.setWrapText (true);
+        VBox vb1 = new VBox(10);
+        HBox hb1 = new HBox();
+        HBox hb2 = new HBox();
+        tf.setPrefWidth(130);
+        tf.setWrapText(true);
 
-        hb1.getChildren ().addAll (
+        hb1.getChildren().addAll(
                 selectIt, acceptEdit, cancelEdit
         );
-        if ( Head.contains ("METHOD") || Head.contains ("INC-SOURCE") ) {
-            hb2.getChildren ().addAll (thisCB, addRCB);
+        if (Head.contains("METHOD") || Head.contains("INC-SOURCE")) {
+            hb2.getChildren().addAll(thisCB, addRCB);
         } else {
-            hb2.getChildren ().addAll (thisCB);
+            hb2.getChildren().addAll(thisCB);
         }
 
-        hb1.setSpacing (10);
-        hb2.setSpacing (10);
-        vb1.getChildren ().addAll (tf, hb2, hb1);
+        hb1.setSpacing(10);
+        hb2.setSpacing(10);
+        vb1.getChildren().addAll(tf, hb2, hb1);
 
-        entryChoice (oList, thisCB);
+        entryChoice(oList, thisCB);
 
-        if ( !act.contains ("Delete") ) {
-            if ( act.contains ("Edit") && getTxtData.length () > 1 ) {
-                tf.setText (getTxtData);
+        if (!act.contains("Delete")) {
+            if (act.contains("Edit") && getTxtData.length() > 1) {
+                tf.setText(getTxtData);
             }
 
-            tp1.getStyleClass ().add ("ttip");
-            if ( Head.contains ("INSTITUTE") ) {
-                tp1.setText (instTip);
-            } else if ( Head.contains ("INC-SOURCE") ) {
-                tp1.setText (incSrcTip);
+            tp1.getStyleClass().add("ttip");
+            if (Head.contains("INSTITUTE")) {
+                tp1.setText(instTip);
+            } else if (Head.contains("INC-SOURCE")) {
+                tp1.setText(incSrcTip);
             }
-            tf.setTooltip (tp1);
-            tooltipDelay (tp1, tf);
+            tf.setTooltip(tp1);
+            tooltipDelay(tp1, tf);
 
-            myDialogScene = new Scene (vb1, 700, 150);
-            myDialogScene.getStylesheets ().add (getClass ().getResource (
-                    "CSS/mainscreen.css").toExternalForm ());
-            myDialog.setScene (myDialogScene);
-            myDialog.show ();
+            myDialogScene = new Scene(vb1, 700, 150);
+            myDialogScene.getStylesheets().add(getClass().getResource(
+                    "CSS/mainscreen.css").toExternalForm());
+            myDialog.setScene(myDialogScene);
+            myDialog.show();
 
-            addRCB.setOnAction ((ActionEvent event1) -> {
-                String tmp = tf.getText ();
-                tf.clear ();
+            addRCB.setOnAction((ActionEvent event1) -> {
+                String tmp = tf.getText();
+                tf.clear();
                 //++lineCount;
-                if ( !tmp.isEmpty () ) {
-                    if ( !exforUtil.isNumeric (tmp.substring (0, 1)) ) {
-                        tmp = Integer.toString (lineCount) + tmp;
+                if (!tmp.isEmpty()) {
+                    if (!exforUtil.isNumeric(tmp.substring(0, 1))) {
+                        tmp = Integer.toString(lineCount) + tmp;
                     }
-                    tf.setText (tmp);
+                    tf.setText(tmp);
                     addRCBB = true;
                 }
             });
 
-            selectIt.setOnAction ((ActionEvent event1) -> {
+            selectIt.setOnAction((ActionEvent event1) -> {
                 String tmpB = "";
-                String tmp = (!thisCB.getValue ().toString ().isEmpty ())
-                        ? (String) thisCB.getValue () : "";
-                tmp = (!tmp.isEmpty ()) ? tmp.substring (0, tmp.indexOf (" "))
+                String tmp = (!thisCB.getValue().toString().isEmpty())
+                        ? (String) thisCB.getValue() : "";
+                tmp = (!tmp.isEmpty()) ? tmp.substring(0, tmp.indexOf(" "))
                         : "";
-                tmpB = tf.getText ().toString ();
+                tmpB = tf.getText().toString();
                 int cnt = 1;
 
-                if ( Head.contains ("METHOD") || Head.contains ("INC-SOURCE") ) {
-                    if ( !addRCBB ) {
-                        if ( lineCount == 1 ) {
-                            if ( !tmpB.isEmpty () ) {
-                                demoStr0 = tmpB.substring (
-                                        0, tmpB.indexOf (")")) +
-                                        "," + tmp + ")" +
-                                        tmpB.substring (tmpB.indexOf (")") + 1);;
+                if (Head.contains("METHOD") || Head.contains("INC-SOURCE")) {
+                    if (!addRCBB) {
+                        if (lineCount == 1) {
+                            if (!tmpB.isEmpty()) {
+                                demoStr0 = tmpB.substring(
+                                        0, tmpB.indexOf(")"))
+                                        + "," + tmp + ")"
+                                        + tmpB.substring(tmpB.indexOf(")") + 1);;
                             } else {
                                 demoStr0 = "(" + tmp + ")";
                             }
-                        } else if ( !tmpB.isEmpty () ) {
-                            demoStr0 = tmpB.substring (0, tmpB.indexOf (")")) +
-                                    "," + tmp;// + ")";
+                        } else if (!tmpB.isEmpty()) {
+                            demoStr0 = tmpB.substring(0, tmpB.indexOf(")"))
+                                    + "," + tmp;// + ")";
                         } else {
-                            demoStr0 = tmpB.substring (0, tmpB.indexOf (")")) +
-                                    "," + tmp + ")" +
-                                    tmpB.substring (tmpB.indexOf (")"));
+                            demoStr0 = tmpB.substring(0, tmpB.indexOf(")"))
+                                    + "," + tmp + ")"
+                                    + tmpB.substring(tmpB.indexOf(")"));
                         }
                     } else {
-                        demoStr0 = tmpB + "\n" +
-                                (++lineCount) + "(" + tmp + ")";
+                        demoStr0 = tmpB + "\n"
+                                + (++lineCount) + "(" + tmp + ")";
                         ++cnt;
                         addRCBB = false;
                     }
                 } else {
-                    if ( (addLReacCnt > 0) ) {
+                    if ((addLReacCnt > 0)) {
                         demoStr0 += "," + tmp;
                     } else {
                         demoStr0 = tmp;
                     }
-                    tmpB = tmpB.substring (tmpB.indexOf (")") + 1);
+                    tmpB = tmpB.substring(tmpB.indexOf(")") + 1);
                 }
 
-                tf.clear ();
-                if ( Head.contains ("METHOD") || Head.contains ("INC-SOURCE") ) {
+                tf.clear();
+                if (Head.contains("METHOD") || Head.contains("INC-SOURCE")) {
                     putTxt = demoStr0;
                 } else {
                     putTxt = "(" + demoStr0 + ")";
                 }
 
-                tf.setText (putTxt);
+                tf.setText(putTxt);
                 ++addLReacCnt;
                 multiLine = lineCount;
                 isSelect = true;
             });
-            acceptEdit.setOnAction ((ActionEvent event) -> {
+            acceptEdit.setOnAction((ActionEvent event) -> {
                 String parseStr;
                 String tmpHead;
                 String strEntered = "";
@@ -2582,177 +2578,177 @@ public class MainScreenController { //implements Initializable {
                 String str2 = "";
                 String labelS;
                 demoStr0 = "";
-                if ( !isSelect ) {
-                    popupMsg.warnBox ("Please \"SELECT\" first",
+                if (!isSelect) {
+                    popupMsg.warnBox("Please \"SELECT\" first",
                             "Attentio!: No Selection.");
-                } else if ( tf.getText ().isEmpty () ) {
-                    popupMsg.warnBox (
+                } else if (tf.getText().isEmpty()) {
+                    popupMsg.warnBox(
                             "Please add entry, then press \"Select\" first",
                             "Attention! ENTRY NULL.");
                 } else {
-                    parseStr = tf.getText ().toString ();
-                    if ( Head.contains ("METHOD") || Head.
-                            contains ("INC-SOURCE") ) {
-                        reacStrLen = parseStr.split ("\\s+");
+                    parseStr = tf.getText().toString();
+                    if (Head.contains("METHOD") || Head.
+                            contains("INC-SOURCE")) {
+                        reacStrLen = parseStr.split("\\s+");
                     } else {
-                        parseStr = arrTitle (parseStr);
+                        parseStr = arrTitle(parseStr);
                     }
 
-                    if ( act.contains ("Edit") ) {
-                        for ( int ii = 0; ii < multiLine; ii++ ) {
+                    if (act.contains("Edit")) {
+                        for (int ii = 0; ii < multiLine; ii++) {
                             tmpHead = (ii == 0) ? str1 : str2;
-                            if ( ii <= multiLine - 2 ) {
-                                if ( Head.contains ("METHOD") || Head.contains (
-                                        "INC-SOURCE") ) {
-                                    strEntered = parseStr.substring (
-                                            1, Integer.valueOf (reacStrLen[ii].
-                                                    length ())
+                            if (ii <= multiLine - 2) {
+                                if (Head.contains("METHOD") || Head.contains(
+                                        "INC-SOURCE")) {
+                                    strEntered = parseStr.substring(
+                                            1, Integer.valueOf(reacStrLen[ii].
+                                                    length())
                                     );
                                 } else {
-                                    strEntered = parseStr.substring (
-                                            0, parseStr.indexOf ("@@"));
+                                    strEntered = parseStr.substring(
+                                            0, parseStr.indexOf("@@"));
                                 }
                             } else {
                                 strEntered = parseStr;
                             }
-                            labelS = (multiLine > 1) ? Integer.toString (ii + 1)
+                            labelS = (multiLine > 1) ? Integer.toString(ii + 1)
                                     : "";
-                            if ( tmpINT == multiLine ) {
-                                if ( Head.contains ("METHOD") || Head.contains (
-                                        "INC-SOURCE") ) {
-                                    myData.set (ri + ii,
-                                            new editableData (
+                            if (tmpINT == multiLine) {
+                                if (Head.contains("METHOD") || Head.contains(
+                                        "INC-SOURCE")) {
+                                    myData.set(ri + ii,
+                                            new editableData(
                                                     tmpHead, labelS, strEntered,
                                                     SE));
                                 } else {
-                                    myData.set (ri + ii,
-                                            new editableData (tmpHead, "",
+                                    myData.set(ri + ii,
+                                            new editableData(tmpHead, "",
                                                     strEntered,
                                                     SE));
                                 }
                             } else {
-                                if ( Head.contains ("METHOD") || Head.contains (
-                                        "INC-SOURCE") ) {
-                                    myData.add (ri + ii,
-                                            new editableData (
+                                if (Head.contains("METHOD") || Head.contains(
+                                        "INC-SOURCE")) {
+                                    myData.add(ri + ii,
+                                            new editableData(
                                                     tmpHead, labelS, strEntered,
                                                     SE));
                                 } else {
-                                    myData.add (ri + ii,
-                                            new editableData (tmpHead, "",
+                                    myData.add(ri + ii,
+                                            new editableData(tmpHead, "",
                                                     strEntered, SE));
                                 }
                             }
-                            if ( ii <= multiLine - 2 ) {
-                                if ( Head.contains ("METHOD") || Head.contains (
-                                        "INC-SOURCE") ) {
-                                    parseStr = parseStr.substring (
-                                            parseStr.indexOf ("),") + 3);
+                            if (ii <= multiLine - 2) {
+                                if (Head.contains("METHOD") || Head.contains(
+                                        "INC-SOURCE")) {
+                                    parseStr = parseStr.substring(
+                                            parseStr.indexOf("),") + 3);
                                 } else {
-                                    parseStr = parseStr.substring (2 + parseStr.
-                                            indexOf (" "));
+                                    parseStr = parseStr.substring(2 + parseStr.
+                                            indexOf(" "));
                                 }
                             }
                         }
                     } else {
-                        for ( int ii = 0; ii < multiLine; ii++ ) {
+                        for (int ii = 0; ii < multiLine; ii++) {
                             tmpHead = (ii == 0) ? str1 : str2;
-                            if ( ii <= multiLine - 2 ) {
-                                if ( Head.contains ("METHOD") || Head.contains (
-                                        "INC-SOURCE") ) {
-                                    strEntered = parseStr.substring (
-                                            1, parseStr.indexOf ("\n")
+                            if (ii <= multiLine - 2) {
+                                if (Head.contains("METHOD") || Head.contains(
+                                        "INC-SOURCE")) {
+                                    strEntered = parseStr.substring(
+                                            1, parseStr.indexOf("\n")
                                     );
                                 } else {
-                                    strEntered = parseStr.substring (
-                                            0, parseStr.indexOf ("@@"));
+                                    strEntered = parseStr.substring(
+                                            0, parseStr.indexOf("@@"));
                                 }
                             } else {
                                 strEntered = parseStr;
                             }
 
-                            labelS = (multiLine > 1) ? Integer.toString (ii + 1)
+                            labelS = (multiLine > 1) ? Integer.toString(ii + 1)
                                     : "";
-                            if ( Head.contains ("METHOD") || Head.contains (
-                                    "INC-SOURCE") ) {
-                                myData.add (ri + ii,
-                                        new editableData (
+                            if (Head.contains("METHOD") || Head.contains(
+                                    "INC-SOURCE")) {
+                                myData.add(ri + ii,
+                                        new editableData(
                                                 tmpHead, labelS, strEntered, SE));
                             } else {
-                                myData.add (ri + ii,
-                                        new editableData (
+                                myData.add(ri + ii,
+                                        new editableData(
                                                 tmpHead, "", strEntered, SE));
                             }
                             ++myDataN;
-                            if ( ii <= multiLine - 2 ) {
-                                if ( Head.contains ("METHOD") || Head.contains (
-                                        "INC-SOURCE") ) {
-                                    parseStr = parseStr.substring (
-                                            parseStr.indexOf ("\n") + 1);
-                                    parseStr = parseStr.substring (
-                                            parseStr.indexOf ("("));
+                            if (ii <= multiLine - 2) {
+                                if (Head.contains("METHOD") || Head.contains(
+                                        "INC-SOURCE")) {
+                                    parseStr = parseStr.substring(
+                                            parseStr.indexOf("\n") + 1);
+                                    parseStr = parseStr.substring(
+                                            parseStr.indexOf("("));
                                 } else {
-                                    parseStr = parseStr.substring (2 + parseStr.
-                                            indexOf ("@@"));
+                                    parseStr = parseStr.substring(2 + parseStr.
+                                            indexOf("@@"));
                                 }
                             }
                         }
-                        thisEntryLine = Integer.toString (doGetSELineNum (Head));
+                        thisEntryLine = Integer.toString(doGetSELineNum(Head));
 
-                        bibList.add (
+                        bibList.add(
                                 bibEntNum,
-                                new BIBClasses (thisEntryLine, Integer.
-                                        toString (
+                                new BIBClasses(thisEntryLine, Integer.
+                                        toString(
                                                 bibEntNum), SE, str1)); //Head));
                         ++bibEntNum;
                     }
-                    editTable.refresh ();
-                    tf.clear ();
-                    myDialog.close ();
+                    editTable.refresh();
+                    tf.clear();
+                    myDialog.close();
                     addRCBB = false;
                     lineCount = 1;
                 }
             });
-            cancelEdit.setOnAction ((ActionEvent event) -> {
-                tf.clear ();
-                if ( act.contains ("Add") ) {
-                    changeBoolStatus (Head, false);
+            cancelEdit.setOnAction((ActionEvent event) -> {
+                tf.clear();
+                if (act.contains("Add")) {
+                    changeBoolStatus(Head, false);
                 }
-                myDialog.close ();
+                myDialog.close();
             });
         }
 
-        if ( act.contains ("Delete") ) {
-            for ( int ii = 0; ii < tmpRICnt; ii++ ) {
-                myData.remove (ri);
+        if (act.contains("Delete")) {
+            for (int ii = 0; ii < tmpRICnt; ii++) {
+                myData.remove(ri);
                 --myDataN;
             }
-            editTable.refresh ();
-            changeBoolStatus (Head, false);
-            zapBIBEntry (Head);
+            editTable.refresh();
+            changeBoolStatus(Head, false);
+            zapBIBEntry(Head);
         }
-        procTree ();
-        System.gc ();
+        procTree();
+        System.gc();
     }
 
     private void refComboSetup(String checkIt) {
         //entryChoice (jTypeList, jType);
-        if ( checkIt.contains ("JOUR") ) {
-            entryChoice (lList.jourList, journals);
+        if (checkIt.contains("JOUR")) {
+            entryChoice(lList.jourList, journals);
         }
-        if ( checkIt.contains ("CONF") ) {
-            entryChoice (lList.confList, journals);
+        if (checkIt.contains("CONF")) {
+            entryChoice(lList.confList, journals);
         }
-        if ( (checkIt.contains ("REPT")) || (checkIt.contains ("THES")) ||
-                (checkIt.contains ("PRIV")) || (checkIt.contains ("PREP")) ||
-                (checkIt.contains ("PROG")) ) {
-            entryChoice (lList.reportList, journals);
+        if ((checkIt.contains("REPT")) || (checkIt.contains("THES"))
+                || (checkIt.contains("PRIV")) || (checkIt.contains("PREP"))
+                || (checkIt.contains("PROG"))) {
+            entryChoice(lList.reportList, journals);
         }
-        if ( checkIt.contains ("BOOK") ) {
-            entryChoice (lList.bookList, journals);
+        if (checkIt.contains("BOOK")) {
+            entryChoice(lList.bookList, journals);
         }
-        if ( checkIt.contains ("DATA") ) {
-            entryChoice (lList.dataList, journals);
+        if (checkIt.contains("DATA")) {
+            entryChoice(lList.dataList, journals);
         }
     }
 
@@ -2761,89 +2757,89 @@ public class MainScreenController { //implements Initializable {
         String temp1;
         isSelect = false;
 
-        if ( act.contains ("Add") ) {
+        if (act.contains("Add")) {
             getTxtData = null;
             putTxt = "";
         } else {
-            getTxtData = myData.get (ri).getContentTxt ().toString ();
-            if ( getTxtData.startsWith ("(") ) {
-                getTxtData = getTxtData.replace ("(", "");
+            getTxtData = myData.get(ri).getContentTxt().toString();
+            if (getTxtData.startsWith("(")) {
+                getTxtData = getTxtData.replace("(", "");
             }
-            if ( getTxtData.endsWith (")") ) {
-                getTxtData = getTxtData.replace (")", "");
+            if (getTxtData.endsWith(")")) {
+                getTxtData = getTxtData.replace(")", "");
             }
             putTxt = getTxtData;
         }
-        myDialog.setTitle ("Enter " + Head);
-        if ( !myDialog.getModality ().toString ().contains ("MODAL") ) {
-            myDialog.initModality (Modality.WINDOW_MODAL);
-            myDialog.initOwner (myStage);
+        myDialog.setTitle("Enter " + Head);
+        if (!myDialog.getModality().toString().contains("MODAL")) {
+            myDialog.initModality(Modality.WINDOW_MODAL);
+            myDialog.initOwner(myStage);
         }
-        VBox vb1 = new VBox (10);
-        VBox vb2 = new VBox (10);
-        VBox vb3 = new VBox (10);
-        VBox vb4 = new VBox (10);
-        VBox vb5 = new VBox (10);
-        VBox vb6 = new VBox (10);
-        VBox vb7 = new VBox (10);
-        VBox vb8 = new VBox (10);
-        HBox hb1 = new HBox ();
-        HBox hb2 = new HBox ();
-        tf.setPrefWidth (130);
-        tf.setWrapText (true);
-        hb1.getChildren ().addAll (
+        VBox vb1 = new VBox(10);
+        VBox vb2 = new VBox(10);
+        VBox vb3 = new VBox(10);
+        VBox vb4 = new VBox(10);
+        VBox vb5 = new VBox(10);
+        VBox vb6 = new VBox(10);
+        VBox vb7 = new VBox(10);
+        VBox vb8 = new VBox(10);
+        HBox hb1 = new HBox();
+        HBox hb2 = new HBox();
+        tf.setPrefWidth(130);
+        tf.setWrapText(true);
+        hb1.getChildren().addAll(
                 selectIt, acceptEdit, cancelEdit
         );
-        vb2.getChildren ().addAll (jtypeL, jType);
-        vb3.getChildren ().addAll (refSrcL, journals);
-        vb4.getChildren ().addAll (volL, volTxt);
-        vb5.getChildren ().addAll (pgL, pgTxt);
-        vb6.getChildren ().addAll (reptL, reptNumTxt);
-        vb7.getChildren ().addAll (reptMML, MMTxt);
-        vb8.getChildren ().addAll (yrL, yrTxt);
-        hb2.getChildren ().addAll (
+        vb2.getChildren().addAll(jtypeL, jType);
+        vb3.getChildren().addAll(refSrcL, journals);
+        vb4.getChildren().addAll(volL, volTxt);
+        vb5.getChildren().addAll(pgL, pgTxt);
+        vb6.getChildren().addAll(reptL, reptNumTxt);
+        vb7.getChildren().addAll(reptMML, MMTxt);
+        vb8.getChildren().addAll(yrL, yrTxt);
+        hb2.getChildren().addAll(
                 vb2, vb3, vb4, vb5, vb6, vb7, vb8
         );
-        volTxt.setMinWidth (50);
-        pgTxt.setMinWidth (50);
-        yrTxt.setMinWidth (70);
-        reptNumTxt.setMinWidth (70);
-        MMTxt.setMinWidth (70);
-        MMTxt.setMaxWidth (90);
-        reptNumTxt.setMaxWidth (90);
-        yrTxt.setMaxWidth (90);
-        volTxt.setMaxWidth (50);
-        pgTxt.setMaxWidth (50);
+        volTxt.setMinWidth(50);
+        pgTxt.setMinWidth(50);
+        yrTxt.setMinWidth(70);
+        reptNumTxt.setMinWidth(70);
+        MMTxt.setMinWidth(70);
+        MMTxt.setMaxWidth(90);
+        reptNumTxt.setMaxWidth(90);
+        yrTxt.setMaxWidth(90);
+        volTxt.setMaxWidth(50);
+        pgTxt.setMaxWidth(50);
 
-        journals.setMaxWidth (300);
-        jType.setMaxWidth (300);
-        hb1.setSpacing (10);
-        hb2.setSpacing (10);
-        vb1.getChildren ().addAll (tf, hb2, hb1);
-        entryChoice (lList.jTypeList, jType);
+        journals.setMaxWidth(300);
+        jType.setMaxWidth(300);
+        hb1.setSpacing(10);
+        hb2.setSpacing(10);
+        vb1.getChildren().addAll(tf, hb2, hb1);
+        entryChoice(lList.jTypeList, jType);
 
-        if ( !act.contains ("Delete") ) {
-            tf.setText (putTxt);
-            myDialogScene = new Scene (vb1, 1200, 250);
-            myDialog.setScene (myDialogScene);
-            myDialog.show ();
-            selectIt.setOnAction ((ActionEvent event1) -> {
+        if (!act.contains("Delete")) {
+            tf.setText(putTxt);
+            myDialogScene = new Scene(vb1, 1200, 250);
+            myDialog.setScene(myDialogScene);
+            myDialog.show();
+            selectIt.setOnAction((ActionEvent event1) -> {
                 String temp = "";
                 String tmp = "";
                 int selUpto;
-                temp = jType.getValue ();
-                if ( !temp.contains ("Please") && (temp != null) ) {
-                    if ( !putTxt.endsWith (", ") &&
-                            putTxt != null &&
-                            putTxt != "" &&
-                            putTxt.length () > 1 ) {
+                temp = jType.getValue();
+                if (!temp.contains("Please") && (temp != null)) {
+                    if (!putTxt.endsWith(", ")
+                            && putTxt != null
+                            && putTxt != ""
+                            && putTxt.length() > 1) {
                         putTxt += ",\n";
                     }
-                    temp = temp.substring (1, 2);
+                    temp = temp.substring(1, 2);
                     putTxt += temp + ", ";
-                    tmp = journals.getValue ();
-                    tmp = tmp.substring (0, tmp.indexOf (" "));
-                    if ( !tmp.contains ("Please") ) {
+                    tmp = journals.getValue();
+                    tmp = tmp.substring(0, tmp.indexOf(" "));
+                    if (!tmp.contains("Please")) {
                         putTxt += tmp;
                         switch (temp) {
                             case "0":
@@ -2853,52 +2849,52 @@ public class MainScreenController { //implements Initializable {
                             case "A":
                             case "B":
                             case "C":
-                                if ( volTxt.getText () != null ) {
-                                    putTxt += "," + volTxt.getText ();
+                                if (volTxt.getText() != null) {
+                                    putTxt += "," + volTxt.getText();
                                 } else {
                                     putTxt += ",";
                                 }
-                                if ( pgTxt.getText () != null ) {
-                                    putTxt += "," + pgTxt.getText ();
+                                if (pgTxt.getText() != null) {
+                                    putTxt += "," + pgTxt.getText();
                                 } else {
                                     putTxt += ",";
                                 }
-                                if ( yrTxt.getText () != null ) {
-                                    putTxt += "," + yrTxt.getText ();
+                                if (yrTxt.getText() != null) {
+                                    putTxt += "," + yrTxt.getText();
                                 }
                                 break;
                             case "J":
                             case "K":
-                                if ( volTxt.getText () != null ) {
-                                    putTxt += "," + volTxt.getText ();
+                                if (volTxt.getText() != null) {
+                                    putTxt += "," + volTxt.getText();
                                 } else {
                                     putTxt += ",";
                                 }
-                                if ( pgTxt.getText () != null ) {
-                                    putTxt += "," + pgTxt.getText ();
+                                if (pgTxt.getText() != null) {
+                                    putTxt += "," + pgTxt.getText();
                                 } else {
                                     putTxt += ",";
                                 }
-                                if ( yrTxt.getText () != null ) {
-                                    putTxt += "," + yrTxt.getText ();
+                                if (yrTxt.getText() != null) {
+                                    putTxt += "," + yrTxt.getText();
                                 }
                                 break;
                             case "P":
                             case "R":
                             case "S":
                             case "X":
-                                if ( reptNumTxt.getText () != null ) {
-                                    putTxt += reptNumTxt.getText ();
+                                if (reptNumTxt.getText() != null) {
+                                    putTxt += reptNumTxt.getText();
                                 } else {
                                     putTxt += ",";
                                 }
-                                if ( MMTxt.getText () != null ) {
-                                    putTxt += "," + MMTxt.getText ();
+                                if (MMTxt.getText() != null) {
+                                    putTxt += "," + MMTxt.getText();
                                 } else {
                                     putTxt += ",";
                                 }
-                                if ( yrTxt.getText () != null ) {
-                                    putTxt += "," + yrTxt.getText ();
+                                if (yrTxt.getText() != null) {
+                                    putTxt += "," + yrTxt.getText();
                                 } else {
                                     putTxt += ",";
                                 }
@@ -2907,69 +2903,69 @@ public class MainScreenController { //implements Initializable {
                             case "W":
                                 break;
                         }
-                        tf.setText (putTxt);
+                        tf.setText(putTxt);
                     }
                 }
                 isSelect = true;
             });
-            acceptEdit.setOnAction ((ActionEvent event) -> {
+            acceptEdit.setOnAction((ActionEvent event) -> {
                 String parseStr;
-                if ( !isSelect ) {
-                    popupMsg.warnBox ("Please \"Select\" first",
+                if (!isSelect) {
+                    popupMsg.warnBox("Please \"Select\" first",
                             "Attention! Select first");
-                } else if ( tf.getText ().isEmpty () ) {
-                    popupMsg.warnBox (
+                } else if (tf.getText().isEmpty()) {
+                    popupMsg.warnBox(
                             "Text Area blank. Use \"Select\" to select data",
                             "Attention! No Data");
                 } else {
                     popupMsg.
-                            warnBox ("Please enter some entry using \"Select\"",
+                            warnBox("Please enter some entry using \"Select\"",
                                     "Attention! Select data");
-                    parseStr = tf.getText ().toString ();
-                    if ( parseStr.contains ("(") ) {
+                    parseStr = tf.getText().toString();
+                    if (parseStr.contains("(")) {
                         parseStr = parseStr;
                     } else {
                         parseStr = "(" + parseStr + ")";
                     }
-                    myDataN = (act.contains ("Add")) ? myDataN + 1 : myDataN;
-                    if ( act.contains ("Edit") ) {
-                        myData.set (ri,
-                                new editableData (Head, "", parseStr, SE));
+                    myDataN = (act.contains("Add")) ? myDataN + 1 : myDataN;
+                    if (act.contains("Edit")) {
+                        myData.set(ri,
+                                new editableData(Head, "", parseStr, SE));
                     } else {
-                        myData.add (ri,
-                                new editableData (Head, "", parseStr, SE));
-                        thisEntryLine = Integer.toString (doGetSELineNum (Head));
-                        bibList.add (
+                        myData.add(ri,
+                                new editableData(Head, "", parseStr, SE));
+                        thisEntryLine = Integer.toString(doGetSELineNum(Head));
+                        bibList.add(
                                 bibEntNum,
-                                new BIBClasses (thisEntryLine, Integer.
-                                        toString (
+                                new BIBClasses(thisEntryLine, Integer.
+                                        toString(
                                                 bibEntNum),
                                         SE, Head));
                         ++bibEntNum;
                     }
-                    editTable.refresh ();
-                    tf.clear ();
-                    myDialog.close ();
+                    editTable.refresh();
+                    tf.clear();
+                    myDialog.close();
                 }
-                System.gc ();
+                System.gc();
             });
-            cancelEdit.setOnAction ((ActionEvent event) -> {
-                tf.clear ();
-                if ( act.contains ("Add") ) {
-                    changeBoolStatus (Head, false);
+            cancelEdit.setOnAction((ActionEvent event) -> {
+                tf.clear();
+                if (act.contains("Add")) {
+                    changeBoolStatus(Head, false);
                 }
-                myDialog.close ();
+                myDialog.close();
             });
         }
-        if ( act.contains ("Delete") ) {
-            changeBoolStatus (Head, false);
-            myData.remove (ri);
-            editTable.refresh ();
+        if (act.contains("Delete")) {
+            changeBoolStatus(Head, false);
+            myData.remove(ri);
+            editTable.refresh();
             --myDataN;
-            zapBIBEntry (Head);
+            zapBIBEntry(Head);
         }
-        procTree ();
-        System.gc ();
+        procTree();
+        System.gc();
     }
 
     private void doEditFacility(int ri, String Head, String act, String SE) {
@@ -2978,80 +2974,80 @@ public class MainScreenController { //implements Initializable {
         int tmpRICnt = 1;
         isSelect = false;
 
-        while (myData.get (ri + tmpRICnt).getBibItemName ().toString () == "") {
+        while (myData.get(ri + tmpRICnt).getBibItemName().toString() == "") {
             ++tmpRICnt;
         }
 
-        if ( act.contains ("Add") ) {
+        if (act.contains("Add")) {
             getTxtData = "";
             putTxt = "";
         } else {
-            for ( int ii = 0; ii < tmpRICnt; ii++ ) {
+            for (int ii = 0; ii < tmpRICnt; ii++) {
                 getTxtData
-                        += myData.get (ri + ii).getContentTxt ().toString () +
-                        ",\n";
+                        += myData.get(ri + ii).getContentTxt().toString()
+                        + ",\n";
             }
         }
 
-        myDialog.setTitle ("Enter " + Head);
-        if ( !myDialog.getModality ().toString ().contains ("MODAL") ) {
-            myDialog.initModality (Modality.WINDOW_MODAL);
-            myDialog.initOwner (myStage);
+        myDialog.setTitle("Enter " + Head);
+        if (!myDialog.getModality().toString().contains("MODAL")) {
+            myDialog.initModality(Modality.WINDOW_MODAL);
+            myDialog.initOwner(myStage);
         }
 
-        VBox vb1 = new VBox (10);
-        VBox vb2 = new VBox (10);
-        VBox vb3 = new VBox (10);
-        VBox vb4 = new VBox (10);
+        VBox vb1 = new VBox(10);
+        VBox vb2 = new VBox(10);
+        VBox vb3 = new VBox(10);
+        VBox vb4 = new VBox(10);
 
-        HBox hb1 = new HBox ();
-        HBox hb2 = new HBox ();
-        tf.setPrefWidth (130);
-        tf.setWrapText (true);
-        hb1.getChildren ().addAll (
+        HBox hb1 = new HBox();
+        HBox hb2 = new HBox();
+        tf.setPrefWidth(130);
+        tf.setWrapText(true);
+        hb1.getChildren().addAll(
                 selectIt, acceptEdit, cancelEdit
         );
-        hb1.setSpacing (10);
-        vb2.getChildren ().addAll (faciL, facilCB);
-        vb3.getChildren ().addAll (instL, institute);
+        hb1.setSpacing(10);
+        vb2.getChildren().addAll(faciL, facilCB);
+        vb3.getChildren().addAll(instL, institute);
         //vb4.getChildren ().addAll (addL);
-        hb2.getChildren ().addAll (vb2, vb3);   // , vb4);
-        vb1.getChildren ().addAll (tf, hb2, hb1);
+        hb2.getChildren().addAll(vb2, vb3);   // , vb4);
+        vb1.getChildren().addAll(tf, hb2, hb1);
 
-        entryChoice (lList.facilList, facilCB);
-        entryChoice (lList.instList, institute);
+        entryChoice(lList.facilList, facilCB);
+        entryChoice(lList.instList, institute);
 
-        if ( !act.contains ("Delete") ) {
-            tf.setText (getTxtData);
-            myDialogScene = new Scene (vb1, 800, 250);
-            myDialog.setScene (myDialogScene);
-            myDialog.show ();
+        if (!act.contains("Delete")) {
+            tf.setText(getTxtData);
+            myDialogScene = new Scene(vb1, 800, 250);
+            myDialog.setScene(myDialogScene);
+            myDialog.show();
             addLReacCnt = 0;
-            selectIt.setOnAction ((ActionEvent event1) -> {
+            selectIt.setOnAction((ActionEvent event1) -> {
                 String tempA = "";
                 String tempB = "";
                 String tempC = "";
-                tempA = facilCB.getValue ();
-                tempA = tempA.substring (0, tempA.indexOf (" "));
-                tempB = institute.getValue ();
-                tempB = tempB.substring (0, tempB.indexOf (" "));
+                tempA = facilCB.getValue();
+                tempA = tempA.substring(0, tempA.indexOf(" "));
+                tempB = institute.getValue();
+                tempB = tempB.substring(0, tempB.indexOf(" "));
 
-                tempC = (addLReacCnt == 0) ? "" : tf.getText () + ",\n";
-                if ( !putTxt.endsWith (", ") &&
-                        putTxt != null &&
-                        putTxt != "" &&
-                        putTxt.length () > 1 ) {
+                tempC = (addLReacCnt == 0) ? "" : tf.getText() + ",\n";
+                if (!putTxt.endsWith(", ")
+                        && putTxt != null
+                        && putTxt != ""
+                        && putTxt.length() > 1) {
                     putTxt += ",\n";
                 }
 
                 putTxt = tempA + ", " + tempB;
                 putTxt = "(" + putTxt + ")";
                 tempC = (addLReacCnt == 0) ? putTxt : tempC + putTxt;
-                tf.setText (tempC);
+                tf.setText(tempC);
                 ++addLReacCnt;
                 isSelect = true;
             });
-            acceptEdit.setOnAction (new EventHandler<ActionEvent> () {
+            acceptEdit.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event1) {
                     String parseStr;
@@ -3062,113 +3058,113 @@ public class MainScreenController { //implements Initializable {
                     int lCnt1 = 0;
                     int lCnt2 = 0;
 
-                    if ( !isSelect ) {
-                        popupMsg.warnBox ("Use \"Select\" to select data",
+                    if (!isSelect) {
+                        popupMsg.warnBox("Use \"Select\" to select data",
                                 "Attention! Select not used");
-                    } else if ( tf.getText ().isEmpty () ) {
-                        popupMsg.warnBox (
+                    } else if (tf.getText().isEmpty()) {
+                        popupMsg.warnBox(
                                 "Text Area blank. Please select data first",
                                 "Attention! No Data");
                     } else {
-                        parseStr = tf.getText ().toString ();
-                        for ( int ii = 0; ii < parseStr.length (); ii++ ) {
-                            if ( parseStr.charAt (ii) == '\n' ) {
+                        parseStr = tf.getText().toString();
+                        for (int ii = 0; ii < parseStr.length(); ii++) {
+                            if (parseStr.charAt(ii) == '\n') {
                                 ++lCnt1;
                             }
                         }
                         tmp1 = "";
                         tmp2 = parseStr;
-                        for ( int ii = 0; ii < lCnt1; ii++ ) {
-                            tmp3 = tmp2.substring (0, tmp2.indexOf ('\n'));
-                            tmp3 = tmp3.substring (0, tmp3.lastIndexOf (","));
-                            if ( tmp3.length () >= cutPoint ) {
-                                tmp3 = arrTitle (tmp3);
+                        for (int ii = 0; ii < lCnt1; ii++) {
+                            tmp3 = tmp2.substring(0, tmp2.indexOf('\n'));
+                            tmp3 = tmp3.substring(0, tmp3.lastIndexOf(","));
+                            if (tmp3.length() >= cutPoint) {
+                                tmp3 = arrTitle(tmp3);
                                 lCnt2 += multiLine;
                             } else {
                                 ++lCnt2;
                             }
                             multiLine = lCnt2;
                             tmp1 += tmp3 + "@@";  // -- CHECK THIS and for problem replace
-                            tmp2 = tmp2.substring (tmp2.indexOf ('\n') + 1);
+                            tmp2 = tmp2.substring(tmp2.indexOf('\n') + 1);
                         }
                         tmp1 += tmp2;
                         parseStr = tmp1;
                         //parseStr = arrTitle (parseStr);
 
-                        if ( act.contains ("Edit") ) {
-                            for ( int ii = 0; ii < multiLine; ii++ ) {
+                        if (act.contains("Edit")) {
+                            for (int ii = 0; ii < multiLine; ii++) {
                                 tmpHead = (ii == 0) ? tmpStr1 : tmpStr2;
-                                if ( ii <= multiLine - 2 ) {
-                                    strEntered = parseStr.substring (
-                                            0, parseStr.indexOf ("@@"));
+                                if (ii <= multiLine - 2) {
+                                    strEntered = parseStr.substring(
+                                            0, parseStr.indexOf("@@"));
                                 } else {
                                     strEntered = parseStr;
                                 }
-                                myData.set (ri + ii,
-                                        new editableData (tmpHead, "",
+                                myData.set(ri + ii,
+                                        new editableData(tmpHead, "",
                                                 strEntered,
                                                 SE));
-                                if ( ii <= multiLine - 2 ) {
-                                    parseStr = parseStr.substring (2 + parseStr.
-                                            indexOf ("@@"));
+                                if (ii <= multiLine - 2) {
+                                    parseStr = parseStr.substring(2 + parseStr.
+                                            indexOf("@@"));
                                 }
                             }
                         } else {
-                            for ( int ii = 0; ii < multiLine; ii++ ) {
+                            for (int ii = 0; ii < multiLine; ii++) {
                                 tmpHead = (ii == 0) ? tmpStr1 : tmpStr2;
-                                if ( ii < multiLine - 1 ) {
-                                    strEntered = parseStr.substring (
-                                            0, parseStr.indexOf ("@@"));
+                                if (ii < multiLine - 1) {
+                                    strEntered = parseStr.substring(
+                                            0, parseStr.indexOf("@@"));
                                 } else {
                                     strEntered = parseStr;
                                 }
-                                myData.add (ri + ii,
-                                        new editableData (tmpHead, "",
+                                myData.add(ri + ii,
+                                        new editableData(tmpHead, "",
                                                 strEntered,
                                                 SE));
                                 ++myDataN;
-                                if ( ii < multiLine - 1 ) {
-                                    parseStr = parseStr.substring (2 + parseStr.
-                                            indexOf ("@@"));
+                                if (ii < multiLine - 1) {
+                                    parseStr = parseStr.substring(2 + parseStr.
+                                            indexOf("@@"));
                                 }
                             }
 
-                            thisEntryLine = Integer.toString (doGetSELineNum (
+                            thisEntryLine = Integer.toString(doGetSELineNum(
                                     Head));
-                            bibList.add (
+                            bibList.add(
                                     bibEntNum,
-                                    new BIBClasses (thisEntryLine,
-                                            Integer.toString (bibEntNum),
+                                    new BIBClasses(thisEntryLine,
+                                            Integer.toString(bibEntNum),
                                             SE, Head));
                             ++bibEntNum;
                         }
-                        editTable.refresh ();
-                        subEntTree.refresh ();
-                        tf.clear ();
-                        myDialog.close ();
+                        editTable.refresh();
+                        subEntTree.refresh();
+                        tf.clear();
+                        myDialog.close();
                     }
                 }
             });
-            cancelEdit.setOnAction ((ActionEvent event) -> {
-                tf.clear ();
-                if ( act.contains ("Add") ) {
-                    changeBoolStatus (Head, false);
+            cancelEdit.setOnAction((ActionEvent event) -> {
+                tf.clear();
+                if (act.contains("Add")) {
+                    changeBoolStatus(Head, false);
                 }
-                myDialog.close ();
+                myDialog.close();
             });
         }
-        if ( act.contains ("Delete") ) {
-            for ( int ii = 0; ii < tmpRICnt; ii++ ) {
-                myData.remove (ri);
+        if (act.contains("Delete")) {
+            for (int ii = 0; ii < tmpRICnt; ii++) {
+                myData.remove(ri);
                 --myDataN;
             }
-            editTable.refresh ();
+            editTable.refresh();
             --myDataN;
-            zapBIBEntry (Head);
-            changeBoolStatus (Head, false);
+            zapBIBEntry(Head);
+            changeBoolStatus(Head, false);
         }
-        procTree ();
-        System.gc ();
+        procTree();
+        System.gc();
     }
 
     private void doEditIncSrc(int ri, String Head, String act, String SE) {
@@ -3177,159 +3173,159 @@ public class MainScreenController { //implements Initializable {
         String temp1;
         isSelect = false;
 
-        while (myData.get (ri + tmpRICnt).getBibItemName ().toString () ==
-                "") {
+        while (myData.get(ri + tmpRICnt).getBibItemName().toString()
+                == "") {
             ++tmpRICnt;
         }
 
-        if ( act.contains ("Add") ) {
+        if (act.contains("Add")) {
             getTxtData = "";
-        } else if ( act.contains ("Edit") ) {
-            for ( int ii = 0; ii < tmpRICnt; ii++ ) {
+        } else if (act.contains("Edit")) {
+            for (int ii = 0; ii < tmpRICnt; ii++) {
                 getTxtData
-                        += myData.get (ri + ii).getContentTxt ().toString () +
-                        " ";
+                        += myData.get(ri + ii).getContentTxt().toString()
+                        + " ";
             }
         }
-        if ( getTxtData != null ) {
-            getTxtData = getTxtData.replaceAll ("\n", " ");
+        if (getTxtData != null) {
+            getTxtData = getTxtData.replaceAll("\n", " ");
         }
 
-        myDialog.setTitle ("Enter " + Head);
-        if ( !myDialog.getModality ().toString ().contains ("MODAL") ) {
-            myDialog.initModality (Modality.WINDOW_MODAL);
-            myDialog.initOwner (myStage);
+        myDialog.setTitle("Enter " + Head);
+        if (!myDialog.getModality().toString().contains("MODAL")) {
+            myDialog.initModality(Modality.WINDOW_MODAL);
+            myDialog.initOwner(myStage);
         }
-        VBox vb1 = new VBox (10);
-        VBox vb2 = new VBox (10);
-        HBox hb1 = new HBox ();
-        HBox hb2 = new HBox ();
-        tf.setPrefWidth (130);
-        tf.setWrapText (true);
-        hb1.getChildren ().addAll (
+        VBox vb1 = new VBox(10);
+        VBox vb2 = new VBox(10);
+        HBox hb1 = new HBox();
+        HBox hb2 = new HBox();
+        tf.setPrefWidth(130);
+        tf.setWrapText(true);
+        hb1.getChildren().addAll(
                 selectIt, acceptEdit, cancelEdit
         );
-        hb1.setSpacing (10);
-        vb2.getChildren ().addAll (incsrcL, incSrcCB);
-        vb1.getChildren ().addAll (tf, vb2, hb1);
+        hb1.setSpacing(10);
+        vb2.getChildren().addAll(incsrcL, incSrcCB);
+        vb1.getChildren().addAll(tf, vb2, hb1);
 
-        entryChoice (lList.incSrcList, incSrcCB);
+        entryChoice(lList.incSrcList, incSrcCB);
 
-        if ( !act.contains ("DELETE") ) {
-            if ( act.contains ("Edit") ) {
-                tf.setText (getTxtData);
+        if (!act.contains("DELETE")) {
+            if (act.contains("Edit")) {
+                tf.setText(getTxtData);
             }
             putTxt = getTxtData;
-            myDialogScene = new Scene (vb1, 800, 250);
-            myDialog.setScene (myDialogScene);
-            myDialog.show ();
-            selectIt.setOnAction ((ActionEvent event1) -> {
+            myDialogScene = new Scene(vb1, 800, 250);
+            myDialog.setScene(myDialogScene);
+            myDialog.show();
+            selectIt.setOnAction((ActionEvent event1) -> {
                 String tempA;
                 String tempB;
-                tempA = incSrcCB.getValue ();
+                tempA = incSrcCB.getValue();
 
-                tempA = tempA.substring (0, tempA.indexOf (" "));
+                tempA = tempA.substring(0, tempA.indexOf(" "));
                 tempA = "(" + tempA + ")";
-                if ( !putTxt.endsWith (", ") &&
-                        putTxt != null &&
-                        putTxt != "" &&
-                        putTxt.length () > 1 ) {
+                if (!putTxt.endsWith(", ")
+                        && putTxt != null
+                        && putTxt != ""
+                        && putTxt.length() > 1) {
                     putTxt += ",\n";
                 }
-                tempB = tf.getText ();
-                putTxt = (!tempB.isEmpty ()) ? tempB + ",\n" + tempA
+                tempB = tf.getText();
+                putTxt = (!tempB.isEmpty()) ? tempB + ",\n" + tempA
                         : tempA;
-                tf.clear ();
-                tf.setText (putTxt);
+                tf.clear();
+                tf.setText(putTxt);
                 isSelect = true;
             });
-            acceptEdit.setOnAction ((ActionEvent event1) -> {
+            acceptEdit.setOnAction((ActionEvent event1) -> {
                 String parseStr = "";
                 String strEntered = "";
                 String tmpStr1 = Head;
                 String tmpStr2 = "";
                 String tmpHead = "";
 
-                if ( !isSelect ) {
-                    popupMsg.warnBox ("Use \"Select\" first",
+                if (!isSelect) {
+                    popupMsg.warnBox("Use \"Select\" first",
                             "Attention! use Select");
-                } else if ( tf.getText ().isEmpty () ) {
-                    popupMsg.warnBox ("Text Area is blank. Select data first",
+                } else if (tf.getText().isEmpty()) {
+                    popupMsg.warnBox("Text Area is blank. Select data first",
                             "Attention! No Data");
                 } else {
 
-                    parseStr = tf.getText ().toString ();
-                    parseStr = arrTitle (parseStr);
+                    parseStr = tf.getText().toString();
+                    parseStr = arrTitle(parseStr);
 
-                    if ( act.contains ("Edit") ) {
-                        for ( int ii = 0; ii < multiLine; ii++ ) {
+                    if (act.contains("Edit")) {
+                        for (int ii = 0; ii < multiLine; ii++) {
                             tmpHead = (ii == 0) ? tmpStr1 : tmpStr2;
-                            if ( ii <= multiLine - 2 ) {
-                                strEntered = parseStr.substring (
-                                        0, parseStr.indexOf ("@@"));
+                            if (ii <= multiLine - 2) {
+                                strEntered = parseStr.substring(
+                                        0, parseStr.indexOf("@@"));
                             } else {
                                 strEntered = parseStr;
                             }
-                            myData.set (ri + ii,
-                                    new editableData (tmpHead, "", strEntered,
+                            myData.set(ri + ii,
+                                    new editableData(tmpHead, "", strEntered,
                                             SE));
-                            if ( ii <= multiLine - 2 ) {
-                                parseStr = parseStr.substring (2 + parseStr.
-                                        indexOf ("@@"));
+                            if (ii <= multiLine - 2) {
+                                parseStr = parseStr.substring(2 + parseStr.
+                                        indexOf("@@"));
                             }
                         }
                     } else {
-                        for ( int ii = 0; ii < multiLine; ii++ ) {
+                        for (int ii = 0; ii < multiLine; ii++) {
                             tmpHead = (ii == 0) ? tmpStr1 : tmpStr2;
-                            if ( ii <= multiLine - 2 ) {
-                                strEntered = parseStr.substring (
-                                        0, parseStr.indexOf ("@@"));
+                            if (ii <= multiLine - 2) {
+                                strEntered = parseStr.substring(
+                                        0, parseStr.indexOf("@@"));
                             } else {
                                 strEntered = parseStr;
                             }
-                            myData.add (ri + ii, new editableData (tmpHead, "",
+                            myData.add(ri + ii, new editableData(tmpHead, "",
                                     strEntered, SE));
                             ++myDataN;
-                            if ( ii <= multiLine - 2 ) {
-                                parseStr = parseStr.substring (2 + parseStr.
-                                        indexOf ("@@"));
+                            if (ii <= multiLine - 2) {
+                                parseStr = parseStr.substring(2 + parseStr.
+                                        indexOf("@@"));
                             }
                         }
-                        thisEntryLine = Integer.toString (doGetSELineNum (Head));
-                        bibList.add (
+                        thisEntryLine = Integer.toString(doGetSELineNum(Head));
+                        bibList.add(
                                 bibEntNum,
-                                new BIBClasses (thisEntryLine,
-                                        Integer.toString (bibEntNum),
+                                new BIBClasses(thisEntryLine,
+                                        Integer.toString(bibEntNum),
                                         SE, Head));
                         ++bibEntNum;
                     }
-                    editTable.refresh ();
-                    subEntTree.refresh ();
-                    tf.clear ();
-                    myDialog.close ();
+                    editTable.refresh();
+                    subEntTree.refresh();
+                    tf.clear();
+                    myDialog.close();
                 }
-                System.gc ();
+                System.gc();
             });
-            cancelEdit.setOnAction ((ActionEvent event) -> {
-                tf.clear ();
-                if ( act.contains ("Add") ) {
-                    changeBoolStatus (Head, false);
+            cancelEdit.setOnAction((ActionEvent event) -> {
+                tf.clear();
+                if (act.contains("Add")) {
+                    changeBoolStatus(Head, false);
                 }
-                myDialog.close ();
+                myDialog.close();
             });
         }
-        if ( act.contains ("Delete") ) {
-            for ( int ii = 0; ii < tmpRICnt; ii++ ) {
-                myData.remove (ri);
+        if (act.contains("Delete")) {
+            for (int ii = 0; ii < tmpRICnt; ii++) {
+                myData.remove(ri);
                 --myDataN;
             }
-            editTable.refresh ();
-            changeBoolStatus (Head, false);
+            editTable.refresh();
+            changeBoolStatus(Head, false);
             --myDataN;
-            zapBIBEntry (Head);
+            zapBIBEntry(Head);
         }
-        procTree ();
-        System.gc ();
+        procTree();
+        System.gc();
     }
 
     private void doEditReact(int ri, String Head, String act, String SE) {
@@ -3340,23 +3336,23 @@ public class MainScreenController { //implements Initializable {
         addLReacCnt = 0;
         multiLine = 0; // check here for multiline problem
 
-        while (myData.get (ri + tmpRICnt).getBibItemName ().toString () == "") {
+        while (myData.get(ri + tmpRICnt).getBibItemName().toString() == "") {
             ++tmpRICnt;
         }
 
-        if ( act.contains ("Add") ) {
+        if (act.contains("Add")) {
             getTxtData = "";
         } else {
-            for ( int ii = 0; ii < tmpRICnt; ii++ ) {
+            for (int ii = 0; ii < tmpRICnt; ii++) {
                 getTxtData
-                        += myData.get (ri + ii).getContentTxt ().toString () +
-                        " ";
+                        += myData.get(ri + ii).getContentTxt().toString()
+                        + " ";
             }
         }
-        if ( getTxtData != null ) {
-            getTxtData = getTxtData.replaceAll ("\n", " ");
+        if (getTxtData != null) {
+            getTxtData = getTxtData.replaceAll("\n", " ");
         }
-        if ( act.contains ("Add") ) {
+        if (act.contains("Add")) {
             getTxtData = null;
             putTxt = "";
         } else {
@@ -3368,174 +3364,174 @@ public class MainScreenController { //implements Initializable {
         //****
         //entryChoice (compoundNucArr, compNucCB);    // SF1
         //entryChoice (incPList, incPCB);        
-        entryChoice (lList.mixedSF1List, targetNCB);      // SF1
-        entryChoice (lList.mixedSF2List, incPCB);         // SF2
-        entryChoice (lList.mixedSF3List, procCB);         // SF3        
-        entryChoice (lList.mixedSF4List, prodCB);         // SF4
-        entryChoice (lList.branchList, branchCB);         // SF5
-        entryChoice (lList.paramSF6List, paramSF6CB);     // SF6
-        entryChoice (lList.paramSF7List, paramSF7CB);     // SF7
-        entryChoice (lList.modifierList, modifierCB);     // SF8
-        entryChoice (lList.dataTypeList, dataTypeCB);     // SF9
+        entryChoice(lList.mixedSF1List, targetNCB);      // SF1
+        entryChoice(lList.mixedSF2List, incPCB);         // SF2
+        entryChoice(lList.mixedSF3List, procCB);         // SF3        
+        entryChoice(lList.mixedSF4List, prodCB);         // SF4
+        entryChoice(lList.branchList, branchCB);         // SF5
+        entryChoice(lList.paramSF6List, paramSF6CB);     // SF6
+        entryChoice(lList.paramSF7List, paramSF7CB);     // SF7
+        entryChoice(lList.modifierList, modifierCB);     // SF8
+        entryChoice(lList.dataTypeList, dataTypeCB);     // SF9
 
-        if ( !putTxt.isEmpty () ) {
-            String[] tmp = putTxt.split ("\\(|\\,|\\)");
-            for ( String item : tmp ) {
-                if ( !tmp[1].isEmpty () ) {
-                    targetNCB.setValue (tmp[1]);
+        if (!putTxt.isEmpty()) {
+            String[] tmp = putTxt.split("\\(|\\,|\\)");
+            for (String item : tmp) {
+                if (!tmp[1].isEmpty()) {
+                    targetNCB.setValue(tmp[1]);
                 }
-                if ( !tmp[2].isEmpty () ) {
-                    incPCB.setValue (tmp[2]);
+                if (!tmp[2].isEmpty()) {
+                    incPCB.setValue(tmp[2]);
                 }
-                if ( !tmp[3].isEmpty () ) {
-                    procCB.setValue (tmp[3]);
+                if (!tmp[3].isEmpty()) {
+                    procCB.setValue(tmp[3]);
                 }
-                if ( !tmp[4].isEmpty () ) {
-                    prodCB.setValue (tmp[4]);
+                if (!tmp[4].isEmpty()) {
+                    prodCB.setValue(tmp[4]);
                 }
             }
 
         }
-        myDialog.setTitle ("Enter Reaction Details:");
-        if ( !myDialog.getModality ().toString ().contains ("MODAL") ) {
-            myDialog.initModality (Modality.WINDOW_MODAL);
-            myDialog.initOwner (myStage);
+        myDialog.setTitle("Enter Reaction Details:");
+        if (!myDialog.getModality().toString().contains("MODAL")) {
+            myDialog.initModality(Modality.WINDOW_MODAL);
+            myDialog.initOwner(myStage);
         }
 
-        HBox hb1 = new HBox ();
-        HBox hb2 = new HBox ();
-        HBox hb3 = new HBox ();
-        HBox hb4 = new HBox ();
-        HBox hb5 = new HBox ();
-        HBox hb6 = new HBox ();
-        VBox vb1 = new VBox ();
-        VBox vb2 = new VBox ();
-        VBox vb3 = new VBox ();
-        VBox vb4 = new VBox ();
-        VBox vb5 = new VBox ();
-        VBox vb6 = new VBox ();
-        VBox vb7 = new VBox ();
-        VBox vb8 = new VBox ();
-        VBox vb9 = new VBox ();
-        VBox vb10 = new VBox ();
-        VBox vb11 = new VBox ();
+        HBox hb1 = new HBox();
+        HBox hb2 = new HBox();
+        HBox hb3 = new HBox();
+        HBox hb4 = new HBox();
+        HBox hb5 = new HBox();
+        HBox hb6 = new HBox();
+        VBox vb1 = new VBox();
+        VBox vb2 = new VBox();
+        VBox vb3 = new VBox();
+        VBox vb4 = new VBox();
+        VBox vb5 = new VBox();
+        VBox vb6 = new VBox();
+        VBox vb7 = new VBox();
+        VBox vb8 = new VBox();
+        VBox vb9 = new VBox();
+        VBox vb10 = new VBox();
+        VBox vb11 = new VBox();
 
-        tf.setPrefWidth (130);
-        tf.setWrapText (true);
+        tf.setPrefWidth(130);
+        tf.setWrapText(true);
 
-        hb1.getChildren ().addAll (
+        hb1.getChildren().addAll(
                 selectIt, acceptEdit, cancelEdit
         );
-        vb1.getChildren ().addAll (sf1L, targetNCB); // SF1
-        vb2.getChildren ().addAll (sf2L, incPCB); // SF2
-        hb6.getChildren ().addAll (procCB, addL); // Add button beside SF3
-        vb3.getChildren ().addAll (sf3L, hb6); // SF3
-        vb4.getChildren ().addAll (sf4L, prodCB); // SF4
-        vb5.getChildren ().addAll (sf5L, branchCB); // SF5
-        vb6.getChildren ().addAll (sf6L, paramSF6CB); // SF6
-        vb7.getChildren ().addAll (sf7L, paramSF7CB); // SF7
-        vb8.getChildren ().addAll (sf8L, modifierCB); // SF8
-        vb9.getChildren ().addAll (sf9L, dataTypeCB); // SF9
+        vb1.getChildren().addAll(sf1L, targetNCB); // SF1
+        vb2.getChildren().addAll(sf2L, incPCB); // SF2
+        hb6.getChildren().addAll(procCB, addL); // Add button beside SF3
+        vb3.getChildren().addAll(sf3L, hb6); // SF3
+        vb4.getChildren().addAll(sf4L, prodCB); // SF4
+        vb5.getChildren().addAll(sf5L, branchCB); // SF5
+        vb6.getChildren().addAll(sf6L, paramSF6CB); // SF6
+        vb7.getChildren().addAll(sf7L, paramSF7CB); // SF7
+        vb8.getChildren().addAll(sf8L, modifierCB); // SF8
+        vb9.getChildren().addAll(sf9L, dataTypeCB); // SF9
 
-        hb3.getChildren ().addAll (vb1, vb2, vb3);
-        hb4.getChildren ().addAll (vb4, vb5, vb6);
-        hb5.getChildren ().addAll (vb7, vb8, vb9);
-        hb1.setSpacing (10);
-        vb11.getChildren ().addAll (tf, hb3, hb4, hb5, hb1);
-        targetNCB.setMaxWidth (180);
-        incPCB.setMaxWidth (180);
-        procCB.setMaxWidth (180);
-        prodCB.setMaxWidth (180);
-        branchCB.setMaxWidth (180);
-        paramSF6CB.setMaxWidth (180);
-        paramSF7CB.setMaxWidth (180);
-        modifierCB.setMaxWidth (180);
-        dataTypeCB.setMaxWidth (180);
+        hb3.getChildren().addAll(vb1, vb2, vb3);
+        hb4.getChildren().addAll(vb4, vb5, vb6);
+        hb5.getChildren().addAll(vb7, vb8, vb9);
+        hb1.setSpacing(10);
+        vb11.getChildren().addAll(tf, hb3, hb4, hb5, hb1);
+        targetNCB.setMaxWidth(180);
+        incPCB.setMaxWidth(180);
+        procCB.setMaxWidth(180);
+        prodCB.setMaxWidth(180);
+        branchCB.setMaxWidth(180);
+        paramSF6CB.setMaxWidth(180);
+        paramSF7CB.setMaxWidth(180);
+        modifierCB.setMaxWidth(180);
+        dataTypeCB.setMaxWidth(180);
 
-        tp1.getStyleClass ().add ("ttip");
-        tp2.getStyleClass ().add ("ttip");
-        tp3.getStyleClass ().add ("ttip");
-        tp4.getStyleClass ().add ("ttip");
-        tp5.getStyleClass ().add ("ttip");
-        tp6.getStyleClass ().add ("ttip");
-        tp7.getStyleClass ().add ("ttip");
-        tp8.getStyleClass ().add ("ttip");
-        tp9.getStyleClass ().add ("ttip");
-        tp10.getStyleClass ().add ("ttip");
+        tp1.getStyleClass().add("ttip");
+        tp2.getStyleClass().add("ttip");
+        tp3.getStyleClass().add("ttip");
+        tp4.getStyleClass().add("ttip");
+        tp5.getStyleClass().add("ttip");
+        tp6.getStyleClass().add("ttip");
+        tp7.getStyleClass().add("ttip");
+        tp8.getStyleClass().add("ttip");
+        tp9.getStyleClass().add("ttip");
+        tp10.getStyleClass().add("ttip");
 
-        tp1.setText (SF1RTip);
-        tp2.setText (SF2RTip);
-        tp3.setText (SF3RTip);
-        tp4.setText (SF4RTip);
-        tp5.setText (SF5RTip);
-        tp6.setText (SF6RTip);
-        tp7.setText (SF7RTip);
-        tp8.setText (SF8RTip);
-        tp9.setText (SF9RTip);
-        tp10.setText (SF3Add);
-        targetNCB.setTooltip (tp1);
-        incPCB.setTooltip (tp2);
-        procCB.setTooltip (tp3);
-        addL.setTooltip (tp10);
-        prodCB.setTooltip (tp4);
-        branchCB.setTooltip (tp5);
-        paramSF6CB.setTooltip (tp6);
-        paramSF7CB.setTooltip (tp7);
-        modifierCB.setTooltip (tp8);
-        dataTypeCB.setTooltip (tp9);
-        tooltipDelay (tp1, targetNCB);
-        tooltipDelay (tp2, incPCB);
-        tooltipDelay (tp3, procCB);
-        tooltipDelay (tp4, prodCB);
-        tooltipDelay (tp5, branchCB);
-        tooltipDelay (tp6, paramSF6CB);
-        tooltipDelay (tp7, paramSF7CB);
-        tooltipDelay (tp8, modifierCB);
-        tooltipDelay (tp9, dataTypeCB);
-        tooltipDelay (tp10, addL);
+        tp1.setText(SF1RTip);
+        tp2.setText(SF2RTip);
+        tp3.setText(SF3RTip);
+        tp4.setText(SF4RTip);
+        tp5.setText(SF5RTip);
+        tp6.setText(SF6RTip);
+        tp7.setText(SF7RTip);
+        tp8.setText(SF8RTip);
+        tp9.setText(SF9RTip);
+        tp10.setText(SF3Add);
+        targetNCB.setTooltip(tp1);
+        incPCB.setTooltip(tp2);
+        procCB.setTooltip(tp3);
+        addL.setTooltip(tp10);
+        prodCB.setTooltip(tp4);
+        branchCB.setTooltip(tp5);
+        paramSF6CB.setTooltip(tp6);
+        paramSF7CB.setTooltip(tp7);
+        modifierCB.setTooltip(tp8);
+        dataTypeCB.setTooltip(tp9);
+        tooltipDelay(tp1, targetNCB);
+        tooltipDelay(tp2, incPCB);
+        tooltipDelay(tp3, procCB);
+        tooltipDelay(tp4, prodCB);
+        tooltipDelay(tp5, branchCB);
+        tooltipDelay(tp6, paramSF6CB);
+        tooltipDelay(tp7, paramSF7CB);
+        tooltipDelay(tp8, modifierCB);
+        tooltipDelay(tp9, dataTypeCB);
+        tooltipDelay(tp10, addL);
 
         //*****
-        if ( !act.contains ("Delete") ) {
-            if ( act.contains ("Edit") ) {
-                tf.setText (getTxtData);
+        if (!act.contains("Delete")) {
+            if (act.contains("Edit")) {
+                tf.setText(getTxtData);
             }
-            myDialogScene = new Scene (vb11, 800, 300);
-            myDialogScene.getStylesheets ().add (getClass ().getResource (
-                    "CSS/mainscreen.css").toExternalForm ());
-            myDialog.setScene (myDialogScene);
-            myDialog.show ();
+            myDialogScene = new Scene(vb11, 800, 300);
+            myDialogScene.getStylesheets().add(getClass().getResource(
+                    "CSS/mainscreen.css").toExternalForm());
+            myDialog.setScene(myDialogScene);
+            myDialog.show();
 
-            addL.setOnAction (e -> {
-                if ( addLReacCnt > 0 ) {
-                    demoStr0 += "+" + exforUtil.fixGet (procCB.getValue ()); // SF3
+            addL.setOnAction(e -> {
+                if (addLReacCnt > 0) {
+                    demoStr0 += "+" + exforUtil.fixGet(procCB.getValue()); // SF3
                 } else {
-                    demoStr0 += exforUtil.fixGet (procCB.getValue ()); // SF3
+                    demoStr0 += exforUtil.fixGet(procCB.getValue()); // SF3
                 }
                 addLReac = (addLReac == false) ? true : addLReac;
                 ++addLReacCnt;
             });
-            selectIt.setOnAction ((ActionEvent event1) -> {
+            selectIt.setOnAction((ActionEvent event1) -> {
                 String tmpA = "";
                 String tmpB = "";
 
-                String s1 = (!targetNCB.getValue ().isEmpty ()) ? exforUtil.
-                        fixGet (targetNCB.getValue ()) : "";
-                String s2 = (!incPCB.getValue ().isEmpty ()) ? exforUtil.
-                        fixGet (incPCB.getValue ()) : "";
+                String s1 = (!targetNCB.getValue().isEmpty()) ? exforUtil.
+                        fixGet(targetNCB.getValue()) : "";
+                String s2 = (!incPCB.getValue().isEmpty()) ? exforUtil.
+                        fixGet(incPCB.getValue()) : "";
                 String s3 = demoStr0;
-                String s4 = (!prodCB.getValue ().isEmpty ()) ? exforUtil.
-                        fixGet (prodCB.getValue ()) : "";
-                String s5 = (!branchCB.getValue ().isEmpty ()) ? exforUtil.
-                        fixGet (branchCB.getValue ()) : "";        // SF5
-                String s6 = (!paramSF6CB.getValue ().isEmpty ()) ? exforUtil.
-                        fixGet (paramSF6CB.getValue ()) : "";      // SF6
-                String s7 = (!paramSF7CB.getValue ().isEmpty ()) ? exforUtil.
-                        fixGet (paramSF7CB.getValue ()) : "";      // SF7
-                String s8 = (!modifierCB.getValue ().isEmpty ()) ? exforUtil.
-                        fixGet (modifierCB.getValue ()) : "";      // SF8
-                String s9 = (!dataTypeCB.getValue ().isEmpty ()) ? exforUtil.
-                        fixGet (dataTypeCB.getValue ()) : "";      // SF9
-                Reaction.Reaction (ri, s1, s2, s3, s4, s5, s6, s7, s8, s9);
+                String s4 = (!prodCB.getValue().isEmpty()) ? exforUtil.
+                        fixGet(prodCB.getValue()) : "";
+                String s5 = (!branchCB.getValue().isEmpty()) ? exforUtil.
+                        fixGet(branchCB.getValue()) : "";        // SF5
+                String s6 = (!paramSF6CB.getValue().isEmpty()) ? exforUtil.
+                        fixGet(paramSF6CB.getValue()) : "";      // SF6
+                String s7 = (!paramSF7CB.getValue().isEmpty()) ? exforUtil.
+                        fixGet(paramSF7CB.getValue()) : "";      // SF7
+                String s8 = (!modifierCB.getValue().isEmpty()) ? exforUtil.
+                        fixGet(modifierCB.getValue()) : "";      // SF8
+                String s9 = (!dataTypeCB.getValue().isEmpty()) ? exforUtil.
+                        fixGet(dataTypeCB.getValue()) : "";      // SF9
+                Reaction.Reaction(ri, s1, s2, s3, s4, s5, s6, s7, s8, s9);
 
                 tmpA = "(" + s1;
                 tmpA += "(" + s2;
@@ -3544,132 +3540,132 @@ public class MainScreenController { //implements Initializable {
                 tmpA += "," + s5;
                 tmpA += "," + s6;
 
-                tmpA += (!s7.isEmpty ()) ? "," + s7 : "";
-                tmpA += (!s8.isEmpty ()) ? "," + s8 : "";
-                tmpA += (!s9.isEmpty ()) ? "," + s9 : "";
+                tmpA += (!s7.isEmpty()) ? "," + s7 : "";
+                tmpA += (!s8.isEmpty()) ? "," + s8 : "";
+                tmpA += (!s9.isEmpty()) ? "," + s9 : "";
                 tmpA += ")";
-                demoStr1 = Integer.toString (tmpA.length ()) + " ";
+                demoStr1 = Integer.toString(tmpA.length()) + " ";
 
-                if ( !putTxt.endsWith (", ") &&
-                        putTxt != null &&
-                        putTxt != "" &&
-                        putTxt.length () > 1 ) {
+                if (!putTxt.endsWith(", ")
+                        && putTxt != null
+                        && putTxt != ""
+                        && putTxt.length() > 1) {
                     putTxt += ",\n";
                 }
                 putTxt += tmpA;
-                tf.setText (putTxt);
+                tf.setText(putTxt);
                 ++multiLine;
                 addLReacCnt = 0;
                 demoStr0 = "";
                 isSelect = true;
             });
 
-            acceptEdit.setOnAction ((ActionEvent event1) -> {
+            acceptEdit.setOnAction((ActionEvent event1) -> {
                 String parseStr;
                 String strEntered = "";
                 String tmpStr1 = "";
                 String tmpStr2 = "";
                 String tmpHead = "";
                 String labelS;
-                parseStr = tf.getText ().toString ();
-                reacStrLen = parseStr.split ("\\s+");
+                parseStr = tf.getText().toString();
+                reacStrLen = parseStr.split("\\s+");
                 //(demoStr1.split (" ");
 
-                if ( !isSelect ) {
-                    popupMsg.warnBox ("Please press \"Select\" first",
+                if (!isSelect) {
+                    popupMsg.warnBox("Please press \"Select\" first",
                             "Attention! Select first");
-                } else if ( tf.getText ().isEmpty () ) {
-                    popupMsg.warnBox ("Text Area is blank.",
+                } else if (tf.getText().isEmpty()) {
+                    popupMsg.warnBox("Text Area is blank.",
                             "Attention! no Data");
                 } else {
                     tmpStr1 = Head;
-                    if ( act.contains ("Edit") ) {
-                        for ( int ii = 0; ii < multiLine; ii++ ) {
+                    if (act.contains("Edit")) {
+                        for (int ii = 0; ii < multiLine; ii++) {
                             tmpHead = (ii == 0) ? tmpStr1 : tmpStr2;
-                            if ( ii <= multiLine - 2 ) {
-                                strEntered = parseStr.substring (
-                                        0, Integer.valueOf (reacStrLen[ii]));
+                            if (ii <= multiLine - 2) {
+                                strEntered = parseStr.substring(
+                                        0, Integer.valueOf(reacStrLen[ii]));
                             } else {
                                 strEntered = parseStr;
                             }
-                            labelS = (multiLine > 1) ? Integer.toString (ii + 1)
+                            labelS = (multiLine > 1) ? Integer.toString(ii + 1)
                                     : "";
-                            myData.set (ri + ii,
-                                    new editableData (
+                            myData.set(ri + ii,
+                                    new editableData(
                                             tmpHead,
                                             labelS,
                                             strEntered, SE)
                             );
-                            if ( ii <= multiLine - 2 ) {
-                                parseStr = parseStr.substring (
-                                        parseStr.indexOf ("),") + 3);
+                            if (ii <= multiLine - 2) {
+                                parseStr = parseStr.substring(
+                                        parseStr.indexOf("),") + 3);
                             }
                         }
                     } else {
-                        for ( int ii = 0; ii < multiLine; ii++ ) {
+                        for (int ii = 0; ii < multiLine; ii++) {
                             tmpHead = (ii == 0) ? tmpStr1 : tmpStr2;
-                            if ( ii <= multiLine - 2 ) {
-                                strEntered = parseStr.substring (
+                            if (ii <= multiLine - 2) {
+                                strEntered = parseStr.substring(
                                         0,
-                                        Integer.valueOf (reacStrLen[ii].
-                                                length ())
+                                        Integer.valueOf(reacStrLen[ii].
+                                                length())
                                 );
-                                strEntered = strEntered.substring (
-                                        0, strEntered.lastIndexOf (",")
+                                strEntered = strEntered.substring(
+                                        0, strEntered.lastIndexOf(",")
                                 );
                             } else {
                                 strEntered = parseStr;
                             }
-                            labelS = (multiLine > 1) ? Integer.toString (ii + 1)
+                            labelS = (multiLine > 1) ? Integer.toString(ii + 1)
                                     : "";
-                            myData.add (ri + ii,
-                                    new editableData (
+                            myData.add(ri + ii,
+                                    new editableData(
                                             tmpHead,
                                             labelS,
                                             strEntered,
                                             SE
                                     ));
                             ++myDataN;
-                            if ( ii <= multiLine - 2 ) {
-                                parseStr = parseStr.substring (
-                                        parseStr.indexOf ("),") + 3);
+                            if (ii <= multiLine - 2) {
+                                parseStr = parseStr.substring(
+                                        parseStr.indexOf("),") + 3);
                             }
                         }
-                        thisEntryLine = Integer.toString (doGetSELineNum (Head));
-                        bibList.add (
+                        thisEntryLine = Integer.toString(doGetSELineNum(Head));
+                        bibList.add(
                                 bibEntNum,
-                                new BIBClasses (thisEntryLine, Integer.
-                                        toString (
+                                new BIBClasses(thisEntryLine, Integer.
+                                        toString(
                                                 bibEntNum),
                                         SE, tmpStr1));
                         ++bibEntNum;
                     }
-                    editTable.refresh ();
-                    tf.clear ();
-                    myDialog.close ();
+                    editTable.refresh();
+                    tf.clear();
+                    myDialog.close();
                 }
-                System.gc ();
+                System.gc();
             });
-            cancelEdit.setOnAction ((ActionEvent event) -> {
-                editTable.refresh ();
-                tf.clear ();
-                if ( act.contains ("Add") ) {
-                    changeBoolStatus (Head, false);
+            cancelEdit.setOnAction((ActionEvent event) -> {
+                editTable.refresh();
+                tf.clear();
+                if (act.contains("Add")) {
+                    changeBoolStatus(Head, false);
                 }
-                myDialog.close ();
+                myDialog.close();
             });
         }
-        if ( act.contains ("Delete") ) {
-            for ( int ii = 0; ii < tmpRICnt; ii++ ) {
-                myData.remove (ri);
+        if (act.contains("Delete")) {
+            for (int ii = 0; ii < tmpRICnt; ii++) {
+                myData.remove(ri);
                 --myDataN;
             }
-            editTable.refresh ();
-            zapBIBEntry (Head);
-            changeBoolStatus (Head, false);
+            editTable.refresh();
+            zapBIBEntry(Head);
+            changeBoolStatus(Head, false);
         }
-        procTree ();
-        System.gc ();
+        procTree();
+        System.gc();
     }
 
     private void doMonitRef(int ri, String Head, String act, String SE) {
@@ -3677,196 +3673,196 @@ public class MainScreenController { //implements Initializable {
         String headingTxt;
 
         isSelect = false;
-        if ( act.contains ("Add") ) {
+        if (act.contains("Add")) {
             getTxtData = null;
             putTxt = "";
         } else {
-            getTxtData = myData.get (ri).getContentTxt ().toString ();
-            if ( getTxtData.startsWith ("(") ) {
-                getTxtData = getTxtData.replace ("(", "");
+            getTxtData = myData.get(ri).getContentTxt().toString();
+            if (getTxtData.startsWith("(")) {
+                getTxtData = getTxtData.replace("(", "");
             }
-            if ( getTxtData.endsWith (")") ) {
-                getTxtData = getTxtData.replace (")", "");
+            if (getTxtData.endsWith(")")) {
+                getTxtData = getTxtData.replace(")", "");
             }
             putTxt = getTxtData;
         }
-        myDialog.setTitle ("Enter " + Head);
-        if ( !myDialog.getModality ().toString ().contains ("MODAL") ) {
-            myDialog.initModality (Modality.WINDOW_MODAL);
-            myDialog.initOwner (myStage);
+        myDialog.setTitle("Enter " + Head);
+        if (!myDialog.getModality().toString().contains("MODAL")) {
+            myDialog.initModality(Modality.WINDOW_MODAL);
+            myDialog.initOwner(myStage);
         }
-        VBox vb1 = new VBox (10);
-        VBox vb2 = new VBox (10);
-        VBox vb3 = new VBox (10);
-        VBox vb4 = new VBox (10);
-        VBox vb5 = new VBox (10);
-        VBox vb6 = new VBox (10);
-        VBox vb7 = new VBox (10);
-        VBox vb8 = new VBox (10);
-        VBox vb9 = new VBox (10);
-        VBox vb10 = new VBox (10);
-        VBox vb11 = new VBox (10);
-        VBox vb12 = new VBox (10);
-        VBox vb13 = new VBox (10);
-        VBox vb14 = new VBox (10);
-        HBox hb1 = new HBox ();
-        HBox hb2 = new HBox ();
-        HBox hb3 = new HBox ();
-        HBox hb4 = new HBox ();
-        HBox hb5 = new HBox ();
-        tf.setPrefWidth (130);
-        tf.setPrefHeight (120);
-        tf.setWrapText (true);
-        volTxt.setMaxWidth (50);
-        pgTxt.setMaxWidth (50);
-        yrTxt.setMaxWidth (50);
-        headingL.setStyle ("-fx-font-size: 10pt;");
-        subAccL.setStyle ("-fx-font-size: 10pt;");
-        authL.setStyle ("-fx-font-size: 10pt;");
-        monitRefL.setStyle ("-fx-font-size: 10pt;");
-        volL.setStyle ("-fx-font-size: 10pt;");
-        pgL.setStyle ("-fx-font-size: 10pt;");
-        yrL.setStyle ("-fx-font-size: 10pt;");
+        VBox vb1 = new VBox(10);
+        VBox vb2 = new VBox(10);
+        VBox vb3 = new VBox(10);
+        VBox vb4 = new VBox(10);
+        VBox vb5 = new VBox(10);
+        VBox vb6 = new VBox(10);
+        VBox vb7 = new VBox(10);
+        VBox vb8 = new VBox(10);
+        VBox vb9 = new VBox(10);
+        VBox vb10 = new VBox(10);
+        VBox vb11 = new VBox(10);
+        VBox vb12 = new VBox(10);
+        VBox vb13 = new VBox(10);
+        VBox vb14 = new VBox(10);
+        HBox hb1 = new HBox();
+        HBox hb2 = new HBox();
+        HBox hb3 = new HBox();
+        HBox hb4 = new HBox();
+        HBox hb5 = new HBox();
+        tf.setPrefWidth(130);
+        tf.setPrefHeight(120);
+        tf.setWrapText(true);
+        volTxt.setMaxWidth(50);
+        pgTxt.setMaxWidth(50);
+        yrTxt.setMaxWidth(50);
+        headingL.setStyle("-fx-font-size: 10pt;");
+        subAccL.setStyle("-fx-font-size: 10pt;");
+        authL.setStyle("-fx-font-size: 10pt;");
+        monitRefL.setStyle("-fx-font-size: 10pt;");
+        volL.setStyle("-fx-font-size: 10pt;");
+        pgL.setStyle("-fx-font-size: 10pt;");
+        yrL.setStyle("-fx-font-size: 10pt;");
 
-        tab1.setText ("Standard Reference");
-        tab2.setText ("Data Library");
-        tab1.setClosable (false);
-        tab2.setClosable (false);
-        tab1.setStyle ("-fx-font-size: 9pt;");
-        tab2.setStyle ("-fx-font-size: 9pt;");
+        tab1.setText("Standard Reference");
+        tab2.setText("Data Library");
+        tab1.setClosable(false);
+        tab2.setClosable(false);
+        tab1.setStyle("-fx-font-size: 9pt;");
+        tab2.setStyle("-fx-font-size: 9pt;");
 
-        headingC.setStyle (
-                "-fx-border-color: lightblue; " +
-                "-fx-font-size: 15;" +
-                "-fx-border-insets: -5; " +
-                "-fx-border-radius: 5;" +
-                "-fx-border-style: dotted;" +
-                "-fx-border-width: 2;"
+        headingC.setStyle(
+                "-fx-border-color: lightblue; "
+                + "-fx-font-size: 15;"
+                + "-fx-border-insets: -5; "
+                + "-fx-border-radius: 5;"
+                + "-fx-border-style: dotted;"
+                + "-fx-border-width: 2;"
         );
-        hb1.getChildren ().addAll (headingL, headingC,
+        hb1.getChildren().addAll(headingL, headingC,
                 subAccL, subAcc, authL, authT, addRCB);
-        hb3.getChildren ().addAll (selectIt, acceptEdit, cancelEdit);
+        hb3.getChildren().addAll(selectIt, acceptEdit, cancelEdit);
 
         // ******------>  TAB1 : standard reference setting
-        vb2.getChildren ().addAll (jtypeL, jType);
-        vb3.getChildren ().addAll (refSrcL, journals);
-        vb4.getChildren ().addAll (volL, volTxt);
-        vb5.getChildren ().addAll (pgL, pgTxt);
-        vb6.getChildren ().addAll (reptL, reptNumTxt);
-        vb7.getChildren ().addAll (reptMML, MMTxt);
-        vb8.getChildren ().addAll (yrL, yrTxt);
-        volTxt.setMinWidth (50);
-        pgTxt.setMinWidth (50);
-        yrTxt.setMinWidth (70);
-        reptNumTxt.setMinWidth (70);
-        MMTxt.setMinWidth (70);
-        MMTxt.setMaxWidth (90);
-        reptNumTxt.setMaxWidth (90);
-        yrTxt.setMaxWidth (90);
-        volTxt.setMaxWidth (50);
-        pgTxt.setMaxWidth (50);
-        journals.setMinWidth (200);
-        jType.setMinWidth (200);
-        monitRefCB.setMinWidth (300);
-        hb2.getChildren ().addAll (vb2, vb3, vb4, vb5, vb6, vb7, vb8);
+        vb2.getChildren().addAll(jtypeL, jType);
+        vb3.getChildren().addAll(refSrcL, journals);
+        vb4.getChildren().addAll(volL, volTxt);
+        vb5.getChildren().addAll(pgL, pgTxt);
+        vb6.getChildren().addAll(reptL, reptNumTxt);
+        vb7.getChildren().addAll(reptMML, MMTxt);
+        vb8.getChildren().addAll(yrL, yrTxt);
+        volTxt.setMinWidth(50);
+        pgTxt.setMinWidth(50);
+        yrTxt.setMinWidth(70);
+        reptNumTxt.setMinWidth(70);
+        MMTxt.setMinWidth(70);
+        MMTxt.setMaxWidth(90);
+        reptNumTxt.setMaxWidth(90);
+        yrTxt.setMaxWidth(90);
+        volTxt.setMaxWidth(50);
+        pgTxt.setMaxWidth(50);
+        journals.setMinWidth(200);
+        jType.setMinWidth(200);
+        monitRefCB.setMinWidth(300);
+        hb2.getChildren().addAll(vb2, vb3, vb4, vb5, vb6, vb7, vb8);
 
-        vb9.getChildren ().addAll (hb2);
-        winPane1.setPrefWidth (1190);
-        winPane1.getChildren ().addAll (vb9);
-        tab1.setContent (winPane1);
+        vb9.getChildren().addAll(hb2);
+        winPane1.setPrefWidth(1190);
+        winPane1.getChildren().addAll(vb9);
+        tab1.setContent(winPane1);
 
         // ******------>  TAB2 :: Data Library setting
-        volMTxt.clear ();
-        volMTxt.clear ();
-        pgMTxt.clear ();
-        yrMTxt.clear ();
-        vb10.getChildren ().addAll (monitRefL, monitRefCB);
-        vb11.getChildren ().addAll (volML, volMTxt);
-        vb12.getChildren ().addAll (matML, pgMTxt);
-        vb13.getChildren ().addAll (yrML, yrMTxt);
-        hb4.getChildren ().addAll (vb10, vb11, vb12, vb13);
-        vb14.getChildren ().addAll (hb4);
-        winPane2.setPrefWidth (1190);
-        winPane2.getChildren ().addAll (vb14);
-        volMTxt.setMinWidth (50);
-        pgMTxt.setMinWidth (50);
-        yrMTxt.setMinWidth (50);
-        tab2.setContent (winPane2);
+        volMTxt.clear();
+        volMTxt.clear();
+        pgMTxt.clear();
+        yrMTxt.clear();
+        vb10.getChildren().addAll(monitRefL, monitRefCB);
+        vb11.getChildren().addAll(volML, volMTxt);
+        vb12.getChildren().addAll(matML, pgMTxt);
+        vb13.getChildren().addAll(yrML, yrMTxt);
+        hb4.getChildren().addAll(vb10, vb11, vb12, vb13);
+        vb14.getChildren().addAll(hb4);
+        winPane2.setPrefWidth(1190);
+        winPane2.getChildren().addAll(vb14);
+        volMTxt.setMinWidth(50);
+        pgMTxt.setMinWidth(50);
+        yrMTxt.setMinWidth(50);
+        tab2.setContent(winPane2);
 
-        hb1.setSpacing (10);
-        hb2.setSpacing (10);
-        hb3.setSpacing (10);
-        hb4.setSpacing (10);
-        hb5.setSpacing (10);
+        hb1.setSpacing(10);
+        hb2.setSpacing(10);
+        hb3.setSpacing(10);
+        hb4.setSpacing(10);
+        hb5.setSpacing(10);
 
-        myTabPane.getTabs ().addAll (tab1, tab2);
-        myTabPane.setSide (Side.LEFT);
-        myTabPane.getSelectionModel ().select (tab1);
+        myTabPane.getTabs().addAll(tab1, tab2);
+        myTabPane.setSide(Side.LEFT);
+        myTabPane.getSelectionModel().select(tab1);
 
         //myTabPane.setSide (Side.TOP);
-        vb1.getChildren ().addAll (tf, hb1, myTabPane, hb3);
-        rootGr.getChildren ().addAll (vb1);
-        winPane.getChildren ().add (rootGr);
-        entryChoice (lList.monitRefList, monitRefCB);
-        entryChoice (lList.jTypeList, jType);
-        entryChoice (lList.jourList, journals);
-        if ( !act.contains ("Delete") ) {
-            if ( act.contains ("Edit") ) {
-                tf.setText (putTxt);
+        vb1.getChildren().addAll(tf, hb1, myTabPane, hb3);
+        rootGr.getChildren().addAll(vb1);
+        winPane.getChildren().add(rootGr);
+        entryChoice(lList.monitRefList, monitRefCB);
+        entryChoice(lList.jTypeList, jType);
+        entryChoice(lList.jourList, journals);
+        if (!act.contains("Delete")) {
+            if (act.contains("Edit")) {
+                tf.setText(putTxt);
             }
-            myDialogScene = new Scene (winPane, 1200, 450);
-            myDialog.setScene (myDialogScene);
-            myDialog.show ();
+            myDialogScene = new Scene(winPane, 1200, 450);
+            myDialog.setScene(myDialogScene);
+            myDialog.show();
 
-            addRCB.setOnAction (new EventHandler<ActionEvent> () {
+            addRCB.setOnAction(new EventHandler<ActionEvent>() {
                 String tmp1;
 
                 @Override
                 public void handle(ActionEvent event1) {
-                    headingC.selectedProperty ().addListener (
-                            new ChangeListener<Boolean> () {
+                    headingC.selectedProperty().addListener(
+                            new ChangeListener<Boolean>() {
                         public void changed(
                                 ObservableValue<? extends Boolean> ov,
                                 Boolean old_val, Boolean new_val) {
                             headingCB = new_val; //headingC.isSelected ();
                         }
                     });
-                    putTxt = (act.contains ("Add")) ? "" : putTxt;
-                    if ( headingCB ) {
+                    putTxt = (act.contains("Add")) ? "" : putTxt;
+                    if (headingCB) {
                         ++headingNum;
-                        tmp1 = String.format ("(MONIT%s",
-                                Integer.toString (headingNum));
-                        if ( headingCB ) {
+                        tmp1 = String.format("(MONIT%s",
+                                Integer.toString(headingNum));
+                        if (headingCB) {
                             tmp1 += ")";
                         }
                     } else {
                         tmp1 = "";
                     }
                     tmp1 += ",";
-                    if ( !subAcc.getText ().isEmpty () ) {
-                        tmp1 += subAcc.getText () + ",";
+                    if (!subAcc.getText().isEmpty()) {
+                        tmp1 += subAcc.getText() + ",";
                     }
-                    if ( !authT.getText ().isEmpty () ) {
-                        tmp1 += authT.getText () + ",";
+                    if (!authT.getText().isEmpty()) {
+                        tmp1 += authT.getText() + ",";
                     }
                     putTxt += tmp1;
                     tmp1 = "";
                 }
             });
 
-            selectIt.setOnAction ((ActionEvent event1) -> {
+            selectIt.setOnAction((ActionEvent event1) -> {
                 String tmp1 = "";
                 String tmp = "";
                 String[] sComps;
                 String date = "";
                 // TAB1 : General             
-                if ( tab1B && !tabSelected ) {
-                    tmp = (!jType.getValue ().isEmpty ())
-                            ? jType.getValue () : "";
-                    tmp1 = tmp.substring (1, 2);
+                if (tab1B && !tabSelected) {
+                    tmp = (!jType.getValue().isEmpty())
+                            ? jType.getValue() : "";
+                    tmp1 = tmp.substring(1, 2);
                     putTxt += tmp1 + ",";
-                    tmp = journals.getValue ();
-                    tmp = tmp.substring (0, tmp.indexOf (" "));
+                    tmp = journals.getValue();
+                    tmp = tmp.substring(0, tmp.indexOf(" "));
                     putTxt += tmp;
                     switch (tmp1) {
                         case "0":
@@ -3876,52 +3872,52 @@ public class MainScreenController { //implements Initializable {
                         case "A":
                         case "B":
                         case "C":
-                            if ( volTxt.getText () != null ) {
-                                putTxt += "," + volTxt.getText ();
+                            if (volTxt.getText() != null) {
+                                putTxt += "," + volTxt.getText();
                             } else {
                                 putTxt += ",";
                             }
-                            if ( pgTxt.getText () != null ) {
-                                putTxt += "," + pgTxt.getText ();
+                            if (pgTxt.getText() != null) {
+                                putTxt += "," + pgTxt.getText();
                             } else {
                                 putTxt += ",";
                             }
-                            if ( yrTxt.getText () != null ) {
-                                putTxt += "," + yrTxt.getText ();
+                            if (yrTxt.getText() != null) {
+                                putTxt += "," + yrTxt.getText();
                             }
                             break;
                         case "J":
                         case "K":
-                            if ( volTxt.getText () != null ) {
-                                putTxt += "," + volTxt.getText ();
+                            if (volTxt.getText() != null) {
+                                putTxt += "," + volTxt.getText();
                             } else {
                                 putTxt += ",";
                             }
-                            if ( pgTxt.getText () != null ) {
-                                putTxt += "," + pgTxt.getText ();
+                            if (pgTxt.getText() != null) {
+                                putTxt += "," + pgTxt.getText();
                             } else {
                                 putTxt += ",";
                             }
-                            if ( yrTxt.getText () != null ) {
-                                putTxt += "," + yrTxt.getText ();
+                            if (yrTxt.getText() != null) {
+                                putTxt += "," + yrTxt.getText();
                             }
                             break;
                         case "P":
                         case "R":
                         case "S":
                         case "X":
-                            if ( reptNumTxt.getText () != null ) {
-                                putTxt += "-" + reptNumTxt.getText ();
+                            if (reptNumTxt.getText() != null) {
+                                putTxt += "-" + reptNumTxt.getText();
                             } else {
                                 putTxt += ",";
                             }
-                            if ( MMTxt.getText () != null ) {
-                                putTxt += "," + MMTxt.getText ();
+                            if (MMTxt.getText() != null) {
+                                putTxt += "," + MMTxt.getText();
                             } else {
                                 putTxt += ",";
                             }
-                            if ( yrTxt.getText () != null ) {
-                                putTxt += "," + yrTxt.getText ();
+                            if (yrTxt.getText() != null) {
+                                putTxt += "," + yrTxt.getText();
                             } else {
                                 putTxt += ",";
                             }
@@ -3931,91 +3927,91 @@ public class MainScreenController { //implements Initializable {
                             break;
                     }
                     putTxt = "(" + putTxt + ")";
-                    tf.setText (putTxt);
+                    tf.setText(putTxt);
                     tmp1 = "";
                     tmp = "";
                     tabSelected = true;
                 }
-                if ( tab2B && !tabSelected ) {
-                    if ( monitRefCB.getValue () != null ) {
-                        tmp1 = monitRefCB.getValue ();
-                        tmp1 = tmp1.substring (0, tmp1.indexOf (" "));
+                if (tab2B && !tabSelected) {
+                    if (monitRefCB.getValue() != null) {
+                        tmp1 = monitRefCB.getValue();
+                        tmp1 = tmp1.substring(0, tmp1.indexOf(" "));
                         putTxt += "3," + tmp1 + ",";
                     }
-                    if ( volMTxt.getText () != null ) {
-                        putTxt += volMTxt.getText ().trim () + ",";
+                    if (volMTxt.getText() != null) {
+                        putTxt += volMTxt.getText().trim() + ",";
                     }
-                    if ( pgMTxt.getText () != null ) {
-                        putTxt += pgMTxt.getText ().trim () + ",";
+                    if (pgMTxt.getText() != null) {
+                        putTxt += pgMTxt.getText().trim() + ",";
                     }
-                    if ( yrMTxt.getText () != null ) {
-                        putTxt += yrMTxt.getText ().trim ();
+                    if (yrMTxt.getText() != null) {
+                        putTxt += yrMTxt.getText().trim();
                     }
                     tmp1 = "";
                     tabSelected = true;
                 }
                 //putTxt = "(" + putTxt + ")";
                 //putTxt = putTxt;
-                tf.setText (putTxt);
+                tf.setText(putTxt);
                 isSelect = true;
             });
-            acceptEdit.setOnAction ((ActionEvent event1) -> {
+            acceptEdit.setOnAction((ActionEvent event1) -> {
                 String parseStr;
-                if ( !isSelect ) {
-                    popupMsg.warnBox ("Please ress \"Select\" to select data",
+                if (!isSelect) {
+                    popupMsg.warnBox("Please ress \"Select\" to select data",
                             "Attention! Select first");
-                } else if ( tf.getText ().isEmpty () ) {
-                    popupMsg.warnBox ("No Data is selected.",
+                } else if (tf.getText().isEmpty()) {
+                    popupMsg.warnBox("No Data is selected.",
                             "Attention! No Data");
                 } else {
 
-                    parseStr = tf.getText ().toString ();
-                    if ( parseStr.contains ("(") ) {
+                    parseStr = tf.getText().toString();
+                    if (parseStr.contains("(")) {
                         parseStr = parseStr;
                     } else {
                         parseStr = "(" + parseStr + ")";
                     }
-                    myDataN = (act.contains ("Add")) ? myDataN + 1 : myDataN;
-                    if ( act.contains ("Edit") ) {
-                        myData.set (ri,
-                                new editableData (Head, "", parseStr, SE));
+                    myDataN = (act.contains("Add")) ? myDataN + 1 : myDataN;
+                    if (act.contains("Edit")) {
+                        myData.set(ri,
+                                new editableData(Head, "", parseStr, SE));
                     } else {
-                        myData.add (ri,
-                                new editableData (Head, "", parseStr, SE));
-                        thisEntryLine = Integer.toString (doGetSELineNum (Head));
-                        bibList.add (
+                        myData.add(ri,
+                                new editableData(Head, "", parseStr, SE));
+                        thisEntryLine = Integer.toString(doGetSELineNum(Head));
+                        bibList.add(
                                 bibEntNum,
-                                new BIBClasses (thisEntryLine,
-                                        Integer.toString (bibEntNum),
+                                new BIBClasses(thisEntryLine,
+                                        Integer.toString(bibEntNum),
                                         SE, Head));
                         ++bibEntNum;
                     }
-                    editTable.refresh ();
-                    subEntTree.refresh ();
-                    tf.clear ();
-                    winPane.getChildren ().clear ();
-                    myDialog.close ();
+                    editTable.refresh();
+                    subEntTree.refresh();
+                    tf.clear();
+                    winPane.getChildren().clear();
+                    myDialog.close();
                 }
-                System.gc ();
+                System.gc();
             });
-            cancelEdit.setOnAction ((ActionEvent event1) -> {
-                tf.clear ();
-                if ( act.contains ("Add") ) {
-                    changeBoolStatus (Head, false);
+            cancelEdit.setOnAction((ActionEvent event1) -> {
+                tf.clear();
+                if (act.contains("Add")) {
+                    changeBoolStatus(Head, false);
                 }
-                winPane.getChildren ().clear ();
-                myDialog.close ();
+                winPane.getChildren().clear();
+                myDialog.close();
             });
         }
-        if ( act.contains ("Delete") ) {
-            changeBoolStatus (Head, false);
-            myData.remove (ri);
-            editTable.refresh ();
+        if (act.contains("Delete")) {
+            changeBoolStatus(Head, false);
+            myData.remove(ri);
+            editTable.refresh();
             --myDataN;
-            zapBIBEntry (Head);
+            zapBIBEntry(Head);
         }
-        procTree ();
-        System.gc ();
+        procTree();
+        System.gc();
     }
 
     /*
@@ -4023,102 +4019,102 @@ public class MainScreenController { //implements Initializable {
      * copy and paste as suggested by Rema
      */
     private void doCommon(int ri, String Head, String act, String SE) {
-        if ( act.contains ("Edit") ) {
-            if ( Head.contains ("COMMON") ) {
-                myData.set (ri, new editableData ("NOCOMMON", "", "", SE));
+        if (act.contains("Edit")) {
+            if (Head.contains("COMMON")) {
+                myData.set(ri, new editableData("NOCOMMON", "", "", SE));
                 int ii = ri + 1;
-                while (!myData.get (ii).getBibItemName ().contains ("ENDCOMMON")) {
-                    myData.remove (ii);
+                while (!myData.get(ii).getBibItemName().contains("ENDCOMMON")) {
+                    myData.remove(ii);
                     --myDataN;
-                    editTable.refresh ();
+                    editTable.refresh();
                 }
 
-                myData.remove (ii);
+                myData.remove(ii);
                 --myDataN;
-                editTable.refresh ();
-                zapBIBEntry (Head);
-                procTree ();
-                changeBoolStatus (Head, false);
-                System.gc ();
+                editTable.refresh();
+                zapBIBEntry(Head);
+                procTree();
+                changeBoolStatus(Head, false);
+                System.gc();
                 return;
-            } else if ( Head.contains ("DATA") ) {
+            } else if (Head.contains("DATA")) {
                 int ii = ri;
-                while (!myData.get (ii).getBibItemName ().contains ("ENDDATA")) {
-                    myData.remove (ii);
+                while (!myData.get(ii).getBibItemName().contains("ENDDATA")) {
+                    myData.remove(ii);
                     --myDataN;
-                    editTable.refresh ();
+                    editTable.refresh();
                 }
-                myData.remove (ii);
+                myData.remove(ii);
                 --myDataN;
-                editTable.refresh ();
-                zapBIBEntry (Head);
-                procTree ();
-                changeBoolStatus (Head, false);
-                System.gc ();
+                editTable.refresh();
+                zapBIBEntry(Head);
+                procTree();
+                changeBoolStatus(Head, false);
+                System.gc();
                 return;
             }
         }
 
-        entryChoice (lList.dataHeadingList, dataHeadingCB);
-        entryChoice (lList.dataHeadingList, dHCB1, "Head");
-        entryChoice (lList.dataHeadingList, dHCB2, "Head");
-        entryChoice (lList.dataHeadingList, dHCB3, "Head");
-        entryChoice (lList.dataHeadingList, dHCB4, "Head");
-        entryChoice (lList.dataHeadingList, dHCB5, "Head");
-        entryChoice (lList.dataHeadingList, dHCB6, "Head");
-        entryChoice (lList.dataUnitsList, dUCB1, "Units");
-        entryChoice (lList.dataUnitsList, dUCB2, "Units");
-        entryChoice (lList.dataUnitsList, dUCB3, "Units");
-        entryChoice (lList.dataUnitsList, dUCB4, "Units");
-        entryChoice (lList.dataUnitsList, dUCB5, "Units");
-        entryChoice (lList.dataUnitsList, dUCB6, "Units");
-        myDialog.setTitle ("Enter " + Head);
-        if ( !myDialog.getModality ().toString ().contains ("MODAL") ) {
-            myDialog.initModality (Modality.WINDOW_MODAL);
-            myDialog.initOwner (myStage);
+        entryChoice(lList.dataHeadingList, dataHeadingCB);
+        entryChoice(lList.dataHeadingList, dHCB1, "Head");
+        entryChoice(lList.dataHeadingList, dHCB2, "Head");
+        entryChoice(lList.dataHeadingList, dHCB3, "Head");
+        entryChoice(lList.dataHeadingList, dHCB4, "Head");
+        entryChoice(lList.dataHeadingList, dHCB5, "Head");
+        entryChoice(lList.dataHeadingList, dHCB6, "Head");
+        entryChoice(lList.dataUnitsList, dUCB1, "Units");
+        entryChoice(lList.dataUnitsList, dUCB2, "Units");
+        entryChoice(lList.dataUnitsList, dUCB3, "Units");
+        entryChoice(lList.dataUnitsList, dUCB4, "Units");
+        entryChoice(lList.dataUnitsList, dUCB5, "Units");
+        entryChoice(lList.dataUnitsList, dUCB6, "Units");
+        myDialog.setTitle("Enter " + Head);
+        if (!myDialog.getModality().toString().contains("MODAL")) {
+            myDialog.initModality(Modality.WINDOW_MODAL);
+            myDialog.initOwner(myStage);
         }
 
-        HBox hb1 = new HBox ();
-        HBox hb2 = new HBox ();
-        HBox hb3 = new HBox ();
-        HBox hb4 = new HBox ();
-        VBox vb1 = new VBox ();
-        VBox vb2 = new VBox ();
-        hb1.getChildren ().addAll (dHCB1, dHCB2, dHCB3, dHCB4, dHCB5, dHCB6);
-        hb2.getChildren ().addAll (dUCB1, dUCB2, dUCB3, dUCB4, dUCB5, dUCB6);
-        vb1.getChildren ().addAll (hb1, hb2, matrixData);
-        hb3.getChildren ().addAll (acceptEdit, cancelEdit);
-        vb2.getChildren ().addAll (vb1, hb3);
-        hb4.getChildren ().addAll (vb2, numNumL, numColL, numCol, chngCol);
+        HBox hb1 = new HBox();
+        HBox hb2 = new HBox();
+        HBox hb3 = new HBox();
+        HBox hb4 = new HBox();
+        VBox vb1 = new VBox();
+        VBox vb2 = new VBox();
+        hb1.getChildren().addAll(dHCB1, dHCB2, dHCB3, dHCB4, dHCB5, dHCB6);
+        hb2.getChildren().addAll(dUCB1, dUCB2, dUCB3, dUCB4, dUCB5, dUCB6);
+        vb1.getChildren().addAll(hb1, hb2, matrixData);
+        hb3.getChildren().addAll(acceptEdit, cancelEdit);
+        vb2.getChildren().addAll(vb1, hb3);
+        hb4.getChildren().addAll(vb2, numNumL, numColL, numCol, chngCol);
 
-        numCol.setMaxWidth (40);
+        numCol.setMaxWidth(40);
 
-        hb1.setSpacing (0);
+        hb1.setSpacing(0);
 
-        dHCB1.setMaxWidth (maxW);
-        dHCB2.setMaxWidth (maxW);
-        dHCB3.setMaxWidth (maxW);
-        dHCB4.setMaxWidth (maxW);
-        dHCB5.setMaxWidth (maxW);
-        dHCB6.setMaxWidth (maxW);
-        dUCB1.setMaxWidth (maxW);
-        dUCB2.setMaxWidth (maxW);
-        dUCB3.setMaxWidth (maxW);
-        dUCB4.setMaxWidth (maxW);
-        dUCB5.setMaxWidth (maxW);
-        dUCB6.setMaxWidth (maxW);
+        dHCB1.setMaxWidth(maxW);
+        dHCB2.setMaxWidth(maxW);
+        dHCB3.setMaxWidth(maxW);
+        dHCB4.setMaxWidth(maxW);
+        dHCB5.setMaxWidth(maxW);
+        dHCB6.setMaxWidth(maxW);
+        dUCB1.setMaxWidth(maxW);
+        dUCB2.setMaxWidth(maxW);
+        dUCB3.setMaxWidth(maxW);
+        dUCB4.setMaxWidth(maxW);
+        dUCB5.setMaxWidth(maxW);
+        dUCB6.setMaxWidth(maxW);
 
         ////////////////////////////////
-        matrixData.getSelectionModel ().setCellSelectionEnabled (true);
-        matrixData.getSelectionModel ().
-                setSelectionMode (SelectionMode.MULTIPLE);
+        matrixData.getSelectionModel().setCellSelectionEnabled(true);
+        matrixData.getSelectionModel().
+                setSelectionMode(SelectionMode.MULTIPLE);
         /////////////////////////////////
-        myDialogScene = new Scene (hb4, 1200, 300);
-        myDialog.setScene (myDialogScene);
+        myDialogScene = new Scene(hb4, 1200, 300);
+        myDialog.setScene(myDialogScene);
 
-        myDialog.show ();
+        myDialog.show();
 
-        acceptEdit.setOnAction ((ActionEvent ev) -> {
+        acceptEdit.setOnAction((ActionEvent ev) -> {
             String parseStr = "";
             String strEntered = "";
             int rowN = 0;
@@ -4128,200 +4124,200 @@ public class MainScreenController { //implements Initializable {
             String col11 = "";
 
             rowN = maxRowNum + 1;
-            parseStr = exforUtil.fixString11 (Integer.toString (numC));
-            parseStr += exforUtil.fixString11 (Integer.toString (rowN));
-            if ( Head.contains ("COMMON") ) {
-                myData.set (ri, new editableData (Head, "", parseStr, SE));
-            } else if ( Head.contains ("DATA") ) {
-                myData.add (ri, new editableData (Head, "", parseStr, SE));
+            parseStr = exforUtil.fixString11(Integer.toString(numC));
+            parseStr += exforUtil.fixString11(Integer.toString(rowN));
+            if (Head.contains("COMMON")) {
+                myData.set(ri, new editableData(Head, "", parseStr, SE));
+            } else if (Head.contains("DATA")) {
+                myData.add(ri, new editableData(Head, "", parseStr, SE));
             }
             ++myDataN;
-            thisEntryLine = Integer.toString (doGetSELineNum (Head));
-            bibList.add (bibEntNum, new BIBClasses (thisEntryLine, Integer.
-                    toString (bibEntNum), SE, Head));
+            thisEntryLine = Integer.toString(doGetSELineNum(Head));
+            bibList.add(bibEntNum, new BIBClasses(thisEntryLine, Integer.
+                    toString(bibEntNum), SE, Head));
             ++bibEntNum;
             ++lineCnt;
             parseStr = "";
 
             // Here we are fixing Heading
-            strCOL[0] = (!dHCB1.getValue ().isEmpty ()) ? exforUtil.
-                    fixString11 (dHCB1.
-                            getValue ().substring (0, 10).trim (), 10, true)
+            strCOL[0] = (!dHCB1.getValue().isEmpty()) ? exforUtil.
+                    fixString11(dHCB1.
+                            getValue().substring(0, 10).trim(), 10, true)
                     : "";
 
-            strCOL[1] = (dHCB2.isVisible () && !dHCB2.getValue ().isEmpty ())
-                    ? exforUtil.fixString11 (
-                            dHCB2.getValue ().substring (0, 10).trim (),
+            strCOL[1] = (dHCB2.isVisible() && !dHCB2.getValue().isEmpty())
+                    ? exforUtil.fixString11(
+                            dHCB2.getValue().substring(0, 10).trim(),
                             true) : "";
-            strCOL[1] = (strCOL[1].length () > 2 && strCOL[1].contains (" "))
-                    ? strCOL[1].substring (0, 10) : strCOL[1];
-            parseStr = (!strCOL[1].isEmpty ()) ? exforUtil.fixString11 (
+            strCOL[1] = (strCOL[1].length() > 2 && strCOL[1].contains(" "))
+                    ? strCOL[1].substring(0, 10) : strCOL[1];
+            parseStr = (!strCOL[1].isEmpty()) ? exforUtil.fixString11(
                     strCOL[1], 10,
                     true) : "";
 
-            strCOL[2] = (dHCB3.isVisible () && !dHCB3.getValue ().isEmpty ())
-                    ? exforUtil.fixString11 (
-                            dHCB3.getValue ().substring (0, 10).trim (),
+            strCOL[2] = (dHCB3.isVisible() && !dHCB3.getValue().isEmpty())
+                    ? exforUtil.fixString11(
+                            dHCB3.getValue().substring(0, 10).trim(),
                             true) : "";
-            strCOL[2] = (strCOL[2].length () > 2 && strCOL[2].contains (" "))
-                    ? strCOL[2].substring (0, 10) : strCOL[2];
-            parseStr += (!strCOL[2].isEmpty ()) ? exforUtil.fixString11 (
+            strCOL[2] = (strCOL[2].length() > 2 && strCOL[2].contains(" "))
+                    ? strCOL[2].substring(0, 10) : strCOL[2];
+            parseStr += (!strCOL[2].isEmpty()) ? exforUtil.fixString11(
                     strCOL[2], 10,
                     true) : "";
 
-            strCOL[3] = (dHCB4.isVisible () && !dHCB4.getValue ().isEmpty ())
-                    ? exforUtil.fixString11 (
-                            dHCB4.getValue ().substring (0, 10).trim (),
+            strCOL[3] = (dHCB4.isVisible() && !dHCB4.getValue().isEmpty())
+                    ? exforUtil.fixString11(
+                            dHCB4.getValue().substring(0, 10).trim(),
                             true) : "";
-            strCOL[3] = (strCOL[3].length () > 2 && strCOL[3].contains (" "))
-                    ? strCOL[3].substring (0, 10) : strCOL[3];
-            parseStr += (!strCOL[3].isEmpty ()) ? exforUtil.fixString11 (
+            strCOL[3] = (strCOL[3].length() > 2 && strCOL[3].contains(" "))
+                    ? strCOL[3].substring(0, 10) : strCOL[3];
+            parseStr += (!strCOL[3].isEmpty()) ? exforUtil.fixString11(
                     strCOL[3], 10,
                     true) : "";
 
-            strCOL[4] = (dHCB5.isVisible () && !dHCB5.getValue ().isEmpty ())
-                    ? exforUtil.fixString11 (
-                            dHCB5.getValue ().substring (0, 10).trim (),
+            strCOL[4] = (dHCB5.isVisible() && !dHCB5.getValue().isEmpty())
+                    ? exforUtil.fixString11(
+                            dHCB5.getValue().substring(0, 10).trim(),
                             true) : "";
-            strCOL[4] = (strCOL[4].length () > 2 && strCOL[4].contains (" "))
-                    ? strCOL[4].substring (0, 10) : strCOL[4];
-            parseStr += (!strCOL[4].isEmpty ()) ? exforUtil.fixString11 (
+            strCOL[4] = (strCOL[4].length() > 2 && strCOL[4].contains(" "))
+                    ? strCOL[4].substring(0, 10) : strCOL[4];
+            parseStr += (!strCOL[4].isEmpty()) ? exforUtil.fixString11(
                     strCOL[4], 10,
                     true) : "";
 
-            strCOL[5] = (dHCB6.isVisible () && !dHCB6.getValue ().isEmpty ())
-                    ? exforUtil.fixString11 (
-                            dHCB6.getValue ().substring (0, 10).trim (),
+            strCOL[5] = (dHCB6.isVisible() && !dHCB6.getValue().isEmpty())
+                    ? exforUtil.fixString11(
+                            dHCB6.getValue().substring(0, 10).trim(),
                             true) : "";
-            strCOL[5] = (strCOL[5].length () > 2 && strCOL[5].contains (" "))
-                    ? strCOL[5].substring (0, 10) : strCOL[5];
-            parseStr += (!strCOL[5].isEmpty ()) ? exforUtil.fixString11 (
+            strCOL[5] = (strCOL[5].length() > 2 && strCOL[5].contains(" "))
+                    ? strCOL[5].substring(0, 10) : strCOL[5];
+            parseStr += (!strCOL[5].isEmpty()) ? exforUtil.fixString11(
                     strCOL[5], 10,
                     true) : "";
 
-            myData.add (ri + lineCnt, new editableData (strCOL[0], "", parseStr,
+            myData.add(ri + lineCnt, new editableData(strCOL[0], "", parseStr,
                     SE));
             ++myDataN;
             parseStr = "";
             ++lineCnt;
 
             // Here we are fixing Units
-            strCOL[0] = (!dUCB1.getValue ().isEmpty ()) ? exforUtil.
-                    fixString11 (dUCB1.
-                            getValue ().substring (0, 10).trim (), 10, true)
+            strCOL[0] = (!dUCB1.getValue().isEmpty()) ? exforUtil.
+                    fixString11(dUCB1.
+                            getValue().substring(0, 10).trim(), 10, true)
                     : "";
 
-            strCOL[1] = (dUCB2.isVisible () && !dUCB2.getValue ().isEmpty ())
-                    ? exforUtil.fixString11 (
-                            dUCB2.getValue ().substring (0, 10).trim (),
+            strCOL[1] = (dUCB2.isVisible() && !dUCB2.getValue().isEmpty())
+                    ? exforUtil.fixString11(
+                            dUCB2.getValue().substring(0, 10).trim(),
                             true) : "";
-            strCOL[1] = (strCOL[1].length () > 2 && strCOL[1].contains (" "))
-                    ? strCOL[1].substring (0, 10) : strCOL[1];
-            parseStr = (!strCOL[1].isEmpty ()) ? exforUtil.fixString11 (
+            strCOL[1] = (strCOL[1].length() > 2 && strCOL[1].contains(" "))
+                    ? strCOL[1].substring(0, 10) : strCOL[1];
+            parseStr = (!strCOL[1].isEmpty()) ? exforUtil.fixString11(
                     strCOL[1], 10,
                     true) : "";
 
-            strCOL[2] = (dUCB3.isVisible () && !dUCB3.getValue ().isEmpty ())
-                    ? exforUtil.fixString11 (
-                            dUCB3.getValue ().substring (0, 10).trim (),
+            strCOL[2] = (dUCB3.isVisible() && !dUCB3.getValue().isEmpty())
+                    ? exforUtil.fixString11(
+                            dUCB3.getValue().substring(0, 10).trim(),
                             true) : "";
-            strCOL[2] = (strCOL[2].length () > 2 && strCOL[2].contains (" "))
-                    ? strCOL[2].substring (0, 10) : strCOL[2];
-            parseStr += (!strCOL[2].isEmpty ()) ? exforUtil.fixString11 (
+            strCOL[2] = (strCOL[2].length() > 2 && strCOL[2].contains(" "))
+                    ? strCOL[2].substring(0, 10) : strCOL[2];
+            parseStr += (!strCOL[2].isEmpty()) ? exforUtil.fixString11(
                     strCOL[2], 10,
                     true) : "";
 
-            strCOL[3] = (dUCB4.isVisible () && !dUCB4.getValue ().isEmpty ())
-                    ? exforUtil.fixString11 (
-                            dHCB4.getValue ().substring (0, 10).trim (),
+            strCOL[3] = (dUCB4.isVisible() && !dUCB4.getValue().isEmpty())
+                    ? exforUtil.fixString11(
+                            dHCB4.getValue().substring(0, 10).trim(),
                             true) : "";
-            strCOL[3] = (strCOL[3].length () > 2 && strCOL[3].contains (" "))
-                    ? strCOL[3].substring (0, 10) : strCOL[3];
-            parseStr += (!strCOL[3].isEmpty ()) ? exforUtil.fixString11 (
+            strCOL[3] = (strCOL[3].length() > 2 && strCOL[3].contains(" "))
+                    ? strCOL[3].substring(0, 10) : strCOL[3];
+            parseStr += (!strCOL[3].isEmpty()) ? exforUtil.fixString11(
                     strCOL[3], 10,
                     true) : "";
 
-            strCOL[4] = (dUCB5.isVisible () && !dUCB5.getValue ().isEmpty ())
-                    ? exforUtil.fixString11 (
-                            dUCB5.getValue ().substring (0, 10).trim (),
+            strCOL[4] = (dUCB5.isVisible() && !dUCB5.getValue().isEmpty())
+                    ? exforUtil.fixString11(
+                            dUCB5.getValue().substring(0, 10).trim(),
                             true) : "";
-            strCOL[4] = (strCOL[4].length () > 2 && strCOL[4].contains (" "))
-                    ? strCOL[4].substring (0, 10) : strCOL[4];
-            parseStr += (!strCOL[4].isEmpty ()) ? exforUtil.fixString11 (
+            strCOL[4] = (strCOL[4].length() > 2 && strCOL[4].contains(" "))
+                    ? strCOL[4].substring(0, 10) : strCOL[4];
+            parseStr += (!strCOL[4].isEmpty()) ? exforUtil.fixString11(
                     strCOL[4], 10,
                     true) : "";
 
-            strCOL[5] = (dUCB6.isVisible () && !dUCB6.getValue ().isEmpty ())
-                    ? exforUtil.fixString11 (
-                            dUCB6.getValue ().substring (0, 10).trim (),
+            strCOL[5] = (dUCB6.isVisible() && !dUCB6.getValue().isEmpty())
+                    ? exforUtil.fixString11(
+                            dUCB6.getValue().substring(0, 10).trim(),
                             true) : "";
-            strCOL[5] = (strCOL[5].length () > 2 && strCOL[5].contains (" "))
-                    ? strCOL[5].substring (0, 10) : strCOL[5];
-            parseStr += (!strCOL[5].isEmpty ()) ? exforUtil.fixString11 (
+            strCOL[5] = (strCOL[5].length() > 2 && strCOL[5].contains(" "))
+                    ? strCOL[5].substring(0, 10) : strCOL[5];
+            parseStr += (!strCOL[5].isEmpty()) ? exforUtil.fixString11(
                     strCOL[5], 10,
                     true) : "";
 
-            myData.add (ri + lineCnt, new editableData (strCOL[0], "", parseStr,
+            myData.add(ri + lineCnt, new editableData(strCOL[0], "", parseStr,
                     SE));
             ++myDataN;
             parseStr = "";
 
-            for ( int jj = 0; jj < rowN; jj++ ) {
+            for (int jj = 0; jj < rowN; jj++) {
                 ++lineCnt;
-                strCOL[0] = matrixData.getItems ().get (jj).getMyD1 ().trim ();
-                strCOL[1] = matrixData.getItems ().get (jj).getMyD2 ().trim ();
-                strCOL[2] = matrixData.getItems ().get (jj).getMyD3 ().trim ();
-                strCOL[3] = matrixData.getItems ().get (jj).getMyD4 ().trim ();
-                strCOL[4] = matrixData.getItems ().get (jj).getMyD5 ().trim ();
-                strCOL[5] = matrixData.getItems ().get (jj).getMyD6 ().trim ();
+                strCOL[0] = matrixData.getItems().get(jj).getMyD1().trim();
+                strCOL[1] = matrixData.getItems().get(jj).getMyD2().trim();
+                strCOL[2] = matrixData.getItems().get(jj).getMyD3().trim();
+                strCOL[3] = matrixData.getItems().get(jj).getMyD4().trim();
+                strCOL[4] = matrixData.getItems().get(jj).getMyD5().trim();
+                strCOL[5] = matrixData.getItems().get(jj).getMyD6().trim();
 
-                if ( strCOL[0].length () > 11 ) {
-                    strCOL[0] = strCOL[0].substring (0, 11); /// concatenation for length > 11
+                if (strCOL[0].length() > 11) {
+                    strCOL[0] = strCOL[0].substring(0, 11); /// concatenation for length > 11
                 }
 
-                col11 = (strCOL[0].length () > 2) ? strCOL[0].substring (
-                        strCOL[0].length () - 1) : "";
-                strCOL[0] = (strCOL[0].length () > 1)
-                        ? strCOL[0].substring (0, strCOL[0].length () - 1)
+                col11 = (strCOL[0].length() > 2) ? strCOL[0].substring(
+                        strCOL[0].length() - 1) : "";
+                strCOL[0] = (strCOL[0].length() > 1)
+                        ? strCOL[0].substring(0, strCOL[0].length() - 1)
                         : strCOL[0];
 
-                strCOL[0] = exforUtil.fixString11 (strCOL[0], 10);
-                strCOL[1] = exforUtil.fixString11 (strCOL[1]);
-                strCOL[2] = exforUtil.fixString11 (strCOL[2]);
-                strCOL[3] = exforUtil.fixString11 (strCOL[3]);
-                strCOL[4] = exforUtil.fixString11 (strCOL[4]);
-                strCOL[5] = exforUtil.fixString11 (strCOL[5]);
-                parseStr = strCOL[1] + strCOL[2] + strCOL[3] + strCOL[4] +
-                        strCOL[5];
-                myData.add (ri + lineCnt, new editableData (strCOL[0], col11,
+                strCOL[0] = exforUtil.fixString11(strCOL[0], 10);
+                strCOL[1] = exforUtil.fixString11(strCOL[1]);
+                strCOL[2] = exforUtil.fixString11(strCOL[2]);
+                strCOL[3] = exforUtil.fixString11(strCOL[3]);
+                strCOL[4] = exforUtil.fixString11(strCOL[4]);
+                strCOL[5] = exforUtil.fixString11(strCOL[5]);
+                parseStr = strCOL[1] + strCOL[2] + strCOL[3] + strCOL[4]
+                        + strCOL[5];
+                myData.add(ri + lineCnt, new editableData(strCOL[0], col11,
                         parseStr, SE));
                 ++myDataN;
             }
-            parseStr = exforUtil.fixString11 (Integer.toString (numC));
-            parseStr += exforUtil.fixString11 (Integer.toString (0));
-            if ( Head.contains ("COMMON") ) {
-                myData.add (ri + lineCnt + 1, new editableData ("ENDCOMMON", "",
+            parseStr = exforUtil.fixString11(Integer.toString(numC));
+            parseStr += exforUtil.fixString11(Integer.toString(0));
+            if (Head.contains("COMMON")) {
+                myData.add(ri + lineCnt + 1, new editableData("ENDCOMMON", "",
                         parseStr, SE));
-            } else if ( Head.contains ("DATA") ) {
-                myData.add (ri, new editableData ("ENDDATA", "", parseStr, SE));
+            } else if (Head.contains("DATA")) {
+                myData.add(ri, new editableData("ENDDATA", "", parseStr, SE));
             }
             ++myDataN;
-            editTable.refresh ();
+            editTable.refresh();
             parseStr = "";
 
-            editTable.refresh ();
-            myDialog.close ();
+            editTable.refresh();
+            myDialog.close();
         });
 
-        cancelEdit.setOnAction ((ActionEvent event) -> {
-            editTable.refresh ();
-            if ( act.contains ("Add") ) {
-                changeBoolStatus (Head, false);
+        cancelEdit.setOnAction((ActionEvent event) -> {
+            editTable.refresh();
+            if (act.contains("Add")) {
+                changeBoolStatus(Head, false);
             }
-            myDialog.close ();
+            myDialog.close();
         });
-        procTree ();
-        System.gc ();
+        procTree();
+        System.gc();
     }
 
     // Decay-Data and DECAY-MON
@@ -4334,108 +4330,108 @@ public class MainScreenController { //implements Initializable {
 
         multiLine = 0;
 
-        while (myData.get (ri + tmpRICnt).getBibItemName ().toString () == "") {
+        while (myData.get(ri + tmpRICnt).getBibItemName().toString() == "") {
             ++tmpRICnt;
         }
-        if ( act.contains ("Add") ) {
+        if (act.contains("Add")) {
             getTxtData = "";
         } else {
-            for ( int ii = 0; ii < tmpRICnt; ii++ ) {
-                tmp = myData.get (ri + ii).getContentTxt ().toString ();
-                tmp = tmp.substring (1, tmp.length () - 1);
+            for (int ii = 0; ii < tmpRICnt; ii++) {
+                tmp = myData.get(ri + ii).getContentTxt().toString();
+                tmp = tmp.substring(1, tmp.length() - 1);
                 getTxtData
-                        += tmp +
-                        "\n";
+                        += tmp
+                        + "\n";
             }
         }
 
-        if ( act.contains ("Add") ) {
+        if (act.contains("Add")) {
             getTxtData = null;
             putTxt = "";
         } else {
             putTxt = getTxtData;
             addLReacCnt = 0;
         }
-        entryChoice (lList.targetNList, nuclideDDCB);
-        entryChoice (lList.dataUnitsList, dataUnitsCB);
-        entryChoice (lList.targetNList, radSF1DDCB);
-        myDialog.setTitle ("Enter Reaction Details:");
-        if ( !myDialog.getModality ().toString ().contains ("MODAL") ) {
-            myDialog.initModality (Modality.WINDOW_MODAL);
-            myDialog.initOwner (myStage);
+        entryChoice(lList.targetNList, nuclideDDCB);
+        entryChoice(lList.dataUnitsList, dataUnitsCB);
+        entryChoice(lList.targetNList, radSF1DDCB);
+        myDialog.setTitle("Enter Reaction Details:");
+        if (!myDialog.getModality().toString().contains("MODAL")) {
+            myDialog.initModality(Modality.WINDOW_MODAL);
+            myDialog.initOwner(myStage);
         }
-        HBox hb1 = new HBox ();
-        HBox hb2 = new HBox ();
-        HBox hb3 = new HBox ();
-        HBox hb4 = new HBox ();
-        HBox hb5 = new HBox ();
-        VBox vb1 = new VBox ();
+        HBox hb1 = new HBox();
+        HBox hb2 = new HBox();
+        HBox hb3 = new HBox();
+        HBox hb4 = new HBox();
+        HBox hb5 = new HBox();
+        VBox vb1 = new VBox();
 
-        tf.setPrefWidth (130);
-        tf.setWrapText (true);
+        tf.setPrefWidth(130);
+        tf.setWrapText(true);
 
-        hb1.getChildren ().addAll (flagL, DDFlagC);
-        hb2.getChildren ().addAll (nuclL, nuclideDDCB);
-        hb3.getChildren ().addAll (HalfL, THalfDDT, dataUnitL, dataUnitsCB);
-        hb4.getChildren ().addAll (
+        hb1.getChildren().addAll(flagL, DDFlagC);
+        hb2.getChildren().addAll(nuclL, nuclideDDCB);
+        hb3.getChildren().addAll(HalfL, THalfDDT, dataUnitL, dataUnitsCB);
+        hb4.getChildren().addAll(
                 SF1DDL, radSF1DDCB, SF2DDL, SF2EnergyDDT, SF3DDL, SF3abandDDT
         );
-        hb5.getChildren ().addAll (
+        hb5.getChildren().addAll(
                 selectIt, acceptEdit, cancelEdit
         );
-        vb1.getChildren ().addAll (tf, hb1, hb2, hb3, hb4, hb5);
-        DDFlagC.setStyle (
-                "-fx-border-color: lightblue; " +
-                "-fx-font-size: 12;" +
-                "-fx-border-insets: -5; " +
-                "-fx-border-radius: 5;" +
-                "-fx-border-style: dotted;" +
-                "-fx-border-width: 2;"
+        vb1.getChildren().addAll(tf, hb1, hb2, hb3, hb4, hb5);
+        DDFlagC.setStyle(
+                "-fx-border-color: lightblue; "
+                + "-fx-font-size: 12;"
+                + "-fx-border-insets: -5; "
+                + "-fx-border-radius: 5;"
+                + "-fx-border-style: dotted;"
+                + "-fx-border-width: 2;"
         );
-        nuclideDDCB.setMaxWidth (130);
-        THalfDDT.setMaxWidth (maxW);
-        radSF1DDCB.setMaxWidth (130);
-        SF2EnergyDDT.setMaxWidth (maxW);
-        SF3abandDDT.setMaxWidth (maxW);
+        nuclideDDCB.setMaxWidth(130);
+        THalfDDT.setMaxWidth(maxW);
+        radSF1DDCB.setMaxWidth(130);
+        SF2EnergyDDT.setMaxWidth(maxW);
+        SF3abandDDT.setMaxWidth(maxW);
 
-        if ( !act.contains ("Delete") ) {
-            if ( act.contains ("Edit") ) {
-                tf.setText (getTxtData);
+        if (!act.contains("Delete")) {
+            if (act.contains("Edit")) {
+                tf.setText(getTxtData);
             }
 
-            tp1.getStyleClass ().add ("ttip");
-            tp2.getStyleClass ().add ("ttip");
-            tp3.getStyleClass ().add ("ttip");
-            tp4.getStyleClass ().add ("ttip");
-            tp5.getStyleClass ().add ("ttip");
-            tp1.setText (nucDDTip);
-            tp2.setText (halfLifeTip);
-            tp3.setText (radSF1Tip);
-            tp4.setText (radSF2Tip);
-            tp5.setText (radSF3Tip);
-            nuclideDDCB.setTooltip (tp1);
-            THalfDDT.setTooltip (tp2);
-            radSF1DDCB.setTooltip (tp3);
-            SF2EnergyDDT.setTooltip (tp4);
-            SF3abandDDT.setTooltip (tp5);
+            tp1.getStyleClass().add("ttip");
+            tp2.getStyleClass().add("ttip");
+            tp3.getStyleClass().add("ttip");
+            tp4.getStyleClass().add("ttip");
+            tp5.getStyleClass().add("ttip");
+            tp1.setText(nucDDTip);
+            tp2.setText(halfLifeTip);
+            tp3.setText(radSF1Tip);
+            tp4.setText(radSF2Tip);
+            tp5.setText(radSF3Tip);
+            nuclideDDCB.setTooltip(tp1);
+            THalfDDT.setTooltip(tp2);
+            radSF1DDCB.setTooltip(tp3);
+            SF2EnergyDDT.setTooltip(tp4);
+            SF3abandDDT.setTooltip(tp5);
 
-            myDialogScene = new Scene (vb1, 800, 300);
-            myDialogScene.getStylesheets ().add (getClass ().getResource (
-                    "CSS/mainscreen.css").toExternalForm ());
-            myDialog.setScene (myDialogScene);
-            myDialog.show ();
+            myDialogScene = new Scene(vb1, 800, 300);
+            myDialogScene.getStylesheets().add(getClass().getResource(
+                    "CSS/mainscreen.css").toExternalForm());
+            myDialog.setScene(myDialogScene);
+            myDialog.show();
 
-            selectIt.setOnAction ((ActionEvent event1) -> {
+            selectIt.setOnAction((ActionEvent event1) -> {
                 String tmp1 = "";
                 String tmp2 = "";
 
                 // --> putTxt = (act.contains ("Add")) ? "" : putTxt;
-                if ( DDFlagB ) {
+                if (DDFlagB) {
                     ++DDFlagNum;
-                    tmp1 = String.format ("(%s",
-                            Integer.toString (DDFlagNum)
+                    tmp1 = String.format("(%s",
+                            Integer.toString(DDFlagNum)
                     );
-                    if ( DDFlagB ) {
+                    if (DDFlagB) {
                         tmp1 += ".)";
                     }
                 } else {
@@ -4443,56 +4439,56 @@ public class MainScreenController { //implements Initializable {
                 }
                 tmp2 = tmp1;
 
-                tmp1 = nuclideDDCB.getValue ().toString ();
-                sComp = tmp1.split ("\\s+");
+                tmp1 = nuclideDDCB.getValue().toString();
+                sComp = tmp1.split("\\s+");
                 tmp1 = sComp[1];
-                tmp1 = (!tmp1.isEmpty ()) ? tmp1 : "";
+                tmp1 = (!tmp1.isEmpty()) ? tmp1 : "";
                 tmp2 += tmp1 + ",";
 
-                tmp1 = THalfDDT.getText ();
-                sComp = tmp1.split ("\\s+");
+                tmp1 = THalfDDT.getText();
+                sComp = tmp1.split("\\s+");
                 tmp1 = sComp[1];
 
-                tmp1 = (!tmp1.isEmpty ()) ? tmp1 : "";
+                tmp1 = (!tmp1.isEmpty()) ? tmp1 : "";
                 tmp2 += tmp1;
 
-                tmp1 = dataUnitsCB.getValue ().toString ();
-                tmp1 = tmp1.substring (0, tmp1.indexOf (" "));
-                tmp1 = (!tmp1.isEmpty ()) ? tmp1 : "";
+                tmp1 = dataUnitsCB.getValue().toString();
+                tmp1 = tmp1.substring(0, tmp1.indexOf(" "));
+                tmp1 = (!tmp1.isEmpty()) ? tmp1 : "";
                 tmp2 += tmp1 + ",";
 
-                tmp1 = radSF1DDCB.getValue ().toString ();
-                sComp = tmp1.split ("\\s+");
+                tmp1 = radSF1DDCB.getValue().toString();
+                sComp = tmp1.split("\\s+");
                 tmp1 = sComp[1];
-                tmp1 = tmp1.substring (
-                        tmp1.indexOf ("-") + 1, tmp1.lastIndexOf ("-"));
-                tmp1 = (!tmp1.isEmpty ()) ? ("D" + tmp1) : "";
+                tmp1 = tmp1.substring(
+                        tmp1.indexOf("-") + 1, tmp1.lastIndexOf("-"));
+                tmp1 = (!tmp1.isEmpty()) ? ("D" + tmp1) : "";
                 tmp2 += tmp1 + ",";
 
-                tmp1 = SF2EnergyDDT.getText ();
-                tmp1 = (!tmp1.isEmpty ()) ? tmp1 : "";
+                tmp1 = SF2EnergyDDT.getText();
+                tmp1 = (!tmp1.isEmpty()) ? tmp1 : "";
                 tmp2 += tmp1;
 
-                tmp1 = SF3abandDDT.getText ();
-                tmp1 = (!tmp1.isEmpty ()) ? tmp1 : "";
-                if ( !tmp1.isEmpty () ) {
+                tmp1 = SF3abandDDT.getText();
+                tmp1 = (!tmp1.isEmpty()) ? tmp1 : "";
+                if (!tmp1.isEmpty()) {
                     tmp2 += "," + tmp1;
                 }
 
-                if ( !putTxt.endsWith (", ") &&
-                        putTxt != null &&
-                        putTxt != "" &&
-                        putTxt.length () > 1 ) {
+                if (!putTxt.endsWith(", ")
+                        && putTxt != null
+                        && putTxt != ""
+                        && putTxt.length() > 1) {
                     putTxt += ",\n";
                 }
                 putTxt += tmp2;
-                tf.setText (putTxt);
+                tf.setText(putTxt);
                 ++multiLine;
                 tmp2 = "";
                 tmp1 = "";
                 isSelect = true;
             });
-            acceptEdit.setOnAction ((ActionEvent event1) -> {
+            acceptEdit.setOnAction((ActionEvent event1) -> {
                 String parseStr;
                 String strEntered = "";
                 String tmpStr1 = "";
@@ -4500,54 +4496,54 @@ public class MainScreenController { //implements Initializable {
                 String tmpHead = "";
                 String labelS;
 
-                if ( !isSelect ) {
-                    popupMsg.warnBox ("Please press \"Select\" first",
+                if (!isSelect) {
+                    popupMsg.warnBox("Please press \"Select\" first",
                             "Attention! Select First");
-                } else if ( tf.getText ().isEmpty () ) {
-                    popupMsg.warnBox ("Please enter data first",
+                } else if (tf.getText().isEmpty()) {
+                    popupMsg.warnBox("Please enter data first",
                             "Attention! No Data");
                 } else {
 
-                    parseStr = tf.getText ().toString ();
-                    sComp = parseStr.split ("\\s+");
+                    parseStr = tf.getText().toString();
+                    sComp = parseStr.split("\\s+");
 
                     tmpStr1 = Head;
-                    if ( act.contains ("Edit") ) {
-                        for ( int ii = 0; ii < multiLine; ii++ ) {
+                    if (act.contains("Edit")) {
+                        for (int ii = 0; ii < multiLine; ii++) {
                             tmpHead = (ii == 0) ? tmpStr1 : tmpStr2;
-                            if ( ii <= multiLine - 2 ) {
-                                strEntered = parseStr.substring (
-                                        0, Integer.valueOf (sComp[ii]));
+                            if (ii <= multiLine - 2) {
+                                strEntered = parseStr.substring(
+                                        0, Integer.valueOf(sComp[ii]));
                             } else {
                                 strEntered = parseStr;
                             }
-                            labelS = (multiLine > 1) ? Integer.toString (ii + 1)
+                            labelS = (multiLine > 1) ? Integer.toString(ii + 1)
                                     : "";
                             strEntered = "(" + strEntered + ")";
-                            myData.set (ri + ii,
-                                    new editableData (
+                            myData.set(ri + ii,
+                                    new editableData(
                                             tmpHead,
                                             labelS,
                                             strEntered, SE)
                             );
-                            if ( ii <= multiLine - 2 ) {
-                                parseStr = parseStr.substring (
-                                        parseStr.indexOf ("),") + 3);
+                            if (ii <= multiLine - 2) {
+                                parseStr = parseStr.substring(
+                                        parseStr.indexOf("),") + 3);
                             }
                         }
                     } else {
-                        for ( int ii = 0; ii < multiLine; ii++ ) {
+                        for (int ii = 0; ii < multiLine; ii++) {
                             tmpHead = (ii == 0) ? tmpStr1 : tmpStr2;
 
                             strEntered = (ii == multiLine - 1) ? sComp[ii]
-                                    : sComp[ii].substring (
+                                    : sComp[ii].substring(
                                             0,
-                                            sComp[ii].lastIndexOf (","));
-                            labelS = (multiLine > 1) ? Integer.toString (ii + 1)
+                                            sComp[ii].lastIndexOf(","));
+                            labelS = (multiLine > 1) ? Integer.toString(ii + 1)
                                     : "";
                             strEntered = "(" + strEntered + ")";
-                            myData.add (ri + ii,
-                                    new editableData (
+                            myData.add(ri + ii,
+                                    new editableData(
                                             tmpHead,
                                             labelS,
                                             strEntered,
@@ -4555,47 +4551,47 @@ public class MainScreenController { //implements Initializable {
                                     ));
                             ++myDataN;
                         }
-                        thisEntryLine = Integer.toString (doGetSELineNum (Head));
-                        bibList.add (
+                        thisEntryLine = Integer.toString(doGetSELineNum(Head));
+                        bibList.add(
                                 bibEntNum,
-                                new BIBClasses (thisEntryLine, Integer.
-                                        toString (
+                                new BIBClasses(thisEntryLine, Integer.
+                                        toString(
                                                 bibEntNum),
                                         SE, tmpStr1));
                         ++bibEntNum;
                     }
-                    editTable.refresh ();
-                    tf.clear ();
-                    tp1.setText ("");
-                    tp2.setText ("");
-                    tp3.setText ("");
-                    tp4.setText ("");
-                    tp5.setText ("");
+                    editTable.refresh();
+                    tf.clear();
+                    tp1.setText("");
+                    tp2.setText("");
+                    tp3.setText("");
+                    tp4.setText("");
+                    tp5.setText("");
 
-                    myDialog.close ();
+                    myDialog.close();
                 }
-                System.gc ();
+                System.gc();
             });
-            cancelEdit.setOnAction ((ActionEvent event) -> {
-                editTable.refresh ();
-                tf.clear ();
-                if ( act.contains ("Add") ) {
-                    changeBoolStatus (Head, false);
+            cancelEdit.setOnAction((ActionEvent event) -> {
+                editTable.refresh();
+                tf.clear();
+                if (act.contains("Add")) {
+                    changeBoolStatus(Head, false);
                 }
-                myDialog.close ();
+                myDialog.close();
             });
         }
-        if ( act.contains ("Delete") ) {
-            for ( int ii = 0; ii < tmpRICnt; ii++ ) {
-                myData.remove (ri);
+        if (act.contains("Delete")) {
+            for (int ii = 0; ii < tmpRICnt; ii++) {
+                myData.remove(ri);
                 --myDataN;
             }
-            editTable.refresh ();
-            zapBIBEntry (Head);
-            changeBoolStatus (Head, false);
+            editTable.refresh();
+            zapBIBEntry(Head);
+            changeBoolStatus(Head, false);
         }
-        procTree ();
-        System.gc ();
+        procTree();
+        System.gc();
     }
 
     /*
@@ -4604,8 +4600,8 @@ public class MainScreenController { //implements Initializable {
      */
     private boolean checkStringArray(String sIn, ArrayList<String> strArrIn) {
         boolean check = false;
-        for ( String item : strArrIn ) {
-            if ( item.contains (sIn) ) {
+        for (String item : strArrIn) {
+            if (item.contains(sIn)) {
                 check = true;
                 break;
             }
@@ -4620,9 +4616,9 @@ public class MainScreenController { //implements Initializable {
     public int getIndexOfStringInCB(String sIn, ComboBox cb) {
         int i = 0;
 
-        ObservableList<String> items = cb.getItems ();
-        for ( String item : items ) {
-            if ( item.contains (sIn) ) {
+        ObservableList<String> items = cb.getItems();
+        for (String item : items) {
+            if (item.contains(sIn)) {
                 break;
             }
             ++i;
@@ -4637,9 +4633,9 @@ public class MainScreenController { //implements Initializable {
             ComboBox<String> cmb,
             ObservableList<String> list
     ) {
-        cmb.getItems ().clear ();
-        for ( String l1 : list ) {
-            cmb.getItems ().add (l1);  // Add elements to the ComboBox
+        cmb.getItems().clear();
+        for (String l1 : list) {
+            cmb.getItems().add(l1);  // Add elements to the ComboBox
         }
     }
 
@@ -4653,162 +4649,162 @@ public class MainScreenController { //implements Initializable {
             ComboBox<String> cmb,
             String str1
     ) {
-        cmb.setTooltip (new Tooltip ());
-        new comboBoxAutoComplete<String> (cmb);
-        setInstCombo (cmb, l1);
-        cmb.setValue (str1);
+        cmb.setTooltip(new Tooltip());
+        new comboBoxAutoComplete<String>(cmb);
+        setInstCombo(cmb, l1);
+        cmb.setValue(str1);
     }
 
     public void entryChoice(
             ObservableList<String> l1,
             ComboBox<String> cmb
     ) {
-        cmb.setTooltip (new Tooltip ());
-        new comboBoxAutoComplete<String> (cmb);
-        setInstCombo (cmb, l1);
-        cmb.setValue (selectionStr);
+        cmb.setTooltip(new Tooltip());
+        new comboBoxAutoComplete<String>(cmb);
+        setInstCombo(cmb, l1);
+        cmb.setValue(selectionStr);
     }
 
     private void viewHeader(int numC) {
         switch (numC) {
             case 1:
-                dHCB1.setVisible (true);
-                dUCB1.setVisible (true); // 1                
-                dHCB2.setVisible (false);
-                dUCB2.setVisible (false);
-                dHCB3.setVisible (false);
-                dUCB3.setVisible (false);
-                dHCB4.setVisible (false);
-                dUCB4.setVisible (false);
-                dHCB5.setVisible (false);
-                dUCB5.setVisible (false);
-                dHCB6.setVisible (false);
-                dUCB6.setVisible (false);
+                dHCB1.setVisible(true);
+                dUCB1.setVisible(true); // 1                
+                dHCB2.setVisible(false);
+                dUCB2.setVisible(false);
+                dHCB3.setVisible(false);
+                dUCB3.setVisible(false);
+                dHCB4.setVisible(false);
+                dUCB4.setVisible(false);
+                dHCB5.setVisible(false);
+                dUCB5.setVisible(false);
+                dHCB6.setVisible(false);
+                dUCB6.setVisible(false);
                 break;
             case 2:
-                dHCB1.setVisible (true);
-                dUCB1.setVisible (true);    // 1
-                dHCB2.setVisible (true);
-                dUCB2.setVisible (true);    // 2
-                dHCB3.setVisible (false);
-                dUCB3.setVisible (false);
-                dHCB4.setVisible (false);
-                dUCB4.setVisible (false);
-                dHCB5.setVisible (false);
-                dUCB5.setVisible (false);
-                dHCB6.setVisible (false);
-                dUCB6.setVisible (false);
+                dHCB1.setVisible(true);
+                dUCB1.setVisible(true);    // 1
+                dHCB2.setVisible(true);
+                dUCB2.setVisible(true);    // 2
+                dHCB3.setVisible(false);
+                dUCB3.setVisible(false);
+                dHCB4.setVisible(false);
+                dUCB4.setVisible(false);
+                dHCB5.setVisible(false);
+                dUCB5.setVisible(false);
+                dHCB6.setVisible(false);
+                dUCB6.setVisible(false);
                 break;
             case 3:
-                dHCB1.setVisible (true);
-                dUCB1.setVisible (true);   // 1
-                dHCB2.setVisible (true);
-                dUCB2.setVisible (true);   // 2
-                dHCB3.setVisible (true);
-                dUCB3.setVisible (true);   // 3
-                dHCB4.setVisible (false);
-                dUCB4.setVisible (false);
-                dHCB5.setVisible (false);
-                dUCB5.setVisible (false);
-                dHCB6.setVisible (false);
-                dUCB6.setVisible (false);
+                dHCB1.setVisible(true);
+                dUCB1.setVisible(true);   // 1
+                dHCB2.setVisible(true);
+                dUCB2.setVisible(true);   // 2
+                dHCB3.setVisible(true);
+                dUCB3.setVisible(true);   // 3
+                dHCB4.setVisible(false);
+                dUCB4.setVisible(false);
+                dHCB5.setVisible(false);
+                dUCB5.setVisible(false);
+                dHCB6.setVisible(false);
+                dUCB6.setVisible(false);
                 break;
             case 4:
-                dHCB1.setVisible (true);
-                dUCB1.setVisible (true);    // 1
-                dHCB2.setVisible (true);
-                dUCB2.setVisible (true);    // 2
-                dHCB3.setVisible (true);
-                dUCB3.setVisible (true);    // 3
-                dHCB4.setVisible (true);
-                dUCB4.setVisible (true);    // 4
-                dHCB5.setVisible (false);
-                dUCB5.setVisible (false);
-                dHCB6.setVisible (false);
-                dUCB6.setVisible (false);
+                dHCB1.setVisible(true);
+                dUCB1.setVisible(true);    // 1
+                dHCB2.setVisible(true);
+                dUCB2.setVisible(true);    // 2
+                dHCB3.setVisible(true);
+                dUCB3.setVisible(true);    // 3
+                dHCB4.setVisible(true);
+                dUCB4.setVisible(true);    // 4
+                dHCB5.setVisible(false);
+                dUCB5.setVisible(false);
+                dHCB6.setVisible(false);
+                dUCB6.setVisible(false);
                 break;
             case 5:
-                dHCB1.setVisible (true);
-                dUCB1.setVisible (true);    // 1
-                dHCB2.setVisible (true);
-                dUCB2.setVisible (true);    // 2
-                dHCB3.setVisible (true);
-                dUCB3.setVisible (true);    // 3
-                dHCB4.setVisible (true);
-                dUCB4.setVisible (true);    // 4
-                dHCB5.setVisible (true);
-                dUCB5.setVisible (true);    // 5
-                dHCB6.setVisible (false);
-                dUCB6.setVisible (false);
+                dHCB1.setVisible(true);
+                dUCB1.setVisible(true);    // 1
+                dHCB2.setVisible(true);
+                dUCB2.setVisible(true);    // 2
+                dHCB3.setVisible(true);
+                dUCB3.setVisible(true);    // 3
+                dHCB4.setVisible(true);
+                dUCB4.setVisible(true);    // 4
+                dHCB5.setVisible(true);
+                dUCB5.setVisible(true);    // 5
+                dHCB6.setVisible(false);
+                dUCB6.setVisible(false);
                 break;
             case 6:
-                dHCB1.setVisible (true);
-                dUCB1.setVisible (true);    // 1
-                dHCB2.setVisible (true);
-                dUCB2.setVisible (true);    // 2
-                dHCB3.setVisible (true);
-                dUCB3.setVisible (true);    // 3
-                dHCB4.setVisible (true);
-                dUCB4.setVisible (true);    // 4
-                dHCB5.setVisible (true);
-                dUCB5.setVisible (true);    // 5
-                dHCB6.setVisible (true);
-                dUCB6.setVisible (true);    // 6
+                dHCB1.setVisible(true);
+                dUCB1.setVisible(true);    // 1
+                dHCB2.setVisible(true);
+                dUCB2.setVisible(true);    // 2
+                dHCB3.setVisible(true);
+                dUCB3.setVisible(true);    // 3
+                dHCB4.setVisible(true);
+                dUCB4.setVisible(true);    // 4
+                dHCB5.setVisible(true);
+                dUCB5.setVisible(true);    // 5
+                dHCB6.setVisible(true);
+                dUCB6.setVisible(true);    // 6
                 break;
         }
     }
 
     private void addRowBelow() {
-        matData.add (new CommonDataClass (
-                TC1.getText (), TC2.getText (), TC3.getText (),
-                TC4.getText (), TC5.getText (), TC6.getText ()
+        matData.add(new CommonDataClass(
+                TC1.getText(), TC2.getText(), TC3.getText(),
+                TC4.getText(), TC5.getText(), TC6.getText()
         ));
     }
 
     private void editCommit(int ii) {
-        matrixDataColumns[ii].setOnEditCommit (
-                new EventHandler<CellEditEvent<CommonDataClass, String>> () {
+        matrixDataColumns[ii].setOnEditCommit(
+                new EventHandler<CellEditEvent<CommonDataClass, String>>() {
             @Override
             public void handle(CellEditEvent<CommonDataClass, String> event) {
-                int colNum = event.getTablePosition ().getColumn ();
-                maxRowNum = Math.max (maxRowNum, event.getTablePosition ().
-                        getRow ());
+                int colNum = event.getTablePosition().getColumn();
+                maxRowNum = Math.max(maxRowNum, event.getTablePosition().
+                        getRow());
                 switch (colNum) {
                     case 0:
-                        event.getTableView ().getItems ().get (event.
-                                getTablePosition ().getRow ()).setMyD1 (event.
-                                        getNewValue ());
+                        event.getTableView().getItems().get(event.
+                                getTablePosition().getRow()).setMyD1(event.
+                                        getNewValue());
                         break;
                     case 1:
-                        event.getTableView ().getItems ().get (event.
-                                getTablePosition ().getRow ()).setMyD2 (event.
-                                        getNewValue ());
+                        event.getTableView().getItems().get(event.
+                                getTablePosition().getRow()).setMyD2(event.
+                                        getNewValue());
                         break;
                     case 2:
-                        event.getTableView ().getItems ().get (event.
-                                getTablePosition ().getRow ()).setMyD3 (event.
-                                        getNewValue ());
+                        event.getTableView().getItems().get(event.
+                                getTablePosition().getRow()).setMyD3(event.
+                                        getNewValue());
                         break;
                     case 3:
-                        event.getTableView ().getItems ().get (event.
-                                getTablePosition ().getRow ()).setMyD4 (event.
-                                        getNewValue ());
+                        event.getTableView().getItems().get(event.
+                                getTablePosition().getRow()).setMyD4(event.
+                                        getNewValue());
                         break;
                     case 4:
-                        event.getTableView ().getItems ().get (event.
-                                getTablePosition ().getRow ()).setMyD5 (event.
-                                        getNewValue ());
+                        event.getTableView().getItems().get(event.
+                                getTablePosition().getRow()).setMyD5(event.
+                                        getNewValue());
                         break;
                     case 5:
-                        event.getTableView ().getItems ().get (event.
-                                getTablePosition ().getRow ()).setMyD6 (event.
-                                        getNewValue ());
+                        event.getTableView().getItems().get(event.
+                                getTablePosition().getRow()).setMyD6(event.
+                                        getNewValue());
                         break;
                 }
-                matrixData.setItems (matData);
-                matrixData.refresh ();
-                if ( !event.getNewValue ().isEmpty () ) {
-                    addRowBelow ();
+                matrixData.setItems(matData);
+                matrixData.refresh();
+                if (!event.getNewValue().isEmpty()) {
+                    addRowBelow();
                 }
             }
         });
@@ -4816,67 +4812,67 @@ public class MainScreenController { //implements Initializable {
 
     // this generates column for common and DATA section
     private TableColumn<CommonDataClass, String> createCol(int icol) {
-        TableColumn<CommonDataClass, String> column = new TableColumn<> ();
-        column.setMinWidth (maxW);
-        column.setMaxWidth (maxW);
-        matrixData.getStylesheets ().add (getClass ().getResource (
-                "CSS/mainscreen.css").toExternalForm ()
+        TableColumn<CommonDataClass, String> column = new TableColumn<>();
+        column.setMinWidth(maxW);
+        column.setMaxWidth(maxW);
+        matrixData.getStylesheets().add(getClass().getResource(
+                "CSS/mainscreen.css").toExternalForm()
         );
-        column.getStyleClass ().add ("colStyle");
-        column.setText ("C" + (icol + 1));
+        column.getStyleClass().add("colStyle");
+        column.setText("C" + (icol + 1));
         String nameC = "myD" + (icol + 1);
         //column.setCellValueFactory (new PropertyValueFactory<CommonDataClass, String> (nameC));
 
         column.
-                setCellValueFactory (cd -> cd.getValue ().
-                dataNameProperty (icol));
-        column.setCellFactory (
-                new DragSelectionCellFactory<CommonDataClass, String> (
-                        TextFieldTableCell.forTableColumn ()
+                setCellValueFactory(cd -> cd.getValue().
+                dataNameProperty(icol));
+        column.setCellFactory(
+                new DragSelectionCellFactory<CommonDataClass, String>(
+                        TextFieldTableCell.forTableColumn()
                 )
         );
 
-        column.setMinWidth (120);
+        column.setMinWidth(120);
         return column;
     }
 
     private void manageTables() {
-        matrixData.getStylesheets ().add (getClass ().getResource (
-                "CSS/mainscreen.css").toExternalForm ());
-        matrixData.setEditable (true);
-        matrixData.setVisible (true);
-        matrixData.getSelectionModel ().setCellSelectionEnabled (true);
-        matrixData.getSelectionModel ().
-                setSelectionMode (SelectionMode.MULTIPLE);
+        matrixData.getStylesheets().add(getClass().getResource(
+                "CSS/mainscreen.css").toExternalForm());
+        matrixData.setEditable(true);
+        matrixData.setVisible(true);
+        matrixData.getSelectionModel().setCellSelectionEnabled(true);
+        matrixData.getSelectionModel().
+                setSelectionMode(SelectionMode.MULTIPLE);
         // matrixData.addEventHandler(KeyEvent.KEY_RELEASED,
         //        new ControlDownSelectionEventHandler());
 
         // enabling copy/paste
-        TableUtils.doCopyPasteHandler (matrixData, matData);
+        TableUtils.doCopyPasteHandler(matrixData, matData);
 
-        editTable.getStylesheets ().add (getClass ().getResource (
-                "CSS/mainscreen.css").toExternalForm ());
-        bibHead.getStyleClass ().add ("bibHeadStyle1");
-        bibPtr.getStyleClass ().add ("bibTextStyle");
-        bibText.getStyleClass ().add ("bibTextStyle");
-        bibLines.getStyleClass ().add ("bibLinesStyle");
-        editTable.getSelectionModel ().setCellSelectionEnabled (true);
-        editTable.getSelectionModel ().setSelectionMode (SelectionMode.MULTIPLE);
+        editTable.getStylesheets().add(getClass().getResource(
+                "CSS/mainscreen.css").toExternalForm());
+        bibHead.getStyleClass().add("bibHeadStyle1");
+        bibPtr.getStyleClass().add("bibTextStyle");
+        bibText.getStyleClass().add("bibTextStyle");
+        bibLines.getStyleClass().add("bibLinesStyle");
+        editTable.getSelectionModel().setCellSelectionEnabled(true);
+        editTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
     }
 
     private void headStyle() {
-        for ( int ii = 0; ii < myDataN; ii++ ) {
-            String sHead = myData.get (ii).getBibItemName ().toString ();
-            bibHead.getStyleClass ().remove ("bibHeadStyle1");
-            bibHead.getStyleClass ().remove ("bibHeadStyle2");
+        for (int ii = 0; ii < myDataN; ii++) {
+            String sHead = myData.get(ii).getBibItemName().toString();
+            bibHead.getStyleClass().remove("bibHeadStyle1");
+            bibHead.getStyleClass().remove("bibHeadStyle2");
 
-            if ( !FixedHeadList.contains (sHead) ) {
+            if (!FixedHeadList.contains(sHead)) {
                 //bibHead.getStyleClass().add("bibHeadStyle2");
-                bibHead.getStyleClass ().clear ();
-                bibHead.getStyleClass ().setAll (
+                bibHead.getStyleClass().clear();
+                bibHead.getStyleClass().setAll(
                         "table-row-cell:selected.table-cell");
             } else {
-                bibHead.getStyleClass ().add ("bibHeadStyle1");
+                bibHead.getStyleClass().add("bibHeadStyle1");
             }
         }
     }
@@ -4885,7 +4881,7 @@ public class MainScreenController { //implements Initializable {
      * Start the process
      */
 //@SuppressWarnings ("unchecked")
-    @SuppressWarnings (
+    @SuppressWarnings(
             "unchecked")
     public void startProcess() {
         //setDefaultDirExt (DICTPathDir);   // Setting the directory and extension by default
@@ -4894,81 +4890,81 @@ public class MainScreenController { //implements Initializable {
         // lList.loadAllDict (brW);   // testing with progressbar
 
         // loadAllDict ();  // Load all List for ComboBoxes
-        manageTables ();   // Add properties to Tables
+        manageTables();   // Add properties to Tables
         // setDefaultDirExt (EXFPathDir);
 
         // Institute related
-        entryChoice (lList.instList, institute);
+        entryChoice(lList.instList, institute);
 
         // COMMON and DATA heading and UNIT related
-        entryChoice (lList.dataHeadingList, dHCB1, "Head");
-        entryChoice (lList.dataHeadingList, dHCB2, "Head");
-        entryChoice (lList.dataHeadingList, dHCB3, "Head");
-        entryChoice (lList.dataHeadingList, dHCB4, "Head");
-        entryChoice (lList.dataHeadingList, dHCB5, "Head");
-        entryChoice (lList.dataHeadingList, dHCB6, "Head");
-        entryChoice (lList.dataUnitsList, dUCB1, "Units");
-        entryChoice (lList.dataUnitsList, dUCB2, "Units");
-        entryChoice (lList.dataUnitsList, dUCB3, "Units");
-        entryChoice (lList.dataUnitsList, dUCB4, "Units");
-        entryChoice (lList.dataUnitsList, dUCB5, "Units");
-        entryChoice (lList.dataUnitsList, dUCB6, "Units");
+        entryChoice(lList.dataHeadingList, dHCB1, "Head");
+        entryChoice(lList.dataHeadingList, dHCB2, "Head");
+        entryChoice(lList.dataHeadingList, dHCB3, "Head");
+        entryChoice(lList.dataHeadingList, dHCB4, "Head");
+        entryChoice(lList.dataHeadingList, dHCB5, "Head");
+        entryChoice(lList.dataHeadingList, dHCB6, "Head");
+        entryChoice(lList.dataUnitsList, dUCB1, "Units");
+        entryChoice(lList.dataUnitsList, dUCB2, "Units");
+        entryChoice(lList.dataUnitsList, dUCB3, "Units");
+        entryChoice(lList.dataUnitsList, dUCB4, "Units");
+        entryChoice(lList.dataUnitsList, dUCB5, "Units");
+        entryChoice(lList.dataUnitsList, dUCB6, "Units");
 
         // for COMMON and DATA section only to change number of columns
-        chngCol.setOnAction (e -> {
-            numColStatus = (numCol.getText ().isEmpty ())
+        chngCol.setOnAction(e -> {
+            numColStatus = (numCol.getText().isEmpty())
                     ? false : true;
-            numC = (numColStatus) ? Integer.parseInt (numCol.getText ()) : 1;
+            numC = (numColStatus) ? Integer.parseInt(numCol.getText()) : 1;
             numC = numC > 6 ? 6 : numC;
             numC = (numC <= 0) ? 1 : numC;
 
-            if ( numColStatus ) {
-                viewHeader (numC);
-                addRowBelow ();
-                matrixData.getColumns ().clear ();
-                for ( int ii = 0; ii < numC; ii++ ) {
-                    matrixDataColumns[ii] = createCol (ii);
-                    editCommit (ii);
+            if (numColStatus) {
+                viewHeader(numC);
+                addRowBelow();
+                matrixData.getColumns().clear();
+                for (int ii = 0; ii < numC; ii++) {
+                    matrixDataColumns[ii] = createCol(ii);
+                    editCommit(ii);
                 }
-                matrixData.setItems (matData);
-                if ( numColStatus ) {
-                    for ( int ii = 0; ii < numC; ii++ ) {
-                        matrixData.getColumns ().addAll (matrixDataColumns[ii]);
+                matrixData.setItems(matData);
+                if (numColStatus) {
+                    for (int ii = 0; ii < numC; ii++) {
+                        matrixData.getColumns().addAll(matrixDataColumns[ii]);
                     }
                 }
             }
-            matrixData.refresh ();
+            matrixData.refresh();
             //  TableUtils.installCopyPasteHandler(matrixData);
         });
 
-        headingC.selectedProperty ().addListener (
-                new ChangeListener<Boolean> () {
+        headingC.selectedProperty().addListener(
+                new ChangeListener<Boolean>() {
             public void changed(ObservableValue<? extends Boolean> ov,
                     Boolean old_val, Boolean new_val) {
                 headingCB = new_val; //headingC.isSelected ();                   
             }
         });
 
-        DDFlagC.selectedProperty ().addListener (
-                new ChangeListener<Boolean> () {
+        DDFlagC.selectedProperty().addListener(
+                new ChangeListener<Boolean>() {
             public void changed(ObservableValue<? extends Boolean> ov,
                     Boolean old_val, Boolean new_val) {
                 DDFlagB = new_val; //headingC.isSelected ();                   
             }
         });
 
-        myTabPane.getSelectionModel ().selectedItemProperty ().
-                addListener (new ChangeListener<Tab> () {
+        myTabPane.getSelectionModel().selectedItemProperty().
+                addListener(new ChangeListener<Tab>() {
                     String tmp = "";
 
                     @Override
                     public void changed(
                             ObservableValue<? extends Tab> observable,
                             Tab oldTab, Tab newTab) {
-                        if ( newTab == tab1 ) {
+                        if (newTab == tab1) {
                             tab1B = true;
                             tab2B = false;
-                        } else if ( newTab == tab2 ) {
+                        } else if (newTab == tab2) {
                             tab1B = false;
                             tab2B = true;
                         }
@@ -4976,61 +4972,61 @@ public class MainScreenController { //implements Initializable {
                 });
 
         // Journal related
-        entryChoice (lList.jTypeList, jType); // journal type   
+        entryChoice(lList.jTypeList, jType); // journal type   
 
-        nuclideDDCB.getSelectionModel ().selectedItemProperty ()
-                .addListener (new ChangeListener () {
+        nuclideDDCB.getSelectionModel().selectedItemProperty()
+                .addListener(new ChangeListener() {
                     @Override
                     public void changed(
                             ObservableValue observable,
                             Object oldV,
                             Object newV) {
-                        if ( newV != null ) {
-                            String halfLife = newV.toString ();
-                            halfLife = halfLife.substring (
-                                    halfLife.lastIndexOf (" ")
+                        if (newV != null) {
+                            String halfLife = newV.toString();
+                            halfLife = halfLife.substring(
+                                    halfLife.lastIndexOf(" ")
                             );
-                            if ( halfLife.length () > 0 ) {
-                                THalfDDT.setText (halfLife);
+                            if (halfLife.length() > 0) {
+                                THalfDDT.setText(halfLife);
                             }
                         }
                     }
 
                 });
 
-        jType.getSelectionModel () // Select Journal type
-                .selectedItemProperty ()
-                .addListener (new ChangeListener () {
+        jType.getSelectionModel() // Select Journal type
+                .selectedItemProperty()
+                .addListener(new ChangeListener() {
                     @Override
                     public void changed(
                             ObservableValue ov,
                             Object o1,
                             Object o2
                     ) {
-                        if ( o2 != null ) {
-                            String oo = o2.toString ().substring (1, 2);
+                        if (o2 != null) {
+                            String oo = o2.toString().substring(1, 2);
                             switch (oo) {
                                 case "0":
                                 case "3":
                                 case "4":
-                                    entryChoice (lList.dataList, journals);
+                                    entryChoice(lList.dataList, journals);
                                     break;
                                 case "B":
-                                    entryChoice (lList.bookList, journals);
+                                    entryChoice(lList.bookList, journals);
                                     break;
                                 case "A":
                                 case "C":
-                                    entryChoice (lList.confList, journals);
+                                    entryChoice(lList.confList, journals);
                                     break;
                                 case "J":
                                 case "K":
-                                    entryChoice (lList.jourList, journals);
+                                    entryChoice(lList.jourList, journals);
                                     break;
                                 case "P":
                                 case "R":
                                 case "S":
                                 case "X":
-                                    entryChoice (lList.reportList, journals);
+                                    entryChoice(lList.reportList, journals);
                                     break;
                                 case "T":
                                 case "W":
@@ -5041,9 +5037,9 @@ public class MainScreenController { //implements Initializable {
                 }
                 );
 
-        journals.getSelectionModel () // journals
-                .selectedItemProperty ()
-                .addListener (new ChangeListener () {
+        journals.getSelectionModel() // journals
+                .selectedItemProperty()
+                .addListener(new ChangeListener() {
                     @Override
                     public void changed(
                             ObservableValue ov,
@@ -5055,80 +5051,78 @@ public class MainScreenController { //implements Initializable {
                     }
                 });
 
-        entryChoice (lList.facilList, facilCB); // Facilities ComboBox
+        entryChoice(lList.facilList, facilCB); // Facilities ComboBox
 
-        entryChoice (lList.incSrcList, incSrcCB); // INC-SRC ComboBox
+        entryChoice(lList.incSrcList, incSrcCB); // INC-SRC ComboBox
 
-        entryChoice (lList.detectorList, detectorCB); // detector list
+        entryChoice(lList.detectorList, detectorCB); // detector list
 
-        entryChoice (lList.methodList, methodCB);  // Methods
+        entryChoice(lList.methodList, methodCB);  // Methods
 
-        entryChoice (lList.mixedSF1List, targetNCB);  // for nuclide and compound
+        entryChoice(lList.mixedSF1List, targetNCB);  // for nuclide and compound
 
-        entryChoice (lList.mixedSF2List, incPCB);  // in place of only IncP
+        entryChoice(lList.mixedSF2List, incPCB);  // in place of only IncP
 
-        entryChoice (lList.mixedSF3List, procCB);  // in place of only procList
+        entryChoice(lList.mixedSF3List, procCB);  // in place of only procList
 
-        entryChoice (lList.mixedSF4List, prodCB);  // in place of prodList
+        entryChoice(lList.mixedSF4List, prodCB);  // in place of prodList
 
-        entryChoice (lList.branchList, branchCB);
+        entryChoice(lList.branchList, branchCB);
 
-        entryChoice (lList.paramSF6List, paramSF6CB);
+        entryChoice(lList.paramSF6List, paramSF6CB);
 
-        entryChoice (lList.paramSF7List, paramSF7CB);
+        entryChoice(lList.paramSF7List, paramSF7CB);
 
-        entryChoice (lList.modifierList, modifierCB);
+        entryChoice(lList.modifierList, modifierCB);
 
-        entryChoice (lList.dataTypeList, dataTypeCB);
+        entryChoice(lList.dataTypeList, dataTypeCB);
 
-        entryChoice (lList.statusList, statusCB);
+        entryChoice(lList.statusList, statusCB);
 
-        entryChoice (lList.addlResultList, addlResultCB);
+        entryChoice(lList.addlResultList, addlResultCB);
 
-        entryChoice (lList.dataHeadingList, dataHeadingCB);
+        entryChoice(lList.dataHeadingList, dataHeadingCB);
 
-        entryChoice (lList.dataUnitsList, dataUnitsCB);
+        entryChoice(lList.dataUnitsList, dataUnitsCB);
 
-        entryChoice (lList.monitRefList, monitRefCB);
+        entryChoice(lList.monitRefList, monitRefCB);
 
-        entryChoice (lList.targetNList, nuclideDDCB);
+        entryChoice(lList.targetNList, nuclideDDCB);
 
-        entryChoice (lList.dataUnitsList, dataUnitsCB);
+        entryChoice(lList.dataUnitsList, dataUnitsCB);
 
-        entryChoice (lList.targetNList, radSF1DDCB);
+        entryChoice(lList.targetNList, radSF1DDCB);
 
-        editTable.setEditable (true);
-        editTable.autosize ();
+        editTable.setEditable(true);
+        editTable.autosize();
 
-        editTable.setMinWidth (633.0);
-        editTable.getSelectionModel ()
-                .setSelectionMode (SelectionMode.MULTIPLE);
-        editTable.setFixedCellSize (Region.USE_COMPUTED_SIZE);
+        editTable.setMinWidth(633.0);
+        editTable.getSelectionModel()
+                .setSelectionMode(SelectionMode.MULTIPLE);
+        editTable.setFixedCellSize(Region.USE_COMPUTED_SIZE);
 
         // set cell Value Factories
-        setCellValueFactories ();
+        setCellValueFactories();
 
         // sets the row factory of the table
-        setRowFactory ();
+        setRowFactory();
 
         // sets the cell factory
-        setCellFactory ();
+        setCellFactory();
 
         // set dummy data to the Table
-        editTable.setItems (myData);
-        headStyle ();
+        editTable.setItems(myData);
+        headStyle();
 
         lastLine = 0;
 
-        String chckDone = setupCheckBox ();
+        String chckDone = setupCheckBox();
 
         // Setting cell properties for the TreeView
-        setTreeSelection ();
+        setTreeSelection();
 
-        subEntTree.setEditable (true);
-        
-        
-        
+        subEntTree.setEditable(true);
+
     }
 
     private int chkSF4(String sIN) {
@@ -5138,19 +5132,18 @@ public class MainScreenController { //implements Initializable {
         String chkSF3C = "SCT EL INL THS";
         String chkSF3D = " F FUS";
 
-        if ( chkSF3A.contains (sIN) ) {
+        if (chkSF3A.contains(sIN)) {
             toReturn = 1;
-        } else if ( chkSF3B.contains (sIN) ) {
+        } else if (chkSF3B.contains(sIN)) {
             toReturn = 2;
-        } else if ( chkSF3C.contains (sIN) ) {
+        } else if (chkSF3C.contains(sIN)) {
             toReturn = 3;
-        } else if ( chkSF3D.contains (sIN) ) {
+        } else if (chkSF3D.contains(sIN)) {
             toReturn = 4;
         }
 
         return toReturn;
     }
-
 
     /**
      * Initialize check boxes
@@ -5159,94 +5152,94 @@ public class MainScreenController { //implements Initializable {
      */
     private String setupCheckBox() {
         String returnS = "OK";
-        titleC.setIndeterminate (false);
-        authC.setIndeterminate (false);
-        instC.setIndeterminate (false);
-        refC.setIndeterminate (false);
-        faciC.setIndeterminate (false);
-        sampC.setIndeterminate (false);
-        detC.setIndeterminate (false);
-        methC.setIndeterminate (false);
-        monitC.setIndeterminate (false);
-        incSrcC.setIndeterminate (false);
-        analC.setIndeterminate (false);
-        errAnalC.setIndeterminate (false);
-        partDetC.setIndeterminate (false);
-        halfLC.setIndeterminate (false);
-        commentC.setIndeterminate (false);
-        commActC.setIndeterminate (false);
-        dataC.setIndeterminate (false);
-        reacC.setIndeterminate (false);
-        flagC.setIndeterminate (false);
-        statusC.setIndeterminate (false);
-        addresC.setIndeterminate (false);
-        corrC.setIndeterminate (false);
+        titleC.setIndeterminate(false);
+        authC.setIndeterminate(false);
+        instC.setIndeterminate(false);
+        refC.setIndeterminate(false);
+        faciC.setIndeterminate(false);
+        sampC.setIndeterminate(false);
+        detC.setIndeterminate(false);
+        methC.setIndeterminate(false);
+        monitC.setIndeterminate(false);
+        incSrcC.setIndeterminate(false);
+        analC.setIndeterminate(false);
+        errAnalC.setIndeterminate(false);
+        partDetC.setIndeterminate(false);
+        halfLC.setIndeterminate(false);
+        commentC.setIndeterminate(false);
+        commActC.setIndeterminate(false);
+        dataC.setIndeterminate(false);
+        reacC.setIndeterminate(false);
+        flagC.setIndeterminate(false);
+        statusC.setIndeterminate(false);
+        addresC.setIndeterminate(false);
+        corrC.setIndeterminate(false);
 
         return returnS;
     }
 
     private String getLine(int llN, int seN) {
         String finalStr = null;
-        finalStr = entryNum + exforUtil.getI2S (seN, 1) + exforUtil.getI2S (llN,
+        finalStr = entryNum + exforUtil.getI2S(seN, 1) + exforUtil.getI2S(llN,
                 1);
         return finalStr;
     }
 
     private String getSUBENT(int seN) {
         String finalStr = null;
-        finalStr = entryNum + exforUtil.getI2S (seN, 0);
+        finalStr = entryNum + exforUtil.getI2S(seN, 0);
         return finalStr;
     }
 
     // creating new .exf file using entryNum and fName
     public void doNewFile() {
-        if ( setB1Count < 2 ) {
+        if (setB1Count < 2) {
             String tmpS = "";
-            tmpS = exforUtil.fixString11 (entryNum) + exforUtil.fixString11 (
+            tmpS = exforUtil.fixString11(entryNum) + exforUtil.fixString11(
                     myDate0);
-            myData.add (myDataN,
-                    new editableData ("ENTRY", "", tmpS, ""));
+            myData.add(myDataN,
+                    new editableData("ENTRY", "", tmpS, ""));
 
             ++subentNum;
-            subEnt = Integer.toString (subentNum);
+            subEnt = Integer.toString(subentNum);
             lastLine = lineN;
-            myData.add (++myDataN,
-                    new editableData ("SUBENT", "",
-                            exforUtil.fixString11 (getSUBENT (subentNum)) +
-                            exforUtil.fixString11 (myDate0), subEnt));
+            myData.add(++myDataN,
+                    new editableData("SUBENT", "",
+                            exforUtil.fixString11(getSUBENT(subentNum))
+                            + exforUtil.fixString11(myDate0), subEnt));
             ++lastLine;
-            myData.add (++myDataN, new editableData ("BIB", "", "", subEnt));
+            myData.add(++myDataN, new editableData("BIB", "", "", subEnt));
             ++lastLine;
-            myData.add (++myDataN, new editableData ("HISTORY", "",
+            myData.add(++myDataN, new editableData("HISTORY", "",
                     ("(" + myDate0) + "C)", subEnt));
             bHist = true;
             ++lastLine;
-            myData.add (++myDataN, new editableData ("ENDBIB", "", "", subEnt));
+            myData.add(++myDataN, new editableData("ENDBIB", "", "", subEnt));
             ++lastLine;
             myData.
-                    add (++myDataN,
-                            new editableData ("NOCOMMON", "",
-                                    exforUtil.fixString11 ("0") + exforUtil.
-                                    fixString11 ("0"),
+                    add(++myDataN,
+                            new editableData("NOCOMMON", "",
+                                    exforUtil.fixString11("0") + exforUtil.
+                                    fixString11("0"),
                                     subEnt));
-            sub4Common.add (subEnt);
+            sub4Common.add(subEnt);
             ++lastLine;
-            myData.add (++myDataN,
-                    new editableData ("ENDSUBENT", "", "", subEnt));
+            myData.add(++myDataN,
+                    new editableData("ENDSUBENT", "", "", subEnt));
 
             //++subentNum;
-            subEnt = Integer.toString (subentNum);
-            InsSubEnt (false, subEnt);
+            subEnt = Integer.toString(subentNum);
+            InsSubEnt(false, subEnt);
 
             //++lastLine;
             //subentNum = 999;              // Do not do this as this will add 999 entries in Tree
             //subEnt = Integer.toString(subentNum);
             // myData.add(++myDataN, new editableData("ENDENTRY", "", "", "999"));
             //  chooseSubENT();
-            editTable.refresh ();
+            editTable.refresh();
 
-            startTree ();  // required as there is no tree now
-            procTree ();
+            startTree();  // required as there is no tree now
+            procTree();
         }
     }
 
@@ -5255,15 +5248,15 @@ public class MainScreenController { //implements Initializable {
         // BufferedReader br;        
         try {
             //br = new BufferedReader (new FileReader (fName));
-            BufferedReader br = new BufferedReader (new FileReader (fName));
-            brW.write ("Trying to load an Existing file->" + fName);
+            BufferedReader br = new BufferedReader(new FileReader(fName));
+            brW.write("Trying to load an Existing file->" + fName);
             //String line;
             myDataN = 0;
             bibEntNum = 0;
             int rowNumber = 0;
             int nCnt = 0;
             String line;
-            while ((line = br.readLine ()) != null) {
+            while ((line = br.readLine()) != null) {
                 int i = 0;
                 String s1 = "";
                 String s2 = "";
@@ -5273,104 +5266,104 @@ public class MainScreenController { //implements Initializable {
                 String oldHead = "";
                 //++rowNumber;
 
-                s1 = line.substring (0, 10).trim ();
+                s1 = line.substring(0, 10).trim();
 
-                oldHead = (!s1.isEmpty () && FixedHeadList.contains (s1)) ? s1
+                oldHead = (!s1.isEmpty() && FixedHeadList.contains(s1)) ? s1
                         : oldHead;
 
-                if ( line.length () > 10 ) {
-                    s2 = line.substring (10, 11);
+                if (line.length() > 10) {
+                    s2 = line.substring(10, 11);
                 }
-                if ( !line.substring (11).isEmpty () ) {
-                    s3 = line.substring (11, 66);
-                    if ( !fNameSet ) {
-                        String s31 = s3.trim ();
-                        entryNum = s31.substring (0, 5);
-                        s31 = s31.substring (5).trim ();
+                if (!line.substring(11).isEmpty()) {
+                    s3 = line.substring(11, 66);
+                    if (!fNameSet) {
+                        String s31 = s3.trim();
+                        entryNum = s31.substring(0, 5);
+                        s31 = s31.substring(5).trim();
                         myDateOldFile = s31;
-                        entDateT.setText (myDateOldFile);
+                        entDateT.setText(myDateOldFile);
                         fNameSet = true;
-                        startTree ();
+                        startTree();
                     }
                 }
-                if ( line.length () > 68 ) {
-                    s4 = line.substring (66, line.length ());
-                    s5 = line.substring (71, 74).trim ();
-                } else if ( line.length () == 67 ) {
-                    s4 = line.substring (66).trim ();
-                    s5 = line.substring (66).trim ();
+                if (line.length() > 68) {
+                    s4 = line.substring(66, line.length());
+                    s5 = line.substring(71, 74).trim();
+                } else if (line.length() == 67) {
+                    s4 = line.substring(66).trim();
+                    s5 = line.substring(66).trim();
                 }
-                if ( (s1.contains ("BIB")) || (s1.contains ("ENDBIB")) || (s1.
-                        contains ("COMMON")) ||
-                        (s1.contains ("ENDCOMMON")) || (s1.contains (
-                        "ENDSUBENT")) ||
-                        (s1.contains ("ENDSUBENT")) //|| (s1.contains ("ENDENTRY")) ) {
+                if ((s1.contains("BIB")) || (s1.contains("ENDBIB")) || (s1.
+                        contains("COMMON"))
+                        || (s1.contains("ENDCOMMON")) || (s1.contains(
+                        "ENDSUBENT"))
+                        || (s1.contains("ENDSUBENT")) //|| (s1.contains ("ENDENTRY")) ) {
                         ) {
                     s3 = "";
                 }
-                if ( s1.contains ("ENTRY") ) {
-                    s3 = exforUtil.fixString11 (entryNum, 11) +
-                            exforUtil.fixString11 (myDateOldFile, 11);
+                if (s1.contains("ENTRY")) {
+                    s3 = exforUtil.fixString11(entryNum, 11)
+                            + exforUtil.fixString11(myDateOldFile, 11);
                 }
-                if ( s1.contains ("SUBENT") ) {
+                if (s1.contains("SUBENT")) {
                     ++subentNum;
-                    subEnt = Integer.toString (subentNum);
-                    s3 = exforUtil.fixString11 (getSUBENT (subentNum), 11) +
-                            exforUtil.fixString11 (
+                    subEnt = Integer.toString(subentNum);
+                    s3 = exforUtil.fixString11(getSUBENT(subentNum), 11)
+                            + exforUtil.fixString11(
                                     myDateOldFile, 11);
                     //s4 = subEnt;
                 }
-                if ( exforUtil.isNumeric (s1) ) {
-                    s1 = exforUtil.fixString11 (s1, 10);
+                if (exforUtil.isNumeric(s1)) {
+                    s1 = exforUtil.fixString11(s1, 10);
                 }
 
-                myData.add (myDataN++, new editableData (s1, s2, s3, s4));
-                if ( FixedHeadList.contains (s1) && !(s1.contains ("DATA") &&
-                        !s2.isEmpty ()) ) {
+                myData.add(myDataN++, new editableData(s1, s2, s3, s4));
+                if (FixedHeadList.contains(s1) && !(s1.contains("DATA")
+                        && !s2.isEmpty())) {
 
-                    thisEntryLine = (!s1.isEmpty ())
-                            ? getLineNum (line, false)
-                            : getLineNum (oldHead, true);
+                    thisEntryLine = (!s1.isEmpty())
+                            ? getLineNum(line, false)
+                            : getLineNum(oldHead, true);
 
-                    if ( line.length () > 68 ) {
-                        int tmpINT = Integer.parseInt (s4.substring (5, 8).
-                                trim ());
+                    if (line.length() > 68) {
+                        int tmpINT = Integer.parseInt(s4.substring(5, 8).
+                                trim());
                         rowNumber = (tmpINT < 999) ? tmpINT : rowNumber;
                     } else {
-                        rowNumber = Integer.parseInt (s4.trim ());
+                        rowNumber = Integer.parseInt(s4.trim());
                     }
-                    bibList.add (bibEntNum++,
-                            new BIBClasses (thisEntryLine, Integer.
-                                    toString (bibEntNum), s5, s1));
+                    bibList.add(bibEntNum++,
+                            new BIBClasses(thisEntryLine, Integer.
+                                    toString(bibEntNum), s5, s1));
                 }
 
-                changeBoolStatus (s1, true);
-                subEntTree.refresh ();
-                editTable.refresh ();
-                if ( s1.contains ("ENDENTRY") ) {
+                changeBoolStatus(s1, true);
+                subEntTree.refresh();
+                editTable.refresh();
+                if (s1.contains("ENDENTRY")) {
                     break;
                 }
             }
-            fixTreeList (rowNumber);
+            fixTreeList(rowNumber);
             BLoadOldFile = true;
-            br.close ();
-            editTable.refresh ();
+            br.close();
+            editTable.refresh();
             //setDefaultDirExt (DICTPathDir);
             isOrdered = false;
         } catch (Exception e) {
-            System.out.println (" We found an error to read the file " +
-                    fName);
-            System.out.println (" Please Check...........");
+            System.out.println(" We found an error to read the file "
+                    + fName);
+            System.out.println(" Please Check...........");
             try {
-                brW.write ("Error in reading and parsing the file-> " + fName +
-                        "in " + brW);
+                brW.write("Error in reading and parsing the file-> " + fName
+                        + "in " + brW);
 
             } catch (IOException ex) {
-                Logger.getLogger (MainScreenController.class
-                        .getName ()).log (
+                Logger.getLogger(MainScreenController.class
+                        .getName()).log(
                                 Level.SEVERE, null, ex);
             }
-            System.exit (89);
+            System.exit(89);
         }
     }
 
