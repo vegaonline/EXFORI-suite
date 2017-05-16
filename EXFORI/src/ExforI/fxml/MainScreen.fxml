@@ -71,11 +71,6 @@
                 </MenuBar>
                 <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-padding: 0 1 0 1; -fx-border-insets: 0, 1, 2; -fx-background-color: #306eff,   linear-gradient(#5a61af, #e8f5fc),    linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #a7d9f5 100%);">
                     <children>
-                        <Button fx:id="doCheck" mnemonicParsing="false" text="Check">
-                            <font>
-                                <Font size="10.0" />
-                            </font>
-                        </Button>
                         <Button fx:id="doOrder" mnemonicParsing="false" onAction="#doProcOrder" text="Order" textAlignment="CENTER">
                             <font>
                                 <Font size="10.0" />
