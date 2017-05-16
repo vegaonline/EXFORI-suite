@@ -24,7 +24,7 @@ import javax.swing.JFileChooser;
 public class selfChecker<T> {
 
     // from other class
-    libList lList = new libList ();
+    libList lList;
 
 
     JFileChooser fileChooser = new JFileChooser ();
@@ -57,13 +57,14 @@ public class selfChecker<T> {
 
     @SuppressWarnings ("unchecked")
     public static void selfChecker(String entryNum, String fName,
-            ObservableList<editableData> myData, BufferedWriter brLog) throws InterruptedException {
+            ObservableList<editableData> myData, BufferedWriter brLog, libList lListIN) throws InterruptedException {
 
         selfChecker sc = new selfChecker ();
         boolean isEntry = true;
         boolean chkTab1 = true, chkTab2 = true, chkTab3 = true;
         boolean chkTab4 = true, chkTab5 = true, chkTab6 = true;
 
+        sc.lList = lListIN;
         sc.setHeadObliged ();
 
         if ( !sc.lList.isLoaded ) {
