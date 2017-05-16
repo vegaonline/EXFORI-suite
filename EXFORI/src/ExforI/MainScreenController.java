@@ -581,6 +581,10 @@ public class MainScreenController { //implements Initializable {
     public void setbrW(BufferedWriter brWIN) {
         this.brW = brWIN;
     }
+    
+    public void setlList(libList lList){
+        this.lList = lList;
+    }
 
     // FXML based functions
     /*

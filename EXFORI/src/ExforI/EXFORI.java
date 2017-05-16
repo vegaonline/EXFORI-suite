@@ -75,6 +75,7 @@ public class EXFORI extends Application {
         controller.setMyStage(pStage);
         controller.setMyScene(mainScene);
         controller.setbrW(brW);
+        controller.setlList(lList);
 
         PauseTransition delay1 = new PauseTransition(Duration.seconds(15));
         // delay1.setOnFinished((ActionEvent event) -> {
