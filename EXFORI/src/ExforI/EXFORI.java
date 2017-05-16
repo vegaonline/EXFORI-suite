@@ -9,6 +9,7 @@ import java.io.*;
 import java.util.logging.*;
 import javafx.animation.PauseTransition;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -36,8 +37,9 @@ public class EXFORI extends Application {
 
     libList lList = new libList();
     ProgressBar bar;
+    ColoredProgressBar barC;
     public BufferedWriter brW;
-    public Label loadingL = new Label("Loading!   Please wait....");
+    public Label loadingL = new Label("Loading IAEA Dictionaries!   Please wait....");
     Stage myStage1 = new Stage();
     private Stage primStage;
     private BorderPane mainLayout;
@@ -46,17 +48,10 @@ public class EXFORI extends Application {
     File recordsDir;
     String path = "";
     String cssName = "";
+    double lSize = 0.0;
 
     @Override
     public void start(Stage pStage) throws Exception {
-        /*
-         * Task mytask1 = new taskStart(); Thread th = new Thread(mytask1);
-         * th.setDaemon (true); mytask1.setOnSucceeded (new
-         * EventHandler<WorkerStateEvent>() { @Override public void
-         * handle(WorkerStateEvent event) { throw new
-         * UnsupportedOperationException ("Not supported yet."); //To change
-         * body of generated methods, choose Tools | Templates. } });
-         */
         loadLogo();
 
         this.primStage = pStage;
@@ -77,8 +72,7 @@ public class EXFORI extends Application {
         controller.setbrW(brW);
         controller.setlList(lList);
 
-        PauseTransition delay1 = new PauseTransition(Duration.seconds(15));
-        // delay1.setOnFinished((ActionEvent event) -> {
+        PauseTransition delay1 = new PauseTransition(Duration.seconds(lSize));
         delay1.setOnFinished(event -> {
             myStage1.close();
             primStage.show();
@@ -116,10 +110,8 @@ public class EXFORI extends Application {
         Image imageLogo = new Image(inStreamLogo);
         ImageView imageLogoView = new ImageView(imageLogo);
 
-        ColoredProgressBar barC = new ColoredProgressBar("progress-barA", 0); // new ProgressBar ();
-        //bar.setStyle ("-fx-accent:red;");
-        //bar.setProgress (0);
-        barC.progressProperty().bind(task.progressProperty());
+        barC = new ColoredProgressBar("progress-barA", 0); // new ProgressBar ();
+
         new Thread(task).start();
 
         hb1.getChildren().addAll(barC, loadingL);
@@ -128,12 +120,9 @@ public class EXFORI extends Application {
 
         thisScene.getStylesheets().add(getClass().getResource(
                 "CSS/mainscreen.css").toExternalForm());
-        //thisScene.getStylesheets().add("progresss-barA");
+
         myStage1.setScene(thisScene);
         myStage1.show();
-
-        //Thread.sleep (10000);
-//         lList.loadAllDict (brW);
         return true;
     }
 
@@ -141,7 +130,24 @@ public class EXFORI extends Application {
         @Override
         public Void call() throws InterruptedException {
             lList.loadAllDict(brW);
-            updateProgress(lList.rptCount, lList.totCount);
+            //updateProgress(lList.rptCount, lList.totCount);
+            lSize = (double) (lList.totCount / 3.0);
+            lSize = Math.round(lSize);
+            new Thread() {
+                public void run() {
+                    for (double i = 0.0; i <= lSize; i++) {
+                        final double step = i;
+                        Platform.runLater(() -> barC.setProgress(step / lSize));
+
+                        try {
+                            Thread.sleep(1000);
+                        } catch (InterruptedException ex) {
+                            Thread.currentThread().interrupt();
+                        }
+                    }
+                }
+            }.start();
+
             return null;
         }
     };

@@ -535,8 +535,6 @@ public class MainScreenController { //implements Initializable {
     @FXML
     private final Button setB2 = new Button("SET");
     @FXML
-    private Button doCheck;
-    @FXML
     private Button doOrder;
     @FXML
     private TextField entNumT;
@@ -581,8 +579,8 @@ public class MainScreenController { //implements Initializable {
     public void setbrW(BufferedWriter brWIN) {
         this.brW = brWIN;
     }
-    
-    public void setlList(libList lList){
+
+    public void setlList(libList lList) {
         this.lList = lList;
     }
 
@@ -975,11 +973,13 @@ public class MainScreenController { //implements Initializable {
     /*
      * This creates a new EXFOR file @author Abhijit Bhattacharyya
      */
+ /*
     private void startNewExf(ActionEvent event
     ) {
         boolean isFileOK = false;
         exforUtil.setDefaultDirExt(EXFPathDir);
         rootDir = fileChooser.getCurrentDirectory().toString();
+        System.out.println("New java dir->" + rootDir);
         fileChooser.setDialogTitle("Load EXFOR compilation file.....");
         fileChooser.addChoosableFileFilter(filter);
         int ret = fileChooser.showDialog(null, "Open File");
@@ -1018,7 +1018,10 @@ public class MainScreenController { //implements Initializable {
         }
     }
 
-    /*
+    
+    
+     */
+ /*
      * This loads an old EXFOR file @author Abhijit Bhattacharyya
      */
     @FXML
@@ -1078,6 +1081,25 @@ public class MainScreenController { //implements Initializable {
             fName += fileChooser.getSelectedFile();
             //trySaving (".exf");
         }
+    }
+
+    private void doAutoSave() {
+        exforUtil.setDefaultDirExt(EXFPathDir);
+        new Thread() {
+            @Override
+            public void run() {
+                Platform.runLater(() -> {
+                    // trySaving(".exf");
+                });
+                try {
+                    trySaving(".exf");
+                    System.out.println("Saved...");
+                    Thread.sleep(1000);
+                } catch (InterruptedException ex) {
+                    Thread.currentThread().interrupt();
+                }
+            }
+        }.start();
     }
 
     @FXML
@@ -4891,9 +4913,7 @@ public class MainScreenController { //implements Initializable {
         //setDefaultDirExt (DICTPathDir);   // Setting the directory and extension by default
         // editor part is actually TableView and should not 
         // have sorting property        
-        // lList.loadAllDict (brW);   // testing with progressbar
 
-        // loadAllDict ();  // Load all List for ComboBoxes
         manageTables();   // Add properties to Tables
         // setDefaultDirExt (EXFPathDir);
 
@@ -5244,6 +5264,8 @@ public class MainScreenController { //implements Initializable {
 
             startTree();  // required as there is no tree now
             procTree();
+            exforUtil.setDefaultDirExt(EXFPathDir);
+            trySaving(".exf");
         }
     }
 

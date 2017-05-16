@@ -378,7 +378,6 @@ public class libList<T> {
      */
     public void loadAllDict(BufferedWriter brW) throws InterruptedException {
         boolean full = false;
-        System.out.println("Loading started.....");
         loadDictsHere(instList, "", instListName, 12, brW, full);                           // _3_ 
         loadDictsHere(jTypeList, "", jTypeListName, 12, brW, full);                    // _4_ from 11 
         loadDictsHere(jourList, "", jourListName, 12, brW, full);                           // _5_ 
@@ -412,7 +411,6 @@ public class libList<T> {
         loadDictsHere(prodList, "", prodListName, 12, brW, full);                       //_236_
 
         doProcessList();
-        System.out.println("Loading ended.....");
     }
 
     public void doProcessList() {
