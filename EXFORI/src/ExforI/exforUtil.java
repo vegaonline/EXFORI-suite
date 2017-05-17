@@ -7,32 +7,12 @@
  */
 package ExforI;
 
-import java.io.File;
-import javax.swing.JFileChooser;
-
 /**
  * This contains all utilities developed for this software
  *
  * @author vega
  */
 public class exforUtil {
-
-    public File recordsDir;
-    JFileChooser fileChooser = new JFileChooser ();
-
-    // Setting the default  Directory        
-    public static void setDefaultDirExt(String fPath) {
-        exforUtil exU = new exforUtil ();
-        exU.recordsDir = new File (fPath);
-        if ( !exU.recordsDir.exists () ) {
-            exU.recordsDir.mkdirs ();
-        }
-
-        if ( !exU.fileChooser.getCurrentDirectory ().toString ().contentEquals (
-                fPath) ) {
-            exU.fileChooser.setCurrentDirectory (exU.recordsDir);
-        }
-    }
 
     /*
      * This code checks if a string is a number or not.
