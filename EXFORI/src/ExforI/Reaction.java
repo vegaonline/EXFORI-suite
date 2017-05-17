@@ -200,8 +200,10 @@ public class Reaction {
 
     public void testSF2() {
         for ( Object cue : lList.d33SF2List ) {
-            if ( cue.toString ().contains ((CharSequence) SF2) ) {
+            if ( cue.toString ().contains ((CharSequence) SF2.get ()) ) {
                 System.out.println ("matching---->" + cue + "<---->" + SF2);
+            } else {
+                SF2.set ("");
             }
         }
     }

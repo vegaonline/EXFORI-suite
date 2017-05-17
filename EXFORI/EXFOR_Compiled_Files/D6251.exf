@@ -1,0 +1,137 @@
+ENTRY            D6251   20170224                                 D6251  0    1 
+SUBENT        D6251001   20170308                                 D6251  1    1 
+BIB                 11         25                                 D6251  1    2 
+TITLE      Measurement of the excitation functions in             D6251  1    3 
+           alpha-induced reactions on 93-Nb from threshold energy D6251  1    4 
+           to 39.5 MeV.                                           D6251  1    5 
+AUTHOR     (Muhammad Shahid,Kwangsoo Kim,Guinyun Kim,             D6251  1    6 
+           Muhammad Zaman,Muhammad Nadeem,Haladhara Naik,         D6251  1    7 
+           Mansoureh Tatari,R Guin,S K Das)                       D6251  1    8 
+INSTITUTE  (3INDVEC)                                              D6251  1    9 
+REFERENCE  (J,KPS,67,1474,2015)                                   D6251  1   10 
+FACILITY   (CYCLO,3INDVEC)                                        D6251  1   11 
+SAMPLE     Nb (99%) foil of 17.5 um thick and Natural Cu (>99%)   D6251  1   12 
+           foil of 10 um thick are stacked to make 8 sets of      D6251  1   13 
+           Nb-Cu. In one experiment Nb-Cu is followed by          D6251  1   14 
+           Nb-Nb-Nb while in the other Al foil of 25 um is        D6251  1   15 
+           followed by Nb-Cu stack.                               D6251  1   16 
+INC-SOURCE1(ATOMI) Alpha beam (~10 mm dia / 120 nA / 45 mins)     D6251  1   17 
+          2(ATOMI) Alpha beam (~10 mm dia / 60 nA / 90 mins)      D6251  1   18 
+DETECTOR   (HPGE,SPEC) An n-type coaxial HPGe spectrometer with   D6251  1   19 
+           FWHM of 1.9 keV at 1332.5 keV gamma ray photopeak of   D6251  1   20 
+           Co-60 coupled to a PC based 4096 channel analyzer      D6251  1   21 
+           having Gamma Vision 5.0 software.                      D6251  1   22 
+ADD-RES    (COMP) Experimental results compared with theoretical  D6251  1   23 
+           values obtained from TENDL-2013 library based on       D6251  1   24 
+           computer code TALYS 1.6                                D6251  1   25 
+STATUS     (TABLE) Table 2 of J, KPS, 67, 1474, 2015              D6251  1   26 
+HISTORY    (20170224C) Abhijit+BL                                 D6251  1   27 
+ENDBIB              25          0                                 D6251  1   28 
+NOCOMMON             0          0                                 D6251  1   29 
+ENDSUBENT           28          0                                 D6251  199999 
+SUBENT        D6251002   20170308                                 D6251  2    1 
+BIB                  4         13                                 D6251  2    2 
+REACTION   (41-NB-93(A,X)42-MO-93-M,,SIG)                         D6251  2    3 
+DECAY-DATA1(42-MO-93-M,6.85HR,DG,263.1)                           D6251  2    4 
+          2(42-MO-93-M,6.85HR,DG,684.7)                           D6251  2    5 
+          3(42-MO-93-M,6.85HR,DG,1477.1)                          D6251  2    6 
+METHOD    1(ACTIV) Current / Exposure = 120nA / 45 mins           D6251  2    7 
+          2(ACTIV) Current / Exposure = 60nA / 90 mins            D6251  2    8 
+ERR-ANALYS (ERR-T) Total uncertainty: 8-26%                       D6251  2    9 
+           (ERR-S,6.,24.)Gamma-ray counting statistics            D6251  2   10 
+           (ERR-1,1.,2.) uncertainty of gamma ray intensity       D6251  2   11 
+           (ERR-2) uncertainty of al beam intensity 5.20%-5.29%   D6251  2   12 
+           (ERR-3,3.,4.)efficiency calibration of detector        D6251  2   13 
+           (ERR-4,1.,2.) uncertainty of sample thickness          D6251  2   14 
+           measurement                                            D6251  2   15 
+ENDBIB              13          0                                 D6251  2   16 
+NOCOMMON             0          0                                 D6251  2   17 
+DATA                 4          4                                 D6251  2   18 
+EN         EN-ERR     DATA       DATA-ERR                         D6251  2   19 
+MEV        MEV        MB         MB                               D6251  2   20 
+      38.75       0.75       2.33       0.23                      D6251  2   21 
+      37.79       0.76       1.78       0.17                      D6251  2   22 
+      36.19       0.79       0.79       0.08                      D6251  2   23 
+      35.18       0.80       0.57       0.09                      D6251  2   24 
+ENDDATA              6          0                                 D6251  2   25 
+ENDSUBENT           24          0                                 D6251  299999 
+SUBENT        D6251003   20170308                                 D6251  3    1 
+BIB                  2          3                                 D6251  3    2 
+REACTION   (41-NB-93(A,X)41-NB-91-M,,SIG)                         D6251  3    3 
+DECAY-DATA1(41-NB-91-M,60.86D,DG,104.6)                           D6251  3    4 
+          2(41-NB-91-M,60.86D,DG,1204.7)                          D6251  3    5 
+ENDBIB               3          0                                 D6251  3    6 
+NOCOMMON             0          0                                 D6251  3    7 
+DATA                 4          6                                 D6251  3    8 
+EN         EN-ERR     DATA       DATA-ERR                         D6251  3    9 
+MEV        MEV        MB         MB                               D6251  3   10 
+      38.75      0.75       17.42       2.44                      D6251  3   11 
+      37.79      0.76       14.05       2.37                      D6251  3   12 
+      36.19      0.79       11.56       1.90                      D6251  3   13 
+      35.18      0.80        7.05       1.58                      D6251  3   14 
+      33.49      0.83        2.66       0.83                      D6251  3   15 
+      32.43      0.85        0.90       0.64                      D6251  3   16 
+ENDDATA              8          0                                 D6251  3   17 
+ENDSUBENT           16          0                                 D6251  399999 
+SUBENT        D6251004   20170308                                 D6251  4    1 
+BIB                  2          2                                 D6251  4    2 
+REACTION   (41-NB-93(A,X)41-NB-92-M,,SIG)                         D6251  4    3 
+DECAY-DATA1(41-NB-92-M,10.15D,DG,934.4)                           D6251  4    4 
+ENDBIB               2          0                                 D6251  4    5 
+NOCOMMON             0          0                                 D6251  4    6 
+DATA                 4         14                                 D6251  4    7 
+EN         EN-ERR     DATA       DATA-ERR                         D6251  4    8 
+MEV        MEV        MB         MB                               D6251  4    9 
+      38.75       0.75      16.78       1.16                      D6251  4   10 
+      37.79       0.76      16.43       1.15                      D6251  4   11 
+      36.19       0.79      16.48       1.14                      D6251  4   12 
+      35.18       0.80      15.40       1.08                      D6251  4   13 
+      33.49       0.83      14.65       1.01                      D6251  4   14 
+      32.43       0.85      13.73       0.96                      D6251  4   15 
+      30.63       0.88      13.63       0.94                      D6251  4   16 
+      29.50       0.91      12.25       0.86                      D6251  4   17 
+      27.56       0.95       9.40       0.65                      D6251  4   18 
+      26.36       0.99       6.58       0.47                      D6251  4   19 
+      24.25       1.05       4.73       0.33                      D6251  4   20 
+      22.90       1.08       3.12       0.23                      D6251  4   21 
+      20.57       1.16       0.32       0.03                      D6251  4   22 
+      19.08       1.22       0.04       0.01                      D6251  4   23 
+ENDDATA             16          0                                 D6251  4   24 
+ENDSUBENT           23          0                                 D6251  499999 
+SUBENT        D6251005   20170308                                 D6251  5    1 
+BIB                  2          2                                 D6251  5    2 
+REACTION   (41-NB-93(A,X)41-NB-95-M,,SIG)                         D6251  5    3 
+DECAY-DATA (41-NB-95-M,3.61D,DG,235.7)                            D6251  5    4 
+ENDBIB               2          0                                 D6251  5    5 
+NOCOMMON             0          0                                 D6251  5    6 
+DATA                 4          6                                 D6251  5    7 
+EN         EN-ERR     DATA       DATA-ERR                         D6251  5    8 
+MEV        MEV        MB         MB                               D6251  5    9 
+      38.75       0.75       0.13      0.014                      D6251  5   10 
+      37.79       0.76       0.06      0.012                      D6251  5   11 
+      36.19       0.79       0.09      0.010                      D6251  5   12 
+      35.18       0.80       0.09      0.015                      D6251  5   13 
+      33.49       0.83       0.01      0.004                      D6251  5   14 
+      30.63       0.88       0.01      0.007                      D6251  5   15 
+ENDDATA              8          0                                 D6251  5   16 
+ENDSUBENT           15          0                                 D6251  599999 
+SUBENT        D6251006   20170308                                 D6251  6    1 
+BIB                  2          2                                 D6251  6    2 
+REACTION   (41-NB-93(A,X)41-NB-95-G,,SIG)                         D6251  6    3 
+DECAY-DATA (41-NB-95-G,34.991D,DG,765.8)                          D6251  6    4 
+ENDBIB               2          0                                 D6251  6    5 
+NOCOMMON             0          0                                 D6251  6    6 
+DATA                 4          8                                 D6251  6    7 
+EN         EN-ERR     DATA       DATA-ERR                         D6251  6    8 
+MEV        MEV        MB         MB                               D6251  6    9 
+      38.75       0.75       2.92       0.21                      D6251  6   10 
+      37.79       0.76       2.55       0.19                      D6251  6   11 
+      36.19       0.79       2.60       0.19                      D6251  6   12 
+      35.18       0.80       2.55       0.19                      D6251  6   13 
+      33.49       0.83       1.94       0.15                      D6251  6   14 
+      32.43       0.85       1.53       0.12                      D6251  6   15 
+      30.63       0.88       0.93       0.08                      D6251  6   16 
+      29.50       0.91       0.56       0.05                      D6251  6   17 
+ENDDATA             10          0                                 D6251  6   18 
+ENDSUBENT           17          0                                 D6251  699999 
+ENDENTRY             6          0                                 D625199999999 

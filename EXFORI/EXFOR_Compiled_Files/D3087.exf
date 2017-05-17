@@ -1,0 +1,163 @@
+ENTRY            33087   20160927                                 3308700000001 
+SUBENT        33087001   20160927                                 3308700100001 
+BIB                 16         23                                 3308700100002 
+TITLE      Cross-sections of a few (n,a) and (n,p) reactions      3308700100003 
+           induced at 14.7 MeV neutrons                           3308700100004 
+AUTHOR     (G.R.Pansare, P.M.Dighe, V.N.Bhoraskar)                3308700100005 
+INSTITUTE  (3INDPOO)                                              3308700100006 
+REFERENCE  (J,PRM,37,425,1991)                                    3308700100007 
+FACILITY   (CCW,3INDPOO)                                          3308700100008 
+SAMPLE     Elemental samples                                      3308700100009 
+INC-SOURCE (D-T)                                                  3308700100010 
+DETECTOR   (HPGE) HPGe (30%) detector was coupled to a 4096       3308700100011 
+           channel analyser.                                      3308700100012 
+MONITOR   1(13-AL-27(N,A)11-NA-24,,SIG)                           3308700100013 
+          2(26-FE-56(N,P)25-MN-56,,SIG)                           3308700100014 
+MONIT-REF  (,Z.Boedy+,B,OKAMOTO,,261,1987)                        3308700100015 
+DECAY-MON 1(11-NA-24,15.02HR,DG,1369.)                            3308700100016 
+          2(25-MN-56,2.578HR,DG,840.)                             3308700100017 
+REL-REF    (O,31412001,P.M.Dighe+,J,JP/G,17,L169,1991)            3308700100018 
+           54Cr(n,a)51Ti and 120Sn(n,a)117Cd data given.          3308700100019 
+CORRECTION The correction due to self-absorption in the sample    3308700100020 
+            was neglected because of small quantity of the sample 3308700100021 
+            powder.                                               3308700100022 
+ADD-RES    (COMP) Model calculation using Alice Livermore-82 code.3308700100023 
+STATUS     (TABLE) Table 2 of Pramana J. of Physics,37(1991)425   3308700100024 
+HISTORY    (20160927C) Abhijit+BL                                 3308700100025 
+ENDBIB              23          0                                 3308700100026 
+COMMON               1          3                                 3308700100027 
+EN                                                                3308700100028 
+MEV                                                               3308700100029 
+       14.7                                                       3308700100030 
+ENDCOMMON            3          0                                 3308700100031 
+ENDSUBENT           30          0                                 3308700199999 
+SUBENT        33087002   20160927                                 3308700200001 
+BIB                  5         22                                 3308700200002 
+REACTION  1(13-AL-27(N,P)12-MG-27,,SIG)                           3308700200003 
+          2(13-AL-27(N,P)12-MG-27,,SIG)                           3308700200004 
+DECAY-DATA (12-MG-27,9.46MIN,DG,840.)                             3308700200005 
+METHOD    1(ACTIV) Irrad./Count./NoOfCycles. = 40mins/40mins/3    3308700200006 
+          2(ACTIV) Irrad./Count./NoOfCycles. = 30mins/30mins/5    3308700200007 
+ERR-ANALYS (ERR-T) Errors for the measured cross-sections are     3308700200008 
+           the root mean square values comprised of uncertainty   3308700200009 
+           in estimation of                                       3308700200010 
+           (ERR-1) Gamma activity under the photopeak (0.7%)      3308700200011 
+           (ERR-2) Half life                          (0.1%)      3308700200012 
+           (ERR-3) Weight of the sample               (0.002%)    3308700200013 
+           (ERR-4) Time of irradiation and counting   (0.05%)     3308700200014 
+           (ERR-5) Neutron flux                       (1.42%)     3308700200015 
+COMMENT    By compiler (2016-09-27):                              3308700200016 
+            In the 27Al(n,p)27Mg reaction, the gamma energy of    3308700200017 
+            840 keV is used for cross section determination with  3308700200018 
+            56Fe(n,p)56Mn as monitor which also emit the same     3308700200019 
+            gamma energy. No explanation is given on how the      3308700200020 
+            gamma counts from 27Mg and 56Mn are separated in the  3308700200021 
+            text of the article. The author did not mention that  3308700200022 
+            the gammas from 37Mg and 56Mn foils are counted       3308700200023 
+            separately.                                           3308700200024 
+ENDBIB              22          0                                 3308700200025 
+COMMON               5          3                                 3308700200026 
+ERR-1      ERR-2      ERR-3      ERR-4      ERR-5                 3308700200027 
+PER-CENT   PER-CENT   PER-CENT   PER-CENT   PER-CENT              3308700200028 
+        0.7        0.1      0.002       0.05       1.42           3308700200029 
+ENDCOMMON            3          0                                 3308700200030 
+DATA                 4          1                                 3308700200031 
+DATA      1ERR-T     1DATA      2ERR-T     2                      3308700200032 
+MB         MB         MB         MB                               3308700200033 
+        68.        2.0        66.        2.0                      3308700200034 
+ENDDATA              3          0                                 3308700200035 
+ENDSUBENT           34          0                                 3308700299999 
+SUBENT        33087003   20160927                                 3308700300001 
+BIB                  4         11                                 3308700300002 
+REACTION  1(14-SI-30(N,A)12-MG-27,,SIG)                           3308700300003 
+          2(14-SI-30(N,A)12-MG-27,,SIG)                           3308700300004 
+DECAY-DATA (12-MG-27,9.46MIN,DG,1013.)                            3308700300005 
+METHOD    1(ACTIV) Irrad./Count./NoOfCycles. = 40mins/40mins/5    3308700300006 
+          2(ACTIV) Irrad./Count./NoOfCycles. = 30mins/30mins/5    3308700300007 
+ERR-ANALYS (DATA-ERR) Root mean square values comprised of        3308700300008 
+            uncertainty in estimation of                          3308700300009 
+            - gamma activity under the photopeak,                 3308700300010 
+            - relative detection efficiency,                      3308700300011 
+            - sample weight,                                      3308700300012 
+            - time measurements.                                  3308700300013 
+ENDBIB              11          0                                 3308700300014 
+NOCOMMON             0          0                                 3308700300015 
+DATA                 4          1                                 3308700300016 
+DATA      1DATA-ERR  1DATA      2DATA-ERR  2                      3308700300017 
+MB         MB         MB         MB                               3308700300018 
+        81.        5.0        85.        5.1                      3308700300019 
+ENDDATA              3          0                                 3308700300020 
+ENDSUBENT           19          0                                 3308700399999 
+SUBENT        33087004   20160927                                 3308700400001 
+BIB                  4         11                                 3308700400002 
+REACTION  1(24-CR-52(N,P)23-V-52,,SIG)                            3308700400003 
+          2(24-CR-52(N,P)23-V-52,,SIG)                            3308700400004 
+DECAY-DATA (23-V-52,3.76MIN,DG,1434.)                             3308700400005 
+METHOD    1(ACTIV) Irrad./Count./NoOfCycles. = 10mins/10mins/10   3308700400006 
+          2(ACTIV) Irrad./Count./NoOfCycles. = 10mins/10mins/10   3308700400007 
+ERR-ANALYS (DATA-ERR) Root mean square values comprised of        3308700400008 
+            uncertainty in estimation of                          3308700400009 
+            - gamma activity under the photopeak,                 3308700400010 
+            - relative detection efficiency,                      3308700400011 
+            - sample weight,                                      3308700400012 
+            - time measurements.                                  3308700400013 
+ENDBIB              11          0                                 3308700400014 
+NOCOMMON             0          0                                 3308700400015 
+DATA                 4          1                                 3308700400016 
+DATA      1DATA-ERR  1DATA      2DATA-ERR  2                      3308700400017 
+MB         MB         MB         MB                               3308700400018 
+        93.        6.0        91.        6.0                      3308700400019 
+ENDDATA              3          0                                 3308700400020 
+ENDSUBENT           19          0                                 3308700499999 
+SUBENT        33087005   20160927                                 3308700500001 
+BIB                  4         11                                 3308700500002 
+REACTION  1(24-CR-53(N,P)23-V-53,,SIG)                            3308700500003 
+          2(24-CR-53(N,P)23-V-53,,SIG)                            3308700500004 
+DECAY-DATA (23-V-53,1.60MIN,DG,1000.)                             3308700500005 
+METHOD    1(ACTIV) Irrad./Count./NoOfCycles. = 5mins/5mins/10     3308700500006 
+          2(ACTIV) Irrad./Count./NoOfCycles. = 5mins/5mins/10     3308700500007 
+ERR-ANALYS (DATA-ERR) Root mean square values comprised of        3308700500008 
+            uncertainty in estimation of                          3308700500009 
+            - gamma activity under the photopeak,                 3308700500010 
+            - relative detection efficiency,                      3308700500011 
+            - sample weight,                                      3308700500012 
+            - time measurements.                                  3308700500013 
+ENDBIB              11          0                                 3308700500014 
+NOCOMMON             0          0                                 3308700500015 
+DATA                 4          1                                 3308700500016 
+DATA      1DATA-ERR  1DATA      2DATA-ERR  2                      3308700500017 
+MB         MB         MB         MB                               3308700500018 
+        48.        6.0        46.        5.0                      3308700500019 
+ENDDATA              3          0                                 3308700500020 
+ENDSUBENT           19          0                                 3308700599999 
+SUBENT        33087006   20160927                                 3308700600001 
+BIB                  5         20                                 3308700600002 
+REACTION  1(24-CR-54(N,P)23-V-54,,SIG)                            3308700600003 
+          2(24-CR-54(N,P)23-V-54,,SIG)                            3308700600004 
+DECAY-DATA (23-V-54,43.0SEC,DG,840.)                              3308700600005 
+METHOD    1(ACTIV) Irrad./Count./NoOfCycles. = 3mins/3mins/25     3308700600006 
+          2(ACTIV) Irrad./Count./NoOfCycles. = 3mins/3mins/25     3308700600007 
+ERR-ANALYS (DATA-ERR) Root mean square values comprised of        3308700600008 
+            uncertainty in estimation of                          3308700600009 
+            - gamma activity under the photopeak,                 3308700600010 
+            - relative detection efficiency,                      3308700600011 
+            - sample weight,                                      3308700600012 
+            - time measurements.                                  3308700600013 
+COMMENT    By compiler (2016-09-27):                              3308700600014 
+            In the 54Cr(n,p)54V reaction, the gamma energy of 840 3308700600015 
+            keV is used for cross section determination with      3308700600016 
+            56Fe(n,p)56Mn as monitor which also emit the same     3308700600017 
+            gamma energy. No explanation is given on how the      3308700600018 
+            gamma counts from 54V and 56Mn are separated in the   3308700600019 
+            text of the article. The author did not mention that  3308700600020 
+            the gammas from 54V and 56Mn foils are counted        3308700600021 
+            separately.                                           3308700600022 
+ENDBIB              20          0                                 3308700600023 
+NOCOMMON             0          0                                 3308700600024 
+DATA                 4          1                                 3308700600025 
+DATA      1DATA-ERR  1DATA      2DATA-ERR  2                      3308700600026 
+MB         MB         MB         MB                               3308700600027 
+        17.        2.0        18.        2.0                      3308700600028 
+ENDDATA              3          0                                 3308700600029 
+ENDSUBENT           28          0                                 3308700699999 
+ENDENTRY             6          0                                 3308799999999 

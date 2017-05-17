@@ -1,0 +1,12 @@
+ENTRY            D4321   20170517                                 
+SUBENT        D4321001   20170517                                 1
+BIB                                                               1
+HISTORY    (20170517C)                                            1
+ENDBIB                                                            1
+NOCOMMON             0          0                                 1
+ENDSUBENT                                                         1
+SUBENT        D4321002   20170517                                 2
+BIB                                                               2
+ENDBIB                                                            2
+NOCOMMON             0          0                                 2
+ENDSUBENT                                                         2

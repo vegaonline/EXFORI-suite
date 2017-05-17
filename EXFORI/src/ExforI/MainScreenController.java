@@ -903,6 +903,7 @@ public class MainScreenController { //implements Initializable {
                     .getName ()).
                     log (Level.SEVERE, null, ex);
         }
+        timerAutoSave.cancel ();
         System.exit (0);
     }
 
@@ -942,11 +943,25 @@ public class MainScreenController { //implements Initializable {
 
             if ( exfFileRead.exists () && !exfFileRead.isDirectory () ) {
                 fNameSet = false;
+
+                timerAutoSave.scheduleAtFixedRate (new TimerTask () {
+                    @Override
+                    public void run() {
+                        doAutoSave ();
+                    }
+                }, 2000, backupDelay);
                 doLoadEXFFile ();
             } else {
                 fNameSet = true;
                 entDateT.setText (myDate0);
                 ++setB1Count;
+                
+                timerAutoSave.scheduleAtFixedRate (new TimerTask () {
+                    @Override
+                    public void run() {
+                        doAutoSave ();
+                    }
+                }, 2000, backupDelay);
                 doNewFile ();
             }
         } else if ( !exforUtil.isNumeric (s12) ) {
@@ -980,39 +995,9 @@ public class MainScreenController { //implements Initializable {
         entDateT.setText (myDate0);
     }
 
-    /*
-     * This creates a new EXFOR file @author Abhijit Bhattacharyya
-     */
- /*
-     * private void startNewExf(ActionEvent event ) { boolean isFileOK = false;
-     * setDefaultDirExt(EXFPathDir); rootDir =
-     * fileChooser.getCurrentDirectory().toString(); System.out.println("New
-     * java dir->" + rootDir); fileChooser.setDialogTitle("Load EXFOR
-     * compilation file....."); fileChooser.addChoosableFileFilter(filter); int
-     * ret = fileChooser.showDialog(null, "Open File"); if (ret ==
-     * JFileChooser.APPROVE_OPTION) { exfFileRead =
-     * fileChooser.getSelectedFile(); if (exfFileRead != null) { isFileOK =
-     * true; } } if (ret == JFileChooser.CANCEL_OPTION) { // dummy for do nothin
-     * option }
-     *
-     * //if ( exfFileRead.exists () ) { if (isFileOK) { if
-     * (exfFileRead.getName().toString().substring(
-     * exfFileRead.getName().toString().length() - 4,
-     * exfFileRead.getName().toString().length())
-     * .toLowerCase().contains(".exf")) { fName =
-     * exfFileRead.getAbsolutePath().toString(); } else { fName =
-     * exfFileRead.getAbsolutePath().toString() + ".exf"; } } else { fName =
-     * exfFileRead.getAbsolutePath().toString() + ".exf"; entryNum =
-     * exfFileRead.getName().toString(); }
-     *
-     * if (exfFileRead.exists() && !exfFileRead.isDirectory()) {
-     * doLoadEXFFile(); } else { entNumT.setText(entryNum);
-     * entDateT.setText(myDate0); doNewFile(); ++setB1Count; } }
+    /**
      *
      *
-     *
-     */
- /*
      * This loads an old EXFOR file @author Abhijit Bhattacharyya
      */
     @FXML
@@ -1425,6 +1410,8 @@ public class MainScreenController { //implements Initializable {
         Tooltip.install (entDateT, t2);
 
         timerAutoSave = new Timer ();
+        getbackUPFreq ();
+
         //Tooltip.install(editTable, t3);        
         //setDefaultDirExt (DICTPathDir);
         // rootDir = fileChooser.getCurrentDirectory ().toString ();
@@ -5242,12 +5229,6 @@ public class MainScreenController { //implements Initializable {
 
             startTree ();  // required as there is no tree now
             procTree ();
-            timerAutoSave.scheduleAtFixedRate (new TimerTask () {
-                @Override
-                public void run() {
-                    doAutoSave ();
-                }
-            }, 2000, backupDelay);
         }
     }
 
