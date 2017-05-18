@@ -302,7 +302,6 @@ public class libList<T> {
                             break;
                         case "33":
                             lx = line.substring (0, 6) + "  " + line.substring (45, 55);
-                            System.out.println(lx);
                             if ( line.substring (43, 44).contains ("2") ) { // checking SF2 flag
                                 l1 = line.substring (0, 6);
                                 l2 = line.substring (40, 96);

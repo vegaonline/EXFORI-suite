@@ -97,6 +97,7 @@ public class MainScreenController { //implements Initializable {
     public String entryNum = "";
     private Boolean fNameSet = false;
     private Boolean BLoadOldFile = false;
+    private Boolean bLoadNew = false;
     private String bibI = null;
     private String bibCont = null;
     private int lineN = 1;
@@ -626,12 +627,13 @@ public class MainScreenController { //implements Initializable {
             str1 = entryNum;
 
             headStyle ();
-            if ( !isOrdered ) {
+            if ( !isOrdered && !bLoadNew ) {
                 lastEntVal = myDataN + 1;
             } else {
                 lastEntVal = myDataN;
             }
 
+            System.out.println (lastEntVal);
             for ( int ii = 0; ii < lastEntVal; ii++ ) {
                 String s1 = myData.get (ii).getBibItemName ().toString ();
                 String s2 = myData.get (ii).getPointerID ().toString ();
@@ -940,6 +942,7 @@ public class MainScreenController { //implements Initializable {
             rootDir = fileChooser.getCurrentDirectory ().toString ();
             fName = rootDir + pathSEP + entryNum + ".exf";
             exfFileRead = new File (fName);
+            System.out.println (exfFileRead.toString ());
 
             if ( exfFileRead.exists () && !exfFileRead.isDirectory () ) {
                 fNameSet = false;
@@ -955,7 +958,7 @@ public class MainScreenController { //implements Initializable {
                 fNameSet = true;
                 entDateT.setText (myDate0);
                 ++setB1Count;
-                
+
                 timerAutoSave.scheduleAtFixedRate (new TimerTask () {
                     @Override
                     public void run() {
@@ -1599,7 +1602,8 @@ public class MainScreenController { //implements Initializable {
             subEnt = findSubEnt (SE);
         }
 
-        if ( (bOrdered || BLoadOldFile) && !append ) {
+        // if ( (bOrdered || BLoadOldFile) && !append ) {
+        if ( (bOrdered) && !append ) {
             subEnt = subEnt.substring (5, 8).trim ();
         }
 
@@ -4833,12 +4837,13 @@ public class MainScreenController { //implements Initializable {
 
     private void manageTables() {
         matrixData.getStylesheets ().add (getClass ().getResource (
-                "CSS/mainscreen.css").toExternalForm ());
+                "CSS/mainscreen.css").toExternalForm ());        
         matrixData.setEditable (true);
         matrixData.setVisible (true);
         matrixData.getSelectionModel ().setCellSelectionEnabled (true);
         matrixData.getSelectionModel ().
                 setSelectionMode (SelectionMode.MULTIPLE);
+        matrixData.getStyleClass ().add ("noheader");
         // matrixData.addEventHandler(KeyEvent.KEY_RELEASED,
         //        new ControlDownSelectionEventHandler());
 
@@ -4846,13 +4851,15 @@ public class MainScreenController { //implements Initializable {
         TableUtils.doCopyPasteHandler (matrixData, matData);
 
         editTable.getStylesheets ().add (getClass ().getResource (
-                "CSS/mainscreen.css").toExternalForm ());
+                "CSS/mainscreen.css").toExternalForm ());        
         bibHead.getStyleClass ().add ("bibHeadStyle1");
         bibPtr.getStyleClass ().add ("bibTextStyle");
         bibText.getStyleClass ().add ("bibTextStyle");
         bibLines.getStyleClass ().add ("bibLinesStyle");
         editTable.getSelectionModel ().setCellSelectionEnabled (true);
         editTable.getSelectionModel ().setSelectionMode (SelectionMode.MULTIPLE);
+        //editTable.getStyleClass ().add ("hideClumnHeader");        
+        editTable.getStyleClass ().add ("noheader");
     }
 
     private void headStyle() {
@@ -5238,6 +5245,7 @@ public class MainScreenController { //implements Initializable {
         try {
             //br = new BufferedReader (new FileReader (fName));
             BufferedReader br = new BufferedReader (new FileReader (fName));
+
             brW.write ("Trying to load an Existing file->" + fName);
             //String line;
             myDataN = 0;
@@ -5245,6 +5253,7 @@ public class MainScreenController { //implements Initializable {
             int rowNumber = 0;
             int nCnt = 0;
             String line;
+            int lCount = 0;
             while ((line = br.readLine ()) != null) {
                 int i = 0;
                 String s1 = "";
@@ -5255,7 +5264,8 @@ public class MainScreenController { //implements Initializable {
                 String oldHead = "";
                 //++rowNumber;
 
-                s1 = line.substring (0, 10).trim ();
+                // s1 = line.substring (0, 10).trim ();
+                s1 = line.substring (0, 10);
 
                 oldHead = (!s1.isEmpty () && FixedHeadList.contains (s1)) ? s1
                         : oldHead;
@@ -5281,7 +5291,11 @@ public class MainScreenController { //implements Initializable {
                 } else if ( line.length () == 67 ) {
                     s4 = line.substring (66).trim ();
                     s5 = line.substring (66).trim ();
+                } else if ( line.length () <= 66 ) {
+                    s4 = "0";
+                    s5 = "0";
                 }
+
                 if ( (s1.contains ("BIB")) || (s1.contains ("ENDBIB")) || (s1.
                         contains ("COMMON")) ||
                         (s1.contains ("ENDCOMMON")) || (s1.contains (
@@ -5335,10 +5349,10 @@ public class MainScreenController { //implements Initializable {
             }
             fixTreeList (rowNumber);
             BLoadOldFile = true;
-            br.close ();
             editTable.refresh ();
-            //setDefaultDirExt (DICTPathDir);
             isOrdered = false;
+            bLoadNew = true;
+            br.close ();
         } catch (Exception e) {
             System.out.println (" We found an error to read the file " +
                     fName);
@@ -5346,7 +5360,6 @@ public class MainScreenController { //implements Initializable {
             try {
                 brW.write ("Error in reading and parsing the file-> " + fName +
                         "in " + brW);
-
             } catch (IOException ex) {
                 Logger.getLogger (MainScreenController.class
                         .getName ()).log (

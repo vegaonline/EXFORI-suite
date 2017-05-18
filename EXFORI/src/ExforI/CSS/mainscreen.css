@@ -1,14 +1,19 @@
 /*
  * Empty Stylesheet file.
  */
-
 .mainFxmlClass {
     .topMenuPane *.split-pane-divider {
         -fx-padding: 0 1 0 1;
     }
 }
+.noheader .column-header-background {
+   -fx-max-height: 0;
+   -fx-pref-height: 0;
+   -fx-min-height: 0;
+}
 .hideColumnHeader { 
-    visibility: hidden; -fx-padding: -1em;
+    visibility: hidden; 
+    -fx-padding: -2em;
 }
 .ttip{
     -fx-max-width:50;
@@ -58,7 +63,6 @@
 .pane{
     -fx-background-color: #1569c7;
 }
-
 .progress-barA {
     -fx-indeterminate-bar-length: 60;
     -fx-indeterminate-bar-escape: true;
@@ -89,7 +93,6 @@
     -fx-background-insets: 0, 0 0 1 0, 1 1 2 1;
     -fx-background-radius: 4, 3, 2; /* 10, 9, 8 */
 }
-
 .green {
     -fx-background-color:
         linear-gradient(#f0ff35, #a9ff00),
