@@ -35,18 +35,32 @@ public class Reaction {
     private String chkSF3B = "PAI";
     private String chkSF3C = "SCT EL INL THS";
     private String chkSF3D = " F FUS";
+    private String chkSF3E = "ELEM MASS ELEM/MASS";
     String sFinal;
     boolean parenOK = true;
     boolean commaOK = true;
+    boolean SF1Wrong = false;
+    boolean SF2Wrong = false;
+    boolean SF3Wrong = false;
+    boolean SF4Wrong = false;
+    boolean SF5Wrong = false;
+    boolean SF6Wrong = false;
+    boolean SF7Wrong = false;
+    boolean SF8Wrong = false;
+    boolean SF9Wrong = false;
 
     // constructor for the editing
-    public static void Reaction(int lNo,
+    public static void Reaction(libList lListIN, int lNo,
             String s1, String s2, String s3, String s4,
-            String s5, String s6, String s7, String s8, String s9) {
+            String s5, String s6, String s7, String s8, String s9,
+            boolean newExfor) {
         String temp;
 
         Reaction react = new Reaction ();
 
+        react.resetBoolean ();
+
+        react.lList = lListIN;
         react.lineNo = lNo;
         react.SF1 = new SimpleStringProperty (s1);
         react.SF2 = new SimpleStringProperty (s2);
@@ -57,7 +71,8 @@ public class Reaction {
         react.SF7 = new SimpleStringProperty (s7);
         react.SF8 = new SimpleStringProperty (s8);
         react.SF9 = new SimpleStringProperty (s9);
-        temp = react.doFormReaction (); // make reaction grammer;
+        temp = react.doFormReaction (newExfor); // make reaction grammer;
+        System.out.println ("Reaction made in Reaction class->" + temp);
         react.reactionStr.add (temp);
     }
 
@@ -184,31 +199,114 @@ public class Reaction {
     }
 
     // construct the full i-th reaction 
-    public String doFormReaction() {
+    public String doFormReaction(boolean willNotTest) {
         String sReac;
 
         sReac = "(";
-        sReac += SF1;
+        sReac += SF1.get ();
         sReac += "(";
-        testSF2 (); // tests SF2
-        sReac += SF2;
-        testSF3 ();    // tests SF3
-        sReac += SF3;
+        if ( !willNotTest ) {
+            testSF2 ();   // tests SF2
+        }
+        sReac += SF2.get () + ",";
+        if ( !willNotTest ) {
+            testSF3 ();    // tests SF3
+        }
+        sReac += SF3.get () + ")";
 
+        testSF4 ();  // tests SF4
+        sReac += SF4.get () + ",";
+
+        testSF5();
+        
+        
         return sReac;
     }
 
     public void testSF2() {
-        for ( Object cue : lList.d33SF2List ) {
-            if ( cue.toString ().contains ((CharSequence) SF2.get ()) ) {
-                System.out.println ("matching---->" + cue + "<---->" + SF2);
-            } else {
+        for ( Object cue2 : lList.d33SF2List ) {
+            if ( !cue2.toString ().contains ((CharSequence) SF2.get ()) ) {
                 SF2.set ("");
             }
         }
     }
 
     public void testSF3() {
+        for ( Object cue3 : lList.d33SF3List ) {
+            if ( !cue3.toString ().contains ((CharSequence) SF3.get ()) ) {
+                SF3.set ("");
+            }
+        }
+    }
 
+    public void testSF4() {
+        // I am now pending SEQ for SF% issue for heaviest element for SF4
+        boolean isReso = false;
+        boolean isNuclide = false;
+        boolean isVariable = false;
+
+        String SF4Local = SF4.get ();
+        for ( Object cue4 : lList.mixedSF4List ) {
+            String cue4S = cue4.toString ();
+            if ( cue4S.contains (SF4Local) ) {
+                if ( cue4S.substring (39, 40).contains (".") ) {
+                    isReso = true;
+                }
+            }
+        }
+        for ( Object cue4 : lList.targetNList ) {
+            String cue4S = cue4.toString ();
+            if ( cue4S.contains (SF4Local) ) {
+                isNuclide = true;
+            }
+        }
+
+        if ( chkSF3E.contains (SF4Local) ) {
+            isVariable = true;
+        }
+
+        if ( isReso ||
+                (chkSF3A.contains (SF3.get ())) ) {
+            SF4.set ("");
+        }
+
+        if ( chkSF3D.contains (SF3.get ()) ) {
+            if ( !isNuclide || !isVariable ) {
+                SF4.set ("");
+            }
+        }
+        if ( chkSF3C.contains (SF3.get ()) ) {
+            SF4.set (SF1.get ());
+        }
+        if ( chkSF3B.contains (SF3.get ()) ) {
+            SF4.set (SF1.get ());
+        }
+        if ( SF3.get ().contains ("X") ) {
+            if (isNuclide||isVariable){
+                SF4Wrong=false;
+            }else{
+                SF4Wrong=true;
+            }
+        }
+    }
+    
+    private void testSF5(){
+        
+    }
+    
+    private void testSF6(){
+        
+    }
+
+    public void resetBoolean() {
+        SF1Wrong = false;
+        SF2Wrong = false;
+        SF3Wrong = false;
+        SF4Wrong = false;
+        SF5Wrong = false;
+        SF6Wrong = false;
+        SF7Wrong = false;
+        SF8Wrong = false;
+        SF9Wrong = false;
     }
 }

@@ -97,7 +97,7 @@ public class MainScreenController { //implements Initializable {
     public String entryNum = "";
     private Boolean fNameSet = false;
     private Boolean BLoadOldFile = false;
-    private Boolean bLoadNew = false;
+    private Boolean bNewExfor = false;
     private String bibI = null;
     private String bibCont = null;
     private int lineN = 1;
@@ -153,6 +153,7 @@ public class MainScreenController { //implements Initializable {
     private boolean append;
     private int theNDX = 0;
     private boolean isSelect = false;
+    private boolean isReacEdited = false;
 
     private ScrollPane sp1 = new ScrollPane ();
     private HBox masterHB = new HBox ();
@@ -627,7 +628,7 @@ public class MainScreenController { //implements Initializable {
             str1 = entryNum;
 
             headStyle ();
-            if ( !isOrdered && !bLoadNew ) {
+            if ( !isOrdered && !bNewExfor ) {
                 lastEntVal = myDataN + 1;
             } else {
                 lastEntVal = myDataN;
@@ -3341,7 +3342,9 @@ public class MainScreenController { //implements Initializable {
 
         if ( act.contains ("Add") ) {
             getTxtData = "";
+            isReacEdited = false;
         } else {
+            isReacEdited = true;
             for ( int ii = 0; ii < tmpRICnt; ii++ ) {
                 getTxtData
                         += myData.get (ri + ii).getContentTxt ().toString () +
@@ -3494,6 +3497,16 @@ public class MainScreenController { //implements Initializable {
             if ( act.contains ("Edit") ) {
                 tf.setText (getTxtData);
             }
+            entryChoice (lList.mixedSF1List, targetNCB);      // SF1
+            entryChoice (lList.mixedSF2List, incPCB);         // SF2
+            entryChoice (lList.mixedSF3List, procCB);         // SF3        
+            entryChoice (lList.mixedSF4List, prodCB);         // SF4
+            entryChoice (lList.branchList, branchCB);         // SF5
+            entryChoice (lList.paramSF6List, paramSF6CB);     // SF6
+            entryChoice (lList.paramSF7List, paramSF7CB);     // SF7
+            entryChoice (lList.modifierList, modifierCB);     // SF8
+            entryChoice (lList.dataTypeList, dataTypeCB);     // SF9
+
             myDialogScene = new Scene (vb11, 800, 300);
             myDialogScene.getStylesheets ().add (getClass ().getResource (
                     "CSS/mainscreen.css").toExternalForm ());
@@ -3530,7 +3543,7 @@ public class MainScreenController { //implements Initializable {
                         fixGet (modifierCB.getValue ()) : "";      // SF8
                 String s9 = (!dataTypeCB.getValue ().isEmpty ()) ? exforUtil.
                         fixGet (dataTypeCB.getValue ()) : "";      // SF9
-                Reaction.Reaction (ri, s1, s2, s3, s4, s5, s6, s7, s8, s9);
+                Reaction.Reaction (lList, ri, s1, s2, s3, s4, s5, s6, s7, s8, s9, bNewExfor);
 
                 tmpA = "(" + s1;
                 tmpA += "(" + s2;
@@ -3570,7 +3583,7 @@ public class MainScreenController { //implements Initializable {
                 reacStrLen = parseStr.split ("\\s+");
                 //(demoStr1.split (" ");
 
-                if ( !isSelect ) {
+                if ( !isSelect && !isReacEdited ) {
                     popupMsg.warnBox ("Please press \"Select\" first",
                             "Attention! Select first");
                 } else if ( tf.getText ().isEmpty () ) {
@@ -4837,7 +4850,7 @@ public class MainScreenController { //implements Initializable {
 
     private void manageTables() {
         matrixData.getStylesheets ().add (getClass ().getResource (
-                "CSS/mainscreen.css").toExternalForm ());        
+                "CSS/mainscreen.css").toExternalForm ());
         matrixData.setEditable (true);
         matrixData.setVisible (true);
         matrixData.getSelectionModel ().setCellSelectionEnabled (true);
@@ -4851,7 +4864,7 @@ public class MainScreenController { //implements Initializable {
         TableUtils.doCopyPasteHandler (matrixData, matData);
 
         editTable.getStylesheets ().add (getClass ().getResource (
-                "CSS/mainscreen.css").toExternalForm ());        
+                "CSS/mainscreen.css").toExternalForm ());
         bibHead.getStyleClass ().add ("bibHeadStyle1");
         bibPtr.getStyleClass ().add ("bibTextStyle");
         bibText.getStyleClass ().add ("bibTextStyle");
@@ -5056,21 +5069,13 @@ public class MainScreenController { //implements Initializable {
         entryChoice (lList.methodList, methodCB);  // Methods
 
         entryChoice (lList.mixedSF1List, targetNCB);  // for nuclide and compound
-
         entryChoice (lList.mixedSF2List, incPCB);  // in place of only IncP
-
         entryChoice (lList.mixedSF3List, procCB);  // in place of only procList
-
         entryChoice (lList.mixedSF4List, prodCB);  // in place of prodList
-
         entryChoice (lList.branchList, branchCB);
-
         entryChoice (lList.paramSF6List, paramSF6CB);
-
         entryChoice (lList.paramSF7List, paramSF7CB);
-
         entryChoice (lList.modifierList, modifierCB);
-
         entryChoice (lList.dataTypeList, dataTypeCB);
 
         entryChoice (lList.statusList, statusCB);
@@ -5078,7 +5083,6 @@ public class MainScreenController { //implements Initializable {
         entryChoice (lList.addlResultList, addlResultCB);
 
         entryChoice (lList.dataHeadingList, dataHeadingCB);
-
         entryChoice (lList.dataUnitsList, dataUnitsCB);
 
         entryChoice (lList.monitRefList, monitRefCB);
@@ -5351,7 +5355,7 @@ public class MainScreenController { //implements Initializable {
             BLoadOldFile = true;
             editTable.refresh ();
             isOrdered = false;
-            bLoadNew = true;
+            bNewExfor = true;
             br.close ();
         } catch (Exception e) {
             System.out.println (" We found an error to read the file " +

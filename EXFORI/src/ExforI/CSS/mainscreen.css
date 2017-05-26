@@ -32,19 +32,19 @@
 .bibHeadStyle1{
     -fx-alignment: CENTER-LEFT;
     -fx-font-family: monospace; 
-    -fx-font-size: 12px;   
+    -fx-font-size: 10px;   
     -fx-text-fill:#000000;
 }
 .bibHeadStyle2{
     -fx-alignment: CENTER-LEFT;
     -fx-font-family: monospace; 
-    -fx-font-size: 12px;   
+    -fx-font-size: 10px;   
     -fx-text-fill:seagreen;
 }
 .bibTextStyle{
     -fx-alignment: CENTER-LEFT;
     -fx-font-family: monospace; 
-    -fx-font-size: 12px;    
+    -fx-font-size: 10px;    
     -fx-text-fill:#000000;  /*seagreen;*/
 }
 .bibLinesStyle{
@@ -57,7 +57,7 @@
 .table-row-cell:selected.table-cell{
     -fx-alignment: CENTER-LEFT;
     -fx-font-family: monospace; 
-    -fx-font-size: 12px;   
+    -fx-font-size: 10px;   
     -fx-text-fill:seagreen;
 }
 .pane{

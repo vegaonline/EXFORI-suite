@@ -227,6 +227,10 @@ public class libList<T> {
                     } else {
                         line = line.substring (col);
                     }
+                    if ( line.substring (0, 11).trim ().length () == 1 && line.
+                            substring (0, 11).trim ().contains ("0") ) {
+                        continue;
+                    }
 
                     switch (FNM) {
                         case "3":
@@ -301,7 +305,8 @@ public class libList<T> {
                             lx = l1 + "  " + l2;
                             break;
                         case "33":
-                            lx = line.substring (0, 6) + "  " + line.substring (45, 55);
+                            lx = line.substring (0, 6).trim () + " -> " + line.
+                                    substring (46, 90).trim ();
                             if ( line.substring (43, 44).contains ("2") ) { // checking SF2 flag
                                 l1 = line.substring (0, 6);
                                 l2 = line.substring (40, 96);
@@ -343,7 +348,9 @@ public class libList<T> {
                         case "236":
                             l1 = line.substring (0, line.indexOf (" "));
                             l2 = line.substring (31, 40);
+                            l3 = line.substring (39, 40).trim ();
                             lx = line.substring (0, 55).trim ();
+
                             break;
                     }
                     list.add (lx);
@@ -426,6 +433,7 @@ public class libList<T> {
         mixedSF4List.addAll (prodList);             // d236 -> SF4
         mixedSF4List.addAll (incPList);             // d33  -> SF4
         mixedSF4List.addAll (targetNList);          // d227 -> SF4    
+
     }
 
     /*
@@ -452,11 +460,11 @@ public class libList<T> {
         compoundNucArr = null;
         mixedSF1List = null;
         mixedSF2List = null;
+        mixedSF3List = null;
+        mixedSF4List = null;
         incPList = null;
         procList = null;
-        mixedSF3List = null;
         prodList = null;
-        mixedSF4List = null;
         branchList = null;
         paramSF6List = null;
         paramSF7List = null;
