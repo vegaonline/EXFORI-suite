@@ -48,9 +48,10 @@ public class Reaction {
     boolean SF7Wrong = false;
     boolean SF8Wrong = false;
     boolean SF9Wrong = false;
+    boolean reacWrong = false;
 
     // constructor for the editing
-    public static void Reaction(libList lListIN, int lNo,
+    public static String Reaction(libList lListIN, int lNo,
             String s1, String s2, String s3, String s4,
             String s5, String s6, String s7, String s8, String s9,
             boolean newExfor) {
@@ -72,8 +73,8 @@ public class Reaction {
         react.SF8 = new SimpleStringProperty (s8);
         react.SF9 = new SimpleStringProperty (s9);
         temp = react.doFormReaction (newExfor); // make reaction grammer;
-        System.out.println ("Reaction made in Reaction class->" + temp);
         react.reactionStr.add (temp);
+        return temp;
     }
 
     //constructor for the checker
@@ -217,9 +218,38 @@ public class Reaction {
         testSF4 ();  // tests SF4
         sReac += SF4.get () + ",";
 
-        testSF5();
+        if ( !SF5.get ().isEmpty () ) {
+            testSF5 ();
+            sReac += SF5.get () + ",";
+        }
+
+        testSF6 ();
+        sReac += SF6.get ();
+
+        if ( !SF7.get ().isEmpty () ) {
+            testSF7 ();
+            sReac += "," + SF7.get ();
+        }
+
+        if ( !SF8.get ().isEmpty () ) {
+            testSF8 ();
+            sReac += "," + SF8.get ();
+        }
+
+        if ( !SF9.get ().isEmpty () ) {
+            testSF9 ();
+            sReac += "," + SF9.get ();
+        }
+        sReac += ")";
+
+        reacWrong
+                = (!parenOK || !commaOK || !SF1Wrong || !SF2Wrong || !SF3Wrong ||
+                !SF4Wrong || !SF5Wrong || !SF6Wrong || !SF7Wrong || !SF8Wrong ||
+                !SF9Wrong) ? true : false;
+
+        sReac = checkblankComma (sReac);
         
-        
+
         return sReac;
     }
 
@@ -249,7 +279,8 @@ public class Reaction {
         for ( Object cue4 : lList.mixedSF4List ) {
             String cue4S = cue4.toString ();
             if ( cue4S.contains (SF4Local) ) {
-                if ( cue4S.substring (39, 40).contains (".") ) {
+                if ( cue4S.length () > 41 && cue4S.substring (39, 40).contains (
+                        ".") ) {
                     isReso = true;
                 }
             }
@@ -282,20 +313,50 @@ public class Reaction {
             SF4.set (SF1.get ());
         }
         if ( SF3.get ().contains ("X") ) {
-            if (isNuclide||isVariable){
-                SF4Wrong=false;
-            }else{
-                SF4Wrong=true;
+            if ( isNuclide || isVariable ) {
+                SF4Wrong = false;
+            } else {
+                SF4Wrong = true;
             }
         }
     }
-    
-    private void testSF5(){
-        
+
+    public void testSF5() {
+
     }
-    
-    private void testSF6(){
-        
+
+    public void testSF6() {
+        if ( SF6.get ().isEmpty () ) {
+            SF6Wrong = true;
+        }
+    }
+
+    public void testSF7() {
+        boolean isPartSF7 = false;
+        for ( Object cue4 : lList.d33SF7List ) {
+            if ( cue4.toString ().contains (SF4.get ()) ) {
+                isPartSF7 = true;
+            }
+        }
+        // confused about RSD. if SF7 tag for particle then compulsorily RSD?
+    }
+
+    public void testSF8() {
+
+    }
+
+    public void testSF9() {
+
+    }
+
+    public String checkblankComma(String sOut) {
+        String temp = "";
+        String key = SF6.get ();
+        int nKey = sOut.indexOf (key);
+        temp = sOut.substring (0, nKey);// +","+sOut.substring (nKey);
+        temp += ",";
+        temp += sOut.substring (nKey);
+        return temp;
     }
 
     public void resetBoolean() {

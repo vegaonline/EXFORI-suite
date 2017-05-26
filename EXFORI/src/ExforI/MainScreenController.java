@@ -3543,19 +3543,8 @@ public class MainScreenController { //implements Initializable {
                         fixGet (modifierCB.getValue ()) : "";      // SF8
                 String s9 = (!dataTypeCB.getValue ().isEmpty ()) ? exforUtil.
                         fixGet (dataTypeCB.getValue ()) : "";      // SF9
-                Reaction.Reaction (lList, ri, s1, s2, s3, s4, s5, s6, s7, s8, s9, bNewExfor);
+                tmpA = Reaction.Reaction (lList, ri, s1, s2, s3, s4, s5, s6, s7, s8, s9, bNewExfor);                
 
-                tmpA = "(" + s1;
-                tmpA += "(" + s2;
-                tmpA += "," + s3;
-                tmpA += ")" + s4;
-                tmpA += "," + s5;
-                tmpA += "," + s6;
-
-                tmpA += (!s7.isEmpty ()) ? "," + s7 : "";
-                tmpA += (!s8.isEmpty ()) ? "," + s8 : "";
-                tmpA += (!s9.isEmpty ()) ? "," + s9 : "";
-                tmpA += ")";
                 demoStr1 = Integer.toString (tmpA.length ()) + " ";
 
                 if ( !putTxt.endsWith (", ") &&

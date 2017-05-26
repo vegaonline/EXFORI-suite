@@ -350,7 +350,6 @@ public class selfChecker<T> {
     private boolean doCheckReaction(int ii, ObservableList<editableData> myData) {
         boolean isOK = true;
         String s3 = "";
-
         
         // check pointer for multiline
         int jCnt = 1;

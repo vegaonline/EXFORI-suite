@@ -99,6 +99,8 @@ public class libList<T> {
             = FXCollections.observableArrayList ();
     public ObservableList<String> d33SF3List
             = FXCollections.observableArrayList ();
+    public ObservableList<String> d33SF7List
+            = FXCollections.observableArrayList ();
     public ObservableList<String> dataHeadingList
             = FXCollections.observableArrayList ();
     public ObservableList<String> dataHeadFullList
@@ -318,6 +320,12 @@ public class libList<T> {
                                 l2 = line.substring (40, 96);
                                 String lx2 = l1 + "  " + l2;
                                 d33SF3List.add (lx2);
+                            }
+                            if ( line.substring (43, 44).contains ("7") ) { // checking SF7 flag
+                                l1 = line.substring (0, 6);
+                                l2 = line.substring (40, 96);
+                                String lx3 = l1 + "  " + l2;
+                                d33SF7List.add (lx3);
                             }
                             break;
                         case "31":
