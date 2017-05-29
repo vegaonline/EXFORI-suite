@@ -10,7 +10,7 @@ package ExforI;
 import java.io.*;
 import java.util.*;
 import java.util.logging.*;
-import javafx.collections.ObservableList;
+import javafx.collections.*;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
@@ -26,6 +26,8 @@ public class selfChecker<T> {
     // from other class
     libList lList = new libList ();
 
+    private final ObservableList<Reaction> reactList = FXCollections.
+            observableArrayList ();
 
     JFileChooser fileChooser = new JFileChooser ();
     File recordsDir;
@@ -57,7 +59,8 @@ public class selfChecker<T> {
 
     @SuppressWarnings ("unchecked")
     public static void selfChecker(String entryNum, String fName,
-            ObservableList<editableData> myData, BufferedWriter brLog) throws InterruptedException {
+            ObservableList<editableData> myData, BufferedWriter brLog) throws
+            InterruptedException {
 
         selfChecker sc = new selfChecker ();
         boolean isEntry = true;
@@ -297,9 +300,9 @@ public class selfChecker<T> {
         String SF3 = s3.substring (s3.indexOf (",") + 1, s3.indexOf (")"));
         s3 = s3.substring (s3.indexOf (")"));
         String SF4 = s3.substring (s3.indexOf (")") + 1, s3.indexOf (","));
-        s3 = s3.substring (s3.indexOf (",")+1);
-        System.out.println("s3-->"+s3);
-        String SF5 =s3.substring (0, s3.indexOf (","));
+        s3 = s3.substring (s3.indexOf (",") + 1);
+        System.out.println ("s3-->" + s3);
+        String SF5 = s3.substring (0, s3.indexOf (","));
         String SF6 = "";
         String SF7 = "";
         String SF8 = "";
@@ -350,10 +353,10 @@ public class selfChecker<T> {
     private boolean doCheckReaction(int ii, ObservableList<editableData> myData) {
         boolean isOK = true;
         String s3 = "";
-        
+
         // check pointer for multiline
-        int jCnt = 1;
-        int jj1 = ii + 1;
+        int jCnt = 1;      // Total number of reaction with pointer, if any
+        int jj1 = ii + 1;   // row number of this start reaction
 
         while (myData.get (jj1).getBibItemName ().isEmpty ()) {
             ++jCnt;
@@ -383,7 +386,6 @@ public class selfChecker<T> {
         for ( int i1 = 0; i1 < jCnt; i1++ ) {
             jj1 = ii + i1;
             s3 = myData.get (jj1).getContentTxt ().trim ();
-            
 
             // check parenthesis
             if ( s3.charAt (0) != '(' ) {
@@ -407,9 +409,22 @@ public class selfChecker<T> {
 
         }
 
-        // check grammer for reaction
-        CheckReactGrammer (s3);
-        return isOK;
+        // make reaction from this string 
+        for ( int i1 = 0; i1 < jCnt; i1++ ) {
+            int j = ii + i1;
+            String sIN = myData.get (j).getContentTxt ();
+            Reaction rei = Reaction.Reaction (j, sIN);
+            reactList.add (i1, rei);
+            System.out.println(reactList.get (i1).)
+        }
+
+
+
+        // check grammer for reaction        
+        //CheckReactGrammer (s3);
+        {
+            return isOK;
+        }
     }
 
     /**
