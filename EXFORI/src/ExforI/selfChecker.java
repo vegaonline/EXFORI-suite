@@ -414,8 +414,7 @@ public class selfChecker<T> {
             int j = ii + i1;
             String sIN = myData.get (j).getContentTxt ();
             Reaction rei = Reaction.Reaction (j, sIN);
-            reactList.add (i1, rei);
-            System.out.println(reactList.get (i1).)
+            reactList.add (i1, rei);            
         }
 
 
