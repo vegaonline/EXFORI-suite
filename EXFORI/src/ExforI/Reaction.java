@@ -12,7 +12,6 @@ import javafx.beans.property.*;
 import javafx.collections.*;
 import javax.swing.JFileChooser;
 
-
 /**
  * This contains all the information related to reaction / monitor
  *
@@ -398,11 +397,11 @@ public class Reaction {
                         itIs = true;
                         //return itIs;
                     }
-                    if ( !itIs && itIsOld ) {
-                       
-                    }
-                    itIsOld = itIs;
                 }
+                if (i1>0 && (itIsOld!=itIs)){
+                    
+                }
+                itIsOld = itIs;
             }
         } else {
             for ( Object cue9 : lList.dataTypeList ) {
