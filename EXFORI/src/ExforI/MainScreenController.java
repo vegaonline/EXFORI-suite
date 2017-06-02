@@ -876,9 +876,7 @@ public class MainScreenController { //implements Initializable {
      * @param event
      */
     @FXML
-    private void doSelfCheck(ActionEvent event) throws InterruptedException,
-            InterruptedException, InterruptedException, InterruptedException,
-            InterruptedException, InterruptedException {
+    private void doSelfCheck(ActionEvent event) throws InterruptedException, IOException {
         if ( !entryNum.isEmpty () &&
                 !fName.isEmpty () &&
                 !myData.isEmpty () &&
@@ -3543,7 +3541,8 @@ public class MainScreenController { //implements Initializable {
                         fixGet (modifierCB.getValue ()) : "";      // SF8
                 String s9 = (!dataTypeCB.getValue ().isEmpty ()) ? exforUtil.
                         fixGet (dataTypeCB.getValue ()) : "";      // SF9
-                tmpA = Reaction.Reaction (lList, ri, s1, s2, s3, s4, s5, s6, s7, s8, s9, bNewExfor);                
+                tmpA = Reaction.Reaction (lList, ri, s1, s2, s3, s4, s5, s6, s7,
+                        s8, s9, bNewExfor);
 
                 demoStr1 = Integer.toString (tmpA.length ()) + " ";
 
@@ -5239,7 +5238,7 @@ public class MainScreenController { //implements Initializable {
             //br = new BufferedReader (new FileReader (fName));
             BufferedReader br = new BufferedReader (new FileReader (fName));
 
-            brW.write ("Trying to load an Existing file->" + fName);
+            brW.write ("Trying to load an Existing file->" + fName + "\n");
             //String line;
             myDataN = 0;
             bibEntNum = 0;
@@ -5346,13 +5345,14 @@ public class MainScreenController { //implements Initializable {
             isOrdered = false;
             bNewExfor = true;
             br.close ();
+            brW.write (fName + " loaded successfully" + "\n");
         } catch (Exception e) {
             System.out.println (" We found an error to read the file " +
                     fName);
             System.out.println (" Please Check...........");
             try {
                 brW.write ("Error in reading and parsing the file-> " + fName +
-                        "in " + brW);
+                        "\n");
             } catch (IOException ex) {
                 Logger.getLogger (MainScreenController.class
                         .getName ()).log (

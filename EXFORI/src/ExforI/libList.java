@@ -315,13 +315,13 @@ public class libList<T> {
                                 String lx1 = l1 + "  " + l2;
                                 d33SF2List.add (lx1);
                             }
-                            if ( line.substring (43, 44).contains ("3") ) { // checking SF3 flag
+                            if ( line.substring (44, 45).contains ("3") ) { // checking SF3 flag
                                 l1 = line.substring (0, 6);
                                 l2 = line.substring (40, 96);
                                 String lx2 = l1 + "  " + l2;
                                 d33SF3List.add (lx2);
                             }
-                            if ( line.substring (43, 44).contains ("7") ) { // checking SF7 flag
+                            if ( line.substring (45, 46).contains ("7") ) { // checking SF7 flag
                                 l1 = line.substring (0, 6);
                                 l2 = line.substring (40, 96);
                                 String lx3 = l1 + "  " + l2;

@@ -60,7 +60,7 @@ public class selfChecker<T> {
     @SuppressWarnings ("unchecked")
     public static void selfChecker(String entryNum, String fName,
             ObservableList<editableData> myData, BufferedWriter brLog) throws
-            InterruptedException {
+            InterruptedException, IOException {
 
         selfChecker sc = new selfChecker ();
         boolean isEntry = true;
@@ -210,7 +210,7 @@ public class selfChecker<T> {
             }
 
             if ( temp.contains ("REACTION") || temp.contains ("MONITOR") ) {
-                if ( !sc.doCheckReaction (ii, myData) ) {
+                if ( !sc.doCheckReaction (ii, myData, brLog) ) {
                     sc.notOK = true;
                 }
             }
@@ -350,9 +350,12 @@ public class selfChecker<T> {
      * @param myData
      * @return
      */
-    private boolean doCheckReaction(int ii, ObservableList<editableData> myData) {
+    private boolean doCheckReaction(int ii, ObservableList<editableData> myData,
+            BufferedWriter brLog) throws IOException {
         boolean isOK = true;
         String s3 = "";
+
+        brLog.append (">> Checking Reaction at line " + ii + "\n");
 
         // check pointer for multiline
         int jCnt = 1;      // Total number of reaction with pointer, if any
@@ -413,11 +416,10 @@ public class selfChecker<T> {
         for ( int i1 = 0; i1 < jCnt; i1++ ) {
             int j = ii + i1;
             String sIN = myData.get (j).getContentTxt ();
-            Reaction rei = Reaction.Reaction (j, sIN);
-            reactList.add (i1, rei);            
+            brLog.append (sIN + "\n");
+            Reaction rei = Reaction.Reaction (lList, j, sIN, brLog);            
+            reactList.add (i1, rei);
         }
-
-
 
         // check grammer for reaction        
         //CheckReactGrammer (s3);

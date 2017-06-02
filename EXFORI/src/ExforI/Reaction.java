@@ -19,7 +19,7 @@ import javax.swing.JFileChooser;
  */
 public class Reaction {
 
-    libList lList = new libList ();
+    //  libList lList = new libList ();
     JFileChooser fileChooser = new JFileChooser ();
     File recordsDir;
     BufferedWriter brW;
@@ -56,7 +56,7 @@ public class Reaction {
     boolean reacWrong = false;
 
     // constructor for the editing
-    public static String Reaction(libList lListIN, int lNo,
+    public static String Reaction(libList lList, int lNo,
             String s1, String s2, String s3, String s4,
             String s5, String s6, String s7, String s8, String s9,
             boolean newExfor) {
@@ -66,7 +66,7 @@ public class Reaction {
 
         react.resetBoolean ();
 
-        react.lList = lListIN;
+        //react.lList = lListIN;
         react.lineNo = lNo;
         react.SF1 = new SimpleStringProperty (s1);
         react.SF2 = new SimpleStringProperty (s2);
@@ -77,19 +77,20 @@ public class Reaction {
         react.SF7 = new SimpleStringProperty (s7);
         react.SF8 = new SimpleStringProperty (s8);
         react.SF9 = new SimpleStringProperty (s9);
-        temp = react.doFormReaction (newExfor); // make reaction grammer;
+        temp = react.doFormReaction (lList, newExfor); // make reaction grammer;
         react.reactionStr.add (temp);
         return temp;
     }
 
     //constructor for the checker
-    public static Reaction Reaction(int lNo, String sIN) {
+    public static Reaction Reaction(libList lList, int lNo, String sIN,
+            BufferedWriter brLog)
+            throws IOException {
         Reaction react = new Reaction ();
         react.lineNo = lNo;
         react.parenOK = (sIN.charAt (0) == '(') ? true : false;
         // sIN = sIN.substring (1);
-        react.decomposeString (sIN);
-
+        react.decomposeString (lList, sIN, brLog);
         return react;
     }
 
@@ -205,44 +206,44 @@ public class Reaction {
     }
 
     // construct the full i-th reaction 
-    public String doFormReaction(boolean willNotTest) {
+    public String doFormReaction(libList lList, boolean willNotTest) {
         String sReac;
 
         sReac = "(";
         sReac += SF1.get ();
         sReac += "(";
         if ( !willNotTest ) {
-            SF2Wrong = testSF2 ("");   // tests SF2
+            SF2Wrong = testSF2 (lList, "");   // tests SF2
         }
         sReac += SF2.get () + ",";
         if ( !willNotTest ) {
-            testSF3 ("");    // tests SF3
+            testSF3 (lList, "");    // tests SF3
         }
         sReac += SF3.get () + ")";
 
-        testSF4 ("");  // tests SF4
+        testSF4 (lList, "");  // tests SF4
         sReac += SF4.get () + ",";
 
         if ( !SF5.get ().isEmpty () ) {
-            testSF5 ("");
+            testSF5 (lList, "");
             sReac += SF5.get () + ",";
         }
 
-        testSF6 ();
+        testSF6 (lList);
         sReac += SF6.get ();
 
         if ( !SF7.get ().isEmpty () ) {
-            testSF7 ("");
+            testSF7 (lList, "");
             sReac += "," + SF7.get ();
         }
 
         if ( !SF8.get ().isEmpty () ) {
-            testSF8 ("");
+            testSF8 (lList, "");
             sReac += "," + SF8.get ();
         }
 
         if ( !SF9.get ().isEmpty () ) {
-            testSF9 ("");
+            testSF9 (lList, "");
             sReac += "," + SF9.get ();
         }
         sReac += ")";
@@ -257,36 +258,43 @@ public class Reaction {
         return sReac;
     }
 
-    public boolean testSF2(String sIN) {
-        boolean wrong = true;
-
+    public boolean testSF2(libList lList, String sIN) {
+        boolean isWrong = true;
         String chkIT = (sIN.isEmpty ()) ? SF2.get () : sIN;
-        for ( Object cue2 : lList.d33SF2List ) {
-            if ( cue2.toString ().contains (chkIT) ) {
-                wrong = false;
+        for ( Object cue2 : lList.mixedSF2List ) {
+            String tmp = (chkIT.length () < 7) ? 
+                    cue2.toString ().substring (0, 6).trim () :
+                    cue2.toString ().substring (0, 12).trim ();
+            if ( tmp.contains (chkIT) && (tmp.length () == chkIT.length ()) ) {
+                isWrong = false;
+                break;
             }
         }
-        if ( wrong && sIN.isEmpty () ) {
+        if ( isWrong && sIN.isEmpty () ) {
             SF2.set ("");
         }
-        return wrong;
+        return isWrong;
     }
 
-    public boolean testSF3(String sIN) {
-        boolean Wrong = true;
+    public boolean testSF3(libList lList, String sIN) {
+        boolean isWrong = true;
         String chkIT = (sIN.isEmpty ()) ? SF3.get () : sIN;
-        for ( Object cue3 : lList.d33SF3List ) {
-            if ( cue3.toString ().contains (chkIT) ) {
-                Wrong = false;
+        for ( Object cue3 : lList.mixedSF3List ) {
+            String tmp = (chkIT.length () < 7) ?
+                    cue3.toString ().substring (0, 6).trim () :
+                    cue3.toString ().substring (0, 12).trim () ;            
+            if ( tmp.contains (chkIT) && (tmp.length () == chkIT.length ()) ) {
+                isWrong = false;
+                break;
             }
         }
-        if ( Wrong && sIN.isEmpty () ) {
+        if ( isWrong && sIN.isEmpty () ) {
             SF3.set ("");
         }
-        return Wrong;
+        return isWrong;
     }
 
-    public boolean testSF4(String sIN) {
+    public boolean testSF4(libList lList, String sIN) {
         // I am now pending SEQ for SF% issue for heaviest element for SF4
         boolean isReso = false;
         boolean isNuclide = false;
@@ -305,13 +313,17 @@ public class Reaction {
                 if ( cue4S.length () > 41 && cue4S.substring (39, 40).contains (
                         ".") ) {
                     isReso = true;
+                    break;
                 }
             }
         }
         for ( Object cue4 : lList.targetNList ) {
-            String cue4S = cue4.toString ();
-            if ( cue4S.contains (SF4Local) ) {
+            String tmp = (SF4Local.length () <13) ?
+                    cue4.toString ().substring (0, 12).trim () :
+                    cue4.toString ();
+            if ( tmp.contains (SF4Local)  && (tmp.length () == SF4Local.length ())) {
                 isNuclide = true;
+                break;
             }
         }
 
@@ -345,17 +357,17 @@ public class Reaction {
         return wrong;
     }
 
-    public void testSF5(String sIN) {
+    public void testSF5(libList lList, String sIN) {
 
     }
 
-    public void testSF6() {
+    public void testSF6(libList lList) {
         if ( SF6.get ().isEmpty () ) {
             SF6Wrong = true;
         }
     }
 
-    public boolean testSF7(String sIN) {
+    public boolean testSF7(libList lList, String sIN) {
         boolean isPartSF7 = false;
         String chkIT = (sIN.isEmpty ()) ? SF7.get () : sIN;
         for ( Object cue4 : lList.d33SF7List ) {
@@ -367,7 +379,7 @@ public class Reaction {
         return isPartSF7;
     }
 
-    public boolean testSF8(String sIN) {
+    public boolean testSF8(libList lList, String sIN) {
         boolean itIs = false;
         String chkIT = (sIN.isEmpty ()) ? SF8.get () : sIN;
         for ( Object cue8 : lList.modifierList ) {
@@ -379,7 +391,7 @@ public class Reaction {
         return itIs;
     }
 
-    public boolean testSF9(String sIN) {
+    public boolean testSF9(libList lList, String sIN) {
         boolean itIs = false;
         boolean itIsOld = false;
         String chkIT = (sIN.isEmpty ()) ? SF9.get () : sIN;
@@ -398,8 +410,8 @@ public class Reaction {
                         //return itIs;
                     }
                 }
-                if (i1>0 && (itIsOld!=itIs)){
-                    
+                if ( i1 > 0 && (itIsOld != itIs) ) {
+
                 }
                 itIsOld = itIs;
             }
@@ -437,9 +449,12 @@ public class Reaction {
     }
 
     // decompose a string into reaction components
-    public void decomposeString(String sIN) {
+    public void decomposeString(libList lList, String sIN, BufferedWriter brLog)
+            throws
+            IOException {
         String tmp;
         if ( sIN.isEmpty () ) {
+            brLog.append ("******  Reaction transferred to checker is NULL \n");
             return;
         }
         System.out.println ("original string at decompose->" + sIN);
@@ -449,32 +464,35 @@ public class Reaction {
 
         sIN = sIN.substring (sIN.indexOf ("(") + 1);       // (SF1(
         tmp = sIN.substring (0, sIN.indexOf (","));
-        SF2Wrong = testSF2 (tmp);
+        SF2Wrong = testSF2 (lList, tmp);
         if ( !SF2Wrong ) {
             SF2 = new SimpleStringProperty (tmp);        // (SF1(SF2
         } else {
+            brLog.append (" Check SF2 " + tmp + "\n");
             SF2 = new SimpleStringProperty ("");        // (SF1(SF2
         }
 
         sIN = sIN.substring (sIN.indexOf (",") + 1);       // (SF1(SF2, 
         tmp = sIN.substring (0, sIN.indexOf (")"));
-        SF3Wrong = testSF3 (tmp);
+        SF3Wrong = testSF3 (lList, tmp);
         if ( !SF3Wrong ) {
             if ( tmp.contains ("0-G-") ) {
                 tmp.replace ("0-G-0", "G");
             }
             SF3 = new SimpleStringProperty (tmp);        // (SF1(SF2, SF3
         } else {
+            brLog.append (" Check SF3 " + tmp + "\n");
             SF3 = new SimpleStringProperty ("");        // (SF1(SF2, SF3
         }
 
         sIN = sIN.substring (sIN.indexOf (")") + 1);       // (SF1(SF2, SF3)
         tmp = sIN.substring (0, sIN.indexOf (","));
         tmp = (tmp.isEmpty ()) ? "RESO" : tmp;
-        SF4Wrong = testSF4 (tmp);
+        SF4Wrong = testSF4 (lList, tmp);
         if ( !SF4Wrong ) {
             SF4 = new SimpleStringProperty (tmp);         // (SF1(SF2, SF3)SF4
         } else {
+            brLog.append (" Check SF4 " + tmp + "\n");
             SF4 = new SimpleStringProperty ("");         // (SF1(SF2, SF3)SF4
         }
 
@@ -485,28 +503,23 @@ public class Reaction {
 
         String[] QtyData = tmp.split (",");
         int llen = QtyData.length;
-        System.out.println ("sIN->" + sIN + " tmp->" + tmp);
-        System.out.println ("TEST---------->" + llen + " <->");
-        for ( int iii = 0; iii < llen; iii++ ) {
-            System.out.print (iii + "-" + QtyData[iii] + "< >");
-        }
-        System.out.println ("<---");
+      
 
         for ( int ix = 1; ix <= (llen - 1); ix++ ) {
             int iii = llen - ix;
             String tmpo = QtyData[iii];
             System.out.println ("-->" + iii + "  " + tmpo);
-            if ( testSF9 (tmpo) ) {
+            if ( testSF9 (lList, tmpo) ) {
                 SF9 = new SimpleStringProperty (tmpo);
             } else {
                 SF9 = new SimpleStringProperty ("");
             }
-            if ( testSF8 (tmpo) ) {
+            if ( testSF8 (lList, tmpo) ) {
                 SF8 = new SimpleStringProperty (tmpo);
             } else {
                 SF8 = new SimpleStringProperty ("");
             }
-            if ( testSF7 (tmpo) ) {
+            if ( testSF7 (lList, tmpo) ) {
                 SF7 = new SimpleStringProperty (tmpo);
             } else {
                 SF7 = new SimpleStringProperty ("");
