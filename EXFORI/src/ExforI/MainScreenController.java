@@ -575,6 +575,8 @@ public class MainScreenController { //implements Initializable {
     private MenuItem Janising;
     @FXML
     private MenuItem selfCheck;
+    @FXML
+    private MenuItem doCloseJob;
 
     public void setMyStage(Stage myStage) {
         this.myStage = myStage;
@@ -634,7 +636,6 @@ public class MainScreenController { //implements Initializable {
                 lastEntVal = myDataN;
             }
 
-            System.out.println (lastEntVal);
             for ( int ii = 0; ii < lastEntVal; ii++ ) {
                 String s1 = myData.get (ii).getBibItemName ().toString ();
                 String s2 = myData.get (ii).getPointerID ().toString ();
@@ -1066,6 +1067,23 @@ public class MainScreenController { //implements Initializable {
         trySaving (".exf");
     }
 
+    
+    // Close present EXF file
+    @FXML
+    private void doClose(ActionEvent event) {
+        trySaving(".exf");
+        try{
+            brW.close();
+            System.gc();
+        }catch(IOException ex){
+            Logger.getLogger (MainScreenController.class
+                    .getName ()).
+                    log (Level.SEVERE, null, ex);
+        }
+        timerAutoSave.cancel();
+    }
+    
+    
     @FXML
     private void doRunChex(ActionEvent event) throws IOException {
         String cmd1;
@@ -5373,4 +5391,5 @@ public class MainScreenController { //implements Initializable {
             fileChooser.setCurrentDirectory (recordsDir);
         }
     }
+
 }

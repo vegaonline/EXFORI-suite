@@ -214,44 +214,67 @@ public class Reaction {
         sReac += "(";
         if ( !willNotTest ) {
             SF2Wrong = testSF2 (lList, "");   // tests SF2
+            if ( SF2Wrong ) {
+                SF2.set ("");
+            }
         }
         sReac += SF2.get () + ",";
         if ( !willNotTest ) {
-            testSF3 (lList, "");    // tests SF3
+            SF3Wrong = testSF3 (lList, "");    // tests SF3
+            if ( SF3Wrong ) {
+                SF3.set ("");
+            }
         }
         sReac += SF3.get () + ")";
 
-        testSF4 (lList, "");  // tests SF4
+        SF4Wrong = testSF4 (lList, "");  // tests SF4
+        if ( SF4Wrong ) {
+            SF4.set ("");
+        }
         sReac += SF4.get () + ",";
 
         if ( !SF5.get ().isEmpty () ) {
-            testSF5 (lList, "");
+            SF5Wrong = testSF5 (lList, "");
+            if ( SF5Wrong ) {
+                SF5.set ("");
+            }
             sReac += SF5.get () + ",";
         }
 
-        testSF6 (lList);
+        SF6Wrong = testSF6 (lList, "");
+        if ( SF6Wrong ) {
+            SF6.set ("");
+        }
         sReac += SF6.get ();
 
         if ( !SF7.get ().isEmpty () ) {
-            testSF7 (lList, "");
+            SF7Wrong = testSF7 (lList, "");
+            if ( SF7Wrong ) {
+                SF7.set ("");
+            }
             sReac += "," + SF7.get ();
         }
 
         if ( !SF8.get ().isEmpty () ) {
-            testSF8 (lList, "");
+            SF8Wrong = testSF8 (lList, "");
+            if ( SF8Wrong ) {
+                SF8.set ("");
+            }
             sReac += "," + SF8.get ();
         }
 
         if ( !SF9.get ().isEmpty () ) {
-            testSF9 (lList, "");
+            SF9Wrong = testSF9 (lList, "");
+            if ( SF9Wrong ) {
+                SF9.set ("");
+            }
             sReac += "," + SF9.get ();
         }
         sReac += ")";
 
         reacWrong
-                = (!parenOK || !commaOK || !SF1Wrong || !SF2Wrong || !SF3Wrong ||
-                !SF4Wrong || !SF5Wrong || !SF6Wrong || !SF7Wrong || !SF8Wrong ||
-                !SF9Wrong) ? true : false;
+                = (!parenOK || !commaOK || SF1Wrong || SF2Wrong || SF3Wrong ||
+                SF4Wrong || SF6Wrong) ? true : false;
 
         sReac = checkblankComma (sReac);
 
@@ -260,36 +283,30 @@ public class Reaction {
 
     public boolean testSF2(libList lList, String sIN) {
         boolean isWrong = true;
+        SF2Wrong = true;
         String chkIT = (sIN.isEmpty ()) ? SF2.get () : sIN;
         for ( Object cue2 : lList.mixedSF2List ) {
-            String tmp = (chkIT.length () < 7) ? 
-                    cue2.toString ().substring (0, 6).trim () :
-                    cue2.toString ().substring (0, 12).trim ();
+            String tmp = (chkIT.length () < 7) ? cue2.toString ().substring (0,
+                    6).trim () : cue2.toString ().substring (0, 12).trim ();
             if ( tmp.contains (chkIT) && (tmp.length () == chkIT.length ()) ) {
                 isWrong = false;
                 break;
             }
-        }
-        if ( isWrong && sIN.isEmpty () ) {
-            SF2.set ("");
         }
         return isWrong;
     }
 
     public boolean testSF3(libList lList, String sIN) {
         boolean isWrong = true;
+        SF3Wrong = true;
         String chkIT = (sIN.isEmpty ()) ? SF3.get () : sIN;
         for ( Object cue3 : lList.mixedSF3List ) {
-            String tmp = (chkIT.length () < 7) ?
-                    cue3.toString ().substring (0, 6).trim () :
-                    cue3.toString ().substring (0, 12).trim () ;            
+            String tmp = (chkIT.length () < 7) ? cue3.toString ().substring (0,
+                    6).trim () : cue3.toString ().substring (0, 12).trim ();
             if ( tmp.contains (chkIT) && (tmp.length () == chkIT.length ()) ) {
                 isWrong = false;
                 break;
             }
-        }
-        if ( isWrong && sIN.isEmpty () ) {
-            SF3.set ("");
         }
         return isWrong;
     }
@@ -300,11 +317,20 @@ public class Reaction {
         boolean isNuclide = false;
         boolean isVariable = false;
         boolean wrong = true;
+        SF4Wrong = true;
 
         String SF4Local = (sIN.isEmpty ()) ? SF4.get () : sIN;
         if ( sIN.contains ("RESO") ) {
             wrong = false;
             return wrong;
+        }
+
+        for ( Object cue4 : lList.mixedSF4List ) {
+            String cue4S = cue4.toString ();
+            if ( cue4S.contains (SF4Local) ) {      //&& (cue4S.length () == SF4Local.length ()) ) {
+                wrong = false;
+                break;
+            }
         }
 
         for ( Object cue4 : lList.mixedSF4List ) {
@@ -318,10 +344,10 @@ public class Reaction {
             }
         }
         for ( Object cue4 : lList.targetNList ) {
-            String tmp = (SF4Local.length () <13) ?
-                    cue4.toString ().substring (0, 12).trim () :
-                    cue4.toString ();
-            if ( tmp.contains (SF4Local)  && (tmp.length () == SF4Local.length ())) {
+            String tmp = (SF4Local.length () < 13) ? cue4.toString ().
+                    substring (0, 12).trim () : cue4.toString ();
+            if ( tmp.contains (SF4Local) &&
+                    (tmp.length () == SF4Local.length ()) ) {
                 isNuclide = true;
                 break;
             }
@@ -331,69 +357,118 @@ public class Reaction {
             isVariable = true;
         }
 
-        if ( (isReso ||
-                (chkSF3A.contains (SF3.get ()))) && sIN.isEmpty () ) {
+        if ( (isReso || (chkSF3A.contains (SF3.get ()))) &&
+                sIN.isEmpty () && wrong ) {
             SF4.set ("");
         }
 
-        if ( chkSF3D.contains (SF3.get ()) && sIN.isEmpty () ) {
+        if ( chkSF3D.contains (SF3.get ()) && sIN.isEmpty () && wrong ) {
             if ( !isNuclide || !isVariable ) {
                 SF4.set ("");
             }
         }
-        if ( chkSF3C.contains (SF3.get ()) && sIN.isEmpty () ) {
-            SF4.set (SF1.get ());
+
+        if ( wrong && chkSF3C.contains (SF3.get ()) && SF4.get ().contains (SF1.
+                get ()) ) {
+            wrong = false;
         }
-        if ( chkSF3B.contains (SF3.get ()) && sIN.isEmpty () ) {
-            SF4.set (SF1.get ());
+        if ( wrong && chkSF3B.contains (SF3.get ()) && SF4.get ().contains (SF1.
+                get ()) ) {
+            wrong = false;
         }
+
+        if ( wrong && chkSF3C.contains (SF3.get ()) && sIN.isEmpty () ) {
+            SF4.set (SF1.get ());
+            wrong = false;
+        }
+        if ( wrong && chkSF3B.contains (SF3.get ()) && sIN.isEmpty () ) {
+            SF4.set (SF1.get ());
+            wrong = false;
+        }
+
         if ( SF3.get ().contains ("X") ) {
             if ( isNuclide || isVariable ) {
-                SF4Wrong = false;
+                wrong = false;
             } else {
-                SF4Wrong = true;
+                wrong = true;
             }
         }
         return wrong;
     }
 
-    public void testSF5(libList lList, String sIN) {
+    public boolean testSF5(libList lList, String sIN) {
+        boolean wrong = true;
+        SF5Wrong = true;
 
+        return wrong;
     }
 
-    public void testSF6(libList lList) {
-        if ( SF6.get ().isEmpty () ) {
-            SF6Wrong = true;
+    public boolean testSF6(libList lList, String sIN) {
+        boolean wrong = true;
+        SF6Wrong = true;
+
+        String chkIT = (sIN.isEmpty ()) ? SF6.get () : sIN;
+
+        for ( Object cue6 : lList.paramSF6List ) {
+            String tmp = cue6.toString ().substring (0, 4).trim ();
+            if ( tmp.contains (chkIT) ) {
+                wrong = false;
+                break;
+            }
         }
+
+        return wrong;
     }
 
     public boolean testSF7(libList lList, String sIN) {
-        boolean isPartSF7 = false;
-        String chkIT = (sIN.isEmpty ()) ? SF7.get () : sIN;
-        for ( Object cue4 : lList.d33SF7List ) {
-            if ( cue4.toString ().contains (chkIT) ) {
-                isPartSF7 = true;
+        boolean wrong = true;
+        SF7Wrong = true;
+        String[] sArr = {};
+
+        if ( sIN.contains ("/") ) {
+            sArr = sIN.split ("/");
+            System.out.println (sArr.length + " 0->" + sArr[0] + " 1->" +
+                    sArr[1]);
+        }
+        if ( sArr.length == 0 ) {
+            String chkIT = (sIN.isEmpty ()) ? SF7.get () : sIN;
+            for ( Object cue4 : lList.d33SF7List ) {
+                if ( cue4.toString ().contains (chkIT) ) {
+                    wrong = false;
+                }
+            }
+        } else {
+            for ( int ii = 0; ii < sArr.length; ii++ ) {
+                String chkIT = (sIN.isEmpty ()) ? SF7.get () : sIN;
+                for ( Object cue4 : lList.d33SF7List ) {
+                    if ( cue4.toString ().contains (chkIT) ) {
+                        wrong = false;
+                    }
+                }
             }
         }
         // confused about RSD. if SF7 tag for particle then compulsorily RSD?
-        return isPartSF7;
+        return wrong;
     }
 
     public boolean testSF8(libList lList, String sIN) {
-        boolean itIs = false;
+        boolean wrong = true;
+        SF8Wrong = true;
         String chkIT = (sIN.isEmpty ()) ? SF8.get () : sIN;
         for ( Object cue8 : lList.modifierList ) {
             if ( cue8.toString ().contains (chkIT) ) {
-                itIs = true;
-                return itIs;
+                wrong = false;
+                break;
             }
         }
-        return itIs;
+        return wrong;
     }
 
     public boolean testSF9(libList lList, String sIN) {
-        boolean itIs = false;
-        boolean itIsOld = false;
+        boolean wrong = true;
+        boolean wrongOld = true;
+
+        SF9Wrong = true;
         String chkIT = (sIN.isEmpty ()) ? SF9.get () : sIN;
         String[] strArr = {""};
         if ( chkIT.contains ("/") ) {
@@ -406,24 +481,24 @@ public class Reaction {
                 String str1 = strArr[i1];
                 for ( Object cue9 : lList.dataTypeList ) {
                     if ( cue9.toString ().contains (str1) ) {
-                        itIs = true;
+                        wrong = false;
                         //return itIs;
                     }
                 }
-                if ( i1 > 0 && (itIsOld != itIs) ) {
+                if ( i1 > 0 && (wrongOld != wrong) ) {
 
                 }
-                itIsOld = itIs;
+                wrongOld = wrong;
             }
         } else {
             for ( Object cue9 : lList.dataTypeList ) {
                 if ( cue9.toString ().contains (chkIT) ) {
-                    itIs = true;
-                    return itIs;
+                    wrong = false;
+                    break;
                 }
             }
         }
-        return itIs;
+        return wrong;
     }
 
     public String checkblankComma(String sOut) {
@@ -457,7 +532,6 @@ public class Reaction {
             brLog.append ("******  Reaction transferred to checker is NULL \n");
             return;
         }
-        System.out.println ("original string at decompose->" + sIN);
         sIN = sIN.substring (1);
         tmp = sIN.substring (0, sIN.indexOf ("("));        // (
         SF1 = new SimpleStringProperty (tmp);         // (SF1
@@ -489,9 +563,11 @@ public class Reaction {
         tmp = sIN.substring (0, sIN.indexOf (","));
         tmp = (tmp.isEmpty ()) ? "RESO" : tmp;
         SF4Wrong = testSF4 (lList, tmp);
-        if ( !SF4Wrong ) {
+        if ( !SF4Wrong && !tmp.contains ("RESO") ) {
             SF4 = new SimpleStringProperty (tmp);         // (SF1(SF2, SF3)SF4
-        } else {
+        } else if ( !SF4Wrong && tmp.contains ("RESO") ) {
+            SF4 = new SimpleStringProperty ("");         // (SF1(SF2, SF3)SF4
+        } else if ( SF4Wrong ) {
             brLog.append (" Check SF4 " + tmp + "\n");
             SF4 = new SimpleStringProperty ("");         // (SF1(SF2, SF3)SF4
         }
@@ -499,35 +575,62 @@ public class Reaction {
         //sIN = sIN.substring (sIN.indexOf (",") + 1);        // // (SF1(SF2, SF3)SF4,
         tmp = sIN.substring (0, sIN.lastIndexOf (")"));
 
-        tmp = "2-He-4,,DA/DE,P/CA40";    // testing
-
+        //tmp = "2-He-4,,DA/DE,P/CA40";    // testing
         String[] QtyData = tmp.split (",");
         int llen = QtyData.length;
-      
 
         for ( int ix = 1; ix <= (llen - 1); ix++ ) {
+            boolean iloop = true;
             int iii = llen - ix;
             String tmpo = QtyData[iii];
-            System.out.println ("-->" + iii + "  " + tmpo);
-            if ( testSF9 (lList, tmpo) ) {
+            if ( tmpo.trim ().isEmpty () ) {
+                break;
+            }
+
+            SF9Wrong = testSF9 (lList, tmpo);
+            SF8Wrong = testSF8 (lList, tmpo);
+            SF7Wrong = testSF7 (lList, tmpo);
+            SF6Wrong = testSF6 (lList, tmpo);
+            SF5Wrong = testSF5 (lList, tmpo);
+
+            if ( !SF9Wrong ) {
                 SF9 = new SimpleStringProperty (tmpo);
-            } else {
+            } else if ( SF9Wrong && SF6Wrong ) {
+                brLog.append (" Check SF9 " + tmpo + "\n");
                 SF9 = new SimpleStringProperty ("");
             }
-            if ( testSF8 (lList, tmpo) ) {
+
+            if ( !SF8Wrong ) {
                 SF8 = new SimpleStringProperty (tmpo);
-            } else {
+            } else if ( SF8Wrong && SF6Wrong ) {
+                brLog.append (" Check SF8 " + tmpo + "\n");
                 SF8 = new SimpleStringProperty ("");
             }
-            if ( testSF7 (lList, tmpo) ) {
+
+            if ( !SF7Wrong ) {
                 SF7 = new SimpleStringProperty (tmpo);
-            } else {
+            } else if ( SF7Wrong && SF6Wrong ) {
+                brLog.append (" Check SF7 " + tmpo + "\n");
                 SF7 = new SimpleStringProperty ("");
             }
+
+            if ( !SF6Wrong ) {
+                SF6 = new SimpleStringProperty (tmpo);
+            } else if ( SF6Wrong && SF6Wrong ) {
+                brLog.append (" Check SF6 " + tmpo + "\n");
+                SF6 = new SimpleStringProperty ("");
+            }
+
+            if ( !SF5Wrong ) {
+                SF5 = new SimpleStringProperty (tmpo);
+            } else if ( SF5Wrong && SF6Wrong ) {
+                brLog.append (" Check SF5 " + tmpo + "\n");
+                SF5 = new SimpleStringProperty ("");
+            }
         }
-        System.out.println (SF1.get () + " " + SF2.get () + " " + SF3.get () +
-                " " + SF4.get ());
-        System.out.println (SF9.get () + " " + SF8.get () + " " + SF7.get ());
+        reacWrong
+                = (SF1Wrong || SF2Wrong || SF3Wrong || SF4Wrong || SF6Wrong)
+                        ? true : false;
     }
 
 }

@@ -33,6 +33,11 @@
                                         <KeyCodeCombination alt="UP" code="A" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                                     </accelerator>
                                 </MenuItem>
+                        <MenuItem fx:id="doCloseJob" mnemonicParsing="false" onAction="#doClose" text="Close">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="X" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
                                 <MenuItem onAction="#goQuit" text="Quit">
                                     <accelerator>
                                         <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />

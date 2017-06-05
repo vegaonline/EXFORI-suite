@@ -355,7 +355,7 @@ public class selfChecker<T> {
         boolean isOK = true;
         String s3 = "";
 
-        brLog.append (">> Checking Reaction at line " + ii + "\n");
+        brLog.append (">> Checking Reaction at line " + ii + ":->  ");
 
         // check pointer for multiline
         int jCnt = 1;      // Total number of reaction with pointer, if any
@@ -415,10 +415,20 @@ public class selfChecker<T> {
         // make reaction from this string 
         for ( int i1 = 0; i1 < jCnt; i1++ ) {
             int j = ii + i1;
+            String ReacStatus = "";
             String sIN = myData.get (j).getContentTxt ();
-            brLog.append (sIN + "\n");
-            Reaction rei = Reaction.Reaction (lList, j, sIN, brLog);            
-            reactList.add (i1, rei);
+            
+            
+            
+            Reaction rei = Reaction.Reaction (lList, j, sIN, brLog);
+            if ( !rei.reacWrong ) {
+                ReacStatus = " OK !";
+            } else {
+                ReacStatus = " Wrong !";
+            }
+            brLog.append (sIN + "   ----> " + ReacStatus + "\n");
+            displayMsg += sIN + "   ----> " + ReacStatus + "\n";
+            //reactList.add (i1, rei);
         }
 
         // check grammer for reaction        
