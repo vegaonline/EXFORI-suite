@@ -8,6 +8,7 @@
 package ExforI;
 
 import java.io.*;
+import java.util.*;
 import java.util.logging.*;
 import javafx.collections.*;
 
@@ -25,7 +26,7 @@ public class libList<T> {
     public String rptList = "";
     public int rptCount = 0;
     public int totCount = 31;
-
+  
     private String instListName
             = "IAEA_DICT_ARC_3_2016_Inst.txt";
     private String jTypeListName
@@ -161,6 +162,8 @@ public class libList<T> {
     public ObservableList<String> THalfList
             = FXCollections.observableArrayList ();
     public ObservableList<String> UnitFamilyList
+            = FXCollections.observableArrayList ();
+    public ObservableList<String>particleAtMassList
             = FXCollections.observableArrayList ();
 
     public static void libList(BufferedWriter brW) throws InterruptedException {
@@ -346,12 +349,13 @@ public class libList<T> {
                             lx = l1 + " " + l2 + " " + l3;
                             break;
                         case "227":
-                            temp = line.substring (52, 62);
+                            temp = line.substring (45, 50);
                             temp = temp.substring (0, temp.indexOf (" "));
                             temp = (exforUtil.isNumeric (temp)) ? temp : "";
                             l1 = line.substring (0, 12);
-                            l2 = line.substring (31, 37);
-                            lx = l1 + "  " + l2 + "  " + temp;
+                            l2 = line.substring (31, 45).trim ();
+                            l3 = line.substring (51, 65).trim ();
+                            lx = l1 + "  " + l2 + "  " + temp + "  " + l3;
                             break;
                         case "236":
                             l1 = line.substring (0, line.indexOf (" "));
@@ -442,8 +446,64 @@ public class libList<T> {
         mixedSF4List.addAll (incPList);             // d33  -> SF4
         mixedSF4List.addAll (targetNList);          // d227 -> SF4    
 
+        // fix duplicate items in the mixed lists
+        mergeDuplicates ();
     }
 
+    public void mergeDuplicates() {
+        // forst sort the list
+        Collections.sort (mixedSF1List);
+        Collections.sort (mixedSF2List);
+        Collections.sort (mixedSF3List);
+        Collections.sort (mixedSF4List);
+
+        // remove duplicates
+        Set<String> myset = new HashSet<String> ();
+        
+        //--------------------- SF1 ------------------------------
+        myset.clear ();
+        myset.addAll (mixedSF1List);
+        mixedSF1List.clear ();
+        mixedSF1List.addAll (myset);
+        Collections.sort (mixedSF1List);
+        
+        //--------------------- SF2 -----------------------------
+        myset.clear ();
+        myset.addAll (mixedSF2List);
+        mixedSF2List.clear ();
+        mixedSF2List.addAll (myset);
+        Collections.sort (mixedSF2List);
+        
+        //--------------------- SF3 -----------------------------
+        myset.clear ();
+        myset.addAll (mixedSF3List);
+        mixedSF3List.clear ();
+        mixedSF3List.addAll (myset);
+        Collections.sort (mixedSF3List);
+        
+        //--------------------- SF4 -----------------------------
+        myset.clear ();
+        myset.addAll (mixedSF4List);
+        mixedSF4List.clear ();
+        mixedSF4List.addAll (myset);
+        Collections.sort (mixedSF4List);
+    }
+
+    
+    private void makeParticlePro(){
+        
+        particleAtMassList.add ("A     2-He-4");
+        particleAtMassList.add ("AN     0-NUBAR-0");        
+        particleAtMassList.add("AP     -1-H-1");
+        particleAtMassList.add ("AR    0-G-0");
+        particleAtMassList.add ("B     -1-e-0");
+        particleAtMassList.add ("B8     7-B-8");
+        particleAtMassList.add ("BE10     7-Be-10");
+        particleAtMassList.add ("C14     7-B-8");
+        
+    }
+    
+    
     /*
      * This deletes elements of lists for releasing memories @author Abhijit
      * Bhattacharyya
@@ -481,5 +541,4 @@ public class libList<T> {
         resultsList = null;
         System.gc ();
     }
-
 }

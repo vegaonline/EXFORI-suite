@@ -25,6 +25,7 @@ public class Reaction {
     BufferedWriter brW;
 
     ObservableList<String> reactionStr = FXCollections.observableArrayList ();
+
     private SimpleStringProperty SF1;
     private SimpleStringProperty SF2;
     private SimpleStringProperty SF3;
@@ -34,14 +35,21 @@ public class Reaction {
     private SimpleStringProperty SF7;
     private SimpleStringProperty SF8;
     private SimpleStringProperty SF9;
+
     public int lineNo;
-    private boolean SF4Blank;
+    public int atNumReactants = 0;
+    public int atNumProducts = 0;
+    public int massNumReactants = 0;
+    public int massNumProducts = 0;
+
     private String chkSF3A = "TOT ABS NON TCC";
     private String chkSF3B = "PAI";
     private String chkSF3C = "SCT EL INL THS";
     private String chkSF3D = " F FUS";
     private String chkSF3E = "ELEM MASS ELEM/MASS";
-    String sFinal;
+    private String sFinal;
+
+    boolean SF4Blank;
     boolean parenOK = true;
     boolean commaOK = true;
     boolean SF1Wrong = false;
@@ -54,6 +62,7 @@ public class Reaction {
     boolean SF8Wrong = false;
     boolean SF9Wrong = false;
     boolean reacWrong = false;
+    boolean chkReacBalance = false;
 
     // constructor for the editing
     public static String Reaction(libList lList, int lNo,
@@ -210,6 +219,7 @@ public class Reaction {
         String sReac;
 
         sReac = "(";
+        SF1Wrong = testSF1 (lList, "");
         sReac += SF1.get ();
         sReac += "(";
         if ( !willNotTest ) {
@@ -279,6 +289,12 @@ public class Reaction {
         sReac = checkblankComma (sReac);
 
         return sReac;
+    }
+
+    public boolean testSF1(libList lList, String sIN) {
+        boolean wrong = true;
+        getReacParams (sIN);
+        return wrong;
     }
 
     public boolean testSF2(libList lList, String sIN) {
@@ -534,6 +550,7 @@ public class Reaction {
         }
         sIN = sIN.substring (1);
         tmp = sIN.substring (0, sIN.indexOf ("("));        // (
+        SF1Wrong = testSF1 (lList, tmp);
         SF1 = new SimpleStringProperty (tmp);         // (SF1
 
         sIN = sIN.substring (sIN.indexOf ("(") + 1);       // (SF1(
@@ -631,6 +648,21 @@ public class Reaction {
         reacWrong
                 = (SF1Wrong || SF2Wrong || SF3Wrong || SF4Wrong || SF6Wrong)
                         ? true : false;
+    }
+
+    private void getReacParams(String sIN) {
+        String[] sComps = sIN.split ("-");
+        if ( sComps.length >= 3 ) {   // for metastable etc
+            if ( exforUtil.isNumeric (sComps[0]) ) {
+                atNumReactants = Integer.parseInt (sComps[0]);
+                chkReacBalance = true;
+            }
+            if ( exforUtil.isNumeric (sComps[2]) ) {
+                massNumReactants = Integer.parseInt (sComps[2]);
+            } else {
+                chkReacBalance = false;
+            }
+        }
     }
 
 }

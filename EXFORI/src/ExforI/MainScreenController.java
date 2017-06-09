@@ -629,7 +629,7 @@ public class MainScreenController { //implements Initializable {
             String temp = "";
             str1 = entryNum;
 
-            headStyle ();
+            //        headStyle ();      //---------------> creating probkems
             if ( !isOrdered && !bNewExfor ) {
                 lastEntVal = myDataN + 1;
             } else {
@@ -1265,7 +1265,7 @@ public class MainScreenController { //implements Initializable {
             rootNode.getChildren ().clear ();
         }
         int count = 0;
-
+        
         for ( int i = 0; i < subentNum; i++ ) {
             count = Integer.parseInt (getSUBENT (i + 1).
                     substring (getSUBENT (i + 1).length () - 3));
@@ -5205,8 +5205,9 @@ public class MainScreenController { //implements Initializable {
                     myDate0);
             myData.add (myDataN,
                     new editableData ("ENTRY", "", tmpS, ""));
-
+            
             ++subentNum;
+            
             subEnt = Integer.toString (subentNum);
             lastLine = lineN;
             myData.add (++myDataN,
@@ -5228,14 +5229,18 @@ public class MainScreenController { //implements Initializable {
                                     exforUtil.fixString11 ("0") + exforUtil.
                                     fixString11 ("0"),
                                     subEnt));
+            
             sub4Common.add (subEnt);
+            
             ++lastLine;
             myData.add (++myDataN,
                     new editableData ("ENDSUBENT", "", "", subEnt));
 
             //++subentNum;
             subEnt = Integer.toString (subentNum);
+            
             InsSubEnt (false, subEnt);
+            
 
             //++lastLine;
             //subentNum = 999;              // Do not do this as this will add 999 entries in Tree
@@ -5318,7 +5323,7 @@ public class MainScreenController { //implements Initializable {
                     s3 = exforUtil.fixString11 (entryNum, 11) +
                             exforUtil.fixString11 (myDateOldFile, 11);
                 }
-                if ( s1.contains ("SUBENT") ) {
+                if ( s1.contains ("SUBENT")  && !s1.contains ("END")) {
                     ++subentNum;
                     subEnt = Integer.toString (subentNum);
                     s3 = exforUtil.fixString11 (getSUBENT (subentNum), 11) +
