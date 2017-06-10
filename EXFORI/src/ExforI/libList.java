@@ -426,7 +426,9 @@ public class libList<T> {
         loadDictsHere (targetNList, "", targetNListName, 12, brW, full);             //_227_ 
         loadDictsHere (prodList, "", prodListName, 12, brW, full);                       //_236_
 
+        makeParticlePro();
         doProcessList ();
+        
     }
 
     public void doProcessList() {
@@ -456,6 +458,7 @@ public class libList<T> {
         Collections.sort (mixedSF2List);
         Collections.sort (mixedSF3List);
         Collections.sort (mixedSF4List);
+        Collections.sort(particleAtMassList);
 
         // remove duplicates
         Set<String> myset = new HashSet<String> ();
@@ -490,16 +493,27 @@ public class libList<T> {
     }
 
     
-    private void makeParticlePro(){
-        
+    private void makeParticlePro(){        
         particleAtMassList.add ("A     2-He-4");
         particleAtMassList.add ("AN     0-NUBAR-0");        
         particleAtMassList.add("AP     -1-H-1");
         particleAtMassList.add ("AR    0-G-0");
         particleAtMassList.add ("B     -1-e-0");
-        particleAtMassList.add ("B8     7-B-8");
-        particleAtMassList.add ("BE10     7-Be-10");
-        particleAtMassList.add ("C14     7-B-8");
+        particleAtMassList.add("E    -1-e-0");
+        particleAtMassList.add ("B8     5-B-8");
+        particleAtMassList.add ("BE10     4-Be-10");
+        particleAtMassList.add ("C14     6-C-14");
+        particleAtMassList.add("CA40     20-Ca-40");
+        particleAtMassList.add("D     1-H-2");
+        particleAtMassList.add("G     0-G-0");
+        particleAtMassList.add("HE2     2-He-2");
+        particleAtMassList.add("HE3     2-He-3");
+        particleAtMassList.add("HE6     2-He-6");
+        particleAtMassList.add("Li6     3-Li-6");
+        particleAtMassList.add("Li7     3-Li-7");
+        particleAtMassList.add("N     0-n-0");
+        particleAtMassList.add("P     1-H-1");
+        particleAtMassList.add("T     1-H-3");
         
     }
     
