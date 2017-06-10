@@ -1,2 +1,5 @@
-/EXFORI/build/
-/EXFORI/dist/
+EXFORI/build/
+EXFORI/dist/
+EXFORI/nbproject/
+EXFORI/EXFOR_Compiled_Files/
+EXFORI/logFile.txt
