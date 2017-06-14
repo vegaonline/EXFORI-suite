@@ -26,7 +26,7 @@ public class libList<T> {
     public String rptList = "";
     public int rptCount = 0;
     public int totCount = 31;
-  
+
     private String instListName
             = "IAEA_DICT_ARC_3_2016_Inst.txt";
     private String jTypeListName
@@ -163,7 +163,7 @@ public class libList<T> {
             = FXCollections.observableArrayList ();
     public ObservableList<String> UnitFamilyList
             = FXCollections.observableArrayList ();
-    public ObservableList<String>particleAtMassList
+    public ObservableList<String> particleAtMassList
             = FXCollections.observableArrayList ();
 
     public static void libList(BufferedWriter brW) throws InterruptedException {
@@ -394,6 +394,7 @@ public class libList<T> {
      */
     public void loadAllDict(BufferedWriter brW) throws InterruptedException {
         boolean full = false;
+        System.out.println ("DICT loading starting....");
         loadDictsHere (instList, "", instListName, 12, brW, full);                           // _3_ 
         loadDictsHere (jTypeList, "", jTypeListName, 12, brW, full);                    // _4_ from 11 
         loadDictsHere (jourList, "", jourListName, 12, brW, full);                           // _5_ 
@@ -425,10 +426,10 @@ public class libList<T> {
         loadDictsHere (compoundList, "", compoundListName, 12, brW, full);      //_209_
         loadDictsHere (targetNList, "", targetNListName, 12, brW, full);             //_227_ 
         loadDictsHere (prodList, "", prodListName, 12, brW, full);                       //_236_
-
-        makeParticlePro();
+        System.out.println ("DICT loaded....");
+        makeParticlePro ();
         doProcessList ();
-        
+
     }
 
     public void doProcessList() {
@@ -458,32 +459,32 @@ public class libList<T> {
         Collections.sort (mixedSF2List);
         Collections.sort (mixedSF3List);
         Collections.sort (mixedSF4List);
-        Collections.sort(particleAtMassList);
+        Collections.sort (particleAtMassList);
 
         // remove duplicates
         Set<String> myset = new HashSet<String> ();
-        
+
         //--------------------- SF1 ------------------------------
         myset.clear ();
         myset.addAll (mixedSF1List);
         mixedSF1List.clear ();
         mixedSF1List.addAll (myset);
         Collections.sort (mixedSF1List);
-        
+
         //--------------------- SF2 -----------------------------
         myset.clear ();
         myset.addAll (mixedSF2List);
         mixedSF2List.clear ();
         mixedSF2List.addAll (myset);
         Collections.sort (mixedSF2List);
-        
+
         //--------------------- SF3 -----------------------------
         myset.clear ();
         myset.addAll (mixedSF3List);
         mixedSF3List.clear ();
         mixedSF3List.addAll (myset);
         Collections.sort (mixedSF3List);
-        
+
         //--------------------- SF4 -----------------------------
         myset.clear ();
         myset.addAll (mixedSF4List);
@@ -492,32 +493,30 @@ public class libList<T> {
         Collections.sort (mixedSF4List);
     }
 
-    
-    private void makeParticlePro(){        
+    private void makeParticlePro() {
         particleAtMassList.add ("A     2-He-4");
-        particleAtMassList.add ("AN     0-NUBAR-0");        
-        particleAtMassList.add("AP     -1-H-1");
+        particleAtMassList.add ("AN     0-NUBAR-0");
+        particleAtMassList.add ("AP     -1-H-1");
         particleAtMassList.add ("AR    0-G-0");
         particleAtMassList.add ("B     -1-e-0");
-        particleAtMassList.add("E    -1-e-0");
+        particleAtMassList.add ("E    -1-e-0");
         particleAtMassList.add ("B8     5-B-8");
         particleAtMassList.add ("BE10     4-Be-10");
         particleAtMassList.add ("C14     6-C-14");
-        particleAtMassList.add("CA40     20-Ca-40");
-        particleAtMassList.add("D     1-H-2");
-        particleAtMassList.add("G     0-G-0");
-        particleAtMassList.add("HE2     2-He-2");
-        particleAtMassList.add("HE3     2-He-3");
-        particleAtMassList.add("HE6     2-He-6");
-        particleAtMassList.add("Li6     3-Li-6");
-        particleAtMassList.add("Li7     3-Li-7");
-        particleAtMassList.add("N     0-n-0");
-        particleAtMassList.add("P     1-H-1");
-        particleAtMassList.add("T     1-H-3");
-        
+        particleAtMassList.add ("CA40     20-Ca-40");
+        particleAtMassList.add ("D     1-H-2");
+        particleAtMassList.add ("G     0-G-0");
+        particleAtMassList.add ("HE2     2-He-2");
+        particleAtMassList.add ("HE3     2-He-3");
+        particleAtMassList.add ("HE6     2-He-6");
+        particleAtMassList.add ("Li6     3-Li-6");
+        particleAtMassList.add ("Li7     3-Li-7");
+        particleAtMassList.add ("N     0-n-0");
+        particleAtMassList.add ("P     1-H-1");
+        particleAtMassList.add ("T     1-H-3");
+
     }
-    
-    
+
     /*
      * This deletes elements of lists for releasing memories @author Abhijit
      * Bhattacharyya

@@ -24,7 +24,7 @@ import javax.swing.JFileChooser;
 public class selfChecker<T> {
 
     // from other class
-    libList lList = new libList();
+    // libList lList = new libList();
 
     private final ObservableList<Reaction> reactList = FXCollections.
             observableArrayList();
@@ -58,7 +58,7 @@ public class selfChecker<T> {
     String monitorTagLines = "";
 
     @SuppressWarnings("unchecked")
-    public static void selfChecker(String entryNum, String fName,
+    public static void selfChecker(libList lList, String entryNum, String fName,
             ObservableList<editableData> myData, BufferedWriter brLog) throws
             InterruptedException, IOException {
 
@@ -68,10 +68,6 @@ public class selfChecker<T> {
         boolean chkTab4 = true, chkTab5 = true, chkTab6 = true;
 
         sc.setHeadObliged();
-
-        if (!sc.lList.isLoaded) {
-            sc.lList.loadAllDict(brLog);
-        }
 
         for (int ii = 0; ii < sc.obligatoryConst; ii++) {
             sc.obligatory[ii] = 0;
@@ -165,7 +161,7 @@ public class selfChecker<T> {
             }
             if (temp.contains("INSTITUTE")) {
                 sc.notOK = false;
-                if (!sc.doCheckInst(entryNum, s1, s2, s3, s4)) {
+                if (!sc.doCheckInst(lList, entryNum, s1, s2, s3, s4)) {
                     sc.displayMsg += " *** ERROR in INSTITUTE *****\n";
                 } else {
                     sc.obligatory[2] = 1;
@@ -173,7 +169,7 @@ public class selfChecker<T> {
             }
             if (temp.contains("REFERENCE")) {
                 sc.notOK = false;
-                if (!sc.doCheckRef(ii, myData)) {
+                if (!sc.doCheckRef(lList, ii, myData)) {
                     sc.displayMsg += "*** ERROR in Reference. *****\n";
                 } else {
                     sc.obligatory[3] = 1;
@@ -181,7 +177,7 @@ public class selfChecker<T> {
             }
             if (temp.contains("FACILITY")) {
                 sc.notOK = false;
-                if (!sc.doCheckFac(ii, myData)) {
+                if (!sc.doCheckFac(lList, ii, myData)) {
                     sc.displayMsg += "*** ERROR in Facility.  ******\n";
                 } else {
                     sc.obligatory[4] = 1;
@@ -192,13 +188,13 @@ public class selfChecker<T> {
             }
             if (temp.contains("INC-SOURCE")) {
                 sc.notOK = false;
-                if (!sc.doCheckIncSrc(ii, myData)) {
+                if (!sc.doCheckIncSrc(lList, ii, myData)) {
                     sc.displayMsg += "*** ERROR in INC-SOURCE. *****\n";
                 }
             }
             if (temp.contains("DETECTOR")) {
                 sc.notOK = false;
-                if (!sc.doCheckDetector(s3)) {
+                if (!sc.doCheckDetector(lList, s3)) {
                     sc.displayMsg += "*** ERROR in DETECTOR *****\n";
                 } else {
                     sc.obligatory[6] = 1;
@@ -210,7 +206,7 @@ public class selfChecker<T> {
             }
 
             if (temp.contains("REACTION") || temp.contains("MONITOR")) {
-                if (!sc.doCheckReaction(ii, myData, brLog)) {
+                if (!sc.doCheckReaction(lList, ii, myData, brLog)) {
                     sc.notOK = true;
                 }
             }
@@ -218,7 +214,7 @@ public class selfChecker<T> {
             if (temp.contains("COMMON") && !temp.contains("NO") && !temp.
                     contains("END")) {
                 sc.notOK = false;
-                if (!sc.doCheckCommon(ii, myData)) {
+                if (!sc.doCheckCommon(lList, ii, myData)) {
                     sc.displayMsg += "*** ERROR in COMMON ...\n";
                 }
             }
@@ -350,7 +346,7 @@ public class selfChecker<T> {
      * @param myData
      * @return
      */
-    private boolean doCheckReaction(int ii, ObservableList<editableData> myData,
+    private boolean doCheckReaction(libList lList, int ii, ObservableList<editableData> myData,
             BufferedWriter brLog) throws IOException {
         boolean isOK = true;
         String s3 = "";
@@ -555,7 +551,7 @@ public class selfChecker<T> {
      * @param kk
      * @param myData
      */
-    private boolean checkHeadUnits(int kk, ObservableList<editableData> myData) {
+    private boolean checkHeadUnits(libList lList, int kk, ObservableList<editableData> myData) {
         boolean isOK = false;
         String s1 = myData.get(kk + 1).getBibItemName() + " " + myData.get(
                 kk + 1).getContentTxt().trim();
@@ -640,7 +636,7 @@ public class selfChecker<T> {
      * @param myData
      * @return
      */
-    private boolean doCheckCommon(int ii, ObservableList<editableData> myData) {
+    private boolean doCheckCommon(libList lList, int ii, ObservableList<editableData> myData) {
         boolean isOK = true;
         setCommonrecNum(myData, ii);
 
@@ -653,7 +649,7 @@ public class selfChecker<T> {
             displayMsg += "*** COMMON: counts are not matching *****\n";
             return isOK;
         }
-        isOK = checkHeadUnits(ii, myData);
+        isOK = checkHeadUnits(lList, ii, myData);
         if (!isOK) {
             notOK = true;
         }
@@ -691,7 +687,7 @@ public class selfChecker<T> {
      * @param s3
      * @return
      */
-    private boolean doCheckDetector(String s3) {
+    private boolean doCheckDetector(libList lList, String s3) {
         boolean isOK = true;
         boolean isDET = false;
 
@@ -739,7 +735,7 @@ public class selfChecker<T> {
      * @param s3
      * @return
      */
-    private boolean doCheckIncSrc(int ii, ObservableList<editableData> myData) {
+    private boolean doCheckIncSrc(libList lList, int ii, ObservableList<editableData> myData) {
         boolean isOK = true;
         boolean isIncSrc = false;
         String s3 = "";
@@ -827,7 +823,7 @@ public class selfChecker<T> {
      * @param s3
      * @return
      */
-    private boolean doCheckFACPart(String s3) {
+    private boolean doCheckFACPart(libList lList, String s3) {
         boolean isOK = true;
         boolean isFac = false;
         boolean isInst = false;
@@ -885,16 +881,16 @@ public class selfChecker<T> {
      * @param myData
      * @return
      */
-    private boolean doCheckFac(int kk, ObservableList<editableData> myData) {
+    private boolean doCheckFac(libList lList, int kk, ObservableList<editableData> myData) {
         boolean isOK = true;
         String s3 = myData.get(kk).getContentTxt();
         s3 = s3.trim();
 
-        isOK = doCheckFACPart(s3);
+        isOK = doCheckFACPart(lList, s3);
         int counter = kk + 1;
         while (myData.get(counter).getBibItemName().isEmpty()) {
             s3 = myData.get(counter).getContentTxt().trim();
-            isOK = doCheckFACPart(s3);
+            isOK = doCheckFACPart(lList, s3);
             ++counter;
         }
         return isOK;
@@ -946,7 +942,7 @@ public class selfChecker<T> {
         }
     }
 
-    private boolean refCheckPart(String s3) {
+    private boolean refCheckPart(libList lList, String s3) {
         boolean isOK = true;
         boolean isjType = false;
         boolean isJour = false;
@@ -1011,17 +1007,17 @@ public class selfChecker<T> {
      * @param myData
      * @return
      */
-    private boolean doCheckRef(int ii, ObservableList<editableData> myData) {
+    private boolean doCheckRef(libList lList, int ii, ObservableList<editableData> myData) {
         boolean isOK = true;
 
         String s3 = myData.get(ii).getContentTxt();
         s3 = s3.trim();
 
-        isOK = refCheckPart(s3);
+        isOK = refCheckPart(lList, s3);
         int counter = ii + 1;
         while (myData.get(counter).getBibItemName().isEmpty()) {
             s3 = myData.get(counter).getContentTxt().trim();
-            isOK = refCheckPart(s3);
+            isOK = refCheckPart(lList, s3);
             ++counter;
         }
         return isOK;
@@ -1102,7 +1098,7 @@ public class selfChecker<T> {
      * @param s4
      * @return
      */
-    private boolean doCheckInst(String EN, String s1, String s2, String s3,
+    private boolean doCheckInst(libList lList, String EN, String s1, String s2, String s3,
             String s4) {
         boolean isOK = true;
 

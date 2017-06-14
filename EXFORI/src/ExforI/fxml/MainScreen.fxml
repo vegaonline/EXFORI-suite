@@ -35,7 +35,7 @@
                                 </MenuItem>
                         <MenuItem fx:id="doCloseJob" mnemonicParsing="false" onAction="#doClose" text="Close">
                            <accelerator>
-                              <KeyCodeCombination alt="UP" code="X" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                              <KeyCodeCombination alt="UP" code="X" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                            </accelerator>
                         </MenuItem>
                                 <MenuItem onAction="#goQuit" text="Quit">
@@ -112,7 +112,7 @@
     <center>
         <TableView fx:id="editTable" editable="true" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #3c7fb1;" BorderPane.alignment="CENTER">
             <columns>
-                <TableColumn fx:id="bibHead" maxWidth="80.0" minWidth="80.0" prefWidth="-1.0" sortable="false" />
+                <TableColumn fx:id="bibHead" maxWidth="80.0" minWidth="73.0" prefWidth="-1.0" sortable="false" />
                 <TableColumn fx:id="bibPtr" maxWidth="18.0" minWidth="18.0" prefWidth="18.0" sortable="false" />
                 <TableColumn fx:id="bibText" maxWidth="442.0" minWidth="440.0" prefWidth="-1.0" sortable="false" />
                 <TableColumn fx:id="bibLines" maxWidth="110.0" minWidth="110.0" prefWidth="110.0" sortable="false" />

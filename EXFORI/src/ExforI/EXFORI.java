@@ -130,7 +130,7 @@ public class EXFORI extends Application {
                         Platform.
                                 runLater (() -> barC.setProgress (step / lSize));
                         try {
-                            Thread.sleep (1000);
+                            Thread.sleep (1000);  // 1000
                         } catch (InterruptedException ex) {
                             Thread.currentThread ().interrupt ();
                         }
