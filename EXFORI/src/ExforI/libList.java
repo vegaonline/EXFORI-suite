@@ -394,7 +394,7 @@ public class libList<T> {
      */
     public void loadAllDict(BufferedWriter brW) throws InterruptedException {
         boolean full = false;
-        System.out.println ("DICT loading starting....");
+        
         loadDictsHere (instList, "", instListName, 12, brW, full);                           // _3_ 
         loadDictsHere (jTypeList, "", jTypeListName, 12, brW, full);                    // _4_ from 11 
         loadDictsHere (jourList, "", jourListName, 12, brW, full);                           // _5_ 
@@ -426,7 +426,7 @@ public class libList<T> {
         loadDictsHere (compoundList, "", compoundListName, 12, brW, full);      //_209_
         loadDictsHere (targetNList, "", targetNListName, 12, brW, full);             //_227_ 
         loadDictsHere (prodList, "", prodListName, 12, brW, full);                       //_236_
-        System.out.println ("DICT loaded....");
+        
         makeParticlePro ();
         doProcessList ();
 
@@ -511,7 +511,7 @@ public class libList<T> {
         particleAtMassList.add ("HE6     2-He-6");
         particleAtMassList.add ("Li6     3-Li-6");
         particleAtMassList.add ("Li7     3-Li-7");
-        particleAtMassList.add ("N     0-n-0");
+        particleAtMassList.add ("N     0-n-1");
         particleAtMassList.add ("P     1-H-1");
         particleAtMassList.add ("T     1-H-3");
 

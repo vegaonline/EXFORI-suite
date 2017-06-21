@@ -45,6 +45,7 @@ public class EXFORI extends Application {
 
     @Override
     public void start(Stage pStage) throws Exception {
+        System.out.println ("DICT loading starting....");
         loadLogo ();
         this.primStage = pStage;
         primStage.setTitle (
@@ -61,13 +62,15 @@ public class EXFORI extends Application {
         controller.setMyScene (mainScene);
         controller.setbrW (brW);
         controller.setlList (lList);
-
-        PauseTransition delay1 = new PauseTransition (Duration.seconds (lSize));
+        
+        PauseTransition delay1 = new PauseTransition (Duration.seconds (lSize/Math.sqrt (3)));
         delay1.setOnFinished (event -> {
             myStage1.close ();
             primStage.show ();
+            System.out.println ("DICT loaded....");
         });
         delay1.play ();
+        
     }
 
     /**
@@ -121,8 +124,12 @@ public class EXFORI extends Application {
         public Void call() throws InterruptedException {
             lList.loadAllDict (brW);
             //updateProgress(lList.rptCount, lList.totCount);
-            lSize = (double) (lList.totCount / 3.0);
+            
+            lSize = (double) (lList.totCount);
             lSize = Math.round (lSize);
+            if (lSize > 10) {
+                lSize = 10;
+            }            
             new Thread () {
                 public void run() {
                     for ( double i = 0.0; i <= lSize; i++ ) {
@@ -130,7 +137,7 @@ public class EXFORI extends Application {
                         Platform.
                                 runLater (() -> barC.setProgress (step / lSize));
                         try {
-                            Thread.sleep (1000);  // 1000
+                            Thread.sleep (500);  // 1000
                         } catch (InterruptedException ex) {
                             Thread.currentThread ().interrupt ();
                         }

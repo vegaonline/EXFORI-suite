@@ -945,7 +945,6 @@ public class MainScreenController { //implements Initializable {
             rootDir = fileChooser.getCurrentDirectory ().toString ();
             fName = rootDir + pathSEP + entryNum + ".exf";
             exfFileRead = new File (fName);
-            System.out.println (exfFileRead.toString ());
 
             if ( exfFileRead.exists () && !exfFileRead.isDirectory () ) {
                 fNameSet = false;
@@ -1085,11 +1084,11 @@ public class MainScreenController { //implements Initializable {
                     log (Level.SEVERE, null, ex);
         }
         timerAutoSave.cancel ();
-        myData.clear ();        
+        myData.clear ();
         myDataN = 0;
         mainPane.getChildren ().clear ();
         exfFileRead = null;
-        initialize();
+        initialize ();
     }
 
     @FXML
@@ -1795,6 +1794,7 @@ public class MainScreenController { //implements Initializable {
             subEntS = findSubEnt (ri);
         }
 
+        s1 = s1.trim ();
         if ( !s1.isEmpty () ) {
             switch (s1) {
                 case "TITLE":
@@ -3410,7 +3410,7 @@ public class MainScreenController { //implements Initializable {
         if ( act.contains ("Add") ) {
             getTxtData = "";
             isReacEdited = false;
-        } else {
+        } else if ( act.contains ("Edit") ) {
             isReacEdited = true;
             for ( int ii = 0; ii < tmpRICnt; ii++ ) {
                 getTxtData
@@ -5416,7 +5416,8 @@ public class MainScreenController { //implements Initializable {
                 }
 
                 myData.add (myDataN++, new editableData (s1, s2, s3, s4));
-                if ( FixedHeadList.contains (s1.trim ()) && !s1.contains ("DATA")  ) {
+                if ( FixedHeadList.contains (s1.trim ()) && !s1.
+                        contains ("DATA") ) {
                     thisEntryLine = (!s1.isEmpty ())
                             ? getLineNum (line, false)
                             : getLineNum (oldHead, true);
@@ -5427,16 +5428,15 @@ public class MainScreenController { //implements Initializable {
                         rowNumber = (tmpINT < 999) ? tmpINT : rowNumber;
                     } else {
                         rowNumber = Integer.parseInt (s4.trim ());
-                    }                    
+                    }
                 }
-                if (TreeHeadList.contains (s1.trim ()) ){
-                    System.out.print(s1+"  ");
+                if ( TreeHeadList.contains (s1.trim ()) ) {
+
                     thisEntryLine = (!s1.isEmpty ())
                             ? getLineNum (line, false)
                             : getLineNum (oldHead, true);
-                    bibList.add (bibEntNum++,new BIBClasses (thisEntryLine, 
+                    bibList.add (bibEntNum++, new BIBClasses (thisEntryLine,
                             Integer.toString (bibEntNum), s5, s1));
-                    System.out.println(s1 + " " + thisEntryLine + " " + bibEntNum);
                 }
 
                 changeBoolStatus (s1, true);
@@ -5453,7 +5453,6 @@ public class MainScreenController { //implements Initializable {
             bNewExfor = true;
             br.close ();
             brW.write (fName + " loaded successfully" + "\n");
-            System.out.println ("Total subentNum->" + subentNum);
         } catch (Exception e) {
             System.out.println (" We found an error to read the file " +
                     fName);
