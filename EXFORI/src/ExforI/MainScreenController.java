@@ -2554,6 +2554,8 @@ public class MainScreenController { //implements Initializable {
                 tf.setText (getTxtData);
             }
 
+            entryChoice (oList, thisCB);
+
             tp1.getStyleClass ().add ("ttip");
             if ( Head.contains ("INSTITUTE") ) {
                 tp1.setText (instTip);
@@ -2886,6 +2888,7 @@ public class MainScreenController { //implements Initializable {
         entryChoice (lList.jTypeList, jType);
 
         if ( !act.contains ("Delete") ) {
+            entryChoice (lList.jTypeList, jType);
             tf.setText (putTxt);
             myDialogScene = new Scene (vb1, 1200, 250);
             myDialog.setScene (myDialogScene);
@@ -2894,6 +2897,7 @@ public class MainScreenController { //implements Initializable {
                 String temp = "";
                 String tmp = "";
                 int selUpto;
+                isSelect = true;
                 temp = jType.getValue ();
                 if ( !temp.contains ("Please") && (temp != null) ) {
                     if ( !putTxt.endsWith (", ") &&
@@ -2973,21 +2977,18 @@ public class MainScreenController { //implements Initializable {
                         tf.setText (putTxt);
                     }
                 }
-                isSelect = true;
             });
             acceptEdit.setOnAction ((ActionEvent event) -> {
                 String parseStr;
-                if ( !isSelect ) {
-                    popupMsg.warnBox ("Please \"Select\" first",
-                            "Attention! Select first");
-                } else if ( tf.getText ().isEmpty () ) {
+                System.out.println ("select? ->" + isSelect);
+                if ( !isSelect && act.contains ("Edit") ) {
+                    popupMsg.warnBox ("Attention!  You did not use SELECT");
+                }
+                if ( tf.getText ().isEmpty () ) {
                     popupMsg.warnBox (
                             "Text Area blank. Use \"Select\" to select data",
                             "Attention! No Data");
                 } else {
-                    popupMsg.
-                            warnBox ("Please enter some entry using \"Select\"",
-                                    "Attention! Select data");
                     parseStr = tf.getText ().toString ();
                     if ( parseStr.contains ("(") ) {
                         parseStr = parseStr;
