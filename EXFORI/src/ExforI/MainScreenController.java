@@ -1522,6 +1522,7 @@ public class MainScreenController { //implements Initializable {
                 "HISTORY", "COMMON", "NOCOMMON");
         TreeHeadList.addAll ("REACTION", "DECAY-DATA", "METHOD", "ERR-ANALYS",
                 "COMMENT", "DATA");
+
     }
 
     private void setCellValueFactories() {
@@ -2889,6 +2890,7 @@ public class MainScreenController { //implements Initializable {
 
         if ( !act.contains ("Delete") ) {
             entryChoice (lList.jTypeList, jType);
+            readJourTypeKey ();
             tf.setText (putTxt);
             myDialogScene = new Scene (vb1, 1200, 250);
             myDialog.setScene (myDialogScene);
@@ -2980,9 +2982,8 @@ public class MainScreenController { //implements Initializable {
             });
             acceptEdit.setOnAction ((ActionEvent event) -> {
                 String parseStr;
-                System.out.println ("select? ->" + isSelect);
                 if ( !isSelect && act.contains ("Edit") ) {
-                    popupMsg.warnBox ("Attention!  You did not use SELECT");
+                    popupMsg.warnBox ("Attention!  You did not use SELECT", "");
                 }
                 if ( tf.getText ().isEmpty () ) {
                     popupMsg.warnBox (
@@ -4980,6 +4981,67 @@ public class MainScreenController { //implements Initializable {
          */
     }
 
+    private void readJourTypeKey() {
+
+        jType.getSelectionModel () // Select Journal type
+                .selectedItemProperty ()
+                .addListener (new ChangeListener () {
+                    @Override
+                    public void changed(
+                            ObservableValue ov,
+                            Object o1,
+                            Object o2
+                    ) {
+                        if ( o2 != null ) {
+                            String oo = o2.toString ().substring (1, 2);
+                            switch (oo) {
+                                case "0":
+                                case "3":
+                                case "4":
+                                    entryChoice (lList.dataList, journals);
+                                    break;
+                                case "B":
+                                    entryChoice (lList.bookList, journals);
+                                    break;
+                                case "A":
+                                case "C":
+                                    entryChoice (lList.confList, journals);
+                                    break;
+                                case "J":
+                                case "K":
+                                    entryChoice (lList.jourList, journals);
+                                    break;
+                                case "P":
+                                case "R":
+                                case "S":
+                                case "X":
+                                    entryChoice (lList.reportList, journals);
+                                    break;
+                                case "T":
+                                case "W":
+                                    break;
+                            }
+                        }
+                    }
+                }
+                );
+
+        journals.getSelectionModel () // journals
+                .selectedItemProperty ()
+                .addListener (new ChangeListener () {
+                    @Override
+                    public void changed(
+                            ObservableValue ov,
+                            Object jo1,
+                            Object jo2
+                    ) {
+                        // Thinking about this part
+                        // will do later
+                    }
+                });
+
+    }
+
     /*
      * Start the process
      */
@@ -5070,6 +5132,7 @@ public class MainScreenController { //implements Initializable {
 
         // Journal related
         entryChoice (lList.jTypeList, jType); // journal type   
+        readJourTypeKey ();
 
         nuclideDDCB.getSelectionModel ().selectedItemProperty ()
                 .addListener (new ChangeListener () {
@@ -5089,63 +5152,6 @@ public class MainScreenController { //implements Initializable {
                         }
                     }
 
-                });
-
-        jType.getSelectionModel () // Select Journal type
-                .selectedItemProperty ()
-                .addListener (new ChangeListener () {
-                    @Override
-                    public void changed(
-                            ObservableValue ov,
-                            Object o1,
-                            Object o2
-                    ) {
-                        if ( o2 != null ) {
-                            String oo = o2.toString ().substring (1, 2);
-                            switch (oo) {
-                                case "0":
-                                case "3":
-                                case "4":
-                                    entryChoice (lList.dataList, journals);
-                                    break;
-                                case "B":
-                                    entryChoice (lList.bookList, journals);
-                                    break;
-                                case "A":
-                                case "C":
-                                    entryChoice (lList.confList, journals);
-                                    break;
-                                case "J":
-                                case "K":
-                                    entryChoice (lList.jourList, journals);
-                                    break;
-                                case "P":
-                                case "R":
-                                case "S":
-                                case "X":
-                                    entryChoice (lList.reportList, journals);
-                                    break;
-                                case "T":
-                                case "W":
-                                    break;
-                            }
-                        }
-                    }
-                }
-                );
-
-        journals.getSelectionModel () // journals
-                .selectedItemProperty ()
-                .addListener (new ChangeListener () {
-                    @Override
-                    public void changed(
-                            ObservableValue ov,
-                            Object jo1,
-                            Object jo2
-                    ) {
-                        // Thinking about this part
-                        // will do later
-                    }
                 });
 
         entryChoice (lList.facilList, facilCB); // Facilities ComboBox
@@ -5357,14 +5363,19 @@ public class MainScreenController { //implements Initializable {
                 String s3 = "";
                 String s4 = "";
                 String s5 = "";
+                String Head = "";
                 String oldHead = "";
                 //++rowNumber;
 
                 // s1 = line.substring (0, 10).trim ();
-                s1 = line.substring (0, 10);
+                s1 = line.substring (0, 10).trim();
 
-                oldHead = (!s1.isEmpty () && FixedHeadList.contains (s1)) ? s1
-                        : oldHead;
+                Head = (!s1.isEmpty () && FixedHeadList.contains (s1)) ? s1
+                        : oldHead;               
+                
+                if ( !s1.isEmpty () ) {
+                    fixBool4Headers (s1);   // set Boolean for Header
+                }
 
                 if ( line.length () > 10 ) {
                     s2 = line.substring (10, 11);
@@ -5446,7 +5457,10 @@ public class MainScreenController { //implements Initializable {
                 if ( s1.contains ("ENDENTRY") ) {
                     break;
                 }
+                oldHead = Head;
+                Head = "";
             }
+
             fixTreeList (rowNumber);
             BLoadOldFile = true;
             editTable.refresh ();
@@ -5454,6 +5468,7 @@ public class MainScreenController { //implements Initializable {
             bNewExfor = true;
             br.close ();
             brW.write (fName + " loaded successfully" + "\n");
+
         } catch (Exception e) {
             System.out.println (" We found an error to read the file " +
                     fName);
@@ -5468,6 +5483,15 @@ public class MainScreenController { //implements Initializable {
                                 Level.SEVERE, null, ex);
             }
             System.exit (89);
+        }
+    }
+
+    // Thisfunction checks Head and clears boolean for the Headers
+    private void fixBool4Headers(String Header) {        
+        for ( Object myItem : TreeHeadList ) {
+            if ( myItem.toString ().contains (Header) ) {
+                changeBoolStatus (Header, true);                
+            }
         }
     }
 
