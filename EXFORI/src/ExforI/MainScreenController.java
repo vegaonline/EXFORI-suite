@@ -773,9 +773,11 @@ public class MainScreenController { //implements Initializable {
         if ( !isOld ) {
             String partA = myText.substring (0, 10).trim ();
             String partB = myText.substring (66).trim ();
-            lineNum = (partA.contains ("COMMON")
-                    ? 99999
-                    : Integer.parseInt (partB.substring (8).trim ()));
+            partB = (partB.length () > 8) ? partB.substring (8).trim () : partB;
+            lineNum = ((partA.contains ("ENDSUBENT")) || (partA.contains (
+                    "ENDENTRY"))
+                            ? 99999
+                            : Integer.parseInt (partB));
             headList.add (new lineList (partA, lineNum));
         } else {
             String Head = myText;
@@ -1199,7 +1201,7 @@ public class MainScreenController { //implements Initializable {
             FileWriter fw = new FileWriter (fileName);
             Writer output = new BufferedWriter (fw);
 
-            for ( int i = 0; i < myDataN; i++ ) {
+            for ( int i = 0; i < myData.size (); i++ ) {
                 String str1 = myData.get (i).getBibItemName ();
                 String str2 = myData.get (i).getPointerID ();
                 String str3 = myData.get (i).getContentTxt ();
@@ -5291,38 +5293,45 @@ public class MainScreenController { //implements Initializable {
             String tmpS = "";
             tmpS = exforUtil.fixString11 (entryNum) + exforUtil.fixString11 (
                     myDate0);
+             String part3 = entryNum+"001"+"00001" ;   // make part from filename
             myData.add (myDataN,
-                    new editableData ("ENTRY", "", tmpS, ""));
+                    new editableData ("ENTRY", "", tmpS,part3));
 
             ++subentNum;
 
             subEnt = Integer.toString (subentNum);
             lastLine = lineN;
+            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.fixStr0s (Integer.toString (lastLine), 5);
             myData.add (++myDataN,
                     new editableData ("SUBENT", "",
                             exforUtil.fixString11 (getSUBENT (subentNum)) +
-                            exforUtil.fixString11 (myDate0), subEnt));
+                            exforUtil.fixString11 (myDate0),part3)); //  subEnt));
             ++lastLine;
-            myData.add (++myDataN, new editableData ("BIB", "", "", subEnt));
+            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.fixStr0s (Integer.toString (lastLine), 5);
+            myData.add (++myDataN, new editableData ("BIB", "", "", part3)); //subEnt));
             ++lastLine;
+            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.fixStr0s (Integer.toString (lastLine), 5);
             myData.add (++myDataN, new editableData ("HISTORY", "",
-                    ("(" + myDate0) + "C)", subEnt));
+                    ("(" + myDate0) + "C)", part3)); // subEnt));
             bHist = true;
             ++lastLine;
-            myData.add (++myDataN, new editableData ("ENDBIB", "", "", subEnt));
+            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.fixStr0s (Integer.toString (lastLine), 5);
+            myData.add (++myDataN, new editableData ("ENDBIB", "", "", part3)); // subEnt));
             ++lastLine;
+            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.fixStr0s (Integer.toString (lastLine), 5);
             myData.
                     add (++myDataN,
                             new editableData ("NOCOMMON", "",
                                     exforUtil.fixString11 ("0") + exforUtil.
-                                    fixString11 ("0"),
-                                    subEnt));
+                                    fixString11 ("0"),part3));
+                                    // subEnt));
 
             sub4Common.add (subEnt);
 
             ++lastLine;
+            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.fixStr0s (Integer.toString (lastLine), 5);
             myData.add (++myDataN,
-                    new editableData ("ENDSUBENT", "", "", subEnt));
+                    new editableData ("ENDSUBENT", "", "", part3)); // subEnt));
 
             //++subentNum;
             subEnt = Integer.toString (subentNum);
@@ -5339,6 +5348,7 @@ public class MainScreenController { //implements Initializable {
             startTree ();  // required as there is no tree now
             procTree ();
         }
+        popupMsg.infoBox ("Right click on HISTORY to ADD", "Start Editing ");
     }
 
     // Try to load OLD file
@@ -5368,11 +5378,14 @@ public class MainScreenController { //implements Initializable {
                 //++rowNumber;
 
                 // s1 = line.substring (0, 10).trim ();
-                s1 = line.substring (0, 10).trim();
+                s1 = line.substring (0, 10);
 
-                Head = (!s1.isEmpty () && FixedHeadList.contains (s1)) ? s1
-                        : oldHead;               
-                
+                System.out.println ("line->" + line + "<-" + s1 + "<-");
+
+                Head = (!s1.isEmpty () && FixedHeadList.contains (s1.trim ()))
+                        ? s1
+                        : oldHead;
+
                 if ( !s1.isEmpty () ) {
                     fixBool4Headers (s1);   // set Boolean for Header
                 }
@@ -5392,6 +5405,16 @@ public class MainScreenController { //implements Initializable {
                         startTree ();
                     }
                 }
+                String part3 = line.substring (66).trim ();
+                System.out.println (line.length () + "<->" +part3 +"<->"+part3.length ());                
+                if (part3.length ()==13){
+                    s4 = part3;
+                    s5=part3.substring (5,7).trim();
+                } else {
+                    s4 = "0";
+                    s5 = "0";
+                }
+/*                
                 if ( line.length () > 68 ) {
                     s4 = line.substring (66, line.length ());
                     s5 = line.substring (71, 74).trim ();
@@ -5402,7 +5425,7 @@ public class MainScreenController { //implements Initializable {
                     s4 = "0";
                     s5 = "0";
                 }
-
+*/
                 if ( (s1.contains ("BIB")) || (s1.contains ("ENDBIB")) || (s1.
                         contains ("COMMON")) ||
                         (s1.contains ("ENDCOMMON")) || (s1.contains (
@@ -5411,7 +5434,7 @@ public class MainScreenController { //implements Initializable {
                         ) {
                     s3 = "";
                 }
-                if ( s1.contains ("ENTRY") ) {
+                if ( s1.contains ("ENTRY") && !s1.contains ("END") ) {
                     s3 = exforUtil.fixString11 (entryNum, 11) +
                             exforUtil.fixString11 (myDateOldFile, 11);
                 }
@@ -5428,12 +5451,16 @@ public class MainScreenController { //implements Initializable {
                 }
 
                 myData.add (myDataN++, new editableData (s1, s2, s3, s4));
+
                 if ( FixedHeadList.contains (s1.trim ()) && !s1.
                         contains ("DATA") ) {
+
                     thisEntryLine = (!s1.isEmpty ())
                             ? getLineNum (line, false)
                             : getLineNum (oldHead, true);
 
+                    System.out.println (s1 + "<->" + Head + "<->" + oldHead +
+                            "<->" + thisEntryLine);
                     if ( line.length () > 68 ) {
                         int tmpINT = Integer.parseInt (s4.substring (5, 8).
                                 trim ());
@@ -5442,8 +5469,8 @@ public class MainScreenController { //implements Initializable {
                         rowNumber = Integer.parseInt (s4.trim ());
                     }
                 }
-                if ( TreeHeadList.contains (s1.trim ()) ) {
 
+                if ( TreeHeadList.contains (s1.trim ()) ) {
                     thisEntryLine = (!s1.isEmpty ())
                             ? getLineNum (line, false)
                             : getLineNum (oldHead, true);
@@ -5451,14 +5478,14 @@ public class MainScreenController { //implements Initializable {
                             Integer.toString (bibEntNum), s5, s1));
                 }
 
-                changeBoolStatus (s1, true);
+                changeBoolStatus (s1.trim (), true);
                 subEntTree.refresh ();
                 editTable.refresh ();
                 if ( s1.contains ("ENDENTRY") ) {
                     break;
                 }
-                oldHead = Head;
-                Head = "";
+                // oldHead = Head;
+                // Head = "";
             }
 
             fixTreeList (rowNumber);
@@ -5484,13 +5511,14 @@ public class MainScreenController { //implements Initializable {
             }
             System.exit (89);
         }
+        popupMsg.infoBox ("Right click on HISTORY to ADD", "Start Editing ");
     }
 
     // Thisfunction checks Head and clears boolean for the Headers
-    private void fixBool4Headers(String Header) {        
+    private void fixBool4Headers(String Header) {
         for ( Object myItem : TreeHeadList ) {
             if ( myItem.toString ().contains (Header) ) {
-                changeBoolStatus (Header, true);                
+                changeBoolStatus (Header, true);
             }
         }
     }
