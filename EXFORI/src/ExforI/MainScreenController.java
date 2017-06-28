@@ -2062,45 +2062,85 @@ public class MainScreenController { //implements Initializable {
     // private void InsSubEnt(String subN) {
     private void InsSubEnt(boolean append, String SE) {
         String subN = Integer.toString (++subentNum);
+        String part3 = "";
         int line = Integer.parseInt (SE);
+        subEnt = subN; //Integer.toString (subentNum);
 
         if ( append ) {
-            ++line;
-            subN = Integer.toString (subentNum);
+            //++line;
+            ++lastLine;
+            // subN = Integer.toString (subentNum);
+            // subEnt = subN; //Integer.toString (subentNum);
+            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.
+                    fixStr0s (Integer.toString (lastLine), 5);
             myData.add (line,
                     new editableData ("SUBENT", "",
                             exforUtil.fixString11 (getSUBENT (subentNum)) +
-                            exforUtil.fixString11 (myDate0), subN));
+                            exforUtil.fixString11 (myDate0), part3)); //subN));
             ++myDataN;
-            myData.add (line + 1, new editableData ("BIB", "", "", subN));
+            ++lastLine;
+            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.
+                    fixStr0s (Integer.toString (lastLine), 5);
+            myData.add (line + 1, new editableData ("BIB", "", "", part3)); //subN));
             ++myDataN;
-            myData.add (line + 2, new editableData ("ENDBIB", "", "", subN));
+            ++lastLine;
+            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.
+                    fixStr0s (Integer.toString (lastLine), 5);
+            myData.add (line + 2, new editableData ("ENDBIB", "", "", part3)); //subN));
             ++myDataN;
+            ++lastLine;
+            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.
+                    fixStr0s (Integer.toString (lastLine), 5);
             myData.add (line + 3, new editableData ("NOCOMMON", "",
                     exforUtil.fixString11 ("0") + exforUtil.fixString11 ("0"),
-                    subN));
+                    part3));
+            //subN));
             ++myDataN;
             sub4Common.add (subN);
+            ++lastLine;
+            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.
+                    fixStr0s ("99999", 5);
             myData.add (line + 4,
-                    new editableData ("ENDSUBENT", "", "", subN));
+                    new editableData ("ENDSUBENT", "", "", part3)); // subN));
             ++myDataN;
             ++lastLine;
         } else {
+            ++lastLine;
+            line = 1;
+            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.
+                    fixStr0s (Integer.toString (line), 5);
             myData.add (++myDataN,
                     new editableData ("SUBENT", "",
                             exforUtil.fixString11 (getSUBENT (subentNum)) +
-                            exforUtil.fixString11 (myDate0), subN));
-
-            myData.add (++myDataN, new editableData ("BIB", "", "", subN));
-            myData.add (++myDataN, new editableData ("ENDBIB", "", "", subN));
+                            exforUtil.fixString11 (myDate0), part3)); // subN));
+            ++lastLine;
+            ++line;
+            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.
+                    fixStr0s (Integer.toString (line), 5);
+            myData.add (++myDataN, new editableData ("BIB", "", "", part3)); // subN));
+            ++lastLine;
+            ++line;
+            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.
+                    fixStr0s (Integer.toString (line), 5);
+            myData.add (++myDataN, new editableData ("ENDBIB", "", "", part3)); // subN));
+            ++lastLine;
+            ++line;
+            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.
+                    fixStr0s (Integer.toString (line), 5);
             myData.add (++myDataN, new editableData ("NOCOMMON", "",
                     exforUtil.fixString11 ("0") + exforUtil.fixString11 ("0"),
-                    subN));
+                    part3));
+            //subN));
             sub4Common.add (subN);
-            myData.add (++myDataN,
-                    new editableData ("ENDSUBENT", "", "", subN));
             ++lastLine;
-            myData.add (++myDataN, new editableData ("ENDENTRY", "", "", "999"));
+            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.
+                    fixStr0s ("99999", 5);
+            myData.add (++myDataN,
+                    new editableData ("ENDSUBENT", "", "", part3)); //subN));
+            ++lastLine;
+            part3 = entryNum + exforUtil.fixStr0s ("999", 3) + exforUtil.
+                    fixStr0s ("99999", 5);
+            myData.add (++myDataN, new editableData ("ENDENTRY", "", "", part3));
         }
     }
 
@@ -2338,6 +2378,8 @@ public class MainScreenController { //implements Initializable {
         tf.setWrapText (true);
         hb1.getChildren ().addAll (acceptEdit, cancelEdit);
         vb1.getChildren ().addAll (tf, hb1);
+        hb1.setSpacing (10);
+        vb1.setSpacing (5);
         if ( !act.contains ("Delete") ) {
             if ( act.contains ("Edit") ) {
                 tf.setText (getTxtData);
@@ -3088,9 +3130,15 @@ public class MainScreenController { //implements Initializable {
         entryChoice (lList.facilList, facilCB);
         entryChoice (lList.instList, institute);
 
+        hb2.setSpacing (5);
+        vb2.setSpacing (5);
+        vb3.setSpacing (5);
+        
         if ( !act.contains ("Delete") ) {
+            entryChoice (lList.facilList, facilCB);
+            entryChoice (lList.instList, institute);
             tf.setText (getTxtData);
-            myDialogScene = new Scene (vb1, 800, 250);
+            myDialogScene = new Scene (vb1, 850, 250);
             myDialog.setScene (myDialogScene);
             myDialog.show ();
             addLReacCnt = 0;
@@ -5293,43 +5341,49 @@ public class MainScreenController { //implements Initializable {
             String tmpS = "";
             tmpS = exforUtil.fixString11 (entryNum) + exforUtil.fixString11 (
                     myDate0);
-             String part3 = entryNum+"001"+"00001" ;   // make part from filename
+            String part3 = entryNum + "001" + "00001";   // make part from filename
             myData.add (myDataN,
-                    new editableData ("ENTRY", "", tmpS,part3));
+                    new editableData ("ENTRY", "", tmpS, part3));
 
             ++subentNum;
 
             subEnt = Integer.toString (subentNum);
             lastLine = lineN;
-            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.fixStr0s (Integer.toString (lastLine), 5);
+            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.
+                    fixStr0s (Integer.toString (lastLine), 5);
             myData.add (++myDataN,
                     new editableData ("SUBENT", "",
                             exforUtil.fixString11 (getSUBENT (subentNum)) +
-                            exforUtil.fixString11 (myDate0),part3)); //  subEnt));
+                            exforUtil.fixString11 (myDate0), part3)); //  subEnt));
             ++lastLine;
-            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.fixStr0s (Integer.toString (lastLine), 5);
+            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.
+                    fixStr0s (Integer.toString (lastLine), 5);
             myData.add (++myDataN, new editableData ("BIB", "", "", part3)); //subEnt));
             ++lastLine;
-            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.fixStr0s (Integer.toString (lastLine), 5);
+            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.
+                    fixStr0s (Integer.toString (lastLine), 5);
             myData.add (++myDataN, new editableData ("HISTORY", "",
                     ("(" + myDate0) + "C)", part3)); // subEnt));
             bHist = true;
             ++lastLine;
-            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.fixStr0s (Integer.toString (lastLine), 5);
+            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.
+                    fixStr0s (Integer.toString (lastLine), 5);
             myData.add (++myDataN, new editableData ("ENDBIB", "", "", part3)); // subEnt));
             ++lastLine;
-            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.fixStr0s (Integer.toString (lastLine), 5);
+            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.
+                    fixStr0s (Integer.toString (lastLine), 5);
             myData.
                     add (++myDataN,
                             new editableData ("NOCOMMON", "",
                                     exforUtil.fixString11 ("0") + exforUtil.
-                                    fixString11 ("0"),part3));
-                                    // subEnt));
+                                    fixString11 ("0"), part3));
+            // subEnt));
 
             sub4Common.add (subEnt);
 
             ++lastLine;
-            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.fixStr0s (Integer.toString (lastLine), 5);
+            part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.
+                    fixStr0s ("99999", 5);
             myData.add (++myDataN,
                     new editableData ("ENDSUBENT", "", "", part3)); // subEnt));
 
@@ -5380,8 +5434,6 @@ public class MainScreenController { //implements Initializable {
                 // s1 = line.substring (0, 10).trim ();
                 s1 = line.substring (0, 10);
 
-                System.out.println ("line->" + line + "<-" + s1 + "<-");
-
                 Head = (!s1.isEmpty () && FixedHeadList.contains (s1.trim ()))
                         ? s1
                         : oldHead;
@@ -5406,26 +5458,20 @@ public class MainScreenController { //implements Initializable {
                     }
                 }
                 String part3 = line.substring (66).trim ();
-                System.out.println (line.length () + "<->" +part3 +"<->"+part3.length ());                
-                if (part3.length ()==13){
+                if ( part3.length () == 13 ) {
                     s4 = part3;
-                    s5=part3.substring (5,7).trim();
+                    s5 = part3.substring (5, 7).trim ();
                 } else {
                     s4 = "0";
                     s5 = "0";
                 }
-/*                
-                if ( line.length () > 68 ) {
-                    s4 = line.substring (66, line.length ());
-                    s5 = line.substring (71, 74).trim ();
-                } else if ( line.length () == 67 ) {
-                    s4 = line.substring (66).trim ();
-                    s5 = line.substring (66).trim ();
-                } else if ( line.length () <= 66 ) {
-                    s4 = "0";
-                    s5 = "0";
-                }
-*/
+                /*
+                 * if ( line.length () > 68 ) { s4 = line.substring (66,
+                 * line.length ()); s5 = line.substring (71, 74).trim (); } else
+                 * if ( line.length () == 67 ) { s4 = line.substring (66).trim
+                 * (); s5 = line.substring (66).trim (); } else if ( line.length
+                 * () <= 66 ) { s4 = "0"; s5 = "0"; }
+                 */
                 if ( (s1.contains ("BIB")) || (s1.contains ("ENDBIB")) || (s1.
                         contains ("COMMON")) ||
                         (s1.contains ("ENDCOMMON")) || (s1.contains (
@@ -5459,8 +5505,6 @@ public class MainScreenController { //implements Initializable {
                             ? getLineNum (line, false)
                             : getLineNum (oldHead, true);
 
-                    System.out.println (s1 + "<->" + Head + "<->" + oldHead +
-                            "<->" + thisEntryLine);
                     if ( line.length () > 68 ) {
                         int tmpINT = Integer.parseInt (s4.substring (5, 8).
                                 trim ());
