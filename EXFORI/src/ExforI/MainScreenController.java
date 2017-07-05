@@ -3102,6 +3102,10 @@ public class MainScreenController { //implements Initializable {
             }
         }
 
+        if ( !act.contains ("Add") ) {
+            tmpINT = tmpRICnt;
+        }
+
         myDialog.setTitle ("Enter " + Head);
         if ( !myDialog.getModality ().toString ().contains ("MODAL") ) {
             myDialog.initModality (Modality.WINDOW_MODAL);
@@ -3133,7 +3137,7 @@ public class MainScreenController { //implements Initializable {
         hb2.setSpacing (5);
         vb2.setSpacing (5);
         vb3.setSpacing (5);
-        
+
         if ( !act.contains ("Delete") ) {
             entryChoice (lList.facilList, facilCB);
             entryChoice (lList.instList, institute);
@@ -3191,23 +3195,23 @@ public class MainScreenController { //implements Initializable {
                                 ++lCnt1;
                             }
                         }
-                        tmp1 = "";
-                        tmp2 = parseStr;
-                        for ( int ii = 0; ii < lCnt1; ii++ ) {
-                            tmp3 = tmp2.substring (0, tmp2.indexOf ('\n'));
-                            tmp3 = tmp3.substring (0, tmp3.lastIndexOf (","));
-                            if ( tmp3.length () >= cutPoint ) {
-                                tmp3 = arrTitle (tmp3);
-                                lCnt2 += multiLine;
-                            } else {
-                                ++lCnt2;
-                            }
-                            multiLine = lCnt2;
-                            tmp1 += tmp3 + "@@";  // -- CHECK THIS and for problem replace
-                            tmp2 = tmp2.substring (tmp2.indexOf ('\n') + 1);
-                        }
-                        tmp1 += tmp2;
-                        parseStr = tmp1;
+                        // tmp1 = "";
+                        parseStr = arrTitle (parseStr);
+                        // tmp2 = parseStr;
+                        /*
+                         * for ( int ii = 0; ii < lCnt1; ii++ ) { tmp3 =
+                         * tmp2.substring (0, tmp2.indexOf ('\n')); tmp3 =
+                         * tmp3.substring (0, tmp3.lastIndexOf (",")); if (
+                         * tmp3.length () >= cutPoint ) { tmp3 = arrTitle
+                         * (tmp3); lCnt2 += multiLine; } else { ++lCnt2; }
+                         * multiLine = lCnt2; tmp1 += tmp3 + "@@"; // -- CHECK
+                         * THIS and for problem replace tmp2 = tmp2.substring
+                         * (tmp2.indexOf ('\n') + 1); } tmp1 += tmp2; parseStr =
+                         * tmp1;
+                         */
+                        multiLine = (parseStr.split ("\\@@")).length;
+                        System.out.println ("0 " + parseStr + " multiLine " +
+                                multiLine);
                         //parseStr = arrTitle (parseStr);
 
                         if ( act.contains ("Edit") ) {
@@ -3223,26 +3227,30 @@ public class MainScreenController { //implements Initializable {
                                         new editableData (tmpHead, "",
                                                 strEntered,
                                                 SE));
+                                ++myDataN;
                                 if ( ii <= multiLine - 2 ) {
                                     parseStr = parseStr.substring (2 + parseStr.
                                             indexOf ("@@"));
                                 }
                             }
-                        } else {
+                        } else {                            
                             for ( int ii = 0; ii < multiLine; ii++ ) {
                                 tmpHead = (ii == 0) ? tmpStr1 : tmpStr2;
-                                if ( ii < multiLine - 1 ) {
+                                // if ( ii < multiLine - 1 ) {
+                                if ( ii <= multiLine - 2 ) {
                                     strEntered = parseStr.substring (
                                             0, parseStr.indexOf ("@@"));
                                 } else {
                                     strEntered = parseStr;
                                 }
+                                System.out.println ("1" + strEntered);
                                 myData.add (ri + ii,
                                         new editableData (tmpHead, "",
                                                 strEntered,
                                                 SE));
                                 ++myDataN;
-                                if ( ii < multiLine - 1 ) {
+                                //if ( ii < multiLine - 1 ) {
+                                if ( ii <= multiLine - 2 ) {
                                     parseStr = parseStr.substring (2 + parseStr.
                                             indexOf ("@@"));
                                 }
