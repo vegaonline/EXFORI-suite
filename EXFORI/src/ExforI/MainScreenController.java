@@ -1549,9 +1549,12 @@ public class MainScreenController { //implements Initializable {
             final TableRow<editableData> row = new TableRow<editableData> ();
             row.setOnMouseClicked ((MouseEvent event) -> {
                 editableData clickedRow = row.getItem ();
-                tmp4 = "";
+                tmp4 = "";                
 
-                tmp4 = clickedRow.bibItemNameProperty ().getValue ();
+                int rowCnt = 1;
+                //########################################################## check
+                tmp4 = (rowCnt<=(myData.size ()-1)) ? clickedRow.bibItemNameProperty ().
+                                        getValue () : "";
 
                 if ( !row.isEmpty () &&
                         event.getButton () == MouseButton.SECONDARY &&
@@ -2261,7 +2264,6 @@ public class MainScreenController { //implements Initializable {
      * @return output String with added character to make it multiline
      */
     private String arrTitle(String s1) {
-
 //        s1 = "Abhijit Bhattacharyya, Susmita Bhattacharyya, " +
 //                "Tilottoma Bhattacharyya. we stay at Anushakti Nagar, " +
 //                "Mumbai. We like to eat Mutton and fish better than " +
@@ -2272,11 +2274,14 @@ public class MainScreenController { //implements Initializable {
         multiLine = 1;
         String nComps[] = s1.split ("\\s+");
         int wCount = 0;
-        
+
+        System.out.println ("In ArrT->" + s1);
+
         s2 = nComps[0] + " ";
         wCount = nComps[0].length () + 1;
-        for ( int ii =10; ii < nComps.length; ii++ ) {
+        for ( int ii = 10; ii < nComps.length; ii++ ) {
             wCount += nComps[ii].length ();
+            System.out.println (ii + " : ->" + nComps[ii]);
             if ( wCount <= cutPoint ) {
                 s2 += nComps[ii] + " ";
                 ++wCount;
@@ -2289,7 +2294,7 @@ public class MainScreenController { //implements Initializable {
         return s2;
     }
 
-        /**
+    /**
      * Word wrapping feature for the Title
      *
      * @param s1 which is input
@@ -2299,14 +2304,14 @@ public class MainScreenController { //implements Initializable {
     private String arrTitle(String s1, boolean multi) {
         String s2 = "";
         String s3 = s1;
-        String s3Old="";
+        String s3Old = "";
         String spaceList = "";
         int wCount = 0;
         int wordNum = 0; // s3.split("\\s+").length;                
         multiLine = 1;
         int ii = 0;
-        while (ii < s1.length () && s3.length ()!=s3Old.length ()) {
-            String tmp = (s3.contains ("\n") ) ? s3.substring (0, s3.indexOf (
+        while (ii < s1.length () && s3.length () != s3Old.length ()) {
+            String tmp = (s3.contains ("\n")) ? s3.substring (0, s3.indexOf (
                     "\n")) : s3;
             if ( tmp.length () > cutPoint ) {
                 tmp = arrTitle (tmp);
@@ -2315,18 +2320,17 @@ public class MainScreenController { //implements Initializable {
             } else {
                 s2 += tmp + "@@";
                 ++multiLine;
-            } 
-            s3Old=s3;            
+            }
+            s3Old = s3;
             s3 = s3.substring (s3.indexOf ("\n") + 1);
             ii += tmp.length ();
         }
         --multiLine;
         s2 = s2.substring (0, s2.length () - 2);
-        System.out.println("string to be returned ->"+s2);
+        System.out.println ("string to be returned ->" + s2);
         return s2;
     }
-       
-    
+
     private void tooltipDelay(Tooltip tpX, Node thisNode) {
         thisNode.setOnMouseEntered (new EventHandler<MouseEvent> () {
             @Override
@@ -2344,7 +2348,6 @@ public class MainScreenController { //implements Initializable {
             }
         });
     }
-
 
     private void doEditFreeText(int ri, String Head, String act, String SE) {
         String getTxtData = "";
@@ -2434,10 +2437,14 @@ public class MainScreenController { //implements Initializable {
                         parseStr = tf.getText ().toString ();
                     }
 
+                    System.out.println ("0->" + parseStr);
+
                     parseStr = (Head.contains ("ERR-ANALYS")) ? arrTitle (
                             parseStr,
                             true) : arrTitle (parseStr);
                     multiLine = (parseStr.split ("\\@@")).length;
+
+                    System.out.println ("1->" + parseStr);
 
                     if ( act.contains ("Edit") ) {
                         for ( int ii = 0; ii < multiLine; ii++ ) {
@@ -3165,7 +3172,8 @@ public class MainScreenController { //implements Initializable {
                 tempB = (!tempB.isEmpty ()) ? tempB.substring (0, tempB.
                         indexOf (" ")) : "";
 
-                tempC = (addLReacCnt == 0) ? tf.getText () : tf.getText () + ",\n";
+                tempC = (addLReacCnt == 0) ? tf.getText () : tf.getText () +
+                        ",\n";
 
                 if ( !putTxt.endsWith (", ") &&
                         putTxt != null &&
@@ -3208,11 +3216,11 @@ public class MainScreenController { //implements Initializable {
                         }
                         // tmp1 = "";
 
-                        parseStr = arrTitle(parseStr, true);
+                        parseStr = arrTitle (parseStr, true);
 
-               
                         lCnt1 = (parseStr.split ("\\@@")).length;
-                        System.out.println ("0 " + parseStr + " lCnt1 " + lCnt1 +
+                        System.out.println (
+                                "0 " + parseStr + " lCnt1 " + lCnt1 +
                                 " multiLine " +
                                 multiLine
                         );
