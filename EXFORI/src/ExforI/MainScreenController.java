@@ -94,6 +94,7 @@ public class MainScreenController { //implements Initializable {
     private int backupFreq = 2; // 2 min
     private int backupDelay;
     private int setB1Count = 0;
+    private int facCnt = 1;
     public String entryNum = "";
     private Boolean fNameSet = false;
     private Boolean BLoadOldFile = false;
@@ -693,7 +694,7 @@ public class MainScreenController { //implements Initializable {
                 }
 
                 if ( s1.contains ("DATA") && (linia == 0) && !isData &&
-                         !s1.contains ("DECAY") ) {
+                        !s1.contains ("DECAY") ) {
                     setDataRecNum (ii);
                     if ( isData ) {
                         DATN1S = exforUtil.
@@ -722,7 +723,7 @@ public class MainScreenController { //implements Initializable {
                 }
 
                 if ( s1.contains ("SUBENT") && !s1.contains ("END") && (linia ==
-                         0) ) {
+                        0) ) {
                     // setSubentNum (ii);
                     String tmp = myData.get (ii - 1).getSubEntNum ().trim ();
                     tmp = tmp.substring (5, 8).trim ();
@@ -737,7 +738,7 @@ public class MainScreenController { //implements Initializable {
                     int fac = Integer.parseInt (tmp) - 1;
                     //int fac = subENTNum;
                     s3 = exforUtil.fixString11 (Integer.toString (fac)) +
-                             exforUtil.fixString11 ("0");
+                            exforUtil.fixString11 ("0");
                 }
 
                 if ( s1.matches ("ENDENTRY") && (linia == 0) ) {
@@ -884,9 +885,9 @@ public class MainScreenController { //implements Initializable {
     private void doSelfCheck(ActionEvent event) throws InterruptedException,
             IOException {
         if ( !entryNum.isEmpty () &&
-                 !fName.isEmpty () &&
-                 !myData.isEmpty () &&
-                 isOrdered ) {
+                !fName.isEmpty () &&
+                !myData.isEmpty () &&
+                isOrdered ) {
             selfChecker.selfChecker (lList, entryNum, fName, myData, brW);
         }
     }
@@ -931,7 +932,7 @@ public class MainScreenController { //implements Initializable {
 
         // entTextEntered = true;
         if ( !s1.isEmpty () && s1.length () <= 5 && !exforUtil.isAlpha (s12) &&
-                 setB1Count < 1 ) {
+                setB1Count < 1 ) {
             if ( s1.length () < 5 || s1.length () > 5 ) {
                 popupMsg.
                         warnBox ("ENTRY Number WRONG Format", "Entry Number...");
@@ -1454,7 +1455,7 @@ public class MainScreenController { //implements Initializable {
         if ( osName.contains (winStr) ) {
             pathSEP = "\\";
             zchexPath = rootDir + pathSEP + checkerDir + pathSEP +
-                     "zchex_windows";
+                    "zchex_windows";
             zchexCmd = zchexPath + pathSEP + "zchexw.exe";
         }
         if ( osName.contains (linStr) ) {
@@ -1559,9 +1560,9 @@ public class MainScreenController { //implements Initializable {
                         getValue () : "";
 
                 if ( !row.isEmpty () &&
-                         event.getButton () == MouseButton.SECONDARY &&
-                         event.getClickCount () == 1 &&
-                         !(tmp4.contains ("COMMON")) ) {
+                        event.getButton () == MouseButton.SECONDARY &&
+                        event.getClickCount () == 1 &&
+                        !(tmp4.contains ("COMMON")) ) {
 
                     row.setContextMenu (chkMenuEdit);
                     int rowIndex = row.getIndex ();
@@ -1579,14 +1580,14 @@ public class MainScreenController { //implements Initializable {
                         doAddEditDelete (rowIndex, tmp4, "Add");    // tmp4 was "" before
                     }
                 } else if ( !row.isEmpty () &&
-                         event.getButton () == MouseButton.SECONDARY &&
-                         event.getClickCount () == 1 &&
-                         (tmp4.contains ("COM")) ) {
+                        event.getButton () == MouseButton.SECONDARY &&
+                        event.getClickCount () == 1 &&
+                        (tmp4.contains ("COM")) ) {
                     doAddEditDelete (row.getIndex (), tmp4, "");
                 }
                 if ( row.isEmpty () && event.getButton () ==
-                         MouseButton.SECONDARY &&
-                         event.getClickCount () == 1 ) {
+                        MouseButton.SECONDARY &&
+                        event.getClickCount () == 1 ) {
                     String s1 = "";
                     int rowIndex = row.getIndex ();
                     resetMenuEditAdd (s1, true, rowIndex);
@@ -1683,8 +1684,8 @@ public class MainScreenController { //implements Initializable {
         }
 
         if ( !s1.contains ("END") || !s1.contains ("ENTRY") ||
-                 !s1.contains ("SUBENT") || !s1.contains ("ENDCOMMON") ||
-                 !s1.contains ("ENDSUBENT") ) {
+                !s1.contains ("SUBENT") || !s1.contains ("ENDCOMMON") ||
+                !s1.contains ("ENDSUBENT") ) {
             if ( subEnt.length () > 3 ) {
                 subEnt = subEnt.substring (5, 8);
             }
@@ -1776,9 +1777,9 @@ public class MainScreenController { //implements Initializable {
     public void resetMenuEditAdd(String s1, boolean ivoid, int SE) {
         boolean bibSUB = false;
         if ( s1.contains ("BIB") ||
-                 s1.contains ("SUBENT") ||
-                 s1.contains ("ENDBIB") ||
-                 s1.contains ("ENDSUBENT") ) {
+                s1.contains ("SUBENT") ||
+                s1.contains ("ENDBIB") ||
+                s1.contains ("ENDSUBENT") ) {
             bibSUB = true;
         }
 
@@ -2081,7 +2082,7 @@ public class MainScreenController { //implements Initializable {
             myData.add (line,
                     new editableData ("SUBENT", "",
                             exforUtil.fixString11 (getSUBENT (subentNum)) +
-                             exforUtil.fixString11 (myDate0), part3)); //subN));
+                            exforUtil.fixString11 (myDate0), part3)); //subN));
             ++myDataN;
             ++lastLine;
             part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.
@@ -2117,7 +2118,7 @@ public class MainScreenController { //implements Initializable {
             myData.add (++myDataN,
                     new editableData ("SUBENT", "",
                             exforUtil.fixString11 (getSUBENT (subentNum)) +
-                             exforUtil.fixString11 (myDate0), part3)); // subN));
+                            exforUtil.fixString11 (myDate0), part3)); // subN));
             ++lastLine;
             ++line;
             part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.
@@ -2277,13 +2278,12 @@ public class MainScreenController { //implements Initializable {
         String nComps[] = s1.split ("\\s+");
         int wCount = 0;
 
-        System.out.println ("In ArrT->" + s1);
-
         s2 = nComps[0] + " ";
         wCount = nComps[0].length () + 1;
+
         for ( int ii = 10; ii < nComps.length; ii++ ) {
             wCount += nComps[ii].length ();
-            System.out.println (ii + " : ->" + nComps[ii]);
+
             if ( wCount <= cutPoint ) {
                 s2 += nComps[ii] + " ";
                 ++wCount;
@@ -2329,7 +2329,7 @@ public class MainScreenController { //implements Initializable {
         }
         --multiLine;
         s2 = s2.substring (0, s2.length () - 2);
-        System.out.println ("string to be returned ->" + s2);
+
         return s2;
     }
 
@@ -2656,22 +2656,22 @@ public class MainScreenController { //implements Initializable {
                             if ( !tmpB.isEmpty () ) {
                                 demoStr0 = tmpB.substring (
                                         0, tmpB.indexOf (")")) +
-                                         "," + tmp + ")" +
-                                         tmpB.substring (tmpB.indexOf (")") + 1);;
+                                        "," + tmp + ")" +
+                                        tmpB.substring (tmpB.indexOf (")") + 1);;
                             } else {
                                 demoStr0 = "(" + tmp + ")";
                             }
                         } else if ( !tmpB.isEmpty () ) {
                             demoStr0 = tmpB.substring (0, tmpB.indexOf (")")) +
-                                     "," + tmp;// + ")";
+                                    "," + tmp;// + ")";
                         } else {
                             demoStr0 = tmpB.substring (0, tmpB.indexOf (")")) +
-                                     "," + tmp + ")" +
-                                     tmpB.substring (tmpB.indexOf (")"));
+                                    "," + tmp + ")" +
+                                    tmpB.substring (tmpB.indexOf (")"));
                         }
                     } else {
                         demoStr0 = tmpB + "\n" +
-                                 (++lineCount) + "(" + tmp + ")";
+                                (++lineCount) + "(" + tmp + ")";
                         ++cnt;
                         addRCBB = false;
                     }
@@ -2866,8 +2866,8 @@ public class MainScreenController { //implements Initializable {
             entryChoice (lList.confList, journals);
         }
         if ( (checkIt.contains ("REPT")) || (checkIt.contains ("THES")) ||
-                 (checkIt.contains ("PRIV")) || (checkIt.contains ("PREP")) ||
-                 (checkIt.contains ("PROG")) ) {
+                (checkIt.contains ("PRIV")) || (checkIt.contains ("PREP")) ||
+                (checkIt.contains ("PROG")) ) {
             entryChoice (lList.reportList, journals);
         }
         if ( checkIt.contains ("BOOK") ) {
@@ -2959,9 +2959,9 @@ public class MainScreenController { //implements Initializable {
                 temp = jType.getValue ();
                 if ( !temp.contains ("Please") && (temp != null) ) {
                     if ( !putTxt.endsWith (", ") &&
-                             putTxt != null &&
-                             putTxt != "" &&
-                             putTxt.length () > 1 ) {
+                            putTxt != null &&
+                            putTxt != "" &&
+                            putTxt.length () > 1 ) {
                         putTxt += ",\n";
                     }
                     temp = temp.substring (1, 2);
@@ -3110,7 +3110,7 @@ public class MainScreenController { //implements Initializable {
             for ( int ii = 0; ii < tmpRICnt; ii++ ) {
                 getTxtData
                         += myData.get (ri + ii).getContentTxt ().toString () +
-                         ",\n";
+                        ",\n";
             }
         }
 
@@ -3167,26 +3167,23 @@ public class MainScreenController { //implements Initializable {
                         : "";
                 tempA = (!tempA.isEmpty ()) ? tempA.substring (0, tempA.
                         indexOf (" ")) : "";
+                
+                
+                
                 tempB = (!institute.getValue ().isEmpty ()) ? institute.
                         getValue () : "";
                 tempB = (!tempB.isEmpty ()) ? tempB.substring (0, tempB.
                         indexOf (" ")) : "";
 
-                tempC = (addLReacCnt == 0) ? tf.getText () : tf.getText () +
-                         ",\n";
-
-                if ( !putTxt.endsWith (", ") &&
-                         putTxt != null &&
-                         putTxt != "" &&
-                         putTxt.length () > 1 ) {
-                    putTxt += ",\n";
-                }
+                
+                tempC = (addLReacCnt == 0) ? tf.getText () : tf.getText () +",\n"; 
 
                 putTxt = tempA + ", " + tempB;
                 putTxt = "(" + putTxt + ")";
                 tempC = (addLReacCnt == 0) ? putTxt : tempC + putTxt;
                 tf.setText (tempC);
                 ++addLReacCnt;
+                ++facCnt;
                 isSelect = true;
             });
             acceptEdit.setOnAction (new EventHandler<ActionEvent> () {
@@ -3216,17 +3213,9 @@ public class MainScreenController { //implements Initializable {
                         }
                         // tmp1 = "";
 
-                        parseStr = arrTitle (parseStr);    //, true);
+                        parseStr = arrTitle (parseStr, true);
                         multiLine = (parseStr.split ("\\@@")).length;
-                        System.out.println(parseStr);
 
-                        //    lCnt1 = (parseStr.split("\\@@")).length;
-                        //     System.out.println(
-                        //             "0 " + parseStr + " lCnt1 " + lCnt1
-                        //             + " multiLine "
-                        //             + multiLine
-                        //     );
-                        //parseStr = arrTitle (parseStr);
                         if ( act.contains ("Edit") ) {
                             for ( int ii = 0; ii < multiLine; ii++ ) {
                                 tmpHead = (ii == 0) ? tmpStr1 : tmpStr2;
@@ -3239,14 +3228,17 @@ public class MainScreenController { //implements Initializable {
 
                                 if ( tmpINT == multiLine ) {
                                     myData.set (ri + ii,
-                                            new editableData (tmpHead, "", strEntered, SE));
+                                            new editableData (tmpHead, "",
+                                                    strEntered, SE));
                                 } else {
                                     myData.set (ri + ii,
-                                            new editableData (tmpHead, "", strEntered, SE));
+                                            new editableData (tmpHead, "",
+                                                    strEntered, SE));
                                     ++myDataN;
                                 }
                                 if ( ii <= multiLine - 2 ) {
-                                    parseStr = parseStr.substring (2 + parseStr. indexOf ("@@"));
+                                    parseStr = parseStr.substring (2 + parseStr.
+                                            indexOf ("@@"));
                                 }
                             }
                         } else {
@@ -3254,7 +3246,8 @@ public class MainScreenController { //implements Initializable {
                                 tmpHead = (ii == 0) ? tmpStr1 : tmpStr2;
                                 // if ( ii < multiLine - 1 ) {
                                 if ( ii <= multiLine - 2 ) {
-                                    strEntered = parseStr.substring (0, parseStr.indexOf ("@@"));
+                                    strEntered = parseStr.substring (0,
+                                            parseStr.indexOf ("@@"));
                                 } else {
                                     strEntered = parseStr;
                                 }
@@ -3316,7 +3309,7 @@ public class MainScreenController { //implements Initializable {
         isSelect = false;
 
         while (myData.get (ri + tmpRICnt).getBibItemName ().toString () ==
-                 "") {
+                "") {
             ++tmpRICnt;
         }
 
@@ -3326,7 +3319,7 @@ public class MainScreenController { //implements Initializable {
             for ( int ii = 0; ii < tmpRICnt; ii++ ) {
                 getTxtData
                         += myData.get (ri + ii).getContentTxt ().toString () +
-                         " ";
+                        " ";
             }
         }
         if ( getTxtData != null ) {
@@ -3369,9 +3362,9 @@ public class MainScreenController { //implements Initializable {
                 tempA = tempA.substring (0, tempA.indexOf (" "));
                 tempA = "(" + tempA + ")";
                 if ( !putTxt.endsWith (", ") &&
-                         putTxt != null &&
-                         putTxt != "" &&
-                         putTxt.length () > 1 ) {
+                        putTxt != null &&
+                        putTxt != "" &&
+                        putTxt.length () > 1 ) {
                     putTxt += ",\n";
                 }
                 tempB = tf.getText ();
@@ -3490,7 +3483,7 @@ public class MainScreenController { //implements Initializable {
             for ( int ii = 0; ii < tmpRICnt; ii++ ) {
                 getTxtData
                         += myData.get (ri + ii).getContentTxt ().toString () +
-                         " ";
+                        " ";
             }
         }
         if ( getTxtData != null ) {
@@ -3691,9 +3684,9 @@ public class MainScreenController { //implements Initializable {
                 demoStr1 = Integer.toString (tmpA.length ()) + " ";
 
                 if ( !putTxt.endsWith (", ") &&
-                         putTxt != null &&
-                         putTxt != "" &&
-                         putTxt.length () > 1 ) {
+                        putTxt != null &&
+                        putTxt != "" &&
+                        putTxt.length () > 1 ) {
                     putTxt += ",\n";
                 }
                 putTxt += tmpA;
@@ -3877,11 +3870,11 @@ public class MainScreenController { //implements Initializable {
 
         headingC.setStyle (
                 "-fx-border-color: lightblue; " +
-                 "-fx-font-size: 15;" +
-                 "-fx-border-insets: -5; " +
-                 "-fx-border-radius: 5;" +
-                 "-fx-border-style: dotted;" +
-                 "-fx-border-width: 2;"
+                "-fx-font-size: 15;" +
+                "-fx-border-insets: -5; " +
+                "-fx-border-radius: 5;" +
+                "-fx-border-style: dotted;" +
+                "-fx-border-width: 2;"
         );
         hb1.getChildren ().addAll (headingL, headingC,
                 subAccL, subAcc, authL, authT, addRCB);
@@ -4432,7 +4425,7 @@ public class MainScreenController { //implements Initializable {
                 strCOL[4] = exforUtil.fixString11 (strCOL[4]);
                 strCOL[5] = exforUtil.fixString11 (strCOL[5]);
                 parseStr = strCOL[1] + strCOL[2] + strCOL[3] + strCOL[4] +
-                         strCOL[5];
+                        strCOL[5];
                 myData.add (ri + lineCnt, new editableData (strCOL[0], col11,
                         parseStr, SE));
                 ++myDataN;
@@ -4485,7 +4478,7 @@ public class MainScreenController { //implements Initializable {
                 tmp = tmp.substring (1, tmp.length () - 1);
                 getTxtData
                         += tmp +
-                         "\n";
+                        "\n";
             }
         }
 
@@ -4526,11 +4519,11 @@ public class MainScreenController { //implements Initializable {
         vb1.getChildren ().addAll (tf, hb1, hb2, hb3, hb4, hb5);
         DDFlagC.setStyle (
                 "-fx-border-color: lightblue; " +
-                 "-fx-font-size: 12;" +
-                 "-fx-border-insets: -5; " +
-                 "-fx-border-radius: 5;" +
-                 "-fx-border-style: dotted;" +
-                 "-fx-border-width: 2;"
+                "-fx-font-size: 12;" +
+                "-fx-border-insets: -5; " +
+                "-fx-border-radius: 5;" +
+                "-fx-border-style: dotted;" +
+                "-fx-border-width: 2;"
         );
         nuclideDDCB.setMaxWidth (130);
         THalfDDT.setMaxWidth (maxW);
@@ -4620,9 +4613,9 @@ public class MainScreenController { //implements Initializable {
                 }
 
                 if ( !putTxt.endsWith (", ") &&
-                         putTxt != null &&
-                         putTxt != "" &&
-                         putTxt.length () > 1 ) {
+                        putTxt != null &&
+                        putTxt != "" &&
+                        putTxt.length () > 1 ) {
                     putTxt += ",\n";
                 }
                 putTxt += tmp2;
@@ -5377,7 +5370,7 @@ public class MainScreenController { //implements Initializable {
             myData.add (++myDataN,
                     new editableData ("SUBENT", "",
                             exforUtil.fixString11 (getSUBENT (subentNum)) +
-                             exforUtil.fixString11 (myDate0), part3)); //  subEnt));
+                            exforUtil.fixString11 (myDate0), part3)); //  subEnt));
             ++lastLine;
             part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.
                     fixStr0s (Integer.toString (lastLine), 5);
@@ -5497,21 +5490,21 @@ public class MainScreenController { //implements Initializable {
                  */
                 if ( (s1.contains ("BIB")) || (s1.contains ("ENDBIB")) || (s1.
                         contains ("COMMON")) ||
-                         (s1.contains ("ENDCOMMON")) || (s1.contains (
+                        (s1.contains ("ENDCOMMON")) || (s1.contains (
                         "ENDSUBENT")) ||
-                         (s1.contains ("ENDSUBENT")) //|| (s1.contains ("ENDENTRY")) ) {
+                        (s1.contains ("ENDSUBENT")) //|| (s1.contains ("ENDENTRY")) ) {
                         ) {
                     s3 = "";
                 }
                 if ( s1.contains ("ENTRY") && !s1.contains ("END") ) {
                     s3 = exforUtil.fixString11 (entryNum, 11) +
-                             exforUtil.fixString11 (myDateOldFile, 11);
+                            exforUtil.fixString11 (myDateOldFile, 11);
                 }
                 if ( s1.contains ("SUBENT") && !s1.contains ("END") ) {
                     ++subentNum;
                     subEnt = Integer.toString (subentNum);
                     s3 = exforUtil.fixString11 (getSUBENT (subentNum), 11) +
-                             exforUtil.fixString11 (
+                            exforUtil.fixString11 (
                                     myDateOldFile, 11);
                     //s4 = subEnt;
                 }
@@ -5565,11 +5558,11 @@ public class MainScreenController { //implements Initializable {
 
         } catch (Exception e) {
             System.out.println (" We found an error to read the file " +
-                     fName);
+                    fName);
             System.out.println (" Please Check...........");
             try {
                 brW.write ("Error in reading and parsing the file-> " + fName +
-                         "\n");
+                        "\n");
 
             } catch (IOException ex) {
                 Logger.getLogger (MainScreenController.class
