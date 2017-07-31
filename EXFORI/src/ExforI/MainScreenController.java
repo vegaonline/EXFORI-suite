@@ -2281,7 +2281,7 @@ public class MainScreenController { //implements Initializable {
         s2 = nComps[0] + " ";
         wCount = nComps[0].length () + 1;
 
-        for ( int ii = 10; ii < nComps.length; ii++ ) {
+        for ( int ii = 1; ii < nComps.length; ii++ ) {
             wCount += nComps[ii].length ();
 
             if ( wCount <= cutPoint ) {
@@ -2439,11 +2439,9 @@ public class MainScreenController { //implements Initializable {
                         parseStr = tf.getText ().toString ();
                     }
 
-                    System.out.println ("0->" + parseStr);
-
                     parseStr = (Head.contains ("ERR-ANALYS")) ? arrTitle (
-                            parseStr,
-                            true) : arrTitle (parseStr);
+                            parseStr, true) : arrTitle (parseStr);
+
                     multiLine = (parseStr.split ("\\@@")).length;
 
                     if ( act.contains ("Edit") ) {
@@ -3167,16 +3165,14 @@ public class MainScreenController { //implements Initializable {
                         : "";
                 tempA = (!tempA.isEmpty ()) ? tempA.substring (0, tempA.
                         indexOf (" ")) : "";
-                
-                
-                
+
                 tempB = (!institute.getValue ().isEmpty ()) ? institute.
                         getValue () : "";
                 tempB = (!tempB.isEmpty ()) ? tempB.substring (0, tempB.
                         indexOf (" ")) : "";
 
-                
-                tempC = (addLReacCnt == 0) ? tf.getText () : tf.getText () +",\n"; 
+                tempC = (addLReacCnt == 0) ? tf.getText () : tf.getText () +
+                        ",\n";
 
                 putTxt = tempA + ", " + tempB;
                 putTxt = "(" + putTxt + ")";
@@ -4551,6 +4547,9 @@ public class MainScreenController { //implements Initializable {
             radSF1DDCB.setTooltip (tp3);
             SF2EnergyDDT.setTooltip (tp4);
             SF3abandDDT.setTooltip (tp5);
+            entryChoice (lList.targetNList, nuclideDDCB);
+            entryChoice (lList.dataUnitsList, dataUnitsCB);
+            entryChoice (lList.targetNList, radSF1DDCB);
 
             myDialogScene = new Scene (vb1, 800, 300);
             myDialogScene.getStylesheets ().add (getClass ().getResource (
@@ -4582,9 +4581,9 @@ public class MainScreenController { //implements Initializable {
                 tmp1 = (!tmp1.isEmpty ()) ? tmp1 : "";
                 tmp2 += tmp1 + ",";
 
-                tmp1 = THalfDDT.getText ();
-                sComp = tmp1.split ("\\s+");
-                tmp1 = sComp[1];
+                tmp1 = THalfDDT.getText ();                   
+               //  sComp = tmp1.split ("\\s+");
+                // tmp1 = sComp[1];
 
                 tmp1 = (!tmp1.isEmpty ()) ? tmp1 : "";
                 tmp2 += tmp1;
