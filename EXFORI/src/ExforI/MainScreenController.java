@@ -4465,19 +4465,23 @@ public class MainScreenController { //implements Initializable {
         while (myData.get (ri + tmpRICnt).getBibItemName ().trim ().isEmpty ()) {
             ++tmpRICnt;
         }
+        
         if ( act.contains ("Add") ) {
             getTxtData = "";
         } else if ( act.contains ("Edit") ) {
+            multiLine = tmpRICnt;
             for ( int ii = 0; ii < tmpRICnt; ii++ ) {
-                tmp = myData.get (ri + ii).getContentTxt ().toString ();
-                tmp = tmp.substring (1, tmp.length () - 1);
-                getTxtData += tmp + " ";
+                tmp = myData.get (ri + ii).getContentTxt ().toString ().trim ();
+                tmp = tmp.substring (0, tmp.length ());
+                getTxtData += (ii <tmpRICnt-1) ?tmp + ",\n":tmp;
             }
         }
 
+        /*
         if ( getTxtData != null ) {
             getTxtData = getTxtData.replaceAll ("\n", " ");
         }
+        */ 
         if ( act.contains ("Add") ) {
             getTxtData = null;
             putTxt = "";
@@ -4615,7 +4619,7 @@ public class MainScreenController { //implements Initializable {
                         putTxt != null &&
                         putTxt != "" &&
                         putTxt.length () > 1 ) {
-                    putTxt += ",\n";
+                    putTxt += "\n";
                 }
                 putTxt += tmp2;
                 tf.setText (putTxt);
@@ -4632,32 +4636,30 @@ public class MainScreenController { //implements Initializable {
                 String tmpHead = "";
                 String labelS;
 
-                if ( !isSelect ) {
+                if ( !isSelect && !act.contains ("Edit")) {
                     popupMsg.warnBox ("Please press \"Select\" first",
                             "Attention! Select First");
                 } else if ( tf.getText ().isEmpty () ) {
                     popupMsg.warnBox ("Please enter data first",
                             "Attention! No Data");
                 } else {
-
                     parseStr = tf.getText ().toString ();
                     //System.out.println("In Accept->"+" multiLine->"+multiLine+ "  " +parseStr);
                     sComp = parseStr.split ("\\s+");
-
                     tmpStr1 = Head;                    
                     if ( act.contains ("Edit") ) {
                         System.out.println(" multiLine->"+Integer.toString (multiLine));
                         for ( int ii = 0; ii < multiLine; ii++ ) {
                             tmpHead = (ii == 0) ? tmpStr1 : tmpStr2;
-                            if ( ii <= multiLine - 2 ) {
-                                strEntered = parseStr.substring (
-                                        0, Integer.valueOf (sComp[ii]));
+                            System.out.println("->"+Integer.toString (ii)+sComp[ii]);
+                           if ( ii <= multiLine - 2 ) {
+                                strEntered = parseStr.substring (0, sComp[ii].length ());  // Integer.valueOf (sComp[ii]));
                             } else {
                                 strEntered = parseStr;
-                            }
+                           }
                             labelS = (multiLine > 1) ? Integer.toString (ii + 1)
                                     : "";
-                            strEntered = "(" + strEntered + ")";
+                           // strEntered = "(" + strEntered + ")";
                             myData.set (ri + ii,
                                     new editableData (
                                             tmpHead,
@@ -4665,8 +4667,7 @@ public class MainScreenController { //implements Initializable {
                                             strEntered, SE)
                             );
                             if ( ii <= multiLine - 2 ) {
-                                parseStr = parseStr.substring (
-                                        parseStr.indexOf ("),") + 3);
+                                parseStr = parseStr.substring (parseStr.indexOf ("),") + 3);                                
                             }
                         }
                     } else {
