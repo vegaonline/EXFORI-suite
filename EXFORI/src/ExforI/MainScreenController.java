@@ -4462,22 +4462,22 @@ public class MainScreenController { //implements Initializable {
         isSelect = false;
 
         multiLine = 0;
-
-        while (myData.get (ri + tmpRICnt).getBibItemName ().toString () == "") {
+        while (myData.get (ri + tmpRICnt).getBibItemName ().trim ().isEmpty ()) {
             ++tmpRICnt;
         }
         if ( act.contains ("Add") ) {
             getTxtData = "";
-        } else {
+        } else if ( act.contains ("Edit") ) {
             for ( int ii = 0; ii < tmpRICnt; ii++ ) {
                 tmp = myData.get (ri + ii).getContentTxt ().toString ();
                 tmp = tmp.substring (1, tmp.length () - 1);
-                getTxtData
-                        += tmp +
-                        "\n";
+                getTxtData += tmp + " ";
             }
         }
 
+        if ( getTxtData != null ) {
+            getTxtData = getTxtData.replaceAll ("\n", " ");
+        }
         if ( act.contains ("Add") ) {
             getTxtData = null;
             putTxt = "";
@@ -4581,8 +4581,8 @@ public class MainScreenController { //implements Initializable {
                 tmp1 = (!tmp1.isEmpty ()) ? tmp1 : "";
                 tmp2 += tmp1 + ",";
 
-                tmp1 = THalfDDT.getText ();                   
-               //  sComp = tmp1.split ("\\s+");
+                tmp1 = THalfDDT.getText ();
+                //  sComp = tmp1.split ("\\s+");
                 // tmp1 = sComp[1];
 
                 tmp1 = (!tmp1.isEmpty ()) ? tmp1 : "";
@@ -4641,10 +4641,12 @@ public class MainScreenController { //implements Initializable {
                 } else {
 
                     parseStr = tf.getText ().toString ();
+                    //System.out.println("In Accept->"+" multiLine->"+multiLine+ "  " +parseStr);
                     sComp = parseStr.split ("\\s+");
 
-                    tmpStr1 = Head;
+                    tmpStr1 = Head;                    
                     if ( act.contains ("Edit") ) {
+                        System.out.println(" multiLine->"+Integer.toString (multiLine));
                         for ( int ii = 0; ii < multiLine; ii++ ) {
                             tmpHead = (ii == 0) ? tmpStr1 : tmpStr2;
                             if ( ii <= multiLine - 2 ) {
