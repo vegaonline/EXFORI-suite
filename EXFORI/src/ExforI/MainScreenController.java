@@ -5357,16 +5357,20 @@ public class MainScreenController { //implements Initializable {
     public void doNewFile() {
         if ( setB1Count < 2 ) {
             String tmpS = "";
+            
+            myData.clear();
+            System.out.println(myData.size()+ "  "+lastLine+ "  "+myDataN);
+            
             tmpS = exforUtil.fixString11 (entryNum) + exforUtil.fixString11 (
                     myDate0);
             String part3 = entryNum + "001" + "00001";   // make part from filename
             myData.add (myDataN,
                     new editableData ("ENTRY", "", tmpS, part3));
-
+            lastLine = 1;
             ++subentNum;
 
             subEnt = Integer.toString (subentNum);
-            lastLine = lineN;
+            
             part3 = entryNum + exforUtil.fixStr0s (subEnt, 3) + exforUtil.
                     fixStr0s (Integer.toString (lastLine), 5);
             myData.add (++myDataN,
@@ -5396,6 +5400,7 @@ public class MainScreenController { //implements Initializable {
                                     exforUtil.fixString11 ("0") + exforUtil.
                                     fixString11 ("0"), part3));
             // subEnt));
+            
 
             sub4Common.add (subEnt);
 
@@ -5408,8 +5413,10 @@ public class MainScreenController { //implements Initializable {
             //++subentNum;
             subEnt = Integer.toString (subentNum);
 
+            System.out.println("NC Size->"+myData.size()+"  "+lastLine+ " "+myDataN);
             InsSubEnt (false, subEnt);
-
+            System.out.println("NC Size->"+myData.size()+"  "+lastLine+ " "+myDataN);           
+            
             //++lastLine;
             //subentNum = 999;              // Do not do this as this will add 999 entries in Tree
             //subEnt = Integer.toString(subentNum);
