@@ -1551,7 +1551,6 @@ public class MainScreenController { //implements Initializable {
 
             row.setOnMouseClicked ((MouseEvent event) -> {
                 editableData clickedRow = row.getItem ();
-                System.out.println ("Row:-> " + clickedRow.toString ());
                 tmp4 = "";
 
                 int rowCnt = 1;
@@ -1661,6 +1660,7 @@ public class MainScreenController { //implements Initializable {
     private void getAddMenus(String s1, int SE) {
         String subEnt;
         append = false;
+/////  check if > index and size
         if ( myData.get (SE).getBibItemName ().contains ("ENDENTRY") ) {
             append = true;
         }

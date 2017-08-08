@@ -110,7 +110,7 @@
         <TreeView id="EntryTree" fx:id="subEntTree" editable="true" onMouseClicked="#doMakeTree" prefHeight="321.0" prefWidth="171.0" style="-fx-background-color: #eaf6fd;" BorderPane.alignment="CENTER" />
     </left>
     <center>
-        <TableView fx:id="editTable" editable="true" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #3c7fb1;" BorderPane.alignment="CENTER">
+        <TableView fx:id="editTable" editable="true" minWidth="-Infinity" style="-fx-background-color: #3c7fb1;" BorderPane.alignment="CENTER">
             <columns>
                 <TableColumn fx:id="bibHead" maxWidth="80.0" minWidth="73.0" prefWidth="-1.0" sortable="false" />
                 <TableColumn fx:id="bibPtr" maxWidth="18.0" minWidth="18.0" prefWidth="18.0" sortable="false" />
